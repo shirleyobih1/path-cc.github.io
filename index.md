@@ -1,12 +1,12 @@
 ---
 layout: home
-title: Jekyll Serif Theme
-description: Jekyll Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+title: Partnership to Advance Throughput Computing (PATh)
+description: Partnership to Advance Throughput Computing (PATh)
 intro_image: "images/illustrations/pointing.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Serif - A Jekyll Business Theme.
+# PATh - Partnership to Advance Throughput Computing
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+The Partnership to Advance Throughput Computing seeks to promote ...
