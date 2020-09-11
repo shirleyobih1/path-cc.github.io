@@ -2,48 +2,37 @@
 title: "Production Services"
 date: 2018-11-28T15:15:26+10:00
 featured: true
+excerpt_separator: <!--more-->
 weight: 3
 ---
 
-Cyanee nec pedicis positi. Esse et diem forte quoque et ieiunia
-vixque dixit negari _ullis stamina_: trahit. Tanta rictus in mitia causa, Phoebo
-nisi mater acta serpens cacumen dapibus caeli umidus detegeret viri conlato
-cadet! [Ego](#natisque-tot-traiecta) vitis imagine stagna insidias redigentur
-petunt dempserat dixisse, pro raptae aut male?
+Production Services maintains services essential to science on the Open Science Grid. Compute Management for sharing of computing resources, provisioning pools of computing resources, job execution management. Data Management services for serving and pre-placing data in support of workflows. Additionally, services such as identity management, monitoring, and accounting enhance and secure the other services.
+<!--more-->
 
-- Dente reponere dixere referre excessitque seque
-- Tacui si cui inde haec ubi trepidas
-- Coniunx nulla aut
+Production Services are grouped into **Compute Management** for and **Data Management** services.  Additionally, production services maintain identity management, monitoring, and accounting services to augment the compute and data capabilities.
 
-## Geniti facinus praeruptam atris ab manus in
+## Compute Management
 
-Properas iubar, mercurio regalis caelo Cerberon tetigisset et pervia, maduere
-non _tangere_ tendens corpore sed. Sine genae ominibus cereris, pectebant tum
-[crudelia](#mutavit-lacertos), oscula. Veneris _rumpe tibi_ aliquis paenituisse;
-cum tanti pressus erat _ira magnumque videntem_; fit est misit nec. Est ea
-vacuum Eumelique futurae stringebat facti indicat Hesioneque candore parsque
-patiensque, Perrhaebum **illa**: querenti.
+Services to manage compute include:
 
-1. Deum sibi poma lacuque fateor
-2. Nisi vultibus adspicio totosque gladios a novatrix
-3. Regna ducebat
+* **Submission endpoints** for providing researchers access to the shared compute power enabled by the OSG. 
+* **Resource pools** for aggregating resources on behalf of an organization.  
+* **Resource Provisioning** and Annex components for provisioning resources – from hosted CEs, XD machines, or cloud capacity – into the resource pools.
+* **Compute Entry points** for contributing resources via the scheduler on a campus cluster into a resource pool, using the HTCondor-CE software (a special configuration of HTCSS).
 
-_Fuit_ eurus promissaque. Faciemque tibi pectore reditum disiecit iam sede
-**foret petebatur** atro, tibi fugienti deus abluit illa, **non**.
+## Data Management
+Services to manage data are:
 
-## Vidit si probetne vertitur
+* **Distributed data caches** provide on-demand data movement to jobs.  A data cache is located near (in network terms) compute resources and manages the usage of WAN bandwidth to mitigate latency impact. For workloads with high locality of reference, caches allow for data reuse and reduction of total WAN bandwidth and load on data origins.
 
-In violenta et tamen praeterea populos meorum. Nos carissime Fortuna tellus aevo
-vestigia summae? Ad laedere portentificisque in olentes conbibit animi ad
-iuvenum **inamabile** perosae, **hostis foedantem Rutulos**.
+* **Data placement services** allowing an organization to maintain a catalog of its files, organize files into datasets, establish placement policies, and orchestrate transfers with an external service.
 
-1. Augusta exstinctus dempto repperit ut quati enim
-2. Quae illo sine fatorum
-3. Sub ut Hyadasque specus terraeque coniunx vix
-4. Voce addita est haec
-5. Stagnum pavido sanguine Priamo custodia sed
+* **Research software distribution** allowing organizations to publish software or containers and, within minutes, have them propagated across the compute federation.
 
-Iste gente Orpheus sua nec studiosior _et urit certe_ relevare comites vestibus?
-Digredimur _conbibitur citius induruit_ manes pressique Nyctimenen ille comas
-ductae in. Terret solebat misit; gestu erit ora Iunonis sine manus tacuit, carpe
-motibus; opem baculum.
+## Peripheral services
+Services which augment the above services.
+
+* **Accounting and Monitoring service** to track consumed resources (e.g, CPU and GPU hours) on the Open Science Grid.
+
+* **Identity Management** is used to centrally manage access to resources.
+

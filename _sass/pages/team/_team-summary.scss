@@ -21,10 +21,15 @@
     }
     p {
       color: $black;
-      text-transform: uppercase;
       margin: 0;
       font-size: 12px;
       font-weight: 500;
+    }
+    p.team-description {
+      text-transform: uppercase;
+    }
+    p.team-institution {
+      color: darken($primary, 20%);
     }
   }
   .team-content {

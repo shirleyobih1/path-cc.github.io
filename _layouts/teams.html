@@ -3,7 +3,7 @@ layout: default
 bodyClass: page-team-list
 ---
 
-<div class="intro">
+<div class="intro-small">
     <div class="container">
         <div class="row justify-content-start">
             <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
@@ -30,7 +30,14 @@ bodyClass: page-team-list
                 </div>
                 {% endif %}
                 <div class="team-meta">
+                    {% if team.website %}
+                    <a href="{{ team.website }}">
+                    {% endif %}
                     <h2 class="team-name">{{ team.title }}</h2>
+                    {% if team.website %}
+                    </a>
+                    {% endif %}
+                    <p class="team-institution">{{ team.institution }}</p>
                     <p class="team-description">{{ team.jobtitle }}</p>
                     {% if team.linkedinurl %}
                     <a target="_blank" href="{{ team.linkedinurl }}">LinkedIn</a>
@@ -52,7 +59,14 @@ bodyClass: page-team-list
                 </div>
                 {% endif %}
                 <div class="team-meta">
+                    {% if team.website %}
+                    <a href="{{ team.website }}">
+                    {% endif %}
                     <h2 class="team-name">{{ team.title }}</h2>
+                    {% if team.website %}
+                    </a>
+                    {% endif %}
+                    <p class="team-institution">{{ team.institution }}</p>
                     <p class="team-description">{{ team.jobtitle }}</p>
                 </div>
             </div>
