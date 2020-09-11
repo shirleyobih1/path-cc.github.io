@@ -11,7 +11,7 @@ logo:
   desktop: "images/logo/logo.svg"
   desktop_height: "36px"
 footer:
-  copyright_text: 'PATh - NSF ...'
+  copyright_text: 'PATh - NSF Grant #2030508'
 
 seo:
   meta_og_title: "PATh"
