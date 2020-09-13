@@ -12,6 +12,9 @@ bodyClass: page-services-list
       {% if page.intro_image %}
       <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
         <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+        {% if page.intro_image_caption %}
+        <p> {{ page.intro_image_caption | markdownify }}</p>
+        {% endif %}
       </div>
       {% endif %}
     </div>
