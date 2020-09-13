@@ -11,17 +11,13 @@ logo:
   desktop: "images/logo/logo.svg"
   desktop_height: "36px"
 footer:
-  copyright_text: 'PATh - NSF Grant #2030508'
+  copyright_text: 'This project is supported by National Science Foundation under Cooperative Agreement OAC-2030508. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.'
 
 seo:
   meta_og_title: "PATh"
   meta_og_type: "website"
   meta_og_url: "https://path-cc.io"
-  meta_og_image: "https://raw.githubusercontent.com/zerostaticthemes/jekyll-serif-theme/master/screenshots/tn.png"
   meta_og_description: "Partnership to Advance Throughput Computing"
-  meta_twitter_card: "summary"
-  meta_twitter_site: "@zerostaticio"
-  meta_twitter_creator: "@zerostaticio"
 
 collections:
   services:
