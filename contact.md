@@ -4,13 +4,14 @@ layout: contact
 bodyClass: page-contact
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.
+To start using PATh services
+----------------------------
 
-| Day       | Opening Hours   |
-| --------- | --------------- |
-| Tuesday   | 8:30am - 5:00pm |
-| Wednesday | 8:30am - 5:00pm |
-| Thursday  | 8:30am - 5:00pm |
-| Friday    | 8:30am - 5:00pm |
-| Saturday  | 10:am - 4:00pm  |
-| Saturday  | Closed          |
+* UW-Madison campus users can contact CHTC directly at [chtc@cs.wisc.edu](mailto:chtc@cs.wisc.edu).
+* To get started as a user on the Open Science Grid through OSG-Connect, reach out to [support@osgconnect.net](mailto:support@osgconnect.net)
+* Campuses interested in providing resources through OSG - and all other queries - can contact [support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+
+Questions about the PATh Project
+--------------------------------
+
+For enquiries about the PATh project, please contact the [PATh leadership](mailto:leadership@path-cc.io).

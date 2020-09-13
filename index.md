@@ -9,4 +9,6 @@ intro_image_hide_on_mobile: true
 
 # PATh - Partnership to Advance Throughput Computing
 
-The Partnership to Advance Throughput Computing seeks to promote ...
+PATh brings together the Center for High Throughput Computing and the
+Open Science Grid in order to advance the nation's campuses and science
+communities through the use of distributed High Throughput Computing.
