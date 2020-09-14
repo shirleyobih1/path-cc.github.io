@@ -1,51 +1,59 @@
 ---
-title: 'About'
-date: 2018-02-22T17:01:34+07:00
+title: 'About PATh'
+date: 2020-09-13T00:00:00Z
 layout: 'page'
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+The Partnership to Advance Throughput Computing (PATh) is a project funded by
+NSF's OAC Campus Cyberinfrastructure (CC\*) program in order to address the
+needs of the rapidly growing community of faculty and students who are
+embracing Distributed High Throughput Computing (dHTC) technologies and
+services to advance their research. Across the science and engineering
+community, a growing number of single-PI groups are joining the cohort of
+international physical science collaborations who have depended on the dHTC
+paradigm for decades.
 
-## Ne verba patulosque numen vix libet
+PATh brings together two entities with a strong history of supporting
+dHTC-enabled research: the Center for High Throughput Computing (CHTC) and the
+Open Science Grid (OSG) Consortium. The team that founded CHTC at University of
+Wisconsin–Madison pioneered, in the mid 1990s, the concept and principles of
+HTC and has advanced and sustained the HTCondor Software Suite (HTCSS) ever
+since. Roughly in parallel and driven by the needs of physics researchers, a
+diverse and multidisciplinary collaboration laid the foundation of the OSG in
+the late 1990s to develop, deploy, operate, and sustain a shared and global
+dHTC ecosystem of sites spanning geographic and administrative boundaries.
 
-Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis.
-Ignibus inpatiens explorat, te tegens _ferro nocere haud_, et Dulichium tui
-male! Quo sed [fuit flexit et](#vexant-achivi) hic die solido, gloria?
+The partnership firmly believes in dHTC as an accessible computing paradigm
+which supports the democratization of research computing to include researchers
+and organizations otherwise underrepresented in the national CI ecosystem. Our
+work is founded on universal principles like sharing, autonomy, unity of
+purpose, and mutual trust. Our goal is to deliver adoption of technologies and
+methodologies that is based on knowledge and understanding. Students, industry,
+federal agencies, and the public are critical elements in achieving this goal
+and in maximizing broad and long-term societal impact in areas like human
+health, security, and national competitiveness. All areas of PATh are engaged
+in a coordinated effort across campuses and science domains that couples CI
+services and capabilities with the empowerment of a diverse workforce.
 
-1. Cum det dixit Parcarum qui spemque est
-2. Exit ex huic
-3. Quod consiste agitataque claustraque vicina videt lacertis
-4. Loquor videt
-5. Ardua non igne caelesti coniugis cognovi diversorum
-6. Per nunc pariterque saeva vindicet
+PATh’s distributed HTC approach strives to increase the national return on
+investment of compute resources by enabling institutions to share computing
+capacity, simultaneously maximizing utilization while also giving smaller
+campuses easier access to this vital capacity. PATh is aligned with the NSF
+National CI Coordination Services blueprint's goal of producing an "an agile,
+integrated, robust, trustworthy and sustainable CI ecosystem that drives new
+thinking and transformative discoveries in all areas of science and engineering
+research and education." The techniques advanced by PATh serve the national
+interest by promoting the progress of science, from academic research groups,
+to large collaborations, institutions, and industry, with training and outreach
+components designed and executed to empower the communities that can benefit
+from these services.
 
-Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco _vati_
-dabant deus. Memorata haberet sepulcrales gentisque dum sic, in flumina templa!
-Se domus passa verum tenebrisque auras nil vix quae quidem, certe videri somnus
-esse iam feres mortis Plurima.
+The institutions in the partnership are:
 
-## Postquam tamen
-
-Et nec ingentem est minus faciunt praecipue posse auctoremque sedes transmittere
-et pedes miratur erat animaeque. Tellus admonuit humanam funes, sagittis et
-licet! Inserui quamvis Clymeni.
-
-- Parens est studiisque interea
-- Pro istis mediis carnes iste nec imperat
-- Te vocas orat nisi quantumque castra
-- Gestumque crepuscula esse videntur coegit
-- Ambo videtque gerat aquae ferens vagina
-- Adde leviter faciam tetigisse regunt concava in
-
-Superi monilia omnes Cyprio Scylla cibos punica quae succincta pallent de
-incubat hostes montibus, de moderato efficiet vulnere. Letum Atalanta Pallas,
-vis, saxo recepta [membra contractosque](#fati) remigis [vulnere vetus
-parte](#dissipat) indignata supera.
-
-Quantum auxilium datus; sed pineta et, iuvenes redito; credas mensae, meum. Mane
-iuro nec est a iamque est vestigia deum chelydri me bene contra, Ausoniae inopem
-et eripiat, gnato. Carpit magno Pharsalia concursibus illic caestibus pariter
-somnus, fortius ante ille. Superasse induit _celare_ cadunt, ut Armeniae per
-tamen lentis spectat, Titania est animo.
+* [Information Sciences Institute](https://www.isi.edu/)
+* [Morgridge Institute for Research](https://morgridge.org/)
+* [The University of Chicago](https://www.uchicago.edu/)
+* [San Diego Supercomputing Center at the University of California San Diego](https://www.sdsc.edu/)
+* [Indiana University](https://www.iu.edu/)
+* [University of Nebraska-Lincoln](https://www.unl.edu/)
+* [University of Wisconsin-Madison](https://www.wisc.edu/)
