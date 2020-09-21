@@ -14,10 +14,12 @@ footer:
   copyright_text: 'This project is supported by National Science Foundation under Cooperative Agreement OAC-2030508. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.'
 
 seo:
-  meta_og_title: "PATh"
+  meta_og_title: "PATh: Partnership to Advance Throughput Computing"
   meta_og_type: "website"
   meta_og_url: "https://path-cc.io"
-  meta_og_description: "Partnership to Advance Throughput Computing"
+  meta_og_description: "PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing."
+  meta_og_image: "https://path-cc.io/images/logo/logo.svg"
+  meta_twitter_card: "summary"
 
 collections:
   services:
