@@ -18,7 +18,7 @@ seo:
   meta_og_type: "website"
   meta_og_url: "https://path-cc.io"
   meta_og_description: "PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing."
-  meta_og_image: "https://path-cc.io/images/logo/logo.svg"
+  meta_og_image: "https://path-cc.io/images/logo/logo.png"
   meta_twitter_card: "summary"
 
 collections:
