@@ -5,7 +5,7 @@ draft: false
 image: "images/team/frank-wuerthwein.jpg"
 jobtitle: "OSG Executive Director"
 website: "https://www-physics.ucsd.edu/fac_staff/fac_profile/faculty_description.php?person_id=494"
-institution: "University of California San Deigo"
+institution: "University of California San Diego"
 promoted: true
 weight: 2
 ---
