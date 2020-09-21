@@ -21,6 +21,7 @@ seo:
   meta_og_image: "https://path-cc.io/images/logo/logo-og.png"
   meta_twitter_card: "summary"
   meta_twitter_site: "PATh"
+  meat_twitter_image: "https://path-cc.io/images/logo/logo-twitter.png"
 
 collections:
   services:
