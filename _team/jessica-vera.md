@@ -2,7 +2,7 @@
 title: "Jessica Vera"
 date: 2018-11-19T10:47:58+10:00
 draft: false
-image: "images/team/jessica-vera.jpg"
+image: "images/team/jessica-vera.png"
 jobtitle: "Research Computing Facilitator"
 institution: "University of Wisconsin - Madison"
 #website: ""
