@@ -31,7 +31,7 @@ bodyClass: page-services-list
         <div class="news news-summary">
           <div class="article-content">
             <h2 class="article-title">
-              <a href="{{site.baseurl}}{{ service.url }}">{{ article.title }}</a>
+              <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
               <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
             </h2>
             <p>{{ article.excerpt | markdownify | strip_html }}</p>
