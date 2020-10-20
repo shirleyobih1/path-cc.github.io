@@ -23,7 +23,28 @@ bodyClass: page-home
 </div>
 
 <div class="strip">
-  <div class="container pt-6 pb-6 pb-md-10">
+  <div class="container pb-6 pb-md-6">
+    <h1><a href="{{site.baseurl}}/news/">Recent News</a></h1>
+    <hr/>
+    <div class="row justify-content-start">
+      {% assign sorted_articles = site.news | reverse  %}
+      {% for article in sorted_articles limit:2 %}
+      <div class="col-12 col-md-12 mb-1">
+        <h2 class="article-title">
+          <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
+          <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
+        </h2>
+        <p>{{ article.excerpt | markdownify | strip_html}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="container pb-6 pb-md-10">
+    <h1>Services</h1>
+    <hr/>
     <div class="row justify-content-start">
       {% for service in site.services %}
       <div class="col-12 col-md-4 mb-1">

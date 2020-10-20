@@ -30,6 +30,9 @@ collections:
   team:
     output: true
     permalink: /team/:path/
+  news:
+    output: true
+    permalink: /news/:path/
 
 defaults:
   - scope:
@@ -37,6 +40,11 @@ defaults:
     values:
       layout: service
       bodyClass: page-services-single
+  - scope:
+      type: news
+    values:
+      layout: news
+      bodyClass: page-news-single
   - scope:
       path: 'images'
     values:
