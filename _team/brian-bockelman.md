@@ -10,5 +10,4 @@ promoted: true
 weight: 3
 ---
 
-Bockelman is an Associate Scientist at the Morgridge Institute for Research and co-lead of the FoCaS area.
-
+Bockelman is an Investigator at the Morgridge Institute for Research and co-lead of the FoCaS area.

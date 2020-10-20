@@ -39,7 +39,7 @@ of the services for campuses, the RCF team also leverages its own experience in
 dHTC for end-users to offer dHTC Facilitation training via shadowing, workshops,
 and ongoing support channels.
 
-## Taking dHTC Impact Further
+## Taking dHTC Impact Farther
 
 As an ultimate principle of Research Computing Facilitation, insights from the
 facilitation of dHTC stakeholders are continually integrated across PATh areas
