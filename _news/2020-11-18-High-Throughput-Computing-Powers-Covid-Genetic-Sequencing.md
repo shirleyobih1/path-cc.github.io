@@ -8,13 +8,7 @@ MADISON — <a href="https://experts.news.wisc.edu/experts/david-o-connor" targe
 makes it possible to track the spread of SARS-CoV-2 throughout communities in Wisconsin. The raw sequencing data, however, needs to be extensively processed before
 it can provide useful information about a person’s viral genetics.
 
-<a href="https://chtc.cs.wisc.edu/" target="_blank">The Center for High Throughput Computing (CHTC)</a> powers this processing. In the last several 
-months, more than 20,000 CHTC CPU hours have been used to convert electrical signals from a sequencing instrument into readable nucleotide letters 
-that can be ordered to create an individual’s virus genome. More than 2,000 such genomes have been analyzed from Wisconsin since the start of the pandemic. 
-As cases have surged this fall, the scalable computing resources of CHTC 
-<a href="https://news.wisc.edu/tracking-virus-mutations-reveals-success-of-stay-at-home-orders/"
-target="_blank">allow us</a> to generate sequencing data from key outbreaks much more quickly than if we were trying to process this data on computers in our 
-lab alone.
+<a href="https://chtc.cs.wisc.edu/" target="_blank">The Center for High Throughput Computing (CHTC)</a> powers this processing. In the last several months, more than 20,000 CHTC CPU hours have been used to convert electrical signals from a sequencing instrument into readable nucleotide letters that can be ordered to create an individual’s virus genome. More than 2,000 such genomes have been analyzed from Wisconsin since the start of the pandemic. As cases have surged this fall, the scalable computing resources of CHTC allows the researchers to generate sequencing data from key outbreaks much more quickly than if they were trying to process this data on computers in their lab alone. <a href="https://news.wisc.edu/tracking-virus-mutations-reveals-success-of-stay-at-home-orders/" target="_blank">Read more in the UW Madison article about their work.</a>
 
  
  
