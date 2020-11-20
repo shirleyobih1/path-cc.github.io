@@ -1,31 +1,8 @@
-# PATh Website
+# PATh - Partnership to Advance Throughput Computing
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+[PATh](https://path-cc.io/) brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing.
 
-[Live Demo](https://jekyll-serif.netlify.app/) | 
-[Zerostatic Themes](https://www.zerostatic.io)
-
-![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
-
-## Theme features
-
-- Jekyll 4.1
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- Responsive design
-- Bootstrap 4.3 grid and media queries only
-- Responsive menu
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
-- Netlify & Github Pages ready
+Thie website is a [Jekyll](https://jekyllrb.com/) based website.  The theme is based on [Jekyll-Serif](https://github.com/zerostaticthemes/jekyll-serif-theme).  Please create a pull request to modify the website.
 
 # Installation
 
@@ -40,42 +17,18 @@ Download or clone the theme.
 To run the theme locally, navigate to the theme directory and run:
 
 ```
-bundle install
+$ bundle install
 ``` 
 
-To start the Jekyll local development server.
+$ To start the Jekyll local development server.
 
 ```
-bundle exec jekyll serve
+$ bundle exec jekyll serve
 ``` 
 
-To build the theme.
+To build the website.
  
 ```
-bundle exec jekyll build
+$ bundle exec jekyll build
 ```
 
-# Deployment
-
-## Netlify
-
-This theme contains a `netlify.toml` and has been tested to work with Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
-
-## Github Pages
-This theme has been tested to work with Github Pages (and Github Project Pages)
-
-If you are using this theme with Github Pages and you are using a Github Project Page then **your site will be hosted in a subfolder** you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
-
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme"`
-
-
-## Credits
-
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-
-
-## License
-
-This theme is open source under the MIT license. If you fork or copy this theme you must leave me as the original author in the LICENSE file (on line 3 where I am listed as the author). Really, I just don't want people copying this theme and then saying it's their theme, because I put a lot of work into my themes, thanks!
