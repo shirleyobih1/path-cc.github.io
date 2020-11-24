@@ -1,6 +1,7 @@
 ---
 title: "High Throughput Computing Powers Covid Genetic Sequencing" 
-date: 2020-11-18T12:00:00+00:00 
+date: 2020-11-18T12:00:00+00:00
+excerpt: MADISON - David O’Connor, professor at the UW School of Medicine and Public Health, reports that recent advances in genetic sequencing of viruses makes it possible to track the spread of SARS-CoV-2 throughout communities in Wisconsin.
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
