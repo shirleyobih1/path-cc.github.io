@@ -1,6 +1,6 @@
 title: "Submit Locally, Run Globally" 
 date: 2020-12-07T12:00:00+00:00
-excerpt: MADISON - The OSG offers via the OSG Connect service researchers with an <a href="https://www.osgconnect.net/" target="_blank">OSG account</a> and an ***Access Point to the Open Science Pool***, a globally deployed HTCondor pool.
+excerpt: MADISON - The OSG offers via the OSG Connect service researchers with an OSG account and an Access Point to the Open Science Pool, a globally deployed HTCondor pool.
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
