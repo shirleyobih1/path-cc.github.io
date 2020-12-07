@@ -32,3 +32,18 @@ To build the website.
 $ bundle exec jekyll build
 ```
 
+# Making Website Changes
+
+This repository uses [GitHub Actions](https://github.com/path-cc/path-cc.github.io/tree/master/.github/worfklows)
+to deploy a website preview from the `master` branch to the [web-preview repository](https://path-cc.io/web-preview/).
+The production website (https://path-cc.io/) is built automatically by GitHub Pages from the `production` branch.
+
+To make changes to the website, use the following workflow:
+
+1.  Submit a pull request with website updates to the `master` branch (the default) and request a review
+1.  Upon approval and merge of the pull request, changes can be previewed at https://path-cc.io/web-preview/
+1.  If additional changes are necessary, repeat steps 1 and 2.
+1.  When satisfied with the preview website, submit a
+    [pull request](https://github.com/path-cc/path-cc.github.io/compare/production...master?expand=1)
+    from `production` to `master`
+1.  After the pull request from step 4 has been merged, verify the changes at https://path-cc.io
