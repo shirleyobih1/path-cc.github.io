@@ -5,6 +5,7 @@ title: 'PATh'
 
 google_analytics_id: null
 homepage:
+  show_alert: true
   show_call_box: true
 logo:
   mobile: "images/logo/logo.png"
