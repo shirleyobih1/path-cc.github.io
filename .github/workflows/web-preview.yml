@@ -16,7 +16,7 @@ jobs:
       - name: Remove prod configurations
         run: |
           rm CNAME
-          sed -i 's|/assets/css/style.css|/web-preview/assets/css/style.css|' _layouts/default.html
+          sed -i "s|baseurl: ''|baseurl: 'web-preview/'|" _config.yml
           git config user.name "Automatic preview publish"
           git config user.email "help@opensciencegrid.org"
           git commit -am "(GHA $GITHUB_RUN_NUMBER)"
