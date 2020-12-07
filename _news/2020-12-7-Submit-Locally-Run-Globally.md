@@ -16,7 +16,6 @@ The <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">The HTCondo
 ***Below are some examples of how researchers enhanced their computational throughput by leveraging the “submit locally, run globally” capabilities offered by PATh Access Points.***
 
 ***AI-Driven Chemistry***
-
 Dr. Roman Zubatyuk from the group of <a href="https://www.cmu.edu/chemistry/people/faculty/isayev.html" target="_blank">Prof. Olexandr Isayev</a> at the Carnegie Mellon University chemistry department uses the access point provided by the OSG to develop a supervised machine learning method that more quickly predicts the chemical behavior of small molecules and potential drugs. Via this single access point, he is able to deploy workers globally in support of a high-throughput “Manager-worker” application. <a href="https://agenda.hep.wisc.edu/event/1440/session/3/contribution/19/material/slides/0.pdf" target="_blank">Roman reported about his OSG experience in a presentation</a> delivered at the 2020 HTCondor Week workshop.
 
 ***Astrophysics***
