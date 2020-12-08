@@ -9,9 +9,6 @@ bodyClass: page-home
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-8 order-2 order-md-1">
         {{ content }}
-        {% if site.homepage.show_alert %}
-          {% include home-alert.html %}
-        {% endif %}
         {% if site.homepage.show_call_box %}
           {% include call.html show_button=true %}
         {% endif %}
@@ -24,6 +21,18 @@ bodyClass: page-home
     </div>
   </div>
 </div>
+{% if site.homepage.show_alert %}
+<div class="homepage-alert">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include home-alert.html %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
 
 <div class="strip">
   <div class="container pb-6 pb-md-6">
