@@ -9,7 +9,7 @@ excerpt: The OSG offers via the OSG Connect service researchers with an OSG acco
   <figcaption class="figure-caption">Open Science Grid Facilitation<br/>Credit: David Nevala</figcaption>
 </figure>
 
-The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. <a href="https://path-cc.io/news/2020-12-7-Submit-Locally-Run-Globally/" target="_blank'>Learn more about how researchers leverage Access Points offered by PATh to support their high throughput computational needs.</a>
+The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. <a href="https://path-cc.io/news/2020-12-7-Submit-Locally-Run-Globally/"  target="_blank">Learn more about how researchers leverage Access Points offered by PATh to support their high throughput computational needs.</a>
 
 The OSG offers via the OSG Connect service researchers with an <a href="https://www.osgconnect.net/" target="_blank">OSG account</a> and an ***Access Point to the Open Science Pool***, a globally deployed HTCondor pool. The capacity offered by this pool comes from more than 130 clusters that are part of the OSG compute federation, and make some of their capacity available to support Open Science. This includes clusters at campuses that are funded under the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">NSF CC* program.</a>
 
