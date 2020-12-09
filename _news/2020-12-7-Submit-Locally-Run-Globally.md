@@ -1,7 +1,7 @@
 ---
 title: "Submit Locally, Run Globally" 
 date: 2020-12-07T12:00:00+00:00
-excerpt: MADISON - The OSG offers via the OSG Connect service researchers with an OSG account and an Access Point to the Open Science Pool, a globally deployed HTCondor pool.
+excerpt: The OSG offers via the OSG Connect service researchers with an OSG account and an Access Point to the Open Science Pool, a globally deployed HTCondor pool.
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
@@ -9,7 +9,9 @@ excerpt: MADISON - The OSG offers via the OSG Connect service researchers with a
   <figcaption class="figure-caption">Open Science Grid Facilitation<br/>Credit: David Nevala</figcaption>
 </figure>
 
-MADISON — The OSG offers via the OSG Connect service researchers with an <a href="https://www.osgconnect.net/" target="_blank">OSG account</a> and an ***Access Point to the Open Science Pool***, a globally deployed HTCondor pool. The capacity offered by this pool comes from more than 130 clusters that are part of the OSG compute federation, and make some of their capacity available to support Open Science. This includes clusters at campuses that are funded under the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">NSF CC* program.</a>
+The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. <a href="https://path-cc.io/news/2020-12-7-Submit-Locally-Run-Globally/" target="_blank'>Learn more about how researchers leverage Access Points offered by PATh to support their high throughput computational needs.</a>
+
+The OSG offers via the OSG Connect service researchers with an <a href="https://www.osgconnect.net/" target="_blank">OSG account</a> and an ***Access Point to the Open Science Pool***, a globally deployed HTCondor pool. The capacity offered by this pool comes from more than 130 clusters that are part of the OSG compute federation, and make some of their capacity available to support Open Science. This includes clusters at campuses that are funded under the <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">NSF CC* program.</a>
 
 The <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">The HTCondor Software Suite (HTCSS)</a> offers the technology for these access points that can be deployed and operated by individuals, science collaborations and campuses. Researchers can use such a private/local Access Point to harness the power of locally and remotely deployed HTCondor execution points. This includes institutional and national computing systems (like the Open Science Pool) as well as commercial clouds.
 
