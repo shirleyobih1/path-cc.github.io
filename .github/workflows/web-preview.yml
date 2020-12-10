@@ -16,10 +16,10 @@ jobs:
       - name: Remove prod configurations
         run: |
           rm CNAME
-          sed -i 's|/assets/css/style.css|/web-preview/assets/css/style.css|' _layouts/default.html
+          sed -i "s|baseurl: ''|baseurl: '/web-preview'|" _config.yml
           git config user.name "Automatic preview publish"
           git config user.email "help@opensciencegrid.org"
-          git commit -am "(GHA $GITHUB_RUN_NUMBER)"
+          git commit -am "GHA: path-cc/path-cc.github.io #$GITHUB_RUN_NUMBER"
 
       # SSH key recipe from https://www.webfactory.de/blog/use-ssh-key-for-private-repositories-in-github-actions
       - name: Deploy web page preview

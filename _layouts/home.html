@@ -33,13 +33,29 @@ bodyClass: page-home
 </div>
 {% endif %}
 
+<div class="strip">
+  <div class="container pb-6 pb-md-6 pt-6 pt-md-6">
+    <h1><a href="{{ '/Submit-Locally-Run-Globally/' | relative_url }}">Submit Locally, Run Globally</a></h1>
+    <hr/>
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-12 mb-1">
+        <p>The PATh project offers technologies and services that enable researchers to harness through a
+           single interface, and from the comfort of their “home directory”, computing capacity offered by
+           a global and diverse collection of resources.
+           <a href="{{ '/Submit-Locally-Run-Globally' | relative_url }}">Learn more</a> about
+           how researchers leverage Access Points offered by PATh to support their high throughput computational needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="strip">
   <div class="container pb-6 pb-md-6">
     <h1><a href="{{site.baseurl}}/news/">Recent News</a></h1>
     <hr/>
     <div class="row justify-content-start">
-      {% assign sorted_articles = site.news | reverse  %}
+      {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
       {% for article in sorted_articles limit:2 %}
       <div class="col-12 col-md-12 mb-1">
         <h2 class="article-title">
