@@ -5,8 +5,8 @@ excerpt: The PATh project offers technologies and services that enable researche
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/images/news/submitlocally.jpg" class="figure-img img-fluid rounded" alt="add alt text" width="250px">
-  <figcaption class="figure-caption">Open Science Grid Facilitation<br/>Credit: David Nevala</figcaption>
+  <img src="{{site.baseurl}}/images/news/submitlocally.jpg" class="figure-img img-fluid rounded" alt="add alt text" width="350px">
+  <figcaption class="figure-caption">Open Science Grid<br/>Credit: Miron Livny</figcaption>
 </figure>
 
 The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. 
