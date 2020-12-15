@@ -6,7 +6,7 @@ layout: 'page'
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/images/news/submitlocally.jpg" class="figure-img img-fluid rounded" alt="add alt text" width="250px">
+  <img src="{{site.baseurl}}/images/news/submitlocally.jpg" class="figure-img img-fluid rounded" alt="add alt text" width="350px">
   <figcaption class="figure-caption">Open Science Grid<br/>Credit: Miron Livny</figcaption>
 </figure>
 
