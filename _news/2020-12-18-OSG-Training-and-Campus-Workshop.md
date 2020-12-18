@@ -1,6 +1,6 @@
 ---
 title: "Don't Miss the February 8-9 Campus Workshop on Distributed High-thoughput Computing" 
-date: 2020-11-18T12:00:00+00:00
+date: 2020-12-18T12:00:00+00:00
 excerpt: - Save the date and register now for another Campus Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput computig (PATh)
 publish: true
 --- 
