@@ -22,7 +22,7 @@ While there is **no fee** for either day, <a href="https://opensciencegrid.org/d
 
 *This workshop is complementary to, and not redundant with our previous* <a href="https://indico.fnal.gov/event/45998/overview" target="_blank">*workshop in October.*</a>
 
-Please feel free to send any questions about the event to events@opensciencegrid.org. If you’d like to discuss appropriate OSG services for your campus, let us know via support@opensciencegrid.org. We’re excited to work with you.
+Please feel free to send any questions about the event to events@opensciencegrid.org. If you’d like to discuss appropriate OSG services for your campus, let us know via support@opensciencegrid.org (mailtosupport@opensciencegrid.org). We’re excited to work with you.
 
 See you there!
 
