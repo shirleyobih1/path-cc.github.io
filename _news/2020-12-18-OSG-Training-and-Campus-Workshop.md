@@ -9,6 +9,7 @@ publish: true
   <img src="{{site.baseurl}}/images/news/savethedate.jpeg" class="figure-img img-fluid rounded" alt="campus facilitation" width="250px">
   <figcaption class="figure-caption">Campus Facilitation<br/></figcaption>
 </figure>
+
 **Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
 
 <ul><li><b>Feb 8 Training on <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2020/" target="_blank">Using and Facilitating the Use of dHTC and the Open Science Grid (OSG)</a></b>, 2-5pm ET.
