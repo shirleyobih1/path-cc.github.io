@@ -1,7 +1,7 @@
 ---
 title: "Register Now for the February 8-9 Campus Workshop" 
 date: 2020-12-18T12:00:00+00:00
-excerpt: Save the date and register now for another Campus Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput computig (PATh).
+excerpt: Save the date and register now for another Campus Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput Computing (PATh).
 publish: true
 --- 
 
