@@ -10,13 +10,6 @@ publish: true
   <figcaption class="figure-caption">Gene Sequencing in the Lab<br/>Credit: Gage Moreno</figcaption>
 </figure>
 
-MADISON — <a href="https://experts.news.wisc.edu/experts/david-o-connor" target="_blank">David O’Connor</a>, professor at the 
-<a href="https://dho.pathology.wisc.edu/" target="_blank">UW School of Medicine and Public Health</a>, reports that recent advances in genetic sequencing of viruses
-makes it possible to track the spread of SARS-CoV-2 throughout communities in Wisconsin. The raw sequencing data, however, needs to be extensively processed before
-it can provide useful information about a person’s viral genetics.
-
-
-
 **Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
 
 +**Feb 8 Training on <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2020/" target="_blank">Using and Facilitating the Use of dHTC and the Open Science Grid (OSG)</a>**, 2-5pm ET. 
