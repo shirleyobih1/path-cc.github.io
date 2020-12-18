@@ -1,10 +1,9 @@
 ---
-title: "Register Now for the February 8-9 Campus Workshop on Distributed High-Throughput Computing" 
-date: 2020-12-18T12:00:00+00:00
-excerpt: **Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
+title: "Don't Miss the February 8-9 Campus Workshop on Distributed High-thoughput Computing" 
+date: 2020-11-18T12:00:00+00:00
+excerpt: - Save the date and register now for another Camput Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput computig (PATh)
 publish: true
 --- 
-
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{site.baseurl}}/images/news/savethedate.jpeg" class="figure-img img-fluid rounded" alt="campus facilitation" width="250px">
   <figcaption class="figure-caption">Campus Facilitation<br/></figcaption>
