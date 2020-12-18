@@ -1,7 +1,7 @@
 ---
 title: "Register now for the February 8-9 Campus Workshop on distributed high-throughput computing" 
 date: 2020-12-18T12:00:00+00:00
-excerpt: MADISON - David O’Connor, professor at the UW School of Medicine and Public Health, reports that recent advances in genetic sequencing of viruses makes it possible to track the spread of SARS-CoV-2 throughout communities in Wisconsin.
+excerpt: **Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
 publish: true
 --- 
 
