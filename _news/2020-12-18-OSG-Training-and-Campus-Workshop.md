@@ -1,7 +1,7 @@
 ---
 title: "Don't Miss the February 8-9 Campus Workshop on Distributed High-thoughput Computing" 
 date: 2020-12-18T12:00:00+00:00
-excerpt: Save the date and register now for another Campus Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput computig (PATh)
+excerpt: Save the date and register now for another Campus Workshop on distributed high-throughput computing (dHTC) February 8-9 offered by the Parternship to Advance Throughput computig (PATh).
 publish: true
 --- 
 
@@ -22,7 +22,7 @@ While there is **no fee** for either day, <a href="https://opensciencegrid.org/d
 
 *This workshop is complementary to, and not redundant with our previous* <a href="https://indico.fnal.gov/event/45998/overview" target="_blank">*workshop in October.*</a>
 
-Please feel free to send any questions about the event to events@opensciencegrid.org. If you’d like to discuss appropriate OSG services for your campus, let us know via support@opensciencegrid.org (mailtosupport@opensciencegrid.org). We’re excited to work with you.
+Please feel free to send any questions about the event to <a href = "mailto: events@opensciencegrid.org">events@opensciencegrid.org</a>. If you’d like to discuss appropriate OSG services for your campus, let us know via <a href = "mailto: support@opensciencegrid.org">support@opensciencegrid.org</a> <. We’re excited to work with you.
 
 See you there!
 
