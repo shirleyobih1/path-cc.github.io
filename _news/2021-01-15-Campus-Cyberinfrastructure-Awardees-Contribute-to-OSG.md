@@ -1,8 +1,7 @@
 ---
 title: Campus Cyberinfrastructure (CC*) Awardees Contribute Over 292 Core Hours in 2020
 date: 2021-01-15 12:00:00 -0600
-categories: NSF Campus Cyberinfrastructure (CC*) Open Science Grid
-layout: default
+excerpt: Campus Cyberinfrastructure Aware Recipients Power the Open Science Grid and contributed over 292 million core hours to researches using the distributed high throughput computing.
 ---
 
 Campus Cyberinfrastructure Award Recipients Power the Open Science Grid
