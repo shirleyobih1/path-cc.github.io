@@ -8,7 +8,7 @@ publish: true
 Campus Cyberinfrastructure Award Recipients Power the Open Science Grid
 =======================================================================
 
-OSG partners with many campuses across the US, including many [Campus Cyberinfrastructure (CC\*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
+OSG partners with campuses across the US, including [Campus Cyberinfrastructure (CC\*)](https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748) awardees, to help them share their resources at a regional and national level.  The campuses actively contributing CC*-funded resources are shown in the map below; every month, we are working to help more awardees contribute:
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
