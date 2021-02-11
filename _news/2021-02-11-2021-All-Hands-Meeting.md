@@ -6,7 +6,7 @@ publish: true
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/images/news/All-Hands-Meeting2.png" class="figure-img img-fluid rounded" alt="All Hands Meeting" width="650px">
+  <img src="{{site.baseurl}}/images/news/All-Hands-Meeting2.png" class="figure-img img-fluid rounded" alt="All Hands Meeting" width="700px">
   <figcaption class="figure-caption">OSG All-Hands Meeting<br/></figcaption>
 </figure>
 
