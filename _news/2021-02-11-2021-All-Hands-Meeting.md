@@ -1,6 +1,7 @@
 ---
 title: "Upcoming OSG All-Hands Meeting March 1 - 5" 
 date: 2021-02-04T12:00:00+00:00
+excerpt: Save the date and register now for All-Hands-Meeting for the eopportunity to discuss the latest OSG developments and hear from researchers about their work and how they are taking advantage of distributed high throughput computing.
 publish: true
 --- 
 
