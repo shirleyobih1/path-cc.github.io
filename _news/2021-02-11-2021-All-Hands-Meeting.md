@@ -30,12 +30,12 @@ The daily meeting topics are:
 * **Thursday:** Impact on Multi-Institutional Collaborations
 * **Friday:** U.S. ATLAS and CMS Projects
 
-An overview of the schedule is available on [the Schedule page](schedule.md),
+An overview of the schedule is available on [the Schedule page](https://opensciencegrid.org/all-hands/2021/schedule/),
 and the detailed schedule (in progress) is available in
 [the Indico scheduling system](https://indico.fnal.gov/event/47040/timetable/).
 
 For meeting technology and other logistics, see
-[the Meeting Logistics page](technology.md).
+[the Meeting Logistics page](https://opensciencegrid.org/all-hands/2021/technology/).
 Note that Zoom connection details are emailed only to those who registered.
 
 
