@@ -6,8 +6,7 @@ publish: true
 --- 
 
 <figure class="figure float-right" style="margin-left: 1em">
-  <img src="path-cc.io/news/images/nickcooley.png
-" class="figure-img img-fluid rounded" alt="Researcher Nicholas Cooley" width="200px">
+  <img src="{{site.baseurl}}/images/news/nickcooley.png"class="figure-img img-fluid rounded" alt="Researcher Nicholas Cooley" width="200px">
   <figcaption class="figure-caption">2021 David Swanson Memorial Award Winner Nicholas Cooley<br/></figcaption>
 </figure>
 
