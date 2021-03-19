@@ -1,7 +1,7 @@
 ---
 title: "Nicholas Cooley awarded David Swanson Memorial Award " 
 date: 2021-03-19T12:00:00+00:00
-excerpt: Nicholas Cooler awarded the 2021 David Swanson Memorial Award
+excerpt: Nicholas Cooley awarded the 2021 David Swanson Memorial Award, established to honor our late colleage David who contributed to campus research across the country. 
 publish: true
 --- 
 
