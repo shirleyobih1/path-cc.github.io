@@ -5,11 +5,7 @@ excerpt: Nicholas Cooler awarded the 2021 David Swanson Memorial Award
 publish: true
 --- 
 
-<figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/images/news/nickcooley.png"class="figure-img img-fluid rounded" alt="Researcher Nicholas Cooley" width="200px">
-  <figcaption class="figure-caption">2021 David Swanson Memorial Award Winner Nicholas Cooley<br/></figcaption>
-</figure>
-
+![David Swanson](img/DavidSwanson.png){ align=right }
 The OSG David Swanson Award was established to honor our late colleague, David Swanson. David contributed to campus research across the country, through the advancement of distributed high-throughput computing (dHTC) and the Open Science Grid (OSG). 
 
 "David was the founding director of the Holland Computing Center at the University of Nebraska-Lincoln and a tireless advocate for the Open Science Grid," said Brian Bockelman, who David mentored.  "Through his leadership, Nebraska went from simple 'users' of the OSG to having team members become part of the OSG management.  David himself ultimately went on to become the OSG Council Chair in 2016 and helped steer the OSG through his calm, steady influence. Beyond his formal appointments, he was a close friend and mentor to many in the OSG community and always available to provide well-needed insight and thoughts to others."
