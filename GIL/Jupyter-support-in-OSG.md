@@ -9,7 +9,7 @@ weight: 4
 ## Summary of GIL Discussion of Options for Jupyter Support in OSG
 
 GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
-The team went through the document below and concluded the following.
+The team went through the document below and concluded the following:
 
 > A. We do not want to support option 1. below. i.e. we do not want to support notebooks as jobs on OSG. There is not enough value to be gained given the complexity and thus cost to support something like this. At least not in the foreseeable future.
 
@@ -25,8 +25,8 @@ OSG Open Pool single researcher support, i.e. us as a “research computing prov
 First, we have to decide what it means.
 There are two interpretations:
 
-- Launching a Jupyter notebook on a OSG worker node through a OSG-managed interface
-- Allow an already running Jupyter notebook to submit OSG jobs
+1. Launching a Jupyter notebook on a OSG worker node through a OSG-managed interface
+2. Allow an already running Jupyter notebook to submit OSG jobs
 
 One can of course combine the two, but the two problems are mostly orthogonal.
 
@@ -38,10 +38,10 @@ Jupyter notebooks are mostly used for interactive analysis. As such, users are l
 
 Assuming we can get pseudo-instant access to worker node resources (see below), there are three technical steps to consider:
 
-- a. Hosting the JupyterLab launcher WebSite
-- b. Execution work environment (e.g. what libraries to include alongside Juyter itself)
-- c. Firewall issues
-- d. Persistency of notebook across session boundaries
+a. Hosting the JupyterLab launcher WebSite
+b. Execution work environment (e.g. what libraries to include alongside Juyter itself)
+c. Firewall issues
+d. Persistency of notebook across session boundaries
 
 **1.1. Hosting JupyterLab**
 
