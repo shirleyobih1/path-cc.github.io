@@ -1,3 +1,10 @@
+---
+title: "Global Infrastructure Laboratory: Options for Jupyter Support in OSG"
+date: 2021-03-31T15:15:26+10:00
+featured: true
+excerpt_separator: <!--more-->
+weight: 4
+---
 Mach 9th 2021:
 ---------------------
 We had a 1h discussion open to the entire staff@opensciencegrid.org mailing list. 
