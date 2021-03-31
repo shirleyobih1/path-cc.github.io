@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 weight: 4
 ---
 
-### Summary of GIL Discussion of Options for Jupyter Support in OSG
+# Summary of GIL Discussion of Options for Jupyter Support in OSG
 
 GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team went through the document below and concluded the following:
@@ -20,7 +20,7 @@ OSG Open Pool single researcher support, i.e. us as a “research computing prov
 
 > D. We agreed that what exactly we will support along these lines, and when is now a management decision about effort. In particular, it seems unlikely that we have the freedom to support anything along these lines until we have replaced the effort we recently lost due to staff departures. 
 
-### GIL Presentation Document
+# GIL Presentation Document
 
 First, we have to decide what it means.
 There are two interpretations:
