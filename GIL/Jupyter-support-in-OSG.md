@@ -36,12 +36,12 @@ Both will require pseudo-instant access to compute resources, although the type 
 
 Jupyter notebooks are mostly used for interactive analysis. As such, users are likely to want a single process that does all the work. Which implies that they would want to run on a single physical node (since OSG does not really support MPI or alike).
 
-Assuming we can get pseudo-instant access to worker node resources (see below), there are three technical steps to consider:
+Assuming we can get pseudo-instant access to worker node resources (see below), there are four technical steps to consider:
 
-a. Hosting the JupyterLab launcher WebSite
-b. Execution work environment (e.g. what libraries to include alongside Juyter itself)
-c. Firewall issues
-d. Persistency of notebook across session boundaries
+1. Hosting the JupyterLab launcher WebSite
+2. Execution work environment (e.g. what libraries to include alongside Juyter itself)
+3. Firewall issues
+4. Persistency of notebook across session boundaries
 
 **1.1. Hosting JupyterLab**
 
