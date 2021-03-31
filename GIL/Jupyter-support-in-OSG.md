@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 weight: 4
 ---
 
-## Summary of GIL Discussion of Options for Jupyter Support in OSG
+### Summary of GIL Discussion of Options for Jupyter Support in OSG
 
 GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team went through the document below and concluded the following:
@@ -20,7 +20,7 @@ OSG Open Pool single researcher support, i.e. us as a “research computing prov
 
 > D. We agreed that what exactly we will support along these lines, and when is now a management decision about effort. In particular, it seems unlikely that we have the freedom to support anything along these lines until we have replaced the effort we recently lost due to staff departures. 
 
-## GIL Presentation Document
+### GIL Presentation Document
 
 First, we have to decide what it means.
 There are two interpretations:
@@ -32,7 +32,7 @@ One can of course combine the two, but the two problems are mostly orthogonal.
 
 Both will require pseudo-instant access to compute resources, although the type and amount may differ between the two classes.
 
-**1. Scheduling a Jupyter notebook on a OSG worker node**
+## 1. Scheduling a Jupyter notebook on a OSG worker node
 
 Jupyter notebooks are mostly used for interactive analysis. As such, users are likely to want a single process that does all the work. Which implies that they would want to run on a single physical node (since OSG does not really support MPI or alike).
 
@@ -67,7 +67,7 @@ Then there is the problem of network security; the default JupyterLab connection
 
 It is quite common for notebook users to expect that their notebooks are persistent. I.e. wherever they left off at the end of one session is where they can restart the next time they come around. A usable notebook environment on OSG would require a mechanism for a user to re-start a notebook as they left it last time they worked with it. This has storage implications, and introduces state into OSG in ways that we don’t have for any jobs we have today. A “notebook job” is thus fundamentally different than any other job we currently have on OSG.
 
-**2. Launching OSG jobs from a Jupyter notebook**
+## 2. Launching OSG jobs from a Jupyter notebook
 
 The opposite problem is allowing for a Jupyter notebook to launch OSG jobs.
 Here the problems are mostly:
@@ -87,7 +87,7 @@ A major question is how will users make use of the OSG-provisioned resources. Wh
 
 Finally, the Jupyter notebooks can run pretty much anywhere, including dedicated OSG resources (e.g. the OSG k8s cluster), (university) login nodes, OSG worker nodes or user laptops. It should really not matter, although setup and support level may vary.
 
-**3. Providing pseudo-instant access to OSG worker node resources**
+## 3. Providing pseudo-instant access to OSG worker node resources
 
 Jupyter notebooks are usually associated with interactive use. Fast access to OSG resources is thus essential for any associated use. Tens of seconds of wait is likely acceptable (assuming that most interactive notebook requests are much faster because they are executed locally on the computer that hosts the notebook) but tens of minutes is not; we call it here “pseudo-interactive”. 
 HTCondor has three mechanisms to deliver pseudo-interactive access:
