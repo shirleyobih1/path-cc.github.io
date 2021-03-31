@@ -25,8 +25,8 @@ OSG Open Pool single researcher support, i.e. us as a “research computing prov
 First, we have to decide what it means.
 There are two interpretations:
 
-- a.Launching a Jupyter notebook on a OSG worker node through a OSG-managed interface
-- b. Allow an already running Jupyter notebook to submit OSG jobs
+- Launching a Jupyter notebook on a OSG worker node through a OSG-managed interface
+- Allow an already running Jupyter notebook to submit OSG jobs
 
 One can of course combine the two, but the two problems are mostly orthogonal.
 
