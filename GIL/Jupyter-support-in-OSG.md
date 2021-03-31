@@ -11,14 +11,14 @@ weight: 4
 GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team went through the document below and concluded the following.
 
->A. We do not want to support option 1. below. i.e. we do not want to support notebooks as jobs on OSG. There is not enough value to be gained given the complexity and thus cost to support something like this. At least not in the foreseeable future.
+> A. We do not want to support option 1. below. i.e. we do not want to support notebooks as jobs on OSG. There is not enough value to be gained given the complexity and thus cost to support something like this. At least not in the foreseeable future.
 
->B. We see value in supporting option 2 below, even if we do not support quasi-realtime functionality. I.e. even if all we supported was a jupyter notebook terminal from which somebody could do everything they presently do with the ssh-login, it would be a worthwhile addition. Such an addition might lead us to embrace “non-terminal” notebook functionality over time. E.g. Ilya mentioned integration with Rucio commands, Miron mentioned possibly having graphical displays of progress of workflows towards completion, etc. etc.
+> B. We see value in supporting option 2 below, even if we do not support quasi-realtime functionality. I.e. even if all we supported was a jupyter notebook terminal from which somebody could do everything they presently do with the ssh-login, it would be a worthwhile addition. Such an addition might lead us to embrace “non-terminal” notebook functionality over time. E.g. Ilya mentioned integration with Rucio commands, Miron mentioned possibly having graphical displays of progress of workflows towards completion, etc. etc.
 
->C. We see value in 2 below from two perspectives: 
+> C. We see value in 2 below from two perspectives: 
 OSG Open Pool single researcher support, i.e. us as a “research computing provider”, as well as providing documentation for how campuses can support their users on the notebook environment that they support for them with OSG as a “notebook backend batch system”.
 
->D. We agreed that what exactly we will support along these lines, and when is now a management decision about effort. In particular, it seems unlikely that we have the freedom to support anything along these lines until we have replaced the effort we recently lost due to staff departures. 
+> D. We agreed that what exactly we will support along these lines, and when is now a management decision about effort. In particular, it seems unlikely that we have the freedom to support anything along these lines until we have replaced the effort we recently lost due to staff departures. 
 
 ## GIL Presentation Document
 
