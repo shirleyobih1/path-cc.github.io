@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 weight: 4
 ---
 
-##Summary of GIL Discussion of Options for Jupyter Support in OSG
+## Summary of GIL Discussion of Options for Jupyter Support in OSG
 
 GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team went through the document below and concluded the following.
