@@ -58,8 +58,8 @@ With CVMFS, assuming we let the user either pick the container or the modules to
 **1.3. Firewall issues**
 Once the Jupyter “job” is deployed, it starts a service that is listening for requests. I.e. incoming connectivity is required.
 Two options here:
-- 1. Should we just restrict ourselves to the locations that allow this? What fraction of OSG resources currently allows it? Do we even have means to ask that at job submission time?
-- 2. Implement some sort of port forwarding solution. There are several places that do that, including PRP and SDSC, but they require a persistent service on a bastion node. Would that be an option for OSG sites?
+1. Should we just restrict ourselves to the locations that allow this? What fraction of OSG resources currently allows it? Do we even have means to ask that at job submission time?
+2. Implement some sort of port forwarding solution. There are several places that do that, including PRP and SDSC, but they require a persistent service on a bastion node. Would that be an option for OSG sites?
 
 Then there is the problem of network security; the default JupyterLab connection is http, not https. Https is likely doable, but one would need to manage the host certificates… Using custom CA and a CDN-like reverse proxy is probably the best solution; SDSC is using this approach (still in beta, though, as far as I understand).
 
@@ -71,14 +71,15 @@ It is quite common for notebook users to expect that their notebooks are persist
 
 The opposite problem is allowing for a Jupyter notebook to launch OSG jobs.
 Here the problems are mostly:
-- 1. Ephemeral nature of the notebooks
-- 2. Authentication
-- 3. HTCondor libraries
-- 4. Marrying interactive nature of Jupyter with Batch nature of OSG
-- 5. Where is the Jupyter notebook running
+1. Ephemeral nature of the notebooks
+2. Authentication
+3. HTCondor libraries
+4. Marrying interactive nature of Jupyter with Batch nature of OSG
+5. Where is the Jupyter notebook running
 
 
 Jupyter notebooks are ephemeral by nature; they run as long as the user actively interacts with them, but they can disappear at any time. So they are not a good candidate for hosting a HTCondor schedd (there may also be security implications). We thus have to assume that the schedd is hosted external to the notebook itself.
+
 We will thus need strong authentication. Standard OSG credentials should work.
 The absence of any server/daemon code will also make HTConor software distribution simpler, as we only need the client libraries and cmdtools. Helper wrappers too be used in the notebook would be desirable for ease of use, but are not a hard requirement.
 
@@ -90,9 +91,9 @@ Finally, the Jupyter notebooks can run pretty much anywhere, including dedicated
 
 Jupyter notebooks are usually associated with interactive use. Fast access to OSG resources is thus essential for any associated use. Tens of seconds of wait is likely acceptable (assuming that most interactive notebook requests are much faster because they are executed locally on the computer that hosts the notebook) but tens of minutes is not; we call it here “pseudo-interactive”. 
 HTCondor has three mechanisms to deliver pseudo-interactive access:
-- a. Preemption
-- b. Sleeper slots
-- c. Idled slots
+a. Preemption
+b. Sleeper slots
+c. Idled slots
 
 OSG has always had preemption as a first-class concept. However, it was mostly a provider tool, not a scheduling tool. OSG could extend it to the scheduling domain to achieve pseudo-interactive semantics. One just has to be careful to keep the pseudo-interactive load a small fraction of the total request, as it both reduces the batch-level resource availability and incurs badput.
 
