@@ -42,5 +42,5 @@ layer with benefits across the NSF CI ecosystem.
 
 GIL has proposed and led the discussion of the following ideas:
 
-> [Jupyter Support in OSG](https://path-cc.io/GIL/Jupyter-support-in-OSG/)
+> [March 9, 2021 - Jupyter Support in OSG](https://path-cc.io/GIL/Jupyter-support-in-OSG/)
 
