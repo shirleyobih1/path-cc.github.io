@@ -40,7 +40,7 @@ and public cloud providers. By leveraging these connections and other NSF-funded
 national and global projects, PATh is positioned to innovate on the infrastructure
 layer with benefits across the NSF CI ecosystem. 
 
-GIL has proposed and lead the discussion of the following ideas:
+GIL has proposed and led the discussion of the following ideas:
 
 > [Jupyter Support in OSG](https://path-cc.io/GIL/Jupyter-support-in-OSG/)
 
