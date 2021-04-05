@@ -8,7 +8,7 @@ weight: 4
 
 # Summary of GIL Discussion of Options for Jupyter Support in OSG
 
-GIL conducted an open dicussion with the entire staff@opensciencegrid.org mailing list on March 9, 2021. 
+GIL conducted an open dicussion with the entire OSG staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team reviewed the [proposal document](https://docs.google.com/document/d/1d7-x5Kh6IayZR5BYQduhYf__5mFUckvMN0xBJ9iD1G0/) and concluded the following:
 
 > A. We do not want to support notebooks as jobs on OSG (Option 1 in the document). There is not enough value to be gained given the complexity and thus cost to support something like this. At least not in the foreseeable future.
