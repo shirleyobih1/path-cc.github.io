@@ -50,10 +50,10 @@ from these services.
 
 The institutions in the partnership are:
 
+* [University of Wisconsin-Madison](https://www.wisc.edu/)
 * [Information Sciences Institute](https://www.isi.edu/)
 * [Morgridge Institute for Research](https://morgridge.org/)
 * [The University of Chicago](https://www.uchicago.edu/)
 * [San Diego Supercomputing Center at the University of California San Diego](https://www.sdsc.edu/)
 * [Indiana University](https://www.iu.edu/)
 * [University of Nebraska-Lincoln](https://www.unl.edu/)
-* [University of Wisconsin-Madison](https://www.wisc.edu/)
