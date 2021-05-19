@@ -2,7 +2,8 @@
 layout: home
 title: Partnership to Advance Throughput Computing
 description: Partnership to Advance Throughput Computing
-intro_image: "images/CHTCandOSG.svg"
+intro_image_CHTC: "images/CHTC-centered.svg"
+intro_image_OSG: "images/OSG-centered.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
