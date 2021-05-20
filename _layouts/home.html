@@ -128,7 +128,26 @@ bodyClass: page-home
     <div class="col-12 col-md-4 col-lg-4 order-2 order-md-2">
       <!-- Right side bar-->
       <div class="intro">
-        <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col">
+          <div class="row">
+            <h2>Events:</h2>
+            {% assign selected_events = site.data.events %}
+            <ul>
+              {% for event_hash in selected_events %}
+              {% assign event = event_hash[1] %}
+              <li>
+                {% include event-card.html event=event %}
+              </li>
+              {% else %}
+              <h1>No Events Planned</h1>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="row">
+            <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
