@@ -1,27 +1,35 @@
 {% assign event = include.event %}
 
-<div class="event-card">
-    <a href="{{event.url}}">
+<div class="event-card w-100 pb-1">
+    <a href="{{ site.baseurl }}{{ event.url }}">
         <div class="card">
-            <div class="card-header">
-                <div class="row justify-content-between">
-                    <div class="col">
-                        {% assign end = event.enddate | date: "-%d" %}
-                        {{ event.startdate | date: "%b %d" | upcase | append : end }}
-                    </div>
-                    <div class="col text-right">
-                        {{ event.location }}
+            {% if event.startdate %}
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col p-0">
+                            {% assign end = event.enddate | date: "-%e" %}
+                            {{ event.startdate | date: "%b %e" | upcase | append : end }}
+                        </div>
+                        <div class="col pr-0 text-right">
+                            {{ event.location }}
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
             {% if event.image %}
                 <img alt="" class="card-img" src="{{ event.image }}" \>
+                <div class="card-body">
+                    <h3 class="card-title m-0">
+                        {{ event.title }}
+                    </h3>
+                </div>
             {% else %}
-                <h2 class="card-title">
-                    {{ event.name }}
-                </h2>
+                <div class="card-body">
+                    <h3 class="card-title m-0">
+                        {{ event.title }}
+                    </h3>
+                </div>
             {% endif %}
-
         </div>
     </a>
 

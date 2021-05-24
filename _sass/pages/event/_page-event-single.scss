@@ -1,0 +1,15 @@
+.article-date {
+    font-size: 60%;
+}
+.article-date:before {
+    content: '\a';
+    white-space: pre;
+}
+
+.article-title {
+    line-height: 1.0;
+}
+
+.news-single .title {
+    line-height: 1.0;
+}

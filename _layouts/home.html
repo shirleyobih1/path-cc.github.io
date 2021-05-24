@@ -67,7 +67,7 @@ bodyClass: page-home
             {% for article in sorted_articles limit:2 %}
             <div class="col-12 col-md-12 mb-1">
               <h2 class="article-title">
-                <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
+                <a href="{{site.baseurl}}{{article.url}}">{{ article.title }}</a>
                 <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
               </h2>
               <p>{{ article.excerpt | markdownify | strip_html}}</p>
@@ -127,27 +127,18 @@ bodyClass: page-home
     </div>
     <div class="col-12 col-md-4 col-lg-4 order-2 order-md-2">
       <!-- Right side bar-->
-      <div class="intro">
-        <div class="col">
-          <div class="row">
-            <h2>Events:</h2>
-            {% assign selected_events = site.data.events %}
-            <ul>
-              {% for event_hash in selected_events %}
-              {% assign event = event_hash[1] %}
-              <li>
-                {% include event-card.html event=event %}
-              </li>
-              {% else %}
-              <h1>No Events Planned</h1>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="row">
-            <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
+      <div class="intro pb-0"></div>
+      <div class="col">
+        <div class="row pb-2">
+          <h2 class="mb-0">Events:</h2>
+          {% assign events = site.events | sort: "startdate" %}
+          {% for event in events %}
+            {% include event-card.html event=event %}
+          {% endfor %}
         </div>
-
+        <div class="row">
+          <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
     </div>
   </div>
