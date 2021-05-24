@@ -1,6 +1,6 @@
 # PATh - Partnership to Advance Throughput Computing
 
-[PATh](https://path-cc.io/) brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing.
+[PATh](https://path-cc.io/) brings together the Center for High Throughput Computing and the OSG in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing.
 
 Thie website is a [Jekyll](https://jekyllrb.com/) based website.  The theme is based on [Jekyll-Serif](https://github.com/zerostaticthemes/jekyll-serif-theme).  Please create a pull request to modify the website.
 

@@ -10,7 +10,7 @@ publish: true
   <figcaption class="figure-caption">OSG All-Hands Meeting<br/></figcaption>
 </figure>
 
-**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://opensciencegrid.org/" target="_blank">Open Science Grid</a>. Everyone is invited to attend. Registration is free but required, so
+**Register now for the online** <a href="https://indico.fnal.gov/event/47040/registrations/2899/" target="_blank">2021 All Hands Meeting</a>, **March 1-5**, offered by the <a href="https://opensciencegrid.org/" target="_blank">OSG</a>. Everyone is invited to attend. Registration is free but required, so
 [please take a minute to register now](https://indico.fnal.gov/event/47040/registrations/2899/).
 
 > *The OSG All-Hands Meeting is an excellent opportunity to discuss the latest developments and directions within the OSG, connect with other colleagues and       hear from researchers about their work and how they are taking advantage of distributed high throughput computing.* 
@@ -18,7 +18,7 @@ publish: true
 
   Frank Würthwein, OSG Executive Director and Meeting Chair, in speaking about this year's the All-Hands Meeting, noted: 
 
-> *These past 12 months, unlike any others, have shown the power and influence of the Open Science Grid in supporting researchers as they work to enhance           science and the importance of the contributors to the pool. The All-Hands Meeting brings the open science community together to share knowledge as this           democratization of science changes the world.* 
+> *These past 12 months, unlike any others, have shown the power and influence of the OSG in supporting researchers as they work to enhance           science and the importance of the contributors to the pool. The All-Hands Meeting brings the open science community together to share knowledge as this           democratization of science changes the world.* 
 
 A wide range of contributors and attendees with diverse backgrounds from across the world wiil be participating in the meeting. A small sampling of the speakers includes Amir Bitran, Harvard University, speaking on "Towards design of folding inhibitors against SARS-CoV-2 proteins", Kevin Thompson, National Science Foundation, discussing "CC* and campus computing," and James P. Howard, Johns Hopkins Applied Physics Laboratory, will be talking about "Modeling demand for medical resources." The full list of contributors can be found on [the Contributors page](https://indico.fnal.gov/event/47040/contributions/).
 
