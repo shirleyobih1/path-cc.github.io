@@ -1,0 +1,30 @@
+{% assign event = include.event %}
+
+<div class="event-card w-100 mt-1 shadow-sm">
+    {% if event.alturl %}
+        <a href="{{ site.baseurl }}{{ event.alturl }}">
+    {% else %}
+        <a href="{{ site.baseurl }}{{ event.url }}">
+    {% endif %}
+        <div class="card shadow">
+            {% if event.startdate %}
+                <div class="card-header">
+                    <h2 class="m-0 text-dark">
+                        {% assign end = event.enddate | date: "-%e" %}
+                        {{ event.startdate | date: "%b %e" | upcase | append : end }}
+                        |
+                        {{ event.location }}
+                    </h2>
+                </div>
+            {% endif %}
+            {% if event.image %}
+                <img alt="" class="card-img" src="{{ event.image }}" \>
+            {% endif %}
+            <div class="card-body">
+                <h2 class="card-title text-dark m-0">
+                    {{ event.title }}
+                </h2>
+            </div>
+        </div>
+    </a>
+</div>
