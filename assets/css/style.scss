@@ -73,19 +73,6 @@ body {
   }
 }
 
-.article {
-  .main {
-
-  }
-  .subsection {
-    border-left: solid;
-    border-left-color: $primary;
-    background-color: $white-offset; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, $white-offset, white);
-    margin-bottom: auto;
-  }
-}
-
 .image-container{
   img{
     width: 100%;
