@@ -1,17 +1,17 @@
 {% assign event = include.event %}
 
-<div class="event-card w-100 mt-1 shadow-sm">
+<div class="event-card w-100 mt-1">
     {% if event.alturl %}
         <a href="{{ site.baseurl }}{{ event.alturl }}">
     {% else %}
         <a href="{{ site.baseurl }}{{ event.url }}">
     {% endif %}
         <div class="card shadow">
-            {% if event.startdate %}
+            {% if event.start_date %}
                 <div class="card-header">
                     <h2 class="m-0 text-dark">
-                        {% assign end = event.enddate | date: "-%e" %}
-                        {{ event.startdate | date: "%b %e" | upcase | append : end }}
+                        {% assign end = event.end_date | date: "-%e" %}
+                        {{ event.start_date | date: "%b %e" | upcase | append : end }}
                         |
                         {{ event.location }}
                     </h2>

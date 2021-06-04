@@ -1,7 +1,0 @@
-{% assign start = startdate | date: "%B %e" %}
-{% if enddate %}
-    {% assign middle = enddate | date: "-%e" | prepend: start%}
-    {% assign date = enddate | date: ", %Y" | prepend: middle %}
-{% else %}
-    {% assign date = enddate | date: ", %Y" | prepend: start %}
-{% endif %}

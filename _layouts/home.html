@@ -131,14 +131,14 @@ bodyClass: page-home
       <div class="col">
         <div class="row d-sm-none d-md-block">
           <h1 class="m-0">Events</h1>
-          <div class="container pr-0 pl-0  border-top border-dark border-2">
-            {% assign events = site.events | sort: "startdate" %}
+          <div class="container pr-0 pl-0 pb-2  border-top border-dark border-2">
+            {% assign events = site.events | sort: "start_date" %}
             {% for event in events %}
             {% include event-card-sidebar.html event=event %}
             {% endfor %}
           </div>
         </div>
-        <div class="row">
+        <div class="row shadow">
           <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>

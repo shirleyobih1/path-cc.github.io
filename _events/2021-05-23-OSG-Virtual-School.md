@@ -4,15 +4,17 @@ layout: events
 published: true
 
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-startdate: 2021-08-02
-enddate: 2021-08-13
+start_date: 2021-08-02
+end_date: 2021-08-13
 location: "Online"
 link: "https://opensciencegrid.org/virtual-school-2021/"
 image: "/images/events/osguserschool.png"
+header_image: "/images/events/Madison-Header.jpg"
 ---
 
 {% capture main %}
-<p style="color: #FF6600;"><strong>Applications now open!</strong> Due May 28 &ndash; see below for link.</p>
+
+**The sidebar text and excerpt will need to be editted before pushing this live**
 
 <p style="font-size: larger; font-weight: bold;">Transform your research with vast amounts of computing!</p>
 
@@ -69,8 +71,8 @@ They should clearly identify your name and “OSG Virtual School 2021” in the 
 
 Ideal candidates will:
 
-*   Be graduate students doing research or support staff helping researchers (but see below)
-*   Need large amounts of computing, which could transform research or open new paths to discovery
+* Be graduate students doing research or support staff helping researchers (but see below)
+* Need large amounts of computing, which could transform research or open new paths to discovery
 *   Have basic experience with the Linux command line (or learn beforehand)
 *   Be able to commit to at least 20 hours each week for the School dates
 
@@ -82,7 +84,35 @@ Also, we consider people in other groups
 (post-doctoral researchers, faculty, researchers, other staff, etc.),
 especially if you convince us that this opportunity is likely
 to have a significant effect on your work or research, or that of others.
+{% endcapture %}
 
+
+{% capture subsection %}
+# When
+
+June 3–5, 2021
+ 
+# Where
+
+Camp Copass
+8200 E McKinney Street
+Denton, TX 76208
+
+# Cost
+
+Early Bird Rate — $225
+
+(Increases to $325 after April 22nd)
+
+Includes all meals during the conference; attendees will be responsible for their own travel and accommodations. We have reserved a block of rooms on the camp property that can be purchased at time of registration.
+
+# Questions?
+
+Contact Steve Laufmann at slaufmann@discovery.org
+
+{% endcapture %}
+
+{% capture endblock %}
 ## Contact Us
 
 The OSG Virtual School is part of the
@@ -92,13 +122,6 @@ learn about past OSG Schools.
 If you have any questions about the event, feel free to email us:
 
 <user-school@opensciencegrid.org>
-{% endcapture %}
-
-
-{% capture subsection %}
-# Dates and Details
-
-I hope that this works but frankly if it does I am unsure of the reason.
 {% endcapture %}
 
 {% include event-page.html %}
