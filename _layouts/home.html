@@ -133,9 +133,13 @@ bodyClass: page-home
           <h1 class="m-0">Events</h1>
           <div class="container pr-0 pl-0 pb-2  border-top border-dark border-2">
             {% assign events = site.events | sort: "start_date" %}
-            {% for event in events %}
-            {% include event-card-sidebar.html event=event %}
-            {% endfor %}
+            {% if events.size > 0 %}
+              {% for event in events %}
+              {% include event-card-sidebar.html event=event %}
+              {% endfor %}
+            {% else %}
+              <h2>No Upcoming Events</h2>
+            {% endif %}
           </div>
         </div>
         <div class="row">
