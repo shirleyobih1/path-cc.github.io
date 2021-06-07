@@ -8,9 +8,9 @@ homepage:
   show_alert: true
   show_call_box: true
 logo:
-  mobile: "images/logo/logo.png"
-  desktop: "images/logo/logo.png"
-  desktop_height: "46px"
+  mobile: "images/logo/Logo_Round_Med.png"
+  desktop: "images/logo/Logo_Round_Med.png"
+  desktop_height: "72px"
 footer:
   copyright_text: 'This project is supported by National Science Foundation under Cooperative Agreement OAC-2030508. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.'
 
@@ -19,7 +19,7 @@ seo:
   meta_og_type: "website"
   meta_og_url: "https://path-cc.io"
   meta_og_description: "PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing."
-  meta_og_image: "https://path-cc.io/images/logo/logo-og.png"
+  meta_og_image: "https://path-cc.io/images/logo/Logo_Primary_Acronym.png"
   meta_twitter_card: "summary"
   meta_twitter_site: "PATh"
   meta_twitter_image: "https://path-cc.io/images/logo/logo-twitter.png"
