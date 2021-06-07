@@ -2,9 +2,9 @@
 
 <div class="event-card w-100 mt-1">
     {% if event.alturl %}
-        <a href="{{ site.baseurl }}{{ event.alturl }}">
+        <a href="{{ event.alturl | relative_url  }}">
     {% else %}
-        <a href="{{ site.baseurl }}{{ event.url }}">
+        <a href="{{ event.url | relative_url  }}">
     {% endif %}
         <div class="card">
             {% if event.start_date %}
@@ -18,7 +18,7 @@
                 </div>
             {% endif %}
             {% if event.image %}
-                <img alt="" class="card-img" src="{{ event.image }}" \>
+                <img alt="" class="card-img" src="{{ event.image | relative_url }}" \>
             {% endif %}
             <div class="card-body">
                 <h2 class="card-title text-dark m-0">

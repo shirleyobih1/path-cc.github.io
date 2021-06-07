@@ -1,22 +1,32 @@
 .event{
-    .event-header{
-        img{
+    .event-header {
+        img {
             width: 100%;
         }
-        .image-container{
+
+        .image-container {
             display: block;
             height: auto;
             width: 100%;
         }
-        .title{
+
+        .title {
             line-height: 1.0;
         }
-        .subtitle{
+
+        .subtitle {
             color: $text-muted;
             margin-bottom: 0;
             padding: 10px;
             background-color: $white-offset;
             text-align: right;
         }
+    }
+    .subsection {
+        border-left: solid;
+        border-left-color: $primary;
+        background-color: $white-offset; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, $white-offset, white);
+        margin-bottom: auto;
     }
 }
