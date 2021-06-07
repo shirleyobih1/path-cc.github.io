@@ -61,6 +61,7 @@ $sub-footer-text-color: $white;
 @import 'pages/team/team-summary';
 @import 'pages/services/page-services-single';
 @import 'pages/news/page-news-single';
+@import 'pages/event/page-event-single';
 
 body {
   font-size: 16px;
@@ -70,4 +71,13 @@ body {
     font-size: 16px;
     line-height: 1.3;
   }
+}
+
+.image-container{
+  img{
+    width: 100%;
+  }
+  display: block;
+  height: auto;
+  width: 100%;
 }

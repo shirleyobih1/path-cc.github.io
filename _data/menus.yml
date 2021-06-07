@@ -8,12 +8,15 @@ main:
   - name: "News"
     url: "/news/"
     weight: 4
+  - name: "Events"
+    url: "/events/"
+    weight: 5
   - name: "About"
     url: "/about/"
-    weight: 5
+    weight: 6
   - name: "Contact"
     url: "/contact/"
-    weight: 6
+    weight: 7
 
 footer:
   - name: "Home"

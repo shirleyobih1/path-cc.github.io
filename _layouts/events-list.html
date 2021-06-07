@@ -1,0 +1,49 @@
+---
+layout: default
+bodyClass: page-services-list
+---
+
+<div class="intro">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+                {{ content }}
+            </div>
+            {% if page.intro_image %}
+            <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+                <figure class="figure">
+                    <img alt={{ page.title }} class="figure-img img-fluid rounded {% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+                    {% if page.intro_image_caption %}
+                    <figcaption class="figure-caption text-right"> {{ page.intro_image_caption | markdownify }} </figcaption>
+                    {% endif %}
+                </figure>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container pt-6 pb-6">
+    <div class="row">
+        {% assign sorted_events = site.events | reverse  %}
+        {% for event in sorted_events %}
+        <div class="col-12 col-md-6 mb-3">
+            <div class="news news-summary">
+                <div class="article-content">
+                    <h2 class="article-title">
+                        <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
+                    </h2>
+                    <h2 class="article-title">
+                        {% assign date = event.start_date | date: "%B %e" %}
+                        {% if event.end_date %}
+                            {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
+                        {% endif %}
+                        <small class="text-muted">{{ date }}</small>
+                    </h2>
+                    <p>{{ event.excerpt | markdownify | strip_html }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
