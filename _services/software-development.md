@@ -11,7 +11,7 @@ Software Suite (HTCSS) to enable the potential of distributed High Throughput
 Computing. This suite of software tools includes HTCondor, components to build
 both on-premise HTCondor compute clusters for use by independent academic,
 commercial, and government campuses, and components to support the federation of
-processing and data resources across the Open Science Grid. 
+processing and data resources across the OSG. 
 <!--more-->
 
 Software Development Team activities balance the inherent tension between the

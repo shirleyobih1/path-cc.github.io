@@ -7,7 +7,7 @@ layout: 'page'
 
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{site.baseurl}}/images/news/submitlocally.jpg" class="figure-img img-fluid rounded" alt="add alt text" width="450px">
-  <figcaption class="figure-caption">Open Science Grid<br/>Credit: Miron Livny</figcaption>
+  <figcaption class="figure-caption">OSG<br/>Credit: Miron Livny</figcaption>
 </figure>
 
 The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. 
