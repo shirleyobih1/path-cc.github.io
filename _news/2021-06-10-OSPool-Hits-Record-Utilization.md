@@ -13,13 +13,15 @@ The people behind these big numbers deserve some recognition. Researchers respon
 
 - Researcher [Susanne Pfeifer](https://biodesign.asu.edu/susanne-pfeifer) from Arizona State University investigating genomics and evolution. 
 
+
 Many other researchers nationwide are tapping into the OSPool and are contributing to the long tail of science. Access to the OSPool is free and open to:
 
-> Any researcher affiliated with a project at a US-based academic, government, or non-profit institution 
->
-> Any researcher affiliated with an organization that has its own access point (including affiliations outside the US)
->
-> All areas of research including social sciences, humanities, life sciences, engineering, medicine, chemistry, and physics.
+- Any researcher affiliated with a project at a US-based academic, government, or non-profit institution 
+
+- Any researcher affiliated with an organization that has its own access point (including affiliations outside the US)
+
+- All areas of research including social sciences, humanities, life sciences, engineering, medicine, chemistry, and physics.
+
 
 Who contributes these distributed high-throughput computing resources to support this science? Campuses large and small across the country. From universities like Syracuse, South Dakota State, Purdue, and the University of Connecticut, to organizations like the [American Museum of Natural History](https://www.amnh.org/) –– institutions nationwide enable this research.
 
