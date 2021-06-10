@@ -3,13 +3,13 @@ title: "OSPool Usage Hits Daily Record"
 date: 2021-06-10T12:00:00+00:00
 publish: true
 --- 
-Researchers utilizing the OSPool are racking up record-breaking numbers. On June 8, the OSPool, which provides computing resources to researchers across the country, went over 1.1 million core hours –– a daily record number. To put this in perspective, one million core hours is equivalent to using 42 thousand cores in just one day. That is close to half the size of Expanse, one of the National Science Foundation’s largest funded supercomputing centers. In short, an increasing number of researchers are utilizing the OSG to carry out an incredible amount of computing.  
+Researchers utilizing the OSPool are racking up record-breaking numbers. On June 8, the OSPool, which provides computing resources to researchers across the country, went over 1.1 million core hours –– a daily record number. To put this in perspective, one million core hours is equivalent to using 42 thousand cores in just one day. That is close to half the size of [Expanse,](https://www.sdsc.edu/services/hpc/expanse/) one of the National Science Foundation’s largest funded supercomputing centers. In short, an increasing number of researchers are utilizing the OSG to carry out an incredible amount of computing.  
 
 The people behind these big numbers deserve some recognition. Researchers responsible for piling up these hours include: 
 
-The Event Horizon Telescope (EHT), an international collaboration capturing the first image of a black hole through the creation of a virtual Earth-sized telescope 
-Michigan State University researcher Martin Berz , who conducts simulations of the Muon g-2 Experiment at Fermilab 
-Researcher Susanne Pfeifer from Arizona State University investigating genomics and evolution. 
+The [Event Horizon Telescope (EHT),](https://eventhorizontelescope.org/) an international collaboration capturing the first image of a black hole through the creation of a virtual Earth-sized telescope 
+Michigan State University researcher [Martin Berz](https://pa.msu.edu/profile/berz/), who conducts simulations of the [Muon g-2 Experiment at Fermilab](https://muon-g-2.fnal.gov/) 
+Researcher [Susanne Pfeifer](https://biodesign.asu.edu/susanne-pfeifer) from Arizona State University investigating genomics and evolution. 
 
 Many other researchers nationwide are tapping into the OSPool and are contributing to the long tail of science. Access to the OSPool is free and open to:
 Any researcher affiliated with a project at a US-based academic, government, or non-profit institution 
