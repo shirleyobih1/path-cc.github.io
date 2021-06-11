@@ -12,7 +12,7 @@ publish: true
 
 **Save the date and register now for another** <a href="https://indico.fnal.gov/event/46925/" target="_blank">Campus Workshop on distributed high-throughput computing (dHTC)</a>, **February 8-9**, offered by the <a href="https://path-cc.io/" target="_blank">Partnership to Advance Throughput computing (PATh)</a>. All campus cyberinfrastructure (CI) staff are invited to attend!
 
-<ul><li><b>Feb 8 Training on <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2021/" target="_blank">Using and Facilitating the Use of dHTC and the Open Science Grid (OSG)</a></b>, 2-5pm ET.
+<ul><li><b>Feb 8 Training on <a href="https://opensciencegrid.org/dHTC-Campus-Workshop-2021/" target="_blank">Using and Facilitating the Use of dHTC and the OSG</a></b>, 2-5pm ET.
 <i>seats limited; register ASAP!</i></li>
 
 <li><b>Feb 9 dHTC Virtual Office Hours</b> with breakout rooms for discussion on all things dHTC, including OSG services for campuses and CC* awards, 2-5pm ET.
