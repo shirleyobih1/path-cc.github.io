@@ -21,4 +21,4 @@ Many other researchers nationwide are tapping into the OSPool and are contributi
 
 Who contributes these distributed high-throughput computing resources to support this science? Campuses large and small across the country. From universities like Syracuse, South Dakota State, Purdue, and the University of Connecticut, to organizations like the [American Museum of Natural History](https://www.amnh.org/) –– institutions nationwide enable this research.
 
-To learn more about OSPools visit: [https://opensciencegrid.org/about/open_science_pool/](https://opensciencegrid.org/about/open_science_pool)
+To learn more about OSPools visit: [Open Science Pool](https://opensciencegrid.org/about/open_science_pool)
