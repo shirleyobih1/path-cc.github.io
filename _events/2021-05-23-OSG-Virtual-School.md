@@ -3,7 +3,17 @@ title: "OSG Virtual School 2021"
 layout: events
 published: true
 
-excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+excerpt: The OSG Virtual School 2021 will prepare you to use high throughput computing (HTC)&nbsp;&mdash;
+whether on a local system or using
+[OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
+to run large-scale research simulation, analysis, and other applications for cutting-edge science. Applications for the OSG Virtual School 2021 are now closed. We are currently reviewing applications and will be sending out acceptance letters to applicants mid-June. 
+
+Please note:
+
+- We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. 
+
+- We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings.
+
 start_date: 2021-08-02
 end_date: 2021-08-13
 location: "Online"
