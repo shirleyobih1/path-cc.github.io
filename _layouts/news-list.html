@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: sub-page
 bodyClass: page-services-list
 ---
 
-{% include subpage-header.html %}
-
-<div class="container pt-6 pb-6">
+<div class="container pb-6">
   <div class="row">
     {% assign sorted_articles = site.news | reverse  %}
     {% for article in sorted_articles %}
