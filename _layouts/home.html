@@ -10,7 +10,7 @@ bodyClass: page-home
       <div class="intro">
         <div class="container">
           <div class="row justify-content-start">
-            <div class="col-12 col-md-10 col-lg-8 mb-2">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8 mb-2">
               <img alt={{ page.title }} class="intro-image" src="{{ 'images/logo/Logo_Primary_Med.png' | relative_url }}" />
             </div>
           </div>
@@ -24,7 +24,7 @@ bodyClass: page-home
               <div class="row mb-2">
                 <div class="col-12">
                   <div class="">
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-evenly">
                       <div class="col-md-5 col-lg-4">
                         <a href="https://chtc.cs.wisc.edu/">
                           <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image_CHTC | relURL }}" />
@@ -143,7 +143,6 @@ bodyClass: page-home
       {% endif %}
     </div>
     <div class="col-12 col-md-4 col-lg-4 order-2 order-md-2">
-      <!-- Right side bar-->
       <div class="intro pb-0"></div>
       <div class="col">
         <div class="row d-sm-none d-md-block">
