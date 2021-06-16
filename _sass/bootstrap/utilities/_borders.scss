@@ -27,6 +27,15 @@
 }
 
 //
+// Border-width
+//
+@each $width, $value in $border-widths {
+  .border-#{$width} {
+    border-width: $value !important;
+  }
+}
+
+//
 // Border-radius
 //
 

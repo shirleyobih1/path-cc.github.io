@@ -1,0 +1,29 @@
+---
+layout: sub-page
+bodyClass: page-services-list
+---
+
+<div class="container pb-6">
+    <div class="row">
+        {% assign sorted_events = site.events | reverse  %}
+        {% for event in sorted_events %}
+        <div class="col-12 col-md-6 mb-3">
+            <div class="news news-summary">
+                <div class="article-content">
+                    <h2 class="article-title">
+                        <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
+                    </h2>
+                    <h2 class="article-title">
+                        {% assign date = event.start_date | date: "%B %e" %}
+                        {% if event.end_date %}
+                            {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
+                        {% endif %}
+                        <small class="text-muted">{{ date }}</small>
+                    </h2>
+                    <p>{{ event.excerpt | markdownify | strip_html }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

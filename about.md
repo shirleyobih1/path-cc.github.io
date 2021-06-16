@@ -1,9 +1,10 @@
 ---
 title: 'About PATh'
 date: 2020-09-13T00:00:00Z
-layout: 'page'
+layout: sub-page
 ---
 
+{% capture content %}
 The Partnership to Advance Throughput Computing (PATh) is a project funded by
 NSF's OAC Campus Cyberinfrastructure (CC\*) program in order to address the
 needs of the rapidly growing community of faculty and students who are
@@ -57,3 +58,9 @@ The institutions in the partnership are:
 * [San Diego Supercomputing Center at the University of California San Diego](https://www.sdsc.edu/)
 * [Indiana University](https://www.iu.edu/)
 * [University of Nebraska-Lincoln](https://www.unl.edu/)
+{% endcapture %}
+  
+{% capture content %}
+{% include markdown-container.html %}
+{% endcapture %}
+{% include body-container.html %}
