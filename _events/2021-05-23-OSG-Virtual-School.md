@@ -28,7 +28,7 @@ header_image: "/images/events/Madison-Header.jpg"
 
 <p style="font-size: larger; font-weight: bold;">Transform your research with vast amounts of computing!</p>
 
-Applications to the OSG Virtual School 2021 are now closed. Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
+Unfortuantely, applications to the OSG Virtual School 2021 are now closed. Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
 whether on a local system or using
 [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
 to run large-scale research simulation, analysis, and other applications for cutting-edge science.
@@ -53,33 +53,14 @@ which includes access to HTC experts and to HTC systems via the
 (otherwise available to researchers working on a U.S.-based academic, government, or non-profit research project).
 
 While no travel is involved and the schedule allows for some flexibility,
-accepted applicants will be asked to commit at least 20 hours each week.
+and accepted applicants were asked to commit at least 20 hours each week.
 You can view [the high-level schedule for 2021](schedule.md),
 and we expect the detailed schedule and materials to be similar to the
 [OSG Virtual School Pilot 2020](https://opensciencegrid.org/virtual-school-pilot-2020/).
 
-Note: We hope to return to an in-person OSG User School in 2022!
+We hope to return to an in-person OSG User School in 2022. 
 
-## Applications
-
-Applications are now open.
-**The deadline for applications is Friday, 28 May 2021.**
-Submit your application soon to ensure consideration!
-
-To apply, complete both steps below (in parallel, if you like):
-
-*   Complete the [online application form](https://uwmadison.co1.qualtrics.com/jfe/form/SV_0SZ8duEyHLZYVdI)
-    (link goes to Qualtrics website, which hosts the application)
-
-*   Have someone email a letter of recommendation for you to
-    [user-school@opensciencegrid.org](mailto:user-school@opensciencegrid.org)
-    (any reasonable format is fine; we like PDF or plain text best)
-
-For the letter of recommendation, ask someone who knows you professionally&nbsp;&mdash;
-ideally a faculty member or other supervisor.
-They should clearly identify your name and “OSG Virtual School 2021” in the email subject and letter.
-
-Ideal candidates will:
+If you are thinking about applying for 2022, ideal candidates will:
 
 * Be graduate students doing research or support staff helping researchers (but see below)
 * Need large amounts of computing, which could transform research or open new paths to discovery
@@ -100,19 +81,14 @@ to have a significant effect on your work or research, or that of others.
 {% capture subsection %}
 # When
 
-June 3–5, 2021
+August 2 - 13 2021
  
 # Where
 
-Camp Copass
-8200 E McKinney Street
-Denton, TX 76208
+Virtual This Year
 
 # Cost
 
-Early Bird Rate — $225
-
-(Increases to $325 after April 22nd)
 
 Includes all meals during the conference; attendees will be responsible for their own travel and accommodations. We have reserved a block of rooms on the camp property that can be purchased at time of registration.
 
