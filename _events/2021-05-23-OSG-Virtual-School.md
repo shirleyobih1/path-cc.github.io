@@ -3,14 +3,14 @@ title: "OSG Virtual School 2021"
 layout: events
 published: true
 
-excerpt: The OSG Virtual School 2021 will prepare you to use high throughput computing (HTC)&nbsp;&mdash;
+excerpt: The OSG Virtual School 2021 prepares student attendees to use high throughput computing (HTC)&nbsp;&mdash;
 whether on a local system or using
 [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
-to run large-scale research simulation, analysis, and other applications for cutting-edge science. Applications for the OSG Virtual School 2021 are now closed. We are currently reviewing applications and will be sending out acceptance letters to applicants mid-June. 
+to run large-scale research simulation, analysis, and other applications for cutting-edge science. Unfortunately, applications for the OSG Virtual School 2021 are now closed. 
 
 Please note:
 
-- We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. 
+- We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. We will be posting these materials immediately following the conclustion of the school this year.
 
 - We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings.
 
@@ -28,25 +28,25 @@ header_image: "/images/events/Madison-Header.jpg"
 
 <p style="font-size: larger; font-weight: bold;">Transform your research with vast amounts of computing!</p>
 
-The OSG Virtual School 2021 will prepare you to use high throughput computing (HTC)&nbsp;&mdash;
+Applications to the OSG Virtual School 2021 are now closed. Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
 whether on a local system or using
 [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
 to run large-scale research simulation, analysis, and other applications for cutting-edge science.
 Through lecture, demonstration, hands-on exercises, and
 a personalized learning plan that includes one-on-one and small-group consulting with experienced OSG staff,
-you will learn to harness HTC systems and apply them to your own computational research.
+students will learn to harness HTC systems and apply them to the researcher's own computational work.
 The School is ideal for graduate students in any research area for whom large-scale computing
 is a vital part of the research process; we also consider applications from advanced undergraduates,
 post-doctoral students, faculty, and staff!
 
-This virtual offering has been tuned for remote participation,
+This year's virtual offering has been tuned for remote participation,
 with the goal of helping attendees get their own work running within the 2-week period,
 and is not merely a translation of the in-person program
 (last offered in [2019](https://opensciencegrid.org/user-school-2019/)).
 
 **The Virtual School will be held the weeks of August 2&ndash;6 and 9&ndash;13.**
 The event is free and materials will be posted publicly.
-A selective application process is required for full participation,
+A selective application process was required for full participation,
 which includes access to HTC experts and to HTC systems via the
 [Center for High Throughput Computing](https://chtc.cs.wisc.edu/approach.shtml) and
 [OSG Connect](https://www.osgconnect.net/) service
