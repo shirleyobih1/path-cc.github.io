@@ -1,5 +1,5 @@
 ---
-title: "OSG Virtual School 2021"
+title: "Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021"
 layout: events
 published: true
 
@@ -16,7 +16,7 @@ Please note:
 
 start_date: 2021-08-02
 end_date: 2021-08-13
-location: "Online"
+location: "Virtual"
 link: "https://opensciencegrid.org/virtual-school-2021/"
 image: "/images/events/osguserschool.png"
 header_image: "/images/events/Madison-Header.jpg"
@@ -26,9 +26,9 @@ header_image: "/images/events/Madison-Header.jpg"
 
 **The sidebar text and excerpt will need to be editted before pushing this live**
 
-<p style="font-size: larger; font-weight: bold;">Transform your research with vast amounts of computing!</p>
+<p style="font-size: larger; font-weight: bold;">Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021!</p>
 
-Unfortuantely, applications to the OSG Virtual School 2021 are now closed. Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
+Applications to the OSG Virtual School 2021 are now closed. Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
 whether on a local system or using
 [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
 to run large-scale research simulation, analysis, and other applications for cutting-edge science.
