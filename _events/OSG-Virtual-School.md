@@ -1,19 +1,20 @@
 ---
+short_title: OSG Virtual School 2021
 title: "Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021"
 layout: events
 published: true
 
-excerpt: The OSG Virtual School 2021 prepares student attendees to use high throughput computing (HTC)&nbsp;&mdash;
-whether on a local system or using
-[OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
-to run large-scale research simulation, analysis, and other applications for cutting-edge science. Unfortunately, applications for the OSG Virtual School 2021 are now closed. 
-
-Please note:
-
-- We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. We will be posting these materials immediately following the conclustion of the school this year.
-
-- We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings.
-
+excerpt: >
+    The OSG Virtual School 2021 prepares student attendees to use high throughput computing (HTC)&nbsp;&mdash;
+    whether on a local system or using
+    [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
+    to run large-scale research simulation, analysis, and other applications for cutting-edge science. Unfortunately, applications for the OSG Virtual School 2021 are now closed. 
+    
+    Please note:
+    
+    - We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. We will be posting these materials immediately following the conclustion of the school this year.
+    
+    - We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings.
 start_date: 2021-08-02
 end_date: 2021-08-13
 location: "Virtual"
@@ -23,8 +24,6 @@ header_image: "/images/events/Madison-Header.jpg"
 ---
 
 {% capture main %}
-
-**The sidebar text and excerpt will need to be editted before pushing this live**
 
 <p style="font-size: larger; font-weight: bold;">Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021!</p>
 
