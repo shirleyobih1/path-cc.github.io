@@ -74,7 +74,7 @@ make a good case for yourself!
 Also, we consider people in other groups
 (post-doctoral researchers, faculty, researchers, other staff, etc.),
 especially if you convince us that this opportunity is likely
-to have a significant effect on your work or research, or that of others.
+to have a significant effect on your work or research, or that of others. 
 {% endcapture %}
 
 
@@ -87,14 +87,10 @@ August 2 - 13 2021
 
 Virtual This Year
 
-# Cost
-
-
-Includes all meals during the conference; attendees will be responsible for their own travel and accommodations. We have reserved a block of rooms on the camp property that can be purchased at time of registration.
 
 # Questions?
 
-Contact Steve Laufmann at slaufmann@discovery.org
+Contact use at <user-school@opensciencegrid.org> with any questions. 
 
 {% endcapture %}
 
