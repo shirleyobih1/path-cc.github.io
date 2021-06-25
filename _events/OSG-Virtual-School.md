@@ -60,10 +60,10 @@ We hope to return to an in-person OSG User School in 2022.
 
 If you are thinking about applying for 2022, ideal candidates will:
 
-- * Be graduate students doing research or support staff helping researchers (but see below)
-- * Need large amounts of computing, which could transform research or open new paths to discovery
-- * Have basic experience with the Linux command line (or learn beforehand)
-- * Be able to commit to at least 20 hours each week for the School dates
+> * Be graduate students doing research or support staff helping researchers (but see below)
+> * Need large amounts of computing, which could transform research or open new paths to discovery
+> * Have basic experience with the Linux command line (or learn beforehand)
+> * Be able to commit to at least 20 hours each week for the School dates
 
 Not a graduate student or support staff?
 
