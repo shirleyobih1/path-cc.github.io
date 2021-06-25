@@ -4,7 +4,7 @@ title: "Acceptance Letters Sent and Preparations Underway for OSG Virtual School
 layout: events
 published: true
 
-excerpt: >
+excerpt: |
     The OSG Virtual School 2021 prepares student attendees to use high throughput computing (HTC)&nbsp;&mdash;
     whether on a local system or using
     [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
