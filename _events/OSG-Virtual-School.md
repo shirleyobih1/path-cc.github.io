@@ -1,6 +1,6 @@
 ---
 short_title: OSG Virtual School 2021
-title: "Preparations Underway for OSG Virtual School 2021"
+title: "OSG Virtual School 2021"
 layout: events
 published: true
 
