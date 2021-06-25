@@ -51,7 +51,7 @@ which includes access to HTC experts and to HTC systems via the
 (otherwise available to researchers working on a U.S.-based academic, government, or non-profit research project).
 
 While no travel is involved and the schedule allows for some flexibility,
-and accepted applicants were asked to commit at least 20 hours each week.
+accepted applicants were asked to commit at least 20 hours each week.
 You can view [the high-level schedule for 2021](schedule.md),
 and we expect the detailed schedule and materials to be similar to the
 [OSG Virtual School Pilot 2020](https://opensciencegrid.org/virtual-school-pilot-2020/).
@@ -62,13 +62,13 @@ If you are thinking about applying for 2022, ideal candidates will:
 
 * Be graduate students doing research or support staff helping researchers (but see below)
 * Need large amounts of computing, which could transform research or open new paths to discovery
-*   Have basic experience with the Linux command line (or learn beforehand)
-*   Be able to commit to at least 20 hours each week for the School dates
+* Have basic experience with the Linux command line (or learn beforehand)
+* Be able to commit to at least 20 hours each week for the School dates
 
-**Not a graduate student or support staff?**
+Not a graduate student or support staff?
+
 We consider applications from advanced undergraduates,
-especially those who are involved in graduate-level research or coursework;
-make a good case for yourself!
+especially those who are involved in graduate-level research or coursework.
 Also, we consider people in other groups
 (post-doctoral researchers, faculty, researchers, other staff, etc.),
 especially if you convince us that this opportunity is likely
