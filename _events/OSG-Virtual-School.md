@@ -52,7 +52,7 @@ which includes access to HTC experts and to HTC systems via the
 
 While no travel is involved and the schedule allows for some flexibility,
 accepted applicants were asked to commit at least 20 hours each week.
-You can view [the high-level schedule for 2021](schedule.md),
+You can view [the high-level schedule for 2021](https://opensciencegrid.org/virtual-school-2021/schedule/),
 and we expect the detailed schedule and materials to be similar to the
 [OSG Virtual School Pilot 2020](https://opensciencegrid.org/virtual-school-pilot-2020/).
 
