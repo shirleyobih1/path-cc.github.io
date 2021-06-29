@@ -34,6 +34,9 @@ collections:
   news:
     output: true
     permalink: /news/:path/
+  events:
+    output: true
+    permalink: /events/:path/
 
 defaults:
   - scope:
@@ -46,6 +49,10 @@ defaults:
     values:
       layout: news
       bodyClass: page-news-single
+  - scope:
+      type: events
+    values:
+      layout: events
   - scope:
       path: 'images'
     values:
