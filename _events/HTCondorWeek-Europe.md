@@ -18,7 +18,7 @@ end_date: 2021-09-26
 location: "Virtual"
 link: "Coming Soon"
 image: "/images/events/osguserschool.png"
-header_image: "/images/events/Madison-Header.jpg"
+header_image: "/images/events/HTCondorEurope.jpeg"
 ---
 
 {% capture main %}
