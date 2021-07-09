@@ -17,7 +17,7 @@ start_date: 2021-07-09
 end_date: 2021-09-26
 location: "Virtual"
 link: "Coming Soon"
-image: "/images/events/osguserschool.png"
+image: "/images/events/HTCondorEurope.jpeg"
 header_image: "/images/events/HTCondorEurope.jpeg"
 ---
 
