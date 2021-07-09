@@ -1,11 +1,11 @@
 ---
 layout: sub-page
-bodyClass: page-services-list
+bodyClass: page-events-list
 ---
 
 <div class="container pb-6">
     <div class="row">
-        {% assign sorted_events = site.events | reverse  %}
+        {% assign sorted_events = site.events | sort: "start_date"  %}
         {% for event in sorted_events %}
         <div class="col-12 col-md-6 mb-3">
             <div class="news news-summary">
