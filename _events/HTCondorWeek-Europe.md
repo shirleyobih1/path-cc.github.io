@@ -13,7 +13,7 @@ open to all organisations (including companies) and persons interested inHTCondo
 If you know potentially interested persons, don't hesitate to make them aware of this opportunity.
     
    
-start_date: 2021-07-09
+start_date: 2021-07-08
 end_date: 2021-09-26
 location: "Virtual"
 link: "Coming Soon"
