@@ -1,6 +1,6 @@
 ---
 short_title: HTCondor Week Sept 2021
-title: "HTCondor Week Europe"
+title: "HTCondor Week Sept 20 - 24"
 layout: events
 published: true
 
