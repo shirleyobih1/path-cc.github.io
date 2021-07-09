@@ -26,12 +26,11 @@ header_image: "/images/events/HTCondorEurope.jpeg"
 <p style="font-size: larger; font-weight: bold;">Save the Date for HTCondor Week workshop Sept 20 - 24!</p>
 
 
-HTCondor workshop will be held from Monday 20 September to Friday 24 September 2021. Mark your agendas!
+HTCondor workshop will be held from Monday 20 September to Friday 24 September 2021. Mark your calendars!
 
-Due to the current pandemic still largely impacting international travel, the workshop will be held purely virtually. (We warmly thank INFN Torino
-in Italy for the proposal to host.)
+Due to the current pandemic still largely impacting international travel, the workshop will be held purely virtually. (We warmly thank [INFN Torino](https://www.to.infn.it/) in Italy for the proposal to host.)
 
-The workshop will be organised as videoconference and/or Webcast sessions of about three hours per day, most probably somewhere between 15:00 h and
+The workshop will be organized as videoconference and/or Webcast sessions of about three hours per day, probably somewhere between 15:00 h and
 19:00 h Paris time (13:00 h - 17:00 h UTC, 8 am - 12 am CDT).
 
 The workshop will be an excellent occasion for learning from the sources (the developers!) about HTCondor, exchanging with your colleagues about
@@ -46,7 +45,7 @@ Attendance is free of charge, but requires registration (see below).
 If you consider attending, we would very much like to know about your project, your experience and your plans. Hence you are warmly encouraged
 to propose a short presentation.
 
-Registration and abstract submission will be opened soon; a dedicated update will be sent once available.
+Registration and abstract submission will be opened soon. 
 
 If you have any questions, please contact us at <hepix-2021condorworkshop-support@hepix.org>.
 
