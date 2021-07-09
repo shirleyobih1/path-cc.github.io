@@ -58,7 +58,7 @@ HTCondor Technical Lead, U Wisconsin, Madison, USA
 
 
 {% capture subsection %}
-# When
+# Date
 
 Sept 20 - 24 2021
 
