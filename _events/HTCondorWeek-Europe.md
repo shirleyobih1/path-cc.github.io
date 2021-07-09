@@ -13,7 +13,7 @@ excerpt: |
     If you know potentially interested persons, don't hesitate to make them aware of this opportunity.
     
    
-start_date: 2021-07-08
+start_date: 2021-09-20
 end_date: 2021-09-26
 location: "Virtual"
 link: "Coming Soon"
