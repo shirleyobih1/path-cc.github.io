@@ -1,6 +1,6 @@
 ---
-short_title: HTCondor Week Sept 2021
-title: "HTCondor Week Europe"
+short_title: European HTCondor Workshop 
+title: "European HTCondor Workshop Sept 20 - 24"
 layout: events
 published: true
 
@@ -23,10 +23,10 @@ header_image: "/images/events/HTCondorEurope.jpeg"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Save the Date for HTCondor Week workshop Sept 20 - 24!</p>
+<p style="font-size: larger; font-weight: bold;">Save the Date for the European HTCondor Workshop Sept 20 - 24!</p>
 
 
-HTCondor workshop will be held from Monday 20 September to Friday 24 September 2021. Mark your calendars!
+The European HTCondor Workshop will be held from Monday 20 September to Friday 24 September 2021. Mark your calendars!
 
 Due to the current pandemic still largely impacting international travel, the workshop will be held purely virtually. (We warmly thank [INFN Torino](https://www.to.infn.it/) in Italy for the proposal to host.)
 
