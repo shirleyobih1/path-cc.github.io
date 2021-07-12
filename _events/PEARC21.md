@@ -1,41 +1,35 @@
 ---
-short_title: OSG Virtual School 2021
-title: "OSG Virtual School 2021"
+short_title: Facilitation Team speaking at PEARC21
+title: "Facilitation Team Presenting Tutorial July 19 at PEARC21"
 layout: events
 published: true
 
+
 excerpt: |
-    The OSG Virtual School 2021 prepares attendees to use high throughput computing (HTC)&nbsp;&mdash;
-    whether on a local system or using
-    [OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
-    to run large-scale research simulation, analysis, and other applications for cutting-edge science. 
+    We’d like to invite you to the PEARC21 tutorial on “Empowering Research Computing at Your Organization Through the OSG” taking place on Monday, July 19 (8am-     11am PT), presented by the OSG Research Facilitation team.
+    
+  
     
     
-    - We plan to make one instance of each lecture this year available to anyone who registered. Please watch the [OSG Virtual School 2021 website] (opensciencegrid.org/virtual-school-2021) for more details to be added in August. Also, all the written materials will be available publicly online for everyone, regardless of whether you applied to attend this year. We will be posting these materials immediately following the conclustion of the school this year.
-    
-    - We plan to continue running the OSG User School every year! In a typical (non-pandemic) year, we accept applications during the month of March. So please keep an eye out for future offerings. (Applications for 2021 are closed.)
-start_date: 2021-08-02
-end_date: 2021-08-13
+    - We’d like to invite you to the PEARC21 tutorial on “Empowering Research Computing at Your Organization Through the OSG” taking place on Monday, July 19 (8am-     11am PT), presented by the OSG Research Facilitation team.
+    - The tutorial will include an introduction to HTC and the OSG, hands-on use of the OSG, group discussions, and a panel of folks who have supported                 researchers using the OSG. We plan to contact those registered for the tutorial ahead of the conference, so be sure to register soon!
+
+    - We hope to see you at PEARC21!
+
+   
+start_date: 2021-07-19
+end_date: 2021-07-19
 location: "Virtual"
-link: "https://opensciencegrid.org/virtual-school-2021/"
+link: "https://pearc.acm.org/pearc21/"
 image: "/images/events/osguserschool.png"
 header_image: "/images/events/Madison-Header.jpg"
 ---
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021!</p>
+<p style="font-size: larger; font-weight: bold;">OSG Research Facilitation team presenting tutorial July 19 on "Empowering Research Computing at Your Organization Thorugh the OSG"</p>
 
-Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
-whether on a local system or using
-[OSG](https://www.youtube.com/watch?v=t2PzIy-vvaE&list=PLBWb4iScSWcPy7LQ4BuXmm8Z2xO4ZW1J_)&nbsp;&mdash;
-to run large-scale research simulation, analysis, and other applications for cutting-edge science.
-Through lecture, demonstration, hands-on exercises, and
-a personalized learning plan that includes one-on-one and small-group consulting with experienced OSG staff,
-students will learn to harness HTC systems and apply them to the researcher's own computational work.
-The School is ideal for graduate students in any research area for whom large-scale computing
-is a vital part of the research process; we also consider applications from advanced undergraduates,
-post-doctoral students, faculty, and staff!
+We’d like to invite you to the PEARC21 tutorial on “Empowering Research Computing at Your Organization Through the OSG” taking place on Monday, July 19 (8am-     11am PT), presented by the OSG Research Facilitation team.
 
 This year's virtual offering has been tuned for remote participation,
 with the goal of helping attendees get their own work running within the 2-week period,
