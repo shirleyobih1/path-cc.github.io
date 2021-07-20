@@ -30,3 +30,43 @@
         margin-bottom: auto;
     }
 }
+
+.dark-card {
+    width: 100%;
+    margin-bottom: map-get($spacers, 1);
+
+    .card {
+        .card-header {
+            background-color: lighten($primary, 48);
+            padding: 0px;
+            padding-left: map-get($spacers, 1);
+            padding-right: map-get($spacers, 1);
+            h2 {
+                margin: 0px;
+                color: $dark;
+            }
+        }
+        .card-body {
+            background-color: $white-offset;
+            padding: 0px;
+        }
+    }
+    .card:hover {
+        * {
+            transition: background-color 150ms linear;
+        }
+        .card-header {
+            background-color: lighten($primary, 45);
+        }
+        .card-body {
+            background-color: darken($white-offset, 3);
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.dark-card:hover {
+    transform: translateY(-1px);
+}

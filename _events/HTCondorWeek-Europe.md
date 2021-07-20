@@ -7,10 +7,7 @@ published: true
 excerpt: |
     HTCondor Workshop will be held from Monday 20 September to Friday 24 September 2021
     
-    - The workshop will be an excellent occasion for learning from the sources (the developers!) about HTCondor, exchanging with your colleagues about
-    experiences and plans, and providing your feedback to the experts. The HTCondor Compute Element (CE) will be covered as well. Participation is
-    open to all organisations (including companies) and persons interested inHTCondor (and by no means restricted to particle physics and/or academia!)
-    If you know potentially interested persons, don't hesitate to make them aware of this opportunity.
+    - The workshop will be an excellent occasion for learning from the sources (the developers!) about HTCondor, exchanging with your colleagues about experiences and plans, and providing your feedback to the experts. The HTCondor Compute Element (CE) will be covered as well. Participation is open to all organisations (including companies) and persons interested inHTCondor (and by no means restricted to particle physics and/or academia!) If you know potentially interested persons, don't hesitate to make them aware of this opportunity.
     
    
 start_date: 2021-09-20
@@ -92,4 +89,4 @@ If you have any questions about the event, feel free to email us:
 <hepix-2021condorworkshop-support@hepix.org>
 {% endcapture %}
 
-{% include event-page.html %}
+{% include event/event-page.html %}

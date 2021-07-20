@@ -7,7 +7,7 @@ $primary: #d41041;
 $secondary: #f88379;
 $black: #2f2f41;
 $white: #ffffff;
-$white-offset: #fff5f7;
+$white-offset: lighten($primary, 53);
 $steel: #5C5A5A;
 
 // Links
@@ -19,6 +19,10 @@ $link-hover-decoration: underline;
 // Fonts
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: 'Playfair Display', serif, -apple-system;
+
+// Navbar
+$navbar-light-color: $black;
+$navbar-light-active-color: $primary;
 
 // Footer
 $footer-background-color: $primary;
@@ -92,4 +96,47 @@ body {
     color: #5C5A5A;
     font-family: Helvetica, Arial, sans-serif, -apple-system;
   }
+}
+
+.navbar {
+  width: 100%;
+  font-size: 1.2rem;
+  .social-media {
+    img {
+      margin-left: map-get($spacers, 1);
+      height: 35px;
+    }
+  }
+}
+
+.hero-image {
+  background-color: lightgrey;
+  img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.section-break {
+  font-weight: bold;
+  hr {
+    border-top-color: $primary;
+    border-top-width: 3px;
+  }
+  .section-header {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+hr.header-break {
+  border-top-color: $black;
+  border-top-width: 2px;
+  margin-top: 0px;
+}
+
+.muted-date {
+  color: $text-muted;
+  font-size: 60%;
 }

@@ -1,12 +1,31 @@
 <div class='header'>
-  <div class="container">
-    <div class="logo">
-      <a href="{{site.baseurl}}/"><img height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
-    </div>
-    <div class="logo-mobile">
-      <a href="{{site.baseurl}}/"><img alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
-    </div>
-    {% include main-menu.html %}
-    {% include hamburger.html %}
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white pl-0 pr-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="{{ site.logo.desktop_height }}" src="{{ site.logo.desktop | relative_url }}" alt="{{ site.title }}"/>
+      </a>
+
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
+          {% for item in mainmenu %}
+          <li class="nav-item {% if item.url == page.url %}active{% endif %}">
+            <a class="nav-link" href="{{ item.url | relative_url }}">{{ item.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="social-media">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="{{ '/images/icons/twitter.svg' | relative_url }}"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img src="{{ '/images/icons/youtube.svg' | relative_url }}"/>
+          </a>
+        </div>
+      </div>
+
+      {% include hamburger.html %}
+    </nav>
   </div>
 </div>

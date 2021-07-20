@@ -1,0 +1,7 @@
+<h2 class="article-title">
+    <a href="{{site.baseurl}}{{article.url}}">{{ include.title }}</a>
+    {% if include.date %}
+        <small class="text-muted article-date">{{ include.date | date: '%B %d, %Y' }}</small>
+    {% endif %}
+</h2>
+{{ include.desc | markdownify }}
