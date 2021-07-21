@@ -24,6 +24,25 @@ header_image: "/images/events/Madison-Header.jpg"
 
 {% capture main %}
 
+<p style="font-size: larger; font-weight: bold;">For the first time, the OSG Virtual School 2021 will open its core lectures live to the public!</p>
+
+The OSG User School is a premier training program for researchers, facilitators, and others who are interested in learning more about how to use High Throughput Computing to advance research. The application deadline to participate fully has passed, but this year the OSG is inviting the public to attend daily lectures and demonstrations during the School’s first week.  
+
+The public lectures are excellent learning opportunities for students and researchers who could not be full participants of the School. The sessions are also well suited for those interested in learning more about High Throughput Computing, OSG, HTCondor, or leveraging any of these in their computing research.  
+
+Topics include:
+
+* Introduction to High Throughput Computing (HTC)
+* Introduction to HTCondor
+* Introduction to OSG
+* Software for HTC
+* Data for HTC
+
+The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/#20210802) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
+
+The lectures will be recorded and posted on the School website eventually, along with the complete set of exercises. While full participants also have priority access to experts, personalized learning plans, and small-group learning sessions, by opening lectures up to the public, a great deal of the School content will be available to everyone.  
+
+
 <p style="font-size: larger; font-weight: bold;">Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021!</p>
 
 Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
@@ -85,6 +104,8 @@ August 2 - 13 2021
 
 Virtual This Year
 
+# Registration
+Registration to participate fully in OSG Virtual School 2021 has closed, but [registration to attend a public lecture](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6.
 
 # Questions?
 
