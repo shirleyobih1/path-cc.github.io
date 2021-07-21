@@ -32,18 +32,17 @@ The public lectures are excellent learning opportunities for students and resear
 
 Topics include:
 
-* Introduction to High Throughput Computing (HTC)
-* Introduction to HTCondor
-* Introduction to OSG
-* Software for HTC
-* Data for HTC
+* The main concepts of High Throughput Computing (HTC)
+* The basics of using HTCondor
+* Getting started on OSG, a national distributed HTC infrastructure for Open Science
+* How to prepare software for use in HTC systems
+* Handling data (input and output) in HTC systems
+
 
 The Public lectures are held daily, August 2–6 from 2:30–4:00 pm CST. Browse the [timetable](https://indico.fnal.gov/event/49686/timetable/#20210802) for a detailed schedule. [Registration](https://indico.fnal.gov/event/49686/registrations/3094/) is open through August 6 and is free, but required. 
 
 The lectures will be recorded and posted on the School website eventually, along with the complete set of exercises. While full participants also have priority access to experts, personalized learning plans, and small-group learning sessions, by opening lectures up to the public, a great deal of the School content will be available to everyone.  
 
-
-<p style="font-size: larger; font-weight: bold;">Acceptance Letters Sent and Preparations Underway for OSG Virtual School 2021!</p>
 
 Attendees of the school will learn to use high throughput computing (HTC)&nbsp;&mdash;
 whether on a local system or using
