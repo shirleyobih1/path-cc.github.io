@@ -45,7 +45,7 @@ Attendance is free of charge, but requires registration (see below).
 If you consider attending, we would very much like to know about your project, your experience and your plans. Hence you are warmly encouraged
 to propose a short presentation.
 
-Registration and abstract submission will be opened soon. 
+[Registration](https://indico.cern.ch/event/1059494/registrations/74555/) and [abstract submission](https://indico.cern.ch/event/1059494/abstracts/) are now open. The registration deadline is September 24, 2021 and the deadline to submit an abstract is September 12, 2021. 
 
 If you have any questions, please contact us at <hepix-2021condorworkshop-support@hepix.org>.
 
@@ -75,7 +75,10 @@ Virtual This Year
 
 No fees, but registration is required.
 
+# Deadlines
+[Register](https://indico.cern.ch/event/1059494/registrations/74555/) before September 24, 2021  
 
+[Submit an abstract](https://indico.cern.ch/event/1059494/abstracts/) before September 12, 2021
 
 # Questions?
 
