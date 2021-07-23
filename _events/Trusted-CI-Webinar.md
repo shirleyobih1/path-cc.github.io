@@ -11,8 +11,8 @@ start_date: 2021-07-26
 end_date: 2021-07-26
 location: "Virtual"
 link: "https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ"
-image: "assets/images/events/trust-webinar-preview.png"
-header_image: "assets/images/events/trust-banner.png"
+image: "/images/events/trust-webinar-preview.png"
+header_image: "/images/events/trust-banner.png"
 ---
 
 {% capture main %}
@@ -38,7 +38,7 @@ functioning infrastructure.
     float: right;
     margin-left: 20px;
 ">
-<img src="/assets/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
+<img src="/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
 <figcaption class="figure-caption">Brian Bockelman</figcaption>
 </figure>
 
@@ -74,4 +74,4 @@ Register [here](https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ).
 
 {% endcapture %}
 
-{% include events/event-page.html %}
+{% include event-page.html %}
