@@ -38,7 +38,7 @@ functioning infrastructure.
     float: right;
     margin-left: 20px;
 ">
-<img src="/images/events/bockelman-smaller.jpeg" class="figure-img img-fluid rounded" alt="BrianBockelman">
+<img src="{{ '/images/events/bockelman-smaller.jpeg' | relative_url }}" class="figure-img img-fluid rounded" alt="BrianBockelman">
 <figcaption class="figure-caption">Brian Bockelman</figcaption>
 </figure>
 
