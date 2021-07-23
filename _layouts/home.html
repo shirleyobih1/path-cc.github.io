@@ -150,7 +150,7 @@ bodyClass: page-home
           <div class="container pr-0 pl-0 pb-2  border-top border-dark border-2">
             {% assign events = site.events | sort: "start_date" %}
             {% if events.size > 0 %}
-              {% for event in events %}
+              {% for event in events limit: 3 %}
               {% include event-card-sidebar.html event=event %}
               {% endfor %}
             {% else %}
