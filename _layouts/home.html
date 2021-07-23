@@ -2,115 +2,125 @@
 title: Jekyll Serif - Jekyll Small Business Theme
 layout: default
 bodyClass: page-home
+header: dark
+logo: /images/logo/PATh-Graphic-Black.svg
 ---
 
-<div id="hero-image" class="hero-image row">
-  <div class="col-12">
-    <img src="{{'/images/icons/card-image.svg' | relative_url}}"/>
+
+<div id="hero-image" class="hero-image">
+  <div class="container pt-4 pb-4">
+    <div class="row mb-2">
+      <img src="{{'images/logo/PATh-Hero.svg' | relative_url}}"/>
+    </div>
+    <div class="row justify-content-center">
+      <a class="btn btn-outline-primary">Learn More</a>
+    </div>
   </div>
 </div>
-{% include text-hr.html text="JOIN" %}
-<div class="row">
-  <div class="col-4">
-    <h1>
-      The OSG provides services and technologies for distributed high-throughput computing (dHTC)!
-    </h1>
-    <hr class="header-break">
-    {% include light-title-date-desc-card.html
+<div class="container">
+  {% include text-hr.html text="JOIN" %}
+  <div class="row">
+    <div class="col-8">
+      <h1>
+        The OSG provides services and technologies for distributed high-throughput computing (dHTC)!
+      </h1>
+      <hr class="header-break">
+      {% include light-title-date-desc-card.html
       title="For Researchers"
       desc="Run your computational work on the OSG via the [OSG Connect](https://www.osgconnect.net/) service, or via access points operated within your campus/collaboration."
-    %}
-    {% include light-title-date-desc-card.html
-        title="For Campus Computing Providers"
-        desc="Integrate your computing and data resources into the OSG, and/or build ‘local’ dHTC capacity. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to collaborate on the right options for your researchers and services."
-    %}
-    {% include light-title-date-desc-card.html
-        title="For Research Collaborations"
-        desc="Share computing capacity, data, and software resources between collaborators and even across continents. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to discuss more."
-    %}
-  </div>
-  <div class="col-4 bg-white-offset"></div>
-  <div class="col-4">
-    <h1 class="m-0">Events</h1>
-    <hr class="header-break">
-    {% assign events = site.events | sort: "start_date" %}
-    {% for event in events limit:2 %}
+      %}
+      {% include light-title-date-desc-card.html
+      title="For Campus Computing Providers"
+      desc="Integrate your computing and data resources into the OSG, and/or build ‘local’ dHTC capacity. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to collaborate on the right options for your researchers and services."
+      %}
+      {% include light-title-date-desc-card.html
+      title="For Research Collaborations"
+      desc="Share computing capacity, data, and software resources between collaborators and even across continents. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to discuss more."
+      %}
+    </div>
+    <div class="col-4">
+      <h1 class="m-0">Events</h1>
+      <hr class="header-break">
+      {% assign events = site.events | sort: "start_date" %}
+      {% for event in events limit:2 %}
       {% include event/event-card.html event=event %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>
-{% include text-hr.html text="NEWS" %}
-<div class="row">
-  {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
-  <div class="col-4 bg-white-offset">
-    {% for article in sorted_articles limit: 1 %}
+  {% include text-hr.html text="NEWS" %}
+  <div class="row">
+    {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
+    <div class="col-4 bg-white-offset">
+      {% for article in sorted_articles limit: 1 %}
       {% include highlighted-title-image-text-card.html
-          internal_href=article.url
-          image=article.image_src
-          alt=article.image_alt
+      internal_href=article.url
+      image=article.image_src
+      alt=article.image_alt
+      title=article.title
+      date=article.date
+      desc=article.excerpt
+      %}
+      {% endfor %}
+    </div>
+    <div class="col-4">
+      <h1 class="m-0">Additional Articles</h1>
+      <hr class="header-break">
+      <div class="row">
+        {% for article in sorted_articles limit: 2 offset: continue %}
+        <div class="col-12">
+          {% include light-title-date-desc-card.html
           title=article.title
           date=article.date
           desc=article.excerpt
-      %}
-    {% endfor %}
-  </div>
-  <div class="col-4">
-    <h1 class="m-0">Additional Articles</h1>
-    <hr class="header-break">
-    <div class="row">
-      {% for article in sorted_articles limit: 2 offset: continue %}
-        <div class="col-12">
-          {% include light-title-date-desc-card.html
-            title=article.title
-            date=article.date
-            desc=article.excerpt
           %}
         </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-4">
+      <a class="twitter-timeline" data-height="650" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
-  <div class="col-4">
-    <a class="twitter-timeline" data-height="650" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-</div>
-{% include text-hr.html text="SERVICES" %}
-<div class="row mb-4">
-  <div class="col-4">
-    <h1 class="mb-0">Affiliates</h1>
-    <hr class="header-break">
-    {% include title-image-card.html
-        title="Center for High Throughput Computing"
-        image=page.intro_image_CHTC
-        alt="Center for High Throughput Computing Logo"
-        href="https://chtc.cs.wisc.edu/"
-    %}
-    {% include title-image-card.html
-        title="OSG"
-        image=page.intro_image_OSG
-        alt="Open Science Grid Logo"
-        href="https://opensciencegrid.org/"
-    %}
-  </div>
-  <div class="col-8">
-    <div class="row justify-content-start">
-      {% for service in site.services %}
-      <div class="col-12 col-md-6">
-        <div class="service service-summary">
-          <div class="service-content">
-            <h2 class="service-title">
-              <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-            </h2>
-            <p>{{ service.excerpt | markdownify | strip_html}}</p>
+  {% include text-hr.html text="SERVICES" %}
+  <div class="row mb-4">
+    <div class="col-4">
+      <h1 class="mb-0">Affiliates</h1>
+      <hr class="header-break">
+      {% include title-image-card.html
+      title="Center for High Throughput Computing"
+      image=page.intro_image_CHTC
+      alt="Center for High Throughput Computing Logo"
+      href="https://chtc.cs.wisc.edu/"
+      %}
+      {% include title-image-card.html
+      title="OSG"
+      image=page.intro_image_OSG
+      alt="Open Science Grid Logo"
+      href="https://opensciencegrid.org/"
+      %}
+    </div>
+    <div class="col-8">
+      <div class="row justify-content-start">
+        {% for service in site.services %}
+        <div class="col-12 col-md-6">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+              </h2>
+              <p>{{ service.excerpt | markdownify | strip_html}}</p>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 

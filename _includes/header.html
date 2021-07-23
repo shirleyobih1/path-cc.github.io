@@ -1,9 +1,13 @@
-<div class='header'>
-  <div class="container-lg">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white pl-0 pr-0">
+{% assign logo = include.logo | default: site.logo.desktop %}
+{% assign header_class = include.header_class | "light" %}
 
-      <a class="navbar-brand" href="/">
-        <img height="{{ site.logo.desktop_height }}" src="{{ site.logo.desktop | relative_url }}" alt="{{ site.title }}"/>
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
+
+      <a class="navbar-brand" href="{{ '/' | relative_url }}">
+        <img height="{{ site.logo.desktop_height }}" src="{{ logo | relative_url }}" alt="{{ site.title }}"/>
       </a>
 
       <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">

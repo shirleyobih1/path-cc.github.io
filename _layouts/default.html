@@ -23,10 +23,8 @@
 <body class='page {{page.bodyClass}}'>
   {% include main-menu-mobile.html %}
   <div id="wrapper" class="wrapper">
-    {% include header.html headerClass='header-extra' %}
-    <div class="container">
-      {{content}}
-    </div>
+    {% include header.html logo=layout.logo header_class=page.header_class %}
+    {{content}}
   </div>
   {% include footer.html %}
   {% include sub-footer.html %}
