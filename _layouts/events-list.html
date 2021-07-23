@@ -14,9 +14,11 @@ bodyClass: page-events-list
                         <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
                     </h2>
                     <h2 class="article-title">
-                        {% assign date = event.start_date | date: "%B %e" %}
-                        {% if event.end_date %}
+                        {% if event.start_date != event.end_date %}
+                            {% assign date = event.start_date | date: "%B %e, %Y" %}
                             {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
+                        {% else %}
+                            {% assign date = event.start_date | date: "%B %e, %Y" %}
                         {% endif %}
                         <small class="text-muted">{{ date }}</small>
                     </h2>
