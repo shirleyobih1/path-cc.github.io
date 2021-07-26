@@ -2,13 +2,24 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
+
+
 // Colors
 $primary: #d41041;
-$secondary: #f88379;
-$black: #2f2f41;
+$primary-light: lighten($primary, 30);
+$primary-white: lighten($primary, 40);
+$secondary: #000000;
+$secondary-light: lighten($secondary, 50);
+$secondary-white: lighten($secondary, 90);
+
+$dark: black;
+$black: #000000;
 $white: #ffffff;
-$white-offset: #fff5f7;
+$white-offset: $secondary-white;
 $steel: #5C5A5A;
+
+// Cards
+$card-background-color: $secondary-light;
 
 // Links
 $link-color: $primary;
@@ -19,6 +30,11 @@ $link-hover-decoration: underline;
 // Fonts
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: 'Playfair Display', serif, -apple-system;
+$font-family-nav: 'Playfair Display', serif, -apple-system;
+
+// Navbar
+$navbar-light-color: $black;
+$navbar-light-active-color: $primary;
 
 // Footer
 $footer-background-color: $primary;
@@ -92,4 +108,41 @@ body {
     color: #5C5A5A;
     font-family: Helvetica, Arial, sans-serif, -apple-system;
   }
+}
+
+.navbar {
+  width: 100%;
+  font-size: 1.2rem;
+  .social-media {
+    img {
+      margin-left: map-get($spacers, 1);
+      height: 35px;
+    }
+  }
+}
+
+
+.section-break {
+  font-weight: bold;
+  hr {
+    border-top-color: $primary;
+    border-top-width: 3px;
+  }
+  .section-header {
+    font-size: large;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+hr.header-break {
+  border-top-color: $black;
+  border-top-width: 2px;
+  margin-top: 0px;
+}
+
+.muted-date {
+  color: $text-muted;
+  font-size: 60%;
 }

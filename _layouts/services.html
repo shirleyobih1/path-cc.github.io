@@ -3,19 +3,17 @@ layout: sub-page
 bodyClass: page-services-list
 ---
 
-<div class="container pb-6">
-  <div class="row">
-    {% for service in site.services %}
-    <div class="col-12 col-md-6 mb-3">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-          </h2>
-          <p>{{ service.excerpt | markdownify | strip_html }}</p>
-        </div>
+<div class="row">
+  {% for service in site.services %}
+  <div class="col-12 col-md-6 mb-3">
+    <div class="service service-summary">
+      <div class="service-content">
+        <h2 class="service-title">
+          <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+        </h2>
+        <p>{{ service.excerpt | markdownify | strip_html }}</p>
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
 </div>

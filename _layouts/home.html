@@ -2,166 +2,139 @@
 title: Jekyll Serif - Jekyll Small Business Theme
 layout: default
 bodyClass: page-home
+header: dark
+logo:
 ---
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-8 col-lg-8 order-1 order-md-1">
-      <div class="intro">
-        <div class="container">
-          <div class="row justify-content-start">
-            <div class="col-12 col-md-10 col-lg-9 col-xl-8 mb-2">
-              <img alt={{ page.title }} class="intro-image" src="{{ 'images/logo/Logo_Primary_Med.png' | relative_url }}" />
-            </div>
-          </div>
-          <div class="row justify-content-start">
-            <div class="col-12 col-md-12 col-lg-12">
-              <p>
-                PATh brings together the Center for High Throughput Computing and the
-                Open Science Grid in order to advance the nation's campuses and science
-                communities through the use of distributed High Throughput Computing.
-              </p>
-              <div class="row mb-2">
-                <div class="col-12">
-                  <div class="">
-                    <div class="row justify-content-evenly">
-                      <div class="col-md-5 col-lg-4">
-                        <a href="https://chtc.cs.wisc.edu/">
-                          <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image_CHTC | relURL }}" />
-                        </a>
-                      </div>
-                      <div class="col-md-5 col-lg-4">
-                        <a href="https://opensciencegrid.org/">
-                          <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image_OSG | relURL }}" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {% if site.homepage.show_call_box %}
-                {% include call.html show_button=true %}
-              {% endif %}
-            </div>
-          </div>
-        </div>
+
+<div id="hero-image" class="hero-image">
+  <div class="container pt-4 pb-4">
+    <div class="row mb-3">
+      <div class="col-12 d-flex justify-content-center">
+        <img class="d-none d-md-block" src="{{ 'images/logo/Logo_Primary.png' | relative_url}}"/>
+        <img class="d-block d-md-none" src="{{ 'images/logo/Logo_Round_Med.png' | relative_url}}"/>
       </div>
-      {% if site.homepage.show_alert %}
-      <div class="homepage-alert">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              {% include home-alert.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-      
-      <div class="strip">
-        <div class="container pb-6 pb-md-6 pt-6 pt-md-6">
-          <h1><a href="{{ '/Submit-Locally-Run-Globally/' | relative_url }}">Submit Locally, Run Globally</a></h1>
-          <hr/>
-          <div class="row justify-content-start">
-            <div class="col-12 col-md-12 mb-1">
-              <p>The PATh project offers technologies and services that enable researchers to harness through a
-                 single interface, and from the comfort of their “home directory”, computing capacity offered by
-                 a global and diverse collection of resources.
-                 <a href="{{ '/Submit-Locally-Run-Globally' | relative_url }}">Learn more</a> about
-                 how researchers leverage Access Points offered by PATh to support their high throughput computational needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="strip">
-        <div class="container pb-6 pb-md-6">
-          <h1><a href="{{site.baseurl}}/news/">Recent News</a></h1>
-          <hr/>
-          <div class="row justify-content-start">
-            {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
-            {% for article in sorted_articles limit:2 %}
-            <div class="col-12 col-md-12 mb-1">
-              <h2 class="article-title">
-                <a href="{{site.baseurl}}{{article.url}}">{{ article.title }}</a>
-                <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
-              </h2>
-              <p>{{ article.excerpt | markdownify | strip_html}}</p>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-      
-      <div class="strip">
-        <div class="container pb-6 pb-md-10">
-          <h1>Services</h1>
-          <hr/>
-          <div class="row justify-content-start">
-            {% for service in site.services %}
-            <div class="col-12 col-md-6 mb-1">
-              <div class="service service-summary">
-                <div class="service-content">
-                  <h2 class="service-title">
-                    <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-                  </h2>
-                  <p>{{ service.excerpt | markdownify | strip_html}}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-auto">
-              <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {% if site.data.features %}
-      <div class="strip strip-grey">
-        <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-          <div class="row justify-content-center">
-      
-            {% for feature in site.data.features %}
-            <div class="col-12 col-md-6 col-lg-4 mb-2">
-              <div class="feature">
-                {% if feature.image %}
-                <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
-                {% endif %}
-                <h2 class="feature-title">{{ feature.title }}</h2>
-                <div class="feature-content">{{ feature.description }}</div>
-              </div>
-            </div>
-            {% endfor %}
-      
-          </div>
-        </div>
-      </div>
-      {% endif %}
     </div>
-    <div class="col-12 col-md-4 col-lg-4 order-2 order-md-2">
-      <div class="intro pb-0"></div>
-      <div class="col">
-        <div class="row d-sm-none d-md-block">
-          <h1 class="m-0">Events</h1>
-          <div class="container pr-0 pl-0 pb-2  border-top border-dark border-2">
-            {% assign events = site.events | sort: "start_date" %}
-            {% if events.size > 0 %}
-              {% for event in events limit: 3 %}
-              {% include event-card-sidebar.html event=event %}
-              {% endfor %}
-            {% else %}
-              <h2>No Upcoming Events</h2>
-            {% endif %}
+    <div class="row justify-content-center">
+      <a class="btn btn-outline-primary">Learn More</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% include text-hr.html text="JOIN" %}
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <h1>
+        The OSG provides services and technologies for distributed high-throughput computing (dHTC)!
+      </h1>
+      {% include light-title-date-desc-card.html
+      title="For Researchers"
+      desc="Run your computational work on the OSG via the [OSG Connect](https://www.osgconnect.net/) service, or via access points operated within your campus/collaboration."
+      %}
+      {% include light-title-date-desc-card.html
+      title="For Campus Computing Providers"
+      desc="Integrate your computing and data resources into the OSG, and/or build ‘local’ dHTC capacity. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to collaborate on the right options for your researchers and services."
+      %}
+      {% include light-title-date-desc-card.html
+      title="For Research Collaborations"
+      desc="Share computing capacity, data, and software resources between collaborators and even across continents. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to discuss more."
+      %}
+    </div>
+    <div class="col-12 col-lg-4">
+      <h1 class="m-0">Events</h1>
+      <hr class="header-break">
+      <div class="row justify-content-center">
+        {% assign events = site.events | sort: "start_date" %}
+        {% for event in events limit:2 %}
+          <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+            {% include event/event-card.html event=event %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include text-hr.html text="NEWS" %}
+  <div class="row">
+    {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
+    <div class="col-12 col-md-6 col-lg-4 bg-white-offset">
+      {% for article in sorted_articles limit: 1 %}
+      {% include highlighted-title-image-text-card.html
+      internal_href=article.url
+      image=article.image_src
+      alt=article.image_alt
+      title=article.title
+      date=article.date
+      desc=article.excerpt
+      %}
+      {% endfor %}
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="row pt-md-0 pt-3">
+        {% for article in sorted_articles limit: 2 offset: continue %}
+        <div class="col-12">
+          {% include light-title-date-desc-card.html
+          title=article.title
+          date=article.date
+          desc=article.excerpt
+          %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-12">
+          <a class="twitter-timeline" data-height="650" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include text-hr.html text="SERVICES" %}
+  <div class="row mb-4">
+    <div class="col-12 col-lg-4 order-2">
+      <h1 class="mb-0">Affiliates</h1>
+      <hr class="header-break">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="Center for High Throughput Computing"
+          image=page.intro_image_CHTC
+          alt="Center for High Throughput Computing Logo"
+          href="https://chtc.cs.wisc.edu/"
+          %}
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="OSG"
+          image=page.intro_image_OSG
+          alt="Open Science Grid Logo"
+          href="https://opensciencegrid.org/"
+          %}
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 order-1">
+      <div class="row justify-content-start">
+        {% for service in site.services %}
+        <div class="col-12 col-md-6">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+              </h2>
+              <p>{{ service.excerpt | markdownify | strip_html}}</p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <a class="twitter-timeline" data-height="1000" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endfor %}
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+

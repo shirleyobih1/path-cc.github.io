@@ -3,29 +3,27 @@ layout: sub-page
 bodyClass: page-events-list
 ---
 
-<div class="container pb-6">
-    <div class="row">
-        {% assign sorted_events = site.events | sort: "start_date"  %}
-        {% for event in sorted_events %}
-        <div class="col-12 col-md-6 mb-3">
-            <div class="news news-summary">
-                <div class="article-content">
-                    <h2 class="article-title">
-                        <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
-                    </h2>
-                    <h2 class="article-title">
-                        {% if event.start_date != event.end_date %}
-                            {% assign date = event.start_date | date: "%B %e" %}
-                            {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
-                        {% else %}
-                            {% assign date = event.start_date | date: "%B %e, %Y" %}
-                        {% endif %}
-                        <small class="text-muted">{{ date }}</small>
-                    </h2>
-                    <p>{{ event.excerpt | markdownify }}</p>
-                </div>
+<div class="row">
+    {% assign sorted_events = site.events | sort: "start_date"  %}
+    {% for event in sorted_events %}
+    <div class="col-12 col-md-6 mb-3">
+        <div class="news news-summary">
+            <div class="article-content">
+                <h2 class="article-title">
+                    <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
+                </h2>
+                <h2 class="article-title">
+                    {% if event.start_date != event.end_date %}
+                        {% assign date = event.start_date | date: "%B %e" %}
+                        {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
+                    {% else %}
+                        {% assign date = event.start_date | date: "%B %e, %Y" %}
+                    {% endif %}
+                    <small class="text-muted">{{ date }}</small>
+                </h2>
+                <p>{{ event.excerpt | markdownify }}</p>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>

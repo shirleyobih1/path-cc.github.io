@@ -1,0 +1,14 @@
+<div class="dark-card">
+    <a href="{{ include.href }}">
+        <div class="card">
+            <div class="card-header">
+                <h2>
+                    {{ include.title }}
+                </h2>
+            </div>
+            {% if event.image %}
+            <img alt="{{ include.alt }}" class="card-img" src="{{ include.image | relative_url }}" \>
+            {% endif %}
+        </div>
+    </a>
+</div>

@@ -74,4 +74,4 @@ Register [here](https://iu.zoom.us/webinar/register/WN_gBLnpC-yS_-en3vKAbeFzQ).
 
 {% endcapture %}
 
-{% include event-page.html %}
+{% include event/event-page.html %}
