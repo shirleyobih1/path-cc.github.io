@@ -23,11 +23,10 @@ logo:
 <div class="container">
   {% include text-hr.html text="JOIN" %}
   <div class="row">
-    <div class="col-8">
+    <div class="col-12 col-lg-8">
       <h1>
         The OSG provides services and technologies for distributed high-throughput computing (dHTC)!
       </h1>
-      <hr class="header-break">
       {% include light-title-date-desc-card.html
       title="For Researchers"
       desc="Run your computational work on the OSG via the [OSG Connect](https://www.osgconnect.net/) service, or via access points operated within your campus/collaboration."
@@ -41,19 +40,23 @@ logo:
       desc="Share computing capacity, data, and software resources between collaborators and even across continents. **Contact us at** [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to discuss more."
       %}
     </div>
-    <div class="col-4">
+    <div class="col-12 col-lg-4">
       <h1 class="m-0">Events</h1>
       <hr class="header-break">
-      {% assign events = site.events | sort: "start_date" %}
-      {% for event in events limit:2 %}
-      {% include event/event-card.html event=event %}
-      {% endfor %}
+      <div class="row justify-content-center">
+        {% assign events = site.events | sort: "start_date" %}
+        {% for event in events limit:2 %}
+          <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+            {% include event/event-card.html event=event %}
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
   {% include text-hr.html text="NEWS" %}
   <div class="row">
     {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
-    <div class="col-4 bg-white-offset">
+    <div class="col-12 col-md-6 col-lg-4 bg-white-offset">
       {% for article in sorted_articles limit: 1 %}
       {% include highlighted-title-image-text-card.html
       internal_href=article.url
@@ -65,10 +68,8 @@ logo:
       %}
       {% endfor %}
     </div>
-    <div class="col-4">
-      <h1 class="m-0">Additional Articles</h1>
-      <hr class="header-break">
-      <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="row pt-md-0 pt-3">
         {% for article in sorted_articles limit: 2 offset: continue %}
         <div class="col-12">
           {% include light-title-date-desc-card.html
@@ -80,29 +81,39 @@ logo:
         {% endfor %}
       </div>
     </div>
-    <div class="col-4">
-      <a class="twitter-timeline" data-height="650" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div class="col-12 col-lg-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-12">
+          <a class="twitter-timeline" data-height="650" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
     </div>
   </div>
   {% include text-hr.html text="SERVICES" %}
   <div class="row mb-4">
-    <div class="col-4">
+    <div class="col-12 col-lg-4 order-2">
       <h1 class="mb-0">Affiliates</h1>
       <hr class="header-break">
-      {% include title-image-card.html
-      title="Center for High Throughput Computing"
-      image=page.intro_image_CHTC
-      alt="Center for High Throughput Computing Logo"
-      href="https://chtc.cs.wisc.edu/"
-      %}
-      {% include title-image-card.html
-      title="OSG"
-      image=page.intro_image_OSG
-      alt="Open Science Grid Logo"
-      href="https://opensciencegrid.org/"
-      %}
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="Center for High Throughput Computing"
+          image=page.intro_image_CHTC
+          alt="Center for High Throughput Computing Logo"
+          href="https://chtc.cs.wisc.edu/"
+          %}
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="OSG"
+          image=page.intro_image_OSG
+          alt="Open Science Grid Logo"
+          href="https://opensciencegrid.org/"
+          %}
+        </div>
+      </div>
     </div>
-    <div class="col-8">
+    <div class="col-12 col-lg-8 order-1">
       <div class="row justify-content-start">
         {% for service in site.services %}
         <div class="col-12 col-md-6">
