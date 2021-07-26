@@ -1,6 +1,6 @@
 <h2 class="text-primary article-title">
-    {% if include.url %}
-        <a href="{{site.baseurl}}{{include.href}}">{{ include.title }}</a>
+    {% if include.href %}
+        <a href="{{include.href | relative_url}}">{{ include.title }}</a>
     {% else %}
         {{ include.title }}
     {% endif %}
