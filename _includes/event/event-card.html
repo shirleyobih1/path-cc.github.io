@@ -9,9 +9,13 @@
         <div class="card">
             {% if event.start_date %}
                 <div class="card-header">
-                    <h2>
-                        {% assign end = event.end_date | date: "-%e" %}
-                        {{ event.start_date | date: "%b %e" | upcase | append : end }}
+                    <h2 class="m-0 text-dark">
+                        {% if event.start_date != event.end_date %}
+                            {% assign end = event.end_date | date: "-%e" %}
+                            {{ event.start_date | date: "%b %e" | upcase | append : end }}
+                        {% else %}
+                            {{ event.start_date | date: "%b %e" | upcase }}
+                        {% endif %}
                         |
                         {{ event.location }}
                     </h2>

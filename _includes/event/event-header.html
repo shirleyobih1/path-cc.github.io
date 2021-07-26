@@ -3,8 +3,8 @@
         <div class="col-auto">
             <h1 class="subtitle">
                 {% assign date = page.start_date | date: "%B %e" %}
-                {% if page.end_date %}
-                {% assign date = page.end_date | date: "-%e" | prepend: date %}
+                {% if event.start_date != event.end_date %}
+                    {% assign date = page.end_date | date: "-%e" | prepend: date %}
                 {% endif %}
 
                 {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
