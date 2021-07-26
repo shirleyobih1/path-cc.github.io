@@ -15,7 +15,7 @@ bodyClass: page-events-list
                     </h2>
                     <h2 class="article-title">
                         {% if event.start_date != event.end_date %}
-                            {% assign date = event.start_date | date: "%B %e, %Y" %}
+                            {% assign date = event.start_date | date: "%B %e" %}
                             {% assign date = event.end_date | date: "-%e, %Y" | prepend: date %}
                         {% else %}
                             {% assign date = event.start_date | date: "%B %e, %Y" %}
