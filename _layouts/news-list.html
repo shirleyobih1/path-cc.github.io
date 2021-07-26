@@ -3,23 +3,22 @@ layout: sub-page
 bodyClass: page-services-list
 ---
 
-<div class="container pb-6">
-  <div class="row">
-    {% assign sorted_articles = site.news | reverse  %}
-    {% for article in sorted_articles %}
-    <div class="col-12 col-md-6 mb-3">
-      <div class="news news-summary">
-        <div class="article-content">
-          <h2 class="article-title">
-            <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
-            <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
-          </h2>
-          <p>{{ article.excerpt | markdownify | strip_html }}</p>
-        </div>
+<div class="row">
+  {% assign sorted_articles = site.news | reverse  %}
+  {% for article in sorted_articles %}
+  <div class="col-12 col-md-6 mb-3">
+    <div class="news news-summary">
+      <div class="article-content">
+        <h2 class="article-title">
+          <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
+          <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
+        </h2>
+        <p>{{ article.excerpt | markdownify | strip_html }}</p>
       </div>
     </div>
-    {% endfor %}
   </div>
+  {% endfor %}
 </div>
+
 
   
