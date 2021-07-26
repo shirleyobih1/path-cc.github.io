@@ -37,7 +37,7 @@
 
     .card {
         .card-header {
-            background-color: lighten($primary, 48);
+            background-color: lighten($card-background-color, 42);
             padding: 0px;
             padding-left: map-get($spacers, 1);
             padding-right: map-get($spacers, 1);
@@ -47,19 +47,20 @@
             }
         }
         .card-body {
-            background-color: $white-offset;
+            background-color: lighten($card-background-color, 40);
             padding: 0px;
         }
     }
     .card:hover {
+        box-shadow: 0px 3px 3px $gray-400;
         * {
             transition: background-color 150ms linear;
         }
         .card-header {
-            background-color: lighten($primary, 45);
+            background-color: lighten($card-background-color, 47);
         }
         .card-body {
-            background-color: darken($white-offset, 3);
+            background-color: lighten($card-background-color, 45);
         }
     }
     a {

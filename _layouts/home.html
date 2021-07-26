@@ -3,14 +3,17 @@ title: Jekyll Serif - Jekyll Small Business Theme
 layout: default
 bodyClass: page-home
 header: dark
-logo: /images/logo/PATh-Graphic-Black.svg
+logo:
 ---
 
 
 <div id="hero-image" class="hero-image">
   <div class="container pt-4 pb-4">
-    <div class="row mb-2">
-      <img src="{{'images/logo/PATh-Hero.svg' | relative_url}}"/>
+    <div class="row mb-3">
+      <div class="col-12 d-flex justify-content-center">
+        <img class="d-none d-md-block" src="{{ 'images/logo/Logo_Primary.png' | relative_url}}"/>
+        <img class="d-block d-md-none" src="{{ 'images/logo/Logo_Round_Med.png' | relative_url}}"/>
+      </div>
     </div>
     <div class="row justify-content-center">
       <a class="btn btn-outline-primary">Learn More</a>
