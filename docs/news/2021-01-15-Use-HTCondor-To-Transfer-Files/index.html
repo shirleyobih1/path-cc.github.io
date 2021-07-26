@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>How to Transfer 460 Terabytes? A File Transfer Case Study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/path-cc.github.io/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/path-cc.github.io/assets/css/style.css" rel="stylesheet">
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+</head>
+<body class='page page-news-single'>
+<div id="main-menu-mobile" class="main-menu-mobile">
+  
+  <ul>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/services/">Services</a>
+    </li>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/team/">Team</a>
+    </li>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/news/">News</a>
+    </li>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/events/">Events</a>
+    </li>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/about/">About</a>
+    </li>
+    
+    <li class="">
+      
+      <a href="/path-cc.github.io/contact/">Contact</a>
+    </li>
+    
+  </ul>
+</div>
+<div id="wrapper" class="wrapper">
+    
+
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
+
+      <a class="navbar-brand" href="/path-cc.github.io/">
+        <img height="70px" src="/path-cc.github.io/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/team/">Team</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/about/">About</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/path-cc.github.io/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/path-cc.github.io/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img src="/path-cc.github.io/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+
+      <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+    </nav>
+  </div>
+</div>
+
+    <div class="container pb-6">
+        
+<div class="row justify-content-start">
+<div class="col-12 col-xl-7 col-lg-8 col-md-10">
+
+<h1 class="title pt-6">How to Transfer 460 Terabytes? A File Transfer Case Study
+    
+    <small class="text-muted article-date">January 15, 2021</small>
+    
+</h1>
+
+<div class="news news-single">
+  <div class="content"><p>When Greg Daues at the <a href="https://resources.istcoalition.org/national-center-for-supercomputing-applications" target="_blank">National Center for Supercomputing Applications (NCSA)</a> needed to transfer 460 Terabytes of NCSA files from <a href="https://in2p3.cnrs.fr/en/node/11" target="_blank">the National Institute of Nuclear and Particle Physics (IN2P3)</a> in Lyon, France to Urbana, Illinois, for a project they were working with <a href="https://www.fnal.gov/" target="_blank">FNAL</a>, <a href="https://cc.in2p3.fr/en/" target="_blank">CC-IN2P3</a> and the <a href="https://www.lsst.org/" target="_blank">Rubin Data Production team</a>, he turned to the <a href="https://research.cs.wisc.edu/htcondor/" target="_blank">HTCondor High Throughput system</a>, not to run computationally intensive jobs, as many do, but to manage the hundreds of thousands of I/O bound transfers.</p>
+
+<h2>The Data</h2>
+
+<p>IN2P3 made the data available via https, but the number of files and their total size made the management of the transfer an engineering challenge.  There were two kinds of files to be transferred, with 3.5 million files with a median size of roughly 100 Mb, and another 3.5 million smaller files, with a median size of about 10 megabytes.  Total transfer size is roughly 460 Terabytes.</p>
+
+<h2>The Requirements</h2>
+
+<p>The requirement for this transfer was to reliably transfer all the files in a reasonably performant way, minimizing the human time to set up, run, and manage the transfer.  Note the noni-goal of optimizing for the fastest possible transfer time – reliability and minimizing the human effort take priority here.  Reliability, in this context implies:</p>
+
+<p>Failed transfers are identified and re-run (with millions of files, a failed transfer is almost inevitable)
+Every file will get transferred
+The operation will not overload the sender, the receiver, or any network in between</p>
+
+<h2>The Inspiration</h2>
+
+<p>Daues presented unrelated work at the <a href="https://research.cs.wisc.edu/htcondor/HTCondorWeek2017/" target="_blank">2017 HTCondor Week workshop</a>.  At this workshop, he heard about the work of Phillip Papodopolous at UCSD, and his international Data Placement Lab (iDPL).   iDPL used HTCondor jobs solely for transferring data between international sites.  Daues re-used and adapted some of these ideas for NCSA’s needs.</p>
+
+<h2>The Solution</h2>
+<p>First, Daues installed a <a href="https://hub.docker.com/r/htcondor/mini" target="_blank">“mini-condor”</a>, an HTCondor pool entirely on one machine, with an access point and eight execution slots on that same machine.  Then, given a single large file containing the names of all the files to transfer, he ran the Unix split command to create separate files with either 50 of the larger files, or 200 of the smaller files.  Finally, using the HTCondor submit file command</p>
+
+<p>Queue filename matching files *.txt</p>
+
+<p>the condor_submit command creates one job per split file, which runs the wget2 command and passes the list of filenames to wget2.  The HTCondor access point can handle tens of thousands of idle jobs, and will schedule these jobs on the eight execution slots.  While more slots would yield more overlapped i/o, eight slots were chosen to throttle the total network bandwidth used.  Over the course of days, this machine with eight slots maintained roughly 600 MB/seconds.</p>
+
+<p><em>(Note that the machine running HTCondor did not crash during this run, but if it had, all the jobs, after submission, were stored reliably on the local disk, and at such time as the crashed machine restarted, and the init program restarted the HTCondor system, all interrupted jobs would be restarted, and the process would continue without human intervention.)</em></p>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/path-cc.github.io/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/path-cc.github.io/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img height="70px" width="70px" src="/path-cc.github.io/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/path-cc.github.io/assets/js/scripts.js"></script>
+
+</body>
+</html>
