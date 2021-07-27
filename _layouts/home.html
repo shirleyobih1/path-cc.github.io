@@ -44,8 +44,8 @@ logo:
       <h1 class="m-0">Events</h1>
       <hr class="header-break">
       <div class="row justify-content-center">
-        {% assign events = site.events | sort: "start_date" %}
-        {% for event in events limit:2 %}
+        {% include get/future_events.html %}
+        {% for event in future_events limit:2 %}
           <div class="col-12 col-sm-10 col-md-6 col-lg-12">
             {% include event/event-card.html event=event %}
           </div>
