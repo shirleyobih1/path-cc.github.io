@@ -1,0 +1,11 @@
+<h2 class="text-primary article-title">
+    {% if include.href %}
+        <a href="{{include.href | relative_url}}">{{ include.title }}</a>
+    {% else %}
+        {{ include.title }}
+    {% endif %}
+    {% if include.date %}
+        <small class="text-muted article-date">{{ include.date | date: '%B %d, %Y' }}</small>
+    {% endif %}
+</h2>
+{{ include.desc | markdownify }}
