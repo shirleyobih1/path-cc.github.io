@@ -36,6 +36,7 @@
     margin-bottom: map-get($spacers, 1);
 
     .card {
+        border: 0px;
         .card-header {
             background-color: lighten($card-background-color, 42);
             padding: 0px;
@@ -47,7 +48,7 @@
             }
         }
         .card-body {
-            background-color: lighten($card-background-color, 40);
+            background-color: lighten($card-background-color, 45);
             padding: 0px;
         }
     }
@@ -57,10 +58,10 @@
             transition: background-color 150ms linear;
         }
         .card-header {
-            background-color: lighten($card-background-color, 47);
+            background-color: lighten($card-background-color, 39);
         }
         .card-body {
-            background-color: lighten($card-background-color, 45);
+            background-color: lighten($card-background-color, 42);
         }
     }
     a {
