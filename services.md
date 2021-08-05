@@ -2,7 +2,7 @@
 title: Services
 layout: services
 intro_image: "images/osg-user-school-2019.png"
-intro_image_caption: "Students and instructors at the annual OSG Summer School."
+intro_image_caption: "Students and instructors at the annual OSG User School."
 intro_image_hide_on_mobile: true
 ---
 
