@@ -50,6 +50,9 @@ We are looking forward to a rich, productive workshop, and we hope to meet many 
 
 Todd Tannenbaum
 HTCondor Technical Lead, U Wisconsin, Madison, USA
+
+Helge Meinhard
+Chair of organising committee, CERN, Geneva, Switzerland
 {% endcapture %}
 
 

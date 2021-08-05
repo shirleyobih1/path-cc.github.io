@@ -19,7 +19,7 @@ $white-offset: $secondary-white;
 $steel: #5C5A5A;
 
 // Cards
-$card-background-color: $secondary-light;
+$card-background-color: lighten($secondary-light, 5);
 
 // Links
 $link-color: $primary;
