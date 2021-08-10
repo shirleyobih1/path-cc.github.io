@@ -5,7 +5,6 @@ publish: true
 image_src: images/news/Science-Gateway-Students.jpeg
 image_alt: UNL students on graduation day. 
 --- 
-
 ***How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications.***
 
 <img src="/images/news/Science-Gateway-Students.jpeg" alt="UNL students on graduation"/>
