@@ -7,7 +7,7 @@ image_alt: UNL students on graduation day.
 --- 
 ***How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications.***
 
-<img src="/images/news/Science-Gateway-Students.jpeg" alt="UNL students on graduation"/>
+<img src="{{ '/images/news/Science-Gateway-Students.jpeg' | relative_url }}" alt="UNL students on graduation"/>
 
 *The UNL students involved in the capstone project, on graduation day. Order from left to right: Evan, Josh, Dan, Daniel, and Conner.*
 
@@ -37,7 +37,7 @@ But learning isn’t just exclusive to students. Joe notes that he gained some u
  
 In the end, this collaboration vastly improved the accessibility of [RNAMake](https://simtk.org/frs/?group_id=1749), Joe’s software suite and the focus of the science gateway. Perhaps he explains it best with an analogy: ”RNAMake is basically a set of 500 different LEGO® pieces. Using enthusiastic gestures, Joe continues by offering an example: “Suppose you want to build something from this palm to this palm, in three-dimensional space. It [RNAMake] will find a set of LEGO® pieces that will fit there.”
 
-<img src="/images/news/RNAMake Example.png" alt="Example of how RNAMake works"/>
+<img src="{{ '/images/news/RNAMake Example.png' | relative_url }}" alt="Example of how RNAMake works"/>
 
 *A demonstration of how RNAMake’s design algorithm works. Credit: Yesselman, J.D., Eiler, D., Carlson, E.D. et al. Computational design of three-dimensional RNA structure and function. Nat. Nanotechnol. 14, 866–873 (2019). [https://doi.org/10.1038/s41565-019-0517-8](https://doi.org/10.1038/s41565-019-0517-8)*
 
