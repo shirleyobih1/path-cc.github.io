@@ -1,7 +1,7 @@
 ---
-title: Campus Cyberinfrastructure (CC*) Awardees Contribute Over 292 Million Core Hours in 2020
-date: 2021-01-15 12:00:00 -0600
-excerpt: Campus Cyberinfrastructure Award Recipients Power the OSG and contributed over 292 million core hours to researchers using distributed high throughput computing (dHTC).
+title: Campus Cyberinfrastructure (CC*) Awardees Contribute Over 349 Million Core Hours in Last 12 Months
+date: 2021-08-12 12:00:00 -0600
+excerpt: Campus Cyberinfrastructure Award Recipients Power the OSG and contributed over 349 million core hours to researchers using distributed high throughput computing (dHTC).
 publish: true
 ---
 
@@ -12,9 +12,9 @@ OSG partners with campuses across the US, including [Campus Cyberinfrastructure 
 
 <iframe width="100%" height="500px" frameBorder="0" style="margin-bottom:1em; margin-top:1em" src="https://map.opensciencegrid.org/map/iframe?view=CCStar#38.61687,-97.86621|4|hybrid"></iframe>
 
-<h2>292 Million Core Hours Contributed by CC* Campuses</h2>
+<h2>349 Million Core Hours Contributed by CC* Campuses</h2>
 
-Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the OSG in support of scientific research. In 2020, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>292 millon core hours to researchers using distributed high throughput computing (dHTC).</b></a> These campus cyberinfrastructures supported over 186 scientific research projects in fields of study such as medical sciences, evolutionary sciences, biostatistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The project reseach supported by these contributions include (among many others):
+Campus Cyberinfrastructure (CC star) award recipients provide a tremendous value to the OSG in support of scientific research. In the year, these campuses contributed over <a href="https://gracc.opensciencegrid.org/d/000000074/gracc-home" target="_blank"> <b>349 millon core hours to researchers using distributed high throughput computing (dHTC). (August 2020 - July 2021)</b></a> These campus cyberinfrastructures supported over 236 scientific research projects in fields of study such as medical sciences, evolutionary sciences, biostatistics, physics and many more. This campus support thoughout the United States contributed to the advancement of science and to researchers both on and off their campuses. The project reseach supported by these contributions include (among many others):
 
 - COVID-19 research  
 - virtual screensing for pain relief compounds
