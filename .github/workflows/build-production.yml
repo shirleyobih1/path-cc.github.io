@@ -6,23 +6,12 @@ on:
       - production
   schedule:
     - cron: '0 0 * * *'
+
 jobs:
-  deploy-production:
-    runs-on: ubuntu-18.04
+  github-pages:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      - uses: helaili/jekyll-action@v2
         with:
-          ruby-version: 2.6
-          bundler-cache: true
-      - name: Build the website
-        run: JEKYLL_ENV=production bundle exec jekyll build
-      - name: Push built site to gh-pages
-        run: |
-          sed -i "s|_site/||g" .gitignore
-          sed -i "s|_site||g"  .gitignore
-          git config user.name "Automatic preview publish"
-          git config user.email "help@opensciencegrid.org"
-          git add _site
-          git commit -m "GHA: Production Deploy #$GITHUB_RUN_NUMBER"
-          git subtree push --prefix _site origin gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
