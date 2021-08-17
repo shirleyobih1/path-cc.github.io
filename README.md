@@ -42,4 +42,4 @@ To make changes to the website, use the following workflow:
 1.  When satisfied with the preview website, submit a
     [pull request](https://github.com/path-cc/path-cc.github.io/compare/production...master?expand=1)
     from `production` to `master`
-1.  After the pull request from step 4 has been merged, verify the changes at https://path-cc.io
+1.  After the pull request from step 4 has been merged, verify the changes at https://path-cc.io 
