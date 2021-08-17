@@ -1,5 +1,5 @@
 baseurl: ''
-exclude: ['README.md']
+exclude: ['README.md', vendor]
 permalink: pretty
 title: 'PATh'
 
