@@ -28,8 +28,5 @@ There are a variety of virtual screening programs, but none of them are all that
 And there’s nothing stopping the Small Molecule Screening Facility from doing just that. Spencer’s jobs are independent from each other, making them “pleasantly parallelizable” on the OSPool’s distributed resources. To maximize throughput, Spencer splits the compound libraries that he’s analyzing into small increments that will run in approximately 2 hours, reducing the chances of a job being evicted and using the OSPool more efficiently.
 
 ...
-<figure>
-  <figcaption class="figure-caption">This article is part of a [series of articles]() from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.<br/></figcaption>
-</figure>
 
 *This article is part of a [series of articles]() from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
