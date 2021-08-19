@@ -7,7 +7,7 @@ image_alt: UNL students on graduation day.
 --- 
 ***How undergraduates at the University of Nebraska-Lincoln developed a science gateway that enables researchers to build RNA nanomachines for therapeutic, engineering, and basic science applications.***
 
-By Josie Watkins
+By Josephine Watkins
 
 <img src="{{ '/images/news/Science-Gateway-Students.jpeg' | relative_url }}" alt="UNL students on graduation"/>
 
