@@ -25,8 +25,8 @@ Leveraging what he learned at the OSG School, Anirvan knew he would only be able
 
 For instance, to observe antihelium particles, a researcher must simulate approximately 100 trillion events, in this case proton-proton collisions. One million of such events typically require about one CPU hour of computation. Therefore, a researcher needs roughly 100 million CPU hours in order to see a few antihelium particles –– that’s equal to 12,000 years on a single CPU. So, Anirvan divided his work into chunks of 10 hour jobs, each containing 10 million simulations. Within each job, the final output file was also analyzed and all the relevant data was extracted and placed in a histogram. This reduces the total size of the output files, which are then transferred over to the server at the University of Hawai’i by an automated workflow that Anirvan created with HTCondor’s DAGMan feature.
 
-<figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{ '/images/news/Anirvan-Showcase-2.png' | relative_url }}" class="figure-img img-fluid rounded" alt="Chart" width="250px">
+<figure>
+  <img src="{{ '/images/news/Anirvan-Showcase-2.png' | relative_url }}" alt="Chart">
   <figcaption class="figure-caption">Image credit: Shukla, A. Datta, A. Doetinchem, P. Gomez-Coral, D. Kanitz, C. (2020). Large-scale simulations of antihelium production in cosmic-ray interactions. Phys. Rev. D. <a href="https://doi.org/10.1103/PhysRevD.102.063004">https://doi.org/10.1103/PhysRevD.102.063004</a><br/></figcaption>
 </figure>
 
