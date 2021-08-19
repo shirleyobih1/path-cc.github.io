@@ -25,13 +25,14 @@ Leveraging what he learned at the OSG School, Anirvan knew he would only be able
 
 For instance, to observe antihelium particles, a researcher must simulate approximately 100 trillion events, in this case proton-proton collisions. One million of such events typically require about one CPU hour of computation. Therefore, a researcher needs roughly 100 million CPU hours in order to see a few antihelium particles –– that’s equal to 12,000 years on a single CPU. So, Anirvan divided his work into chunks of 10 hour jobs, each containing 10 million simulations. Within each job, the final output file was also analyzed and all the relevant data was extracted and placed in a histogram. This reduces the total size of the output files, which are then transferred over to the server at the University of Hawai’i by an automated workflow that Anirvan created with HTCondor’s DAGMan feature.
 
+In his presentation at the OSG School, Anirvan noted that over the last two years, he submitted more than 8 million jobs to the OSPool and used nearly 50 million core hours. [The results](https://doi.org/10.1103/PhysRevD.102.063004) from his simulations generated a spectra that had never been produced before, shown below.
+
 <figure>
-  <img src="{{ '/images/news/Anirvan-Showcase-2.png' | relative_url }}" alt="Chart">
+  <img src="{{ '/images/news/Anirvan-Showcase-2.png' | relative_url }}" alt="Chart" width="500px" >
   <figcaption class="figure-caption">Image credit: Shukla, A. Datta, A. Doetinchem, P. Gomez-Coral, D. Kanitz, C. (2020). Large-scale simulations of antihelium production in cosmic-ray interactions. Phys. Rev. D. <a href="https://doi.org/10.1103/PhysRevD.102.063004">https://doi.org/10.1103/PhysRevD.102.063004</a><br/></figcaption>
 </figure>
 
 
-In his presentation at the OSG School, Anirvan noted that over the last two years, he submitted more than 8 million jobs to the OSPool and used nearly 50 million core hours. [The results](https://doi.org/10.1103/PhysRevD.102.063004) from his simulations generated a spectra that had never been produced before, shown above.
 
 If Anirvan had tried to run these simulations on his own laptop, he would still be searching for dark matter in the year 14,021. Even the available computing resources at [CERN](https://home.cern/) and the [University of Hawai’i](https://manoa.hawaii.edu/) weren’t enough for this colossal project –– the OSPool was necessary. 
 
