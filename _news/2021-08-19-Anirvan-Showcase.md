@@ -15,7 +15,7 @@ By Josephine Watkins
 </figure>
 
 
-The final speaker at the [OSG User School Showcase]() was Anirvan Shukla, a graduate student at the University of Hawai’i Mānoa, and this wasn’t his first school event. In 2016, Anirvan attended as a participant, but today he assumed the role of presenter and had the opportunity to explain how high throughput computing (HTC) has transformed his research in the last five years.
+The final speaker at the [OSG User School Showcase](https://path-cc.io/news/2021-08-19-Showcase/) was Anirvan Shukla, a graduate student at the University of Hawai’i Mānoa, and this wasn’t his first school event. In 2016, Anirvan attended as a participant, but today he assumed the role of presenter and had the opportunity to explain how high throughput computing (HTC) has transformed his research in the last five years.
 
 Anirvan studies antimatter and the extremely rare processes that produce it. Hypothetical dark matter decays into different matter and antimatter particles, like protons, antiprotons, deuterons, and anti-deuterons. When these particles are detected, they suggest that there may be dark matter inside or outside our galaxy. However, these matter and antimatter particles are also produced by the regular collisions of cosmic rays with the particles that make up the interstellar medium. 
 
@@ -40,5 +40,5 @@ If Anirvan had tried to run these simulations on his own laptop, he would still 
 
 ...
 
-*This article is part of a [series of articles]() from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
+*This article is part of a [series of articles](https://path-cc.io/news/2021-08-19-Showcase/) from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
 
