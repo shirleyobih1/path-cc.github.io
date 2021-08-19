@@ -1,6 +1,7 @@
 ---
 title: "Scaling virtual screening to ultra-large virtual chemical libraries" 
 date: 2021-08-19T12:00:00+00:00
+excerpt: Kicking off last week’s OSG User School Showcase, Spencer Erikson, a researcher at the University of Wisconsin-Madison’s Carbone Cancer Center, described how high throughput computing (HTC) has made his work in early-stage drug discovery infinitely more scalable.
 publish: true
 image_src: images/news/Spencer-Showcase.jpg
 image_alt: Liquid Handler 
