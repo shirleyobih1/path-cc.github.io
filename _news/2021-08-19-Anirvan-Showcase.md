@@ -30,7 +30,9 @@ In his presentation at the OSG School, Anirvan noted that over the last two year
 <figure>
   <img src="{{ '/images/news/Anirvan-Showcase-2.png' | relative_url }}" alt="Chart" width="500px" >
   <figcaption class="figure-caption">Image credit: Shukla, A. Datta, A. Doetinchem, P. Gomez-Coral, D. Kanitz, C. (2020). Large-scale simulations of antihelium production in cosmic-ray interactions. Phys. Rev. D. <a href="https://doi.org/10.1103/PhysRevD.102.063004">https://doi.org/10.1103/PhysRevD.102.063004</a><br/></figcaption>
-</figure>
+</figure> 
+
+
 
 
 
