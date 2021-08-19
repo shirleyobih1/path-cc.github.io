@@ -14,6 +14,7 @@ By Josephine Watkins
   <figcaption class="figure-caption">Image by the National Cancer Institute on Unsplash<br/></figcaption>
 </figure>
 
+
 Kicking off last week’s [OSG User School Showcase](), Spencer Erikson, a researcher at the University of Wisconsin-Madison’s Carbone Cancer Center, described how high throughput computing (HTC) has made his work in early-stage drug discovery infinitely more scalable. Spencer works within the Small Molecule Screening Facility, where he partners with researchers across campus to search for small molecules that might bind to and affect the behavior of proteins they study. By using a computational approach, Spencer can help a researcher inexpensively screen many more candidates than possible through traditional laboratory approaches. With as many as [10<sup>33</sup> possible molecules](https://doi.org/10.1007/s10822-013-9672-4), the best binders from computational ‘docking’ might even be investigated as potential drug candidates.
 
 With traditional laboratory approaches, researchers might test just 100,000 individual compounds using liquid handlers like the one pictured above. However, this approach is expensive, imposing limits both on the number of molecules tested and the number of researchers able to pursue potential binders of the proteins they study.
@@ -27,5 +28,8 @@ There are a variety of virtual screening programs, but none of them are all that
 And there’s nothing stopping the Small Molecule Screening Facility from doing just that. Spencer’s jobs are independent from each other, making them “pleasantly parallelizable” on the OSPool’s distributed resources. To maximize throughput, Spencer splits the compound libraries that he’s analyzing into small increments that will run in approximately 2 hours, reducing the chances of a job being evicted and using the OSPool more efficiently.
 
 ...
+<figure>
+  <figcaption class="figure-caption">This article is part of a [series of articles]() from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.<br/></figcaption>
+</figure>
 
 *This article is part of a [series of articles]() from the 2021 OSG Virtual School Showcase. [OSG School](https://opensciencegrid.org/virtual-school-2021/) is an annual education event for researchers who want to learn how to use distributed high throughput computing methods and tools. The Showcase, which features researchers sharing how HTC has impacted their work, is a highlight of the school each year.*
