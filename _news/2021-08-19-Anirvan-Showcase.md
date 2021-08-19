@@ -31,7 +31,7 @@ For instance, to observe antihelium particles, a researcher must simulate approx
 </figure>
 
 
-In his presentation at the OSG School, Anirvan noted that over the last two years, he submitted more than 8 million jobs to the OSPool and used nearly 50 million core hours. [The results](https://doi.org/10.1103/PhysRevD.102.063004) from his simulations generated a spectra that had never been produced before, shown to the right.
+In his presentation at the OSG School, Anirvan noted that over the last two years, he submitted more than 8 million jobs to the OSPool and used nearly 50 million core hours. [The results](https://doi.org/10.1103/PhysRevD.102.063004) from his simulations generated a spectra that had never been produced before, shown above.
 
 If Anirvan had tried to run these simulations on his own laptop, he would still be searching for dark matter in the year 14,021. Even the available computing resources at [CERN](https://home.cern/) and the [University of Hawai’i](https://manoa.hawaii.edu/) weren’t enough for this colossal project –– the OSPool was necessary. 
 
