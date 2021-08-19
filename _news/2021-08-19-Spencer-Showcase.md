@@ -9,11 +9,10 @@ image_alt: Liquid Handler
 
 By Josephine Watkins
 
-<figure class="figure float-right" style="margin-left: 1em">
-  <img src="{{ '/images/news/Spencer-Showcase.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Liquid Handler" width="250px">
+<figure>
+  <img src="{{ '/images/news/Spencer-Showcase.jpg' | relative_url }}" alt="Liquid Handler"/>
   <figcaption class="figure-caption">Image by the National Cancer Institute on Unsplash<br/></figcaption>
 </figure>
-
 
 Kicking off last week’s [OSG User School Showcase](), Spencer Erikson, a researcher at the University of Wisconsin-Madison’s Carbone Cancer Center, described how high throughput computing (HTC) has made his work in early-stage drug discovery infinitely more scalable. Spencer works within the Small Molecule Screening Facility, where he partners with researchers across campus to search for small molecules that might bind to and affect the behavior of proteins they study. By using a computational approach, Spencer can help a researcher inexpensively screen many more candidates than possible through traditional laboratory approaches. With as many as [10<sup>33</sup> possible molecules](https://doi.org/10.1007/s10822-013-9672-4), the best binders from computational ‘docking’ might even be investigated as potential drug candidates.
 
