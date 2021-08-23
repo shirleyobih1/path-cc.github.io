@@ -1,20 +1,20 @@
 
 ---
 short_title: NSF CC Star PI Workshop 
-title: "September 14 - 15 2021 NSF CC Star PI WorkShop"
+title: "September 1 and 14 - 15 2021 NSF CC Star PI WorkShop"
 layout: events
 published: true
 
 excerpt: |
-   The 2021 Campus Cyberinfrastructure (CC*) Workshop will be held September 14 - 15, 2021, 9:00am-12:00pm Pacific / 12:00 - 3:00pm Eastern.
+   The 2021 Campus Cyberinfrastructure (CC*) Workshop will be held September 1 and September 14 - 15, 2021, 9:00am-12:00pm Pacific / 12:00 - 3:00pm Eastern.
     
     The 2021 Campus Cyberinfrastructure (CC*) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts and collaborate across project areas and project regions. Due to the on-going pandemic, the 2021 PI workshop will be conducted virtually.  
 
    
-start_date: 2021-09-14
+start_date: 2021-09-01
 end_date: 2021-09-15
 location: "Virtual"
-link: "Coming Soon"
+link: "https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform"
 image: "/images/events/HTCondorEurope.jpeg"
 header_image: "/images/events/HTCondorEurope.jpeg"
 ---
