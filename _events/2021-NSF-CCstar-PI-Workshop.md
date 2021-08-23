@@ -61,7 +61,7 @@ For individual project questions for CC* – contact Kevin Thompson at kthompso@
 {% capture subsection %}
 # Dates
 
-Sept 1,  14 - 15  and Sept 
+Sept 1,  14 - 15  and Sept 21- 22 2021
 
 # Time
 
@@ -88,8 +88,8 @@ No fees, but registration is required.
 
 # Questions?
 
-For PI Workshop agenda questions – contact Jen Leasure at ,jen@thequilt.net>
-For individual project questions for CC* – contact Kevin Thompson at <kthompso@nsf.gov.
+For PI Workshop agenda questions – contact Jen Leasure at <jen@thequilt.net>
+For individual project questions for CC* – contact Kevin Thompson at <kthompso@nsf.gov>
 
 {% endcapture %}
 
