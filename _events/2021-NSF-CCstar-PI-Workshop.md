@@ -35,6 +35,25 @@ Attendance is free of charge, but requires registration (see below).
 
 [Registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform) is now open. 
 
+General Schedule
+
+WEDNESDAY, SEPTEMBER 1
+10:30 am – 12:00 pm ET	Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal” 
+This session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
+Facilitator: Wendy Huntoon
+
+
+TUESDAY, SEPTEMBER 14	WEDNESDAY, SEPTEMBER 15
+Theme for the Day	Campus CI Plan as a Strategic Vision	Science DMZs and Data Mobility
+11:00 am – 11:45 pm ET	N/A	Drop In Office Hours with the National CI Experts
+11:45 am – 3:00 pm ET	Main Program
+
+TUESDAY, SEPTEMBER 21	WEDNESDAY, SEPTEMBER 22
+Theme for the Day	Science Drivers and Research IT and Researcher Engagement	Campus Compute
+11:00 am – 11:45 pm ET	Drop In Office Hours with the National CI Experts	TBD
+11:45 am – 3:00 pm ET	Main Program
+
+
 If you have any questions, please contact us at <hepix-2021condorworkshop-support@hepix.org>.
 
 
@@ -49,6 +68,10 @@ Sept 14 - 15 2021
 # Time
 
 9:00am-12:00pm Pacific / 12:00 - 3:00pm Eastern
+
+# Who 
+
+PIs and project teams of current or planned CC* Planning Grant awards.
 
  
 # Where
