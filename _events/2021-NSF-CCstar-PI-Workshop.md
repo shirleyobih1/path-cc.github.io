@@ -27,7 +27,7 @@ September 1 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Subm
 
 This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
-**Four Day Workshop **
+**Four Day Workshop
 
 The 2021 Campus Cyberinfrastructure (CC*) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts and collaborate across project areas and project regions. Due to the on-going pandemic, the 2021 PI workshop will be conducted virtually.  
 
@@ -49,21 +49,17 @@ Attendance is free of charge, but requires registration.
 
 [Registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform) is now open. 
 
-
-
 For questions about the 2021 CC* Virtual PI Workshop, please use the following contacts:
-
 
 For PI Workshop agenda questions – contact Jen Leasure at jen@thequilt.net
 For individual project questions for CC* – contact Kevin Thompson at kthompso@nsf.gov
 
 {% endcapture %}
 
-
 {% capture subsection %}
 # Dates
 
-Sept 1,  14 - 15  and Sept 21- 22 2021
+Sept 1,  14 - 15 and21- 22 2021
 
 # Time
 
@@ -103,9 +99,9 @@ We are here to help with your NSF (CC*) Proposal!
 
 As part of the PATh project we have accumulated significant experience working with campuses that apply to the CC* Program applicants letters of support and consulting for:
 
-CC*-required resource sharing via the OSPool for the Campus Compute category
-Gathering science drivers and planning local computing resources
-Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
+* CC*-required resource sharing via the OSPool for the Campus Compute category
+* Gathering science drivers and planning local computing resources
+* Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
 
 {% endcapture %}
 
