@@ -14,8 +14,8 @@ start_date: 2021-09-01
 end_date: 2021-09-22
 location: "Virtual"
 link: "https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform"
-image: "/images/events/HTCondorEurope.jpeg"
-header_image: "/images/events/HTCondorEurope.jpeg"
+image: "/images/events/CC*Workshop2021.jpeg"
+header_image: "/images/events/CC*Workshop2021.jpeg"
 ---
 
 {% capture main %}
