@@ -20,13 +20,13 @@ header_image: "/images/events/CC*Workshop2021.jpeg"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and Sept 21 - 22 </p>
+<p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22 </p>
 
-**September 1 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal” ** 
+/**September 1 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”
 
 This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
-**Four Day Workshop
+/**Four Day Workshop
 
 The 2021 Campus Cyberinfrastructure (CC*) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts and collaborate across project areas and project regions. Due to the on-going pandemic, the 2021 PI workshop will be conducted virtually.  
 
@@ -36,11 +36,11 @@ The PI Workshop will promote dialogue across a range of important and timely top
 
 The Sept 14 - 15 and September 21 - 22 sessions covers the following topics:
 
-**Sept 14:  Campus CI Plan as a Strategic Vision
-**Sept 15: Science DMZs and Data Mobility
+/**Sept 14:  Campus CI Plan as a Strategic Vision
+/**Sept 15: Science DMZs and Data Mobility
 
-**Sept 21 Science Drivers and Research IT and Researcher Engagement
-**Sept 22 Campus Compute
+/**Sept 21 Science Drivers and Research IT and Researcher Engagement
+/**Sept 22 Campus Compute
 
 [See complete schedule details](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/)
   
@@ -101,7 +101,7 @@ As part of the PATh project we have accumulated significant experience working w
 1. CC*-required resource sharing via the OSPool for the Campus Compute category
 2. Gathering science drivers and planning local computing resources
 
-** Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
+/**Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
 
 {% endcapture %}
 
