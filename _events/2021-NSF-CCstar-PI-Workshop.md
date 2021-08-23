@@ -22,8 +22,7 @@ header_image: "/images/events/CC*Workshop2021.jpeg"
 
 <p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and Sept 21 - 22 </p>
 
-
-September 1 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal” ** 
+**September 1 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal” ** 
 
 This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
@@ -99,9 +98,10 @@ We are here to help with your NSF (CC*) Proposal!
 
 As part of the PATh project we have accumulated significant experience working with campuses that apply to the CC* Program applicants letters of support and consulting for:
 
-* CC*-required resource sharing via the OSPool for the Campus Compute category
-* Gathering science drivers and planning local computing resources
-* Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
+1. CC*-required resource sharing via the OSPool for the Campus Compute category
+2. Gathering science drivers and planning local computing resources
+
+** Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
 
 {% endcapture %}
 
