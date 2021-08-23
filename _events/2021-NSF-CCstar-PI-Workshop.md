@@ -1,4 +1,3 @@
-
 ---
 short_title: NSF CC Star PI Workshop 
 title: "September 1 and 14 - 15 and 21-22 2021 NSF CC Star PI Workshop"
@@ -30,6 +29,7 @@ This session is targeted to the PIs and project teams of current CC* Planning Gr
 Facilitator: Wendy Huntoon
 
 The Sept 14 - 15 and September 21 - 22 covers the following topics:
+
 *Sept 14:  Campus CI Plan as a Strategic Vision
 *Sept 15: Science DMZs and Data Mobility
 
