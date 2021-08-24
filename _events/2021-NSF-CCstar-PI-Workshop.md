@@ -39,7 +39,7 @@ The Sept 14-15 and September 21-22 sessions cover the following topics:
 __Sept 14:  Campus CI Plan as a Strategic Vision__  
 __Sept 15: Science DMZs and Data Mobility__
 
-__Sept 21 Science Drivers and Research IT and Researcher Engagement__
+__Sept 21 Science Drivers and Research IT and Researcher Engagement__  
 __Sept 22 Campus Compute__
   
 Browse the [complete schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/).
