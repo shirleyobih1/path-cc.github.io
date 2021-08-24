@@ -17,7 +17,8 @@ header_image: "/images/events/key-banner.png"
 
 {% capture main %}
 
-  
+<p style="font-size: larger; font-weight: bold;">Join us October 14 & 15 for an engaging and collaborative workshop!</p>
+
   
 
 The Token Transition Workshop will be an opportunity for the broader physics and collaboration communities to learn more about making the transition from certificates to tokens for resource access within your organization. You will be able to share with the community your readiness to make this transition and to learn approaches and processes that organizations are taking for the transition. The deadline for the end of support of OSG 3.5 will be impacted by the information shared in the Workshop.
