@@ -42,7 +42,8 @@ The Sept 14-15 and September 21-22 sessions cover the following topics:
 /**Sept 21 Science Drivers and Research IT and Researcher Engagement  
 /**Sept 22 Campus Compute
   
-Attendance is free of charge, but requires [registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform). Browse the [complete schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/).
+Browse the [complete schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/).
+Attendance is free of charge, but requires [registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform).
 
 For questions about the 2021 CC* Virtual PI Workshop, please use the following contacts:
 - For PI Workshop agenda questions, contact Jen Leasure (<jen@thequilt.net>)
