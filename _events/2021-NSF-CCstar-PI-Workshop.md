@@ -22,11 +22,11 @@ header_image: "/images/events/CC*Workshop2021.jpeg"
 
 <p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22 </p>
 
-__September 1, 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
+September 1, 10:30 am – 12:00 pm ET __Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
 
 This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
-__Four Day Workshop__
+Sept 14-15 and  21 - 22 __CC* Workshop__
 
 The 2021 Campus Cyberinfrastructure (CC star) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts, and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
 
