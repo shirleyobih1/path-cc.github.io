@@ -47,7 +47,7 @@ Attendance is free of charge, but requires [registration](https://docs.google.co
 
 For questions about the 2021 CC* Virtual PI Workshop, please use the following contacts:
 - For PI Workshop agenda questions, contact Jen Leasure (<jen@thequilt.net>)
-- For individual project questions for CC*, contact Kevin Thompson at (<kthompso@nsf.gov>)
+- For individual project questions for CC*, contact Kevin Thompson (<kthompso@nsf.gov>)
 
 {% endcapture %}
 
