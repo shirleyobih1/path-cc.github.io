@@ -22,11 +22,11 @@ header_image: "/images/events/CC*Workshop2021.jpeg"
 
 <p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22 </p>
 
-__September 1, 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”
+__September 1, 10:30 am – 12:00 pm ET **Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
 
 This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
-__Four Day Workshop
+__Four Day Workshop__
 
 The 2021 Campus Cyberinfrastructure (CC star) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts, and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
 
@@ -36,11 +36,11 @@ The PI Workshop will promote dialogue across a range of important and timely top
 
 The Sept 14-15 and September 21-22 sessions cover the following topics:
 
-__Sept 14:  Campus CI Plan as a Strategic Vision  
-__Sept 15: Science DMZs and Data Mobility
+__Sept 14:  Campus CI Plan as a Strategic Vision__  
+__Sept 15: Science DMZs and Data Mobility__
 
 __Sept 21 Science Drivers and Research IT and Researcher Engagement  
-__Sept 22 Campus Compute
+__Sept 22 Campus Compute__
   
 Browse the [complete schedule](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/).
 Attendance is free of charge, but requires [registration](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform).
@@ -97,7 +97,7 @@ As part of the PATh project we have accumulated significant experience working w
 - CC*-required resource sharing via the OSPool for the Campus Compute category
 - Gathering science drivers and planning local computing resources
 
-__Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!
+__Please contact us at <cc-star-proposals@opensciencegrid.org> with any questions you may have about OSG and the CC* Program!__
 
 {% endcapture %}
 
