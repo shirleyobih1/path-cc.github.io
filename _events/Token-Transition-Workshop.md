@@ -25,7 +25,7 @@ The Token Transition Workshop will be an opportunity for the broader physics and
 
 This two-day workshop features a variety of presentations and interactive discussions. Several topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the physics collaboration community's transition to tokens. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
 
-[Registration](https://indico.fnal.gov/event/50597/) for this event will be open soon.
+A complete schedule for the workshop will be avaliable shortly, and registration will be open soon.
 
 {% endcapture %}
 
@@ -49,7 +49,7 @@ Virtual
 No fees, attendance is free!
 
 # Registration
-[Registration](https://indico.fnal.gov/event/50597/) will be open soon.
+Registration will be open soon.
 
 # Questions?
 
