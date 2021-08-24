@@ -24,7 +24,7 @@ The Token Transition Workshop will be an opportunity for the broader physics and
 
 This two-day workshop features a variety of presentations, guided discussions, and open discussions. Several topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the physics collaboration community's transition to tokens. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
 
-Speakers: 
+Speakers include: 
 - **Brian Bockelman**, Morgridge Institute for Research
 - **Brian Lin**, University of Wisconsin–Madison
 - **Derek Weitzel**, University of Nebraska–Lincoln 
