@@ -7,7 +7,7 @@ published: true
 excerpt: |
    The 2021 Campus Cyberinfrastructure (CC*) Workshop Events will be held September 1,  14 - 15, and 21 - 22, 2021.
     
-    - The 2021 Campus Cyberinfrastructure (CC*) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
+    - [The 2021 Campus Cyberinfrastructure (CC*) Workshop](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/) builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
 
    
 start_date: 2021-09-01
@@ -24,11 +24,11 @@ header_image: "/images/events/CC_Workshop2021.png"
 
 September 1, 10:30 am – 12:00 pm ET __Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
 
-This first pre-workshop session is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
+[This first pre-workshop session](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/) is targeted to the PIs and project teams of current CC* Planning Grant awards. If you are a representative of a planning grant, please plan to attend. PIs from other program areas are also invited to join. (Note: Sign up to attend when you register for the Workshop.)
 
 Sept 14-15 and  21 - 22 __CC* Workshop__
 
-The 2021 Campus Cyberinfrastructure (CC*) Workshop builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts, and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
+[The 2021 Campus Cyberinfrastructure (CC*) Workshop](https://www.thequilt.net/public-event/2021-nsf-virtual-cc-pi-workshop/) builds upon the success of the previous CC* Workshops providing an opportunity for recipients of all active NSF CC* awards to engage with one another, exchange project findings, interact with national cyberinfrastructure experts, and collaborate across project areas and project regions. Due to the ongoing pandemic, the 2021 PI workshop will be conducted virtually.  
 
 The  virtual workshop provides flexibility for broader participation of additional CC* award project collaborators such as co-PIs, researchers, and other campus representatives to participate in workshop conversations. Please encourage your project collaborators to register and join us for this meeting.  Feel free to share the registration link with them.     
 
