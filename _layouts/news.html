@@ -2,8 +2,13 @@
 layout: container-default
 ---
 
+{% assign use_date = true %}
+{% if page.hide_date %}
+  {% assign use_date = false %}
+{% endif %}
+
 {% capture content %}
-{% include subpage-header.html date=true %}
+{% include subpage-header.html date=use_date %}
 <div class="news news-single">
   <div class="content">{{content}}</div>
 </div>

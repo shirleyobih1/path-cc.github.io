@@ -11,7 +11,9 @@ bodyClass: page-services-list
       <div class="article-content">
         <h2 class="article-title">
           <a href="{{site.baseurl}}{{ article.url }}">{{ article.title }}</a>
-          <small class="text-muted article-date">{{article.date | date: '%B %d, %Y' }}</small>
+          {% unless article.hide_date %}
+          <small class="text-muted article-date">{{ article.date | date: '%B %d, %Y' }}</small>
+          {% endunless %}
         </h2>
         <p>{{ article.excerpt | markdownify | strip_html }}</p>
       </div>
