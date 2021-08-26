@@ -1,5 +1,7 @@
 ---
 title: "High Throughput Computing in Support of Science"
+date: 2019-10-10T12:00:00+00:00
+hide_date: true
 publish: true
 ---
 
