@@ -15,7 +15,7 @@ layout: sub-page
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <h1>CPU Credits</h1>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-xl-6">
         <table  class="table">
             <thead class="thead-light">
             <tr>
@@ -48,20 +48,20 @@ layout: sub-page
         </p>
     </div>
 </div>
-<div class="row">
+<div class="row bg-white-offset pt-1">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <h2>Additional CPU Credit Charge</h2>
     </div>
 </div>
-<div class="row">
-    <div class="col-12 col-lg-6">
+<div class="row bg-white-offset">
+    <div class="col-12 col-xl-6">
         <h3>Memory Per Core</h3>
         <p>
             When more than 2GB per core of memory is used requested by the job,
             there’s an additional per-GB charge for memory.
         </p>
         <table  class="table">
-            <thead class="thead-light">
+            <thead class="">
             <tr>
                 <th>Memory (GB) per job</th>
                 <th>Credit charge per hour per GB</th>
@@ -92,9 +92,9 @@ layout: sub-page
         </table>
     </div>
 </div>
-<div class="row">
+<div class="row mt-2">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-        <h2>Example</h2>
+        <h2>CPU Credit Example</h2>
         <p>
             If an 8 core job requests 128 GB of RAM, there is an additional
             charge for 128 – 8 * 2 = 112 GB of RAM.  If the job ran for an hour, it would
@@ -107,7 +107,7 @@ layout: sub-page
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <h1>GPU Credits</h1>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-xl-6">
         <table class="table">
             <thead class="thead-light">
             <tr>
@@ -136,20 +136,20 @@ layout: sub-page
         </table>
     </div>
 </div>
-<div class="row">
+<div class="row bg-white-offset pt-1">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
         <h2>Additional GPU Credit Charge</h2>
     </div>
 </div>
-<div class="row">
-    <div class="col-12 col-lg-6">
+<div class="row bg-white-offset">
+    <div class="col-12 col-xl-6">
         <h3>CPUS per GPU</h3>
         <p>
             When more than 16 cores per GPU is requested by the job, there’s an additional
             per-core charge for the CPU cores beyond the nominal.
         </p>
         <table  class="table">
-            <thead class="thead-light">
+            <thead class="">
             <tr>
                 <th>CPUs per job</th>
                 <th>Credit charge per hour per core</th>
@@ -171,14 +171,14 @@ layout: sub-page
             </tbody>
         </table>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-xl-6">
         <h3>Memory per GPU</h3>
         <p>
             When more than 2 GB per core of memory is requested by the job, there’s an additional
             per-GB charge for memory for the beyond-nominal memory usage.
         </p>
         <table  class="table">
-            <thead class="thead-light">
+            <thead class="">
             <tr>
                 <th>Memory (GB) per job</th>
                 <th>Credit charge per hour per GB</th>
@@ -201,9 +201,9 @@ layout: sub-page
         </table>
     </div>
 </div>
-<div class="row">
+<div class="row mt-2">
     <div class="col-12 col-xl-7 col-lg-8 col-md-10">
-        <h2>Example</h2>
+        <h2>GPU Credit Example</h2>
         <p>
             If a 1 GPU job requests 256 GB of RAM and 32 cores, there is an additional
             charge for 256 – 1 * 128 = 128 GB of RAM and an additional charge for 32 – 1 * 16 = 16 cores.

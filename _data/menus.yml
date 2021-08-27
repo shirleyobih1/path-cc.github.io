@@ -1,4 +1,7 @@
 main:
+  - name: "About"
+    url: "/about/"
+    weight: 1
   - name: "Services"
     url: "/services/"
     weight: 2
@@ -11,9 +14,6 @@ main:
   - name: "Events"
     url: "/events/"
     weight: 5
-  - name: "About"
-    url: "/about/"
-    weight: 6
   - name: "Contact"
     url: "/contact/"
     weight: 7
