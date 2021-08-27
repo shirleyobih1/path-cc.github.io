@@ -39,9 +39,12 @@ h3 {
 ul,
 ol {
   margin: 0;
+  margin-bottom: 1rem;
   padding: 0;
   li {
+    color: $steel;
     padding: 0;
+    padding-bottom: .2rem;
     margin: 0;
   }
 }
