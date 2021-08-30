@@ -102,7 +102,7 @@ and discuss how a workload can be adapted to run on PATh.  Please contact
 or estimating credit needs.
 
 __PATh has more scheduling flexibility for smaller jobs; hence, there’s an
-escalating charge in credits for larger jobs in our [2022 charge listing](/charges).__
+escalating charge in credits for larger jobs in our [2022 charge listing](/credit-account-charges).__
 {% endcapture %}
 
 {% capture content %}
