@@ -15,8 +15,10 @@ published: true
 ---
 
 {% capture content %}
-The Partnership to Advance Throughput Computing (PATh) project is funded by the
-NSF to advance High Throughput Computing (HTC) and its impact on research and
+The [Partnership to Advance Throughput Computing (PATh)](/) 
+project is funded by the NSF to advance 
+[High Throughput Computing (HTC)](https://research.cs.wisc.edu/htcondor/htc.html) 
+and its impact on research and
 education. To achieve this goal, PATh operates a fabric of capacity services
 that ranges from Research Computing Facilitation, to Access Points capable of
 managing distributed HTC workloads. Starting January 2022, PATh will add to its
