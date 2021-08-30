@@ -25,7 +25,9 @@
   {% include main-menu-mobile.html %}
   <div id="wrapper" class="wrapper">
     {% include header.html logo=layout.logo header_class=page.header_class %}
-    {{content}}
+    <main>
+      {{content}}
+    </main>
   </div>
   {% include footer.html %}
   {% include sub-footer.html %}

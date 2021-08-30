@@ -20,7 +20,7 @@ header_image: "/images/events/CC_Workshop2021.png"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Register Now for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22 </p>
+__[Register Now](https://docs.google.com/forms/d/e/1FAIpQLSeD0PnPEyfn_h-TPlaV4PyqUate9M-fI_ykxBaLCNISo6Kcaw/viewform) for NSF Campus Cyberinfrastructure (CC*) Workshop Events, Sept 1, Sept 14 - 15 and 21 - 22__
 
 September 1, 10:30 am – 12:00 pm ET __Pre-Workshop Session – “Tips for Submitting a Compelling CC* Proposal”__
 
