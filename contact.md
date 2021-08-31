@@ -1,17 +1,13 @@
 ---
 title: Contact
-layout: contact
-bodyClass: page-contact
+layout: sub-page
 ---
 
-To start using PATh services
-----------------------------
+PATh is a unique partnership between the Center for High Throughput Computing (CHTC) and the OSG Consortium.
 
-* UW-Madison campus users can contact CHTC directly at [chtc@cs.wisc.edu](mailto:chtc@cs.wisc.edu).
-* To get started as a user on the OSG through OSG-Connect, reach out to [support@osgconnect.net](mailto:support@osgconnect.net)
-* Campuses interested in providing resources through OSG - and all other queries - can contact [support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+* For enquiries about the *PATh project*, please contact the [PATh leadership](mailto:leadership@path-cc.io).
+* For help with *CHTC technologies* such as the HTCondor Software Suite (HTCSS), contact [chtc@cs.wisc.edu](mailto:chtc@cs.wisc.edu).
+* *Campuses* interested in providing resources to the [Open Science Pool (OSPool)](https://osg-htc.org/about/open_science_pool/) can contact [support@opensciencegrid.org](mailto:support@opensciencegrid.org)
+* *Users* interested in using an Access Point to leverage resource like the OSPool can contact [support@osgconnect.net](support@osgconnect.net).
+* *PIs* interested in getting credit accounts on PATh-managed hardware should visit the [dedicated page](https://path-cc.io/services/credit-accounts/).
 
-Questions about the PATh Project
---------------------------------
-
-For enquiries about the PATh project, please contact the [PATh leadership](mailto:leadership@path-cc.io).
