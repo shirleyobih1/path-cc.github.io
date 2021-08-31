@@ -52,8 +52,17 @@ The dedicated PATh resources that power the capacity credit accounts are expecte
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
-The dedicated PATh resources will be distributed across 3 sites; credits
+The dedicated PATh resources will be distributed across four sites; credits
 for dedicated resources can be used at a PATh access point.
+
+### Are PATh dedicated resources the same as the Open Science Pool?
+
+PATh dedicated resources are _not_ the same as the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/).
+The OSPool is composed of resources, often opportunistic, that are managed by PATh through fairshare.
+
+The dedicated resources are funded by NSF to be managed by PATh and accessible via the PATh credit account system.  This provides
+PATh with the ability to set policy.  For example, users will have more flexibility in their workloads; jobs can have much longer runtimes compared
+to the OSPool (where long-running jobs are often preempted by the local site).
 
 ### Can HTC workloads access other resources?
 
