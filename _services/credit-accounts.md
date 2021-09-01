@@ -1,7 +1,6 @@
 ---
 title: "Credit Accounts"
 date: 2021-07-26T14:11:26+10:00
-layout: sub-page
 featured: true
 excerpt: |
     The Partnership to Advance Throughput Computing (PATh) project is funded by the
@@ -14,7 +13,6 @@ weight: 3
 published: true
 ---
 
-{% capture content %}
 The [Partnership to Advance Throughput Computing (PATh)](/) 
 project is funded by the NSF to advance 
 [High Throughput Computing (HTC)](https://research.cs.wisc.edu/htcondor/htc.html) 
@@ -44,7 +42,7 @@ collection of [science stories](/news/htc-in-support-of-science/).
 
 ## FAQs
 
-### What hardware resources are available through the credit accounts?
+##### What hardware resources are available through the credit accounts?
 
 The dedicated PATh resources that power the capacity credit accounts are expected to consist of:
 - Compute servers with up to 128 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM.
@@ -55,7 +53,7 @@ The dedicated PATh resources that power the capacity credit accounts are expecte
 The dedicated PATh resources will be distributed across 3 sites; credits
 for dedicated resources can be used at a PATh access point.
 
-### Can HTC workloads access other resources?
+##### Can HTC workloads access other resources?
 
 Workloads placed on the PATh Access Points can harness resources pools
 beyond the credit-based dedicated resources.  For example, the [Open Science
@@ -63,7 +61,7 @@ Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/) capacity co
 about 50 sites on a fairshare basis.  PIs can also utilize their [XRAC](https://portal.xsede.org/my-xsede#/guest) or
 [Frontera](https://www.tacc.utexas.edu/systems/frontera) allocations through Access Points.
 
-### What workloads run well on HTC?
+##### What workloads run well on HTC?
 
 Requests should be for workloads that are amenable to the distributed high
 throughput computing services provided by PATh; to help the evaluation, information
@@ -75,18 +73,18 @@ about HTC workloads should include the following information:
 4.	Expected input and output data requirements for each task type?
 5.	Expected number and size of shared input files within an ensemble?  How many times are each file read per ensemble?
 
-### What about Containers?
+##### What about Containers?
 
 The dedicated PATh resources support the ability to execute software within
 containers or portable, self-contained applications.
 
-### How can I “test drive” the HTC services?
+##### How can I “test drive” the HTC services?
 
 A strength of the PATh Access Point is users can get started without any
 credits through using the [OSPool’s](https://opensciencegrid.org/about/open_science_pool/) opportunistic resources.  We encourage
 users to contact [support@osg-htc.org](mailto:support@osg-htc.org) to get started on an Access Point today.
 
-### What Data Services does PATh provide?
+##### What Data Services does PATh provide?
 
 Users place data at the PATh Access Point; this can be moved to computing by:
 - Specifying the data as input or output to jobs, triggering a built-in file transfer mechanism, or
@@ -96,7 +94,7 @@ Users place data at the PATh Access Point; this can be moved to computing by:
 
 Given the distributed nature of the hardware, there is no global shared filesystem.
 
-### Can I get help estimating my HTC needs?
+##### Can I get help estimating my HTC needs?
 
 PATh research facilitators are available to help explain the above concepts
 and discuss how a workload can be adapted to run on PATh.  Please contact
@@ -105,12 +103,7 @@ or estimating credit needs.
 
 __PATh has more scheduling flexibility for smaller jobs; hence, there’s an
 escalating charge in credits for larger jobs in our [2022 charge listing](/credit-account-charges).__
-{% endcapture %}
 
-{% capture content %}
-{% include markdown-container.html %}
-{% endcapture %}
-{% include body-container.html %}
 
 
 
