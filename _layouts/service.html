@@ -2,10 +2,15 @@
 layout: container-default
 ---
 
+<div class="row justify-content-start">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    {% include subpage-header.html %}
+  </div>
+</div>
+
 {% capture content %}
-{% include subpage-header.html %}
 <div class="service service-single">
-  <div class="content">{{content}}</div>
+  <div>{{content}}</div>
 </div>
 {% endcapture %}
-{% include body-container.html %}
+{% include body-container-twitter-right.html %}

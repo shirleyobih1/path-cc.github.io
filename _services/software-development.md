@@ -3,16 +3,16 @@ title: "Software Development"
 date: 2018-11-28T15:14:39+10:00 
 featured: true
 weight: 2 
-excerpt_separator: <!--more-->
+excerpt: |
+    The Software Development Team supports, sustains, and enhances the HTCondor
+    Software Suite (HTCSS) to enable the potential of distributed High Throughput
+    Computing. This suite of software tools includes HTCondor, components to build
+    both on-premise HTCondor compute clusters for use by independent academic,
+    commercial, and government campuses, and components to support the federation of
+    processing and data resources across the OSG.
 ---
 
-The Software Development Team supports, sustains, and enhances the HTCondor
-Software Suite (HTCSS) to enable the potential of distributed High Throughput
-Computing. This suite of software tools includes HTCondor, components to build
-both on-premise HTCondor compute clusters for use by independent academic,
-commercial, and government campuses, and components to support the federation of
-processing and data resources across the OSG. 
-<!--more-->
+{{ page.excerpt }}
 
 Software Development Team activities balance the inherent tension between the
 desire for innovation, the expectation of stability and dependability for widely
@@ -44,5 +44,3 @@ directly involve developers in the operation of a large, production dHTC
 infrastructure at CHTC to function as a living lab for the team to understand
 first-hand the strengths and weaknesses of their work, as well as obtain
 feedback on the user experience.
-
-
