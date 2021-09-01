@@ -47,6 +47,8 @@ collection of [science stories](/news/htc-in-support-of-science/).
 The dedicated PATh resources that power the capacity credit accounts are expected to consist of:
 - Compute servers with up to 128 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM.
 - Compute servers with up to 64 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM
+- Compute servers with 68 Intel Knights Landing cores and 96GB of RAM.
+- Compute servers with 48 Intel Xeon Skylake cores and 192GB of RAM.
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
@@ -110,10 +112,24 @@ and discuss how a workload can be adapted to run on PATh.  Please contact
 [credit-accounts@path-cc.io](mailto:credit-accounts@path-cc.io) with questions about PATh resources, using HTC,
 or estimating credit needs.
 
-__PATh has more scheduling flexibility for smaller jobs; hence, there’s an
-escalating charge in credits for larger jobs in our [2022 charge listing](/credit-account-charges).__
+HTC resource management has different approaches compared to many batch systems.  For example, PATh has more
+scheduling flexibility for smaller jobs, resulting in an escalating charge in credits for larger jobs.
 
+Please see our [2022 charge listing](/credit-account-charges) for more details.
 
+##### Where is the dedicated hardware located?
 
+There are currently five locations that are expected to have dedicated hardware during 2022:
 
+* University of Nebraska-Lincoln's [Holland Computing Center](https://hcc.unl.edu)
+* University of Wisconsin - Madison's [Center for High Throughput Computing](https://chtc.cs.wisc.edu)
+* Syracuse University's [Research Computing](https://researchcomputing.syr.edu/)
+* University of California San Diego's [San Diego Supercomputing Center](https://www.sdsc.edu/)
+* University of Texas at Austin's [Texas Advanced Computing Center](https://www.tacc.utexas.edu/)
+
+Additionally, there will be one location, to be confirmed, embedded in the nation's R&E network infrastructure backbone.
+
+Compute and GPU credits are good at all sites.  By default, jobs may go to any location but users can add specific
+restrictions to target a single location.  For example, jobs may be restricted to San Diego because they need to
+access a dataset at that location.
 
