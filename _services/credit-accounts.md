@@ -113,7 +113,7 @@ and discuss how a workload can be adapted to run on PATh.  Please contact
 or estimating credit needs.
 
 HTC resource management has different approaches compared to many batch systems.  For example, PATh has more
-scheduling flexibility for smaller jobs, meaning there's an escalating charge in credits for larger jobs.
+scheduling flexibility for smaller jobs, resulting in an escalating charge in credits for larger jobs.
 
 Please see our [2022 charge listing](/credit-account-charges) for more details.
 
