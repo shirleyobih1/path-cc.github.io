@@ -2,10 +2,10 @@
 short_title: Token Transition Workshop
 title: "Token Transition Workshop"
 layout: events
-published: false
+published: true
 
 excerpt: |
-    Join us and the broader physics and collaboration communities to learn about making the transition from certificates to tokens for resource access within your organization.
+    Join us and the broader science communities to learn about making the transition from certificates to tokens for resource access within your organization.
    
 start_date: 2021-10-14
 end_date: 2021-10-15
