@@ -6,6 +6,8 @@ excerpt: Facilitation Services leverage the CHTC-pioneered principles of Researc
 weight: 3
 ---
 
+{{ page.excerpt }}
+
 Drawing upon the principles of Research Computing Facilitation (RCF) pioneered
 by UW-Madison’s Center for High Throughput Computing, the Facilitation Services
 team work to expand the impact of dHTC and dHTC Facilitation across various PATh
@@ -49,3 +51,4 @@ significantly to the materials and execution of PATh’s various outreach,
 education, and training programs. As part of the services for campuses, the RCF
 team leverages its own experience in dHTC for end-users to offer dHTC
 Facilitation training for personnel at campuses.
+ 

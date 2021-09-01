@@ -2,18 +2,17 @@
 title: "Global Infrastructure Laboratory"
 date: 2018-11-28T15:15:26+10:00
 featured: true
-excerpt_separator: <!--more-->
+excerpt: |
+    PATh is committed to openness in the science and institutions we support,
+    in innovation of technologies and methodologies, and in interfaces to the
+    broader ecosystem of NSF-funded CI services, especially as the fabric of
+    coordination services evolves. To facilitate ingestion of ideas into HTCSS,
+    and services into FoCaS, the Global Infrastructure Lab (GIL) tests and
+    evaluate infrastructure software from inside and outside the partnership.
 weight: 4
 ---
 
-PATh is committed to openness in the science and institutions we support,
-in innovation of technologies and methodologies, and in interfaces to the
-broader ecosystem of NSF-funded CI services, especially as the fabric of
-coordination services evolves. To facilitate ingestion of ideas into HTCSS,
-and services into FoCaS, the Global Infrastructure Lab (GIL) tests and
-evaluate infrastructure software from inside and outside the partnership.
-
-<!--more-->
+{{ page.excerpt }}
 
 GIL maintains several testbeds, allowing the team to rapidly test
 configurations. These dedicated testbeds are composed of volunteer partners
@@ -43,4 +42,3 @@ layer with benefits across the NSF CI ecosystem.
 GIL has proposed and led the discussion of the following ideas:
 
 > [March 9, 2021 - Jupyter Support in OSG](https://path-cc.io/GIL/Jupyter-support-in-OSG/)
-
