@@ -31,14 +31,15 @@ A complete schedule for the workshop will be avaliable shortly. **[Registration 
 
 
 {% capture subsection %}
-# Date
+# Who
 
-October 14 - 15, 2021
+System and service administrators in the broader science communities
 
-# Time
+# When
 
-October 14: 10am – 1:15pm CT  
-October 15: 10am – 2:45pm CT 
+October 14: 10:00am – 1:15pm CT  
+October 15: 10:00am – 2:45pm CT  
+[See a detailed schedule](https://indico.fnal.gov/event/50597/timetable/#20211015)
 
 # Where
 
