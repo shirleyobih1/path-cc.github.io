@@ -5,7 +5,7 @@ layout: events
 published: true
 
 excerpt: |
-    Join us and the broader science communities to learn about making the transition from certificates to tokens for resource access within your organization.
+    Join us and the broader science communities to learn about making the transition from certificates to tokens for resource access within your organization's infrastructure.
    
 start_date: 2021-10-14
 end_date: 2021-10-15
@@ -21,7 +21,7 @@ header_image: "/images/events/key-banner.png"
 
   
 
-The Token Transition Workshop will be an opportunity for the broader science communities to learn more about making the transition from certificates to tokens for resource access within your organization. You will be able to share with the community your readiness to make this transition and to learn approaches and processes that organizations are taking for the transition. The deadline for the end of support of OSG 3.5 will be impacted by the information shared in the Workshop.
+The Token Transition Workshop will be an opportunity for system and service administrators in the broader science communities to learn more about making the transition from certificates to tokens for resource access within your organization's infrastructure. You will be able to share with the community your readiness to make this transition and to learn approaches and processes that organizations are taking for the transition. The deadline for the end of support of OSG 3.5 will be impacted by the information shared in the Workshop.
 
 This two-day workshop features a variety of presentations and discussions. Topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the status of the transition to tokens for various communities. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
 
