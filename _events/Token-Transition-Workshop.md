@@ -25,7 +25,7 @@ The Token Transition Workshop will be an opportunity for system and service admi
 
 This two-day workshop features a variety of presentations and discussions. Topics that will be discussed include: the future of tokens, the OSPool's use of tokens, OSG Software token transition plans, and the status of the transition to tokens for various communities. We will also discuss tokens from both a technical system administrator perspective and an administrative policy perspective
 
-A complete schedule for the workshop will be avaliable shortly. **[Registration is open](https://indico.fnal.gov/event/50597/registrations/3133/).**
+[View the complete schedule for the workshop here](https://indico.fnal.gov/event/50597/timetable/#20211014). **[Registration is open](https://indico.fnal.gov/event/50597/registrations/3133/).**
 
 {% endcapture %}
 
