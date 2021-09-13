@@ -36,7 +36,7 @@ bodyClass: page-team-list
     {% assign teams = site.team | sort: "weight" | sort: "title" %}
     {% for team in teams %}
     {% if team.promoted == nil %}
-    <div class="col-12 col-md-4 mb-3">
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
         <div class="team team-summary">
             {% if team.image %}
             <div class="team-image">
@@ -47,7 +47,7 @@ bodyClass: page-team-list
                 {% if team.website %}
                 <a href="{{ team.website }}">
                 {% endif %}
-                <h2 class="team-name">{{ team.title }}</h2>
+                <h3 class="team-name m-0">{{ team.title }}</h3>
                 {% if team.website %}
                 </a>
                 {% endif %}

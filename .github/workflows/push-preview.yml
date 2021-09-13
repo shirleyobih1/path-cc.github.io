@@ -1,11 +1,11 @@
-name: Build/deploy web pages
+name: Deploy Web Previews
 on:
   push:
     branches:
-      - preview/**
+      - preview-**
   pull_request:
     branches:
-    - preview/**
+    - preview-**
 jobs:
   build-and-maybe-deploy:
     runs-on: ubuntu-18.04
