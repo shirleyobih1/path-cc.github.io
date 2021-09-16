@@ -7,7 +7,7 @@ excerpt: |
     (WoTBAn&Az 2021) will be held online from 10am to 2pm Eastern Time on Monday, October 18, 
     co-located with the [2021 NSF Cybersecurity Summit](https://www.trustedci.org/2021-cybersecurity-summit). 
     Summit registration will be required to attend 
-    the workshop. Please register now at https://www.trustedci.org/2021-cybersecurity-summit. There is 
+    the workshop. Please [register](https://www.trustedci.org/2021-cybersecurity-summit) now, there is
     no registration fee.
 
 start_date: 2021-10-18
