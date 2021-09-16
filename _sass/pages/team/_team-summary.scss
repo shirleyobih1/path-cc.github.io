@@ -3,14 +3,11 @@
   flex-wrap: wrap;
   flex-direction: row;
   .team-image {
-    height: 60px;
-    width: 60px;
+    height: 5rem;
+    width: 5rem;
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;
-    img {
-      width: 60px;
-    }
   }
   .team-meta {
     flex: 1;
