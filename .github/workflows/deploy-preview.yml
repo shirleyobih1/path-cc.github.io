@@ -39,6 +39,7 @@ jobs:
 
       - name: Build and Deploy
         run: |
+          git checkout -b temp-branch
           bundle exec jekyll build
           mkdir temp-dir
           mv _site ${{ env.BRANCH_NAME }}
