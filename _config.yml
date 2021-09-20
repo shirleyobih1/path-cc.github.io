@@ -2,6 +2,7 @@ baseurl: ''
 exclude: ['README.md', vendor]
 permalink: pretty
 title: 'PATh'
+url: "https://path-cc.io/"
 
 google_analytics_id: G-0CCSDQV212
 homepage:
@@ -63,3 +64,4 @@ sass:
 
 plugins:
   - jekyll-environment-variables
+  - jekyll-sitemap
