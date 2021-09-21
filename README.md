@@ -14,10 +14,12 @@ If this is your first time using Jekyll, please follow the [Jekyll docs](https:/
 
 1. Create a Branch from master with 'preview-' at the start of the branch name
   - For instance 'preview-helloworld'
-2. Populate the changes that you want to see
-3. Preview the changes that you have made at https://path-cc.io/web-preview/<branch-name>/ 
+2. Push this branch to the repo at https://github.com/path-cc/path-cc.github.io.git
+  - If you created the branch on github it is already there!
+4. Populate the changes that you want to see
+5. Preview the changes that you have made at https://path-cc.io/web-preview/<branch-name>/ 
   - For this instance https://path-cc.io/web-preview/preview-helloworld/
-4. When you are happy with the changes create a PR into master
+6. When you are happy with the changes create a PR into master
 
 ### Using Docker for Development
 
