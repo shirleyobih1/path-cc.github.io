@@ -20,10 +20,11 @@ logo:
     </div>
   </div>
 </div>
+{% include get/future_events.html %}
 <div class="container">
   {% include text-hr.html text="Bring the power of HTC to your research" %}
   <div class="row">
-    <div class="col-12 col-lg-8">
+    <div class="col-12 {% if future_events.size != 0 %}col-lg-8{% endif %}">
       <h1>
         PATh provides services and technologies for distributed high-throughput computing (dHTC)!
       </h1>
@@ -40,11 +41,10 @@ logo:
       desc="Share computing capacity, data, and software resources between collaborators and even across continents. **Contact us** at [support@opensciencegrid.org](mailto:support@opensciencegrid.org) to discuss more."
       %}
     </div>
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-4 {% if future_events.size == 0 %}d-none{% endif %}">
       <h1 class="m-0">Events</h1>
       <hr class="header-break">
       <div class="row justify-content-center">
-        {% include get/future_events.html %}
         {% for event in future_events limit:2 %}
           <div class="col-12 col-sm-10 col-md-6 col-lg-12">
             {% include event/event-card.html event=event %}

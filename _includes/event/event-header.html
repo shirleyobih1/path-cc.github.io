@@ -7,9 +7,10 @@
                     {% assign date = page.end_date | date: "-%e" | prepend: date %}
                 {% endif %}
 
-                {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-                {% capture posttime %}{{page.end_date | date: '%s'}}{% endcapture %}
-                {% if posttime < nowunix %}
+                {% assign current_time = 'now' | date: '%Y-%m-%d' | date: '%s' | plus: 0 %}
+                {% assign event_end =  page.end_date | append: "" | date: '%Y-%m-%d' | date: '%s' | plus: 0 %}
+
+                {% if current_time > event_end %}
                     Past Event | {{ date }}
                 {% else %}
                     Upcoming Event | {{ date }}
