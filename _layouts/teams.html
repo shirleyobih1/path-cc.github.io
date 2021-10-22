@@ -2,9 +2,9 @@
 layout: sub-page
 bodyClass: page-team-list
 ---
-
+{% include get/team.liquid %}
 <div class="row">
-    {% assign promoted_teams = site.team | where: "promoted", true | sort: "weight" %}
+    {% assign promoted_teams = team | where: "promoted", true | sort: "weight" %}
     {% for team in promoted_teams %}
     <div class="col-12 col-md-6 mb-2">
         <div class="team team-summary team-summary-large">
@@ -27,13 +27,13 @@ bodyClass: page-team-list
                 <a target="_blank" href="{{ team.linkedinurl }}">LinkedIn</a>
                 {% endif %}
             </div>
-            <div class="team-content">{{ team.content | truncate: 120 }}</div>
+            <div class="team-content">{{ team.description | truncate: 120 }}</div>
         </div>
     </div>
     {% endfor %}
 </div>
 <div class="row pt-6 pb-6">
-    {% assign teams = site.team | sort: "weight" | sort: "title" %}
+    {% assign teams = team | sort: "weight" | sort: "title" %}
     {% for team in teams %}
     {% if team.promoted == nil %}
     <div class="col-12 col-md-6 col-lg-4 mb-3">

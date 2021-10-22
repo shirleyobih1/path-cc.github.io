@@ -1,7 +1,0 @@
----
-title: "Carl Edquist"
-date: 2020-09-20T16:51:58-05:00
-image: "images/team/carl-edquist.jpg"
-institution: "University of Wisconsin-Madison"
-weight: 5
----
