@@ -6,7 +6,7 @@
                     {{ include.title }}
                 </h2>
             </div>
-            {% if event.image %}
+            {% if include.image %}
             <img alt="{{ include.alt }}" class="card-img mt-2 mb-2" src="{{ include.image | relative_url }}" \>
             {% endif %}
         </div>
