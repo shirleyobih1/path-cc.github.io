@@ -55,7 +55,7 @@ logo:
   </div>
   {% include text-hr.html text="News" %}
   <div class="row">
-    {% assign sorted_articles = site.news | reverse | where: 'publish', 'true' %}
+    {% assign sorted_articles = site.news | reverse %}
     <div class="col-12 col-md-6 col-lg-4 bg-white-offset">
       {% for article in sorted_articles limit: 1 %}
       {% include highlighted-title-image-text-card.html
