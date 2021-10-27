@@ -16,11 +16,11 @@ Specialized by the [OSG](#osg-consortiumosg-htcorg), this involves many independ
 ##### [OSG Consortium](https://osg-htc.org)
 A consortium dedicated to the advancement of all of Open Science via the practice of [distributed High Throughput Computing](#distributed-high-throughput-computing-dhtc), and the advancement of its state of the art.
 
-The OSG Consortium provides a fabric of services, including a software stack, that organization scan use to build dHTC environments
+The OSG Consortium provides a fabric of services, including a software stack, that organization scan use to build dHTC environments.
 
-- The OSG owns no clusters and pays no staff
-- It is coordinates the efforts contributed by projects such as the NSF-funded IRIS-HEP and PATh
-- OSG also runs the [Open Science Pool](#open-science-pool-ospool)
+- The OSG owns no clusters and pays no staff.
+- It is coordinates the efforts contributed by projects such as the NSF-funded IRIS-HEP and PATh.
+- OSG also runs the [Open Science Pool](#open-science-pool-ospool).
 
 ##### [HTCondor Software Suite (HTCSS)](https://htcondor.org)
 Provides technologies for creating a dHTC environment.
@@ -47,8 +47,8 @@ The OSCF provides a set of services for requesting and allocating computing reso
 
 - The [CE](#compute-entrypoint-ce), hosted on-prem or off-prem, provide a way for the factory to 
   send resource requests to a compute resource.
-- The factory acts on behalf of an organization the requests resources
-- If HTCSS is used by the organization the resource start and [EP](#execution-point-ep) and join the [Central Manager](#central-manager)
+- The factory acts on behalf of an organization the requests resources.
+- If HTCSS is used by the organization the resource start and [EP](#execution-point-ep) and join the [Central Manager](#central-manager).
 
 ##### Open Science Pool (OSPool)
 An environment for any scientist or group doing open science in the US.
