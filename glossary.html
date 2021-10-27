@@ -1,0 +1,91 @@
+---
+layout: sub-page
+title: Glossary and Concepts
+---
+
+<p>Since the inception of “High Throughput Computing” in 1996 the PATh partners have coined many
+  terms and concepts to help better describe their computational methodology. Below are the terms
+  that have been introduced and a description of each.</p>
+
+<div class="bg-white-offset row p-2 mb-2">
+  <div class="col-12">
+    <h5 id="high-throughput-computing-htc">High Throughput Computing (HTC)</h5>
+    <p>Maximizing the throughput of a computing resource toward a common problem.</p>
+  </div>
+</div>
+
+<div class="bg-white-offset row p-2 mb-2">
+  <div class="col-12">
+    <h5 id="distributed-high-throughput-computing-dhtc">Distributed High Throughput Computing (dHTC)</h5>
+    <p>Specialized by the <a href="#osg-consortiumosg-htcorg">OSG</a>, this involves many independent, collaborating administrative domains.</p>
+  </div>
+</div>
+
+<div class="bg-white-offset row p-2 mb-2">
+  <div class="col-12">
+    <h5 id="osg-consortium"><a href="https://osg-htc.org">OSG Consortium</a></h5>
+    <p>A consortium dedicated to the advancement of all of Open Science via the practice of <a href="#distributed-high-throughput-computing-dhtc">distributed High Throughput Computing</a>, and the advancement of its state of the art.</p>
+
+    <p>The OSG Consortium provides a fabric of services, including a software stack, that organization scan use to build dHTC environments.</p>
+
+    <ul>
+      <li>The OSG owns no clusters and pays no staff.</li>
+      <li>It is coordinates the efforts contributed by projects such as the NSF-funded IRIS-HEP and PATh.</li>
+      <li>OSG also runs the <a href="#open-science-pool-ospool">Open Science Pool</a>.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row bg-white-offset p-2 mb-2">
+  <div class="col-12">
+    <h5 id="htcondor-software-suite-htcss"><a href="https://htcondor.org">HTCondor Software Suite (HTCSS)</a></h5>
+    <p>Provides technologies for creating a dHTC environment.</p>
+  </div>
+  <div class="col-12 col-md-8">
+    <h5 id="access-point">Access Point</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, allows users to place workloads such as jobs, job sets, and DAGs. Can access one or more resource pools to acquire resources.</p>
+
+    <h5 id="execution-point-ep">Execution Point (EP)</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, executes jobs.</p>
+
+    <h5 id="central-manager">Central Manager</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, locates daemons and allocates shares of the overall resource pool.</p>
+
+    <h5 id="compute-entrypoint-ce">Compute Entrypoint (CE)</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, submits ‘pilot jobs’ to a remote compute resource.</p>
+  </div>
+  <div class="col-12 col-md-4">
+    <img src="../images/HTCSS-service-interaction.jpg" width="100%" alt="Image detailing the interaction between users and HTCSS services">
+  </div>
+</div>
+
+<div class="row bg-white-offset p-2 mb-2">
+  <div class="col-12">
+    <h5 id="open-science-compute-federation-oscf">Open Science Compute Federation (OSCF)</h5>
+    <p>The OSCF provides a set of services for requesting and allocating computing resources and creating <a href="#distributed-high-throughput-computing-dhtc">dHTC</a> environments.</p>
+
+    <p class="justify-content-center d-flex"><img class="img-fluid" src="../images/OSFC-graphic.jpg" alt="OSFC graphic detailing the interaction between the CE, factory, and resources"></p>
+
+    <ul>
+      <li>The <a href="#compute-entrypoint-ce">CE</a>, hosted on-prem or off-prem, provide a way for the factory to
+        send resource requests to a compute resource.</li>
+      <li>The factory acts on behalf of an organization the requests resources.</li>
+      <li>If HTCSS is used by the organization the resource start and <a href="#execution-point-ep">EP</a> and join the <a href="#central-manager">Central Manager</a>.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row bg-white-offset p-2 mb-2">
+  <div class="col-12">
+    <h5 id="open-science-pool-ospool">Open Science Pool (OSPool)</h5>
+    <p>An environment for any scientist or group doing open science in the US.</p>
+
+    <p class="justify-content-center d-flex"><img class="img-fluid" src="../images/OSPool-graphic.jpg" alt="Graphic detailing the interaction happening in the OSPool"></p>
+
+    <ul>
+      <li>Any campus, group, or collaboration can attach an access point to the OSPool and receive a share of the resources.</li>
+      <li>OSG operates the OSG Connect AP, meant to provide a place for PI-driven groups to place their jobs.</li>
+      <li>Users can Bring Your Own Resources (BYOR) to utilize their own resources (such as an XRAC allocation) via the OSPool.</li>
+    </ul>
+  </div>
+</div>
