@@ -26,7 +26,7 @@ The OSG Consortium provides a fabric of services, including a software stack, th
 Provides technologies for creating a dHTC environment.
 
 {: .float-right }
-![Image detailing the interaction between users and HTCSS services](images/HTCSS-service-interaction.jpg)
+![Image detailing the interaction between users and HTCSS services](../images/HTCSS-service-interaction.jpg)
 
 ##### Access Point
 Provided by [HTCSS](#htcondor-software-suite-htcsshtcondororg), allows users to place workloads such as jobs, job sets, and DAGs. Can access one or more resource pools to acquire resources.
@@ -43,7 +43,7 @@ Provided by [HTCSS](#htcondor-software-suite-htcsshtcondororg), submits 'pilot j
 ##### Open Science Compute Federation (OSCF)
 The OSCF provides a set of services for requesting and allocating computing resources and creating [dHTC](#distributed-high-throughput-computing-dhtc) environments.
 
-![OSFC graphic detailing the interaction between the CE, factory, and resources](images/OSFC-graphic.jpg)
+![OSFC graphic detailing the interaction between the CE, factory, and resources](../images/OSFC-graphic.jpg)
 
 - The [CE](#compute-entrypoint-ce), hosted on-prem or off-prem, provide a way for the factory to 
   send resource requests to a compute resource.
@@ -53,7 +53,7 @@ The OSCF provides a set of services for requesting and allocating computing reso
 ##### Open Science Pool (OSPool)
 An environment for any scientist or group doing open science in the US.
 
-![Graphic detailing the interaction happening in the OSPool](images/OSPool-graphic.jpg)
+![Graphic detailing the interaction happening in the OSPool](../images/OSPool-graphic.jpg)
 
 - Any campus, group, or collaboration can attach an access point to the OSPool and receive a share of the resources.
 - OSG operates the OSG Connect AP, meant to provide a place for PI-driven groups to place their jobs.
