@@ -22,11 +22,11 @@ The OSG Consortium provides a fabric of services, including a software stack, th
 - It is coordinates the efforts contributed by projects such as the NSF-funded IRIS-HEP and PATh.
 - OSG also runs the [Open Science Pool](#open-science-pool-ospool).
 
-##### [HTCondor Software Suite (HTCSS)](https://htcondor.org)
-Provides technologies for creating a dHTC environment.
-
 {: .float-right }
 ![Image detailing the interaction between users and HTCSS services](../images/HTCSS-service-interaction.jpg)
+
+##### [HTCondor Software Suite (HTCSS)](https://htcondor.org)
+Provides technologies for creating a dHTC environment.
 
 ##### Access Point
 Provided by [HTCSS](#htcondor-software-suite-htcsshtcondororg), allows users to place workloads such as jobs, job sets, and DAGs. Can access one or more resource pools to acquire resources.
