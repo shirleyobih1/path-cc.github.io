@@ -17,7 +17,7 @@ title: Glossary and Concepts
 <div class="bg-white-offset row p-2 mb-2">
   <div class="col-12">
     <h5 id="distributed-high-throughput-computing-dhtc">Distributed High Throughput Computing (dHTC)</h5>
-    <p>Specialized by the <a href="#osg-consortiumosg-htcorg">OSG</a>, this involves many independent, collaborating administrative domains.</p>
+    <p>Specialized by the <a href="#osg-consortiumosg-htcorg">OSG</a>, dHTC involves running a HTC infrastructure across many independent, collaborating administrative domains.</p>
   </div>
 </div>
 
@@ -26,12 +26,11 @@ title: Glossary and Concepts
     <h5 id="osg-consortium"><a href="https://osg-htc.org">OSG Consortium</a></h5>
     <p>A consortium dedicated to the advancement of all of Open Science via the practice of <a href="#distributed-high-throughput-computing-dhtc">distributed High Throughput Computing</a>, and the advancement of its state of the art.</p>
 
-    <p>The OSG Consortium provides a fabric of services, including a software stack, that organization scan use to build dHTC environments.</p>
+    <p>The OSG Consortium provides a fabric of services, including a software stack, that organization scan use to build dHTC environments.  These services can be used by resource providers to build dHTC environments.</p>
 
     <ul>
-      <li>The OSG owns no clusters and pays no staff.</li>
-      <li>It is coordinates the efforts contributed by projects such as the NSF-funded IRIS-HEP and PATh.</li>
-      <li>OSG also runs the <a href="#open-science-pool-ospool">Open Science Pool</a>.</li>
+      <li>The consortium is coordinates the efforts contributed by projects such as the NSF-funded <a href="https://iris-hep.org/">IRIS-HEP</a> and PATh.</li>
+      <li>One important service in the OSG fabric of services is the <a href="#open-science-pool-ospool">Open Science Pool</a>.</li>
     </ul>
   </div>
 </div>
@@ -39,20 +38,20 @@ title: Glossary and Concepts
 <div class="row bg-white-offset p-2 mb-2">
   <div class="col-12">
     <h5 id="htcondor-software-suite-htcss"><a href="https://htcondor.org">HTCondor Software Suite (HTCSS)</a></h5>
-    <p>Provides technologies for creating a dHTC environment.</p>
+    <p>HTCSS, based out of the <a href="https://chtc.cs.wisc.edu">Center for High Throughput Computing</a> at UW-Madison, implements several technologies for creating a dHTC environment.</p>
   </div>
   <div class="col-12 col-md-8">
-    <h5 id="access-point">Access Point</h5>
-    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, allows users to place workloads such as jobs, job sets, and DAGs. Can access one or more resource pools to acquire resources.</p>
+    <h5 id="access-point">Access Point (AP)</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, users can place their workloads (such as jobs, job sets, and DAGs) at an Access Point.  The AP access one or more resource pools to acquire resources.</p>
 
     <h5 id="execution-point-ep">Execution Point (EP)</h5>
-    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, executes jobs.</p>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, the Execution Point is given jobs by an AP and executes them.</p>
 
-    <h5 id="central-manager">Central Manager</h5>
-    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, locates daemons and allocates shares of the overall resource pool.</p>
+    <h5 id="central-manager">Central Manager (CM)</h5>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, the Central Manager locates daemons and allocates shares of the overall resource pool.</p>
 
     <h5 id="compute-entrypoint-ce">Compute Entrypoint (CE)</h5>
-    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, submits ‘pilot jobs’ to a remote compute resource.</p>
+    <p>Provided by <a href="#htcondor-software-suite-htcsshtcondororg">HTCSS</a>, the Compute Entrypoint provides a mechanism to integrate a local resource (such as a batch system) with the outside world.</p>
   </div>
   <div class="col-12 col-md-4">
     <img src="../images/HTCSS-service-interaction.jpg" width="100%" alt="Image detailing the interaction between users and HTCSS services">
