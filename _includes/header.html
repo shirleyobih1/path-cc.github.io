@@ -12,6 +12,15 @@
 
       <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
         <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="{{ '/about' | relative_url }}">PATh</a>
+              <a class="dropdown-item" href="{{ '/glossary' | relative_url }}">Glossary</a>
+            </div>
+          </li>
           {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
           {% for item in mainmenu %}
           <li class="nav-item {% if item.url == page.url %}active{% endif %}">
