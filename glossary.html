@@ -89,3 +89,18 @@ title: Glossary and Concepts
     <img class="img-fluid my-auto" src="../images/OSPool-graphic.jpg" alt="Graphic detailing the interaction happening in the OSPool">
   </div>
 </div>
+
+<div class="row bg-white-offset p-2 mb-2">
+  <div class="col-12 col-lg-7">
+    <h5 id="open-science-data-federation"><a href="https://opensciencegrid.org/docs/data/stashcache/overview/#data-federation-overview">Open Science Data Federation (OSDF)</a></h5>
+    <p>The OSDF is a set of federated origin and cache services that coordinate a namespace for data access.</p>
+    <ul>
+      <li>Jobs at an <a href="#compute-entrypoint-ce">CE</a> can access data via the OSDF, potentially authorized by an access token.</li>
+      <li>The OSDF system serves the data from the closest cache, retrieving it from an origin via the redirector if not on the local disk of the cache.</li>
+      <li><a href="https://www.osgconnect.net/">OSG Connect</a> provides an origin service; users can place data in that origin or add their data on their filesystem via our origin service to the OSDF.</li>
+    </ul>
+  </div>
+  <div class="col-12 col-lg-5 justify-content-center d-flex">
+    <img class="img-fluid my-auto" src="../images/OSDF.jpg" alt="Graphic detailing the interaction happening in the Open Science Data Federation">
+  </div>
+</div>
