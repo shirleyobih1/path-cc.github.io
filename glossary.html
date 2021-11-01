@@ -65,8 +65,8 @@ title: Glossary and Concepts
     <ul>
       <li>The <a href="#compute-entrypoint-ce">CE</a>, hosted on-prem or off-prem, provides a way for the factory to
         send resource requests to a compute resource.</li>
-      <li>The factory acts on behalf of an organization the requests resources.</li>
-      <li>If HTCSS is used by the organization, the resources start an <a href="#execution-point-ep">EP</a> and join to a <a href="#central-manager">Central Manager</a>.</li>
+      <li>The factory acts on behalf of an organization that requests resources.</li>
+      <li>If HTCSS is used by the organization, each resource starts an <a href="#execution-point-ep">EP</a> and joins a <a href="#central-manager">Central Manager</a>.</li>
     </ul>
   </div>
   <div class="col-12 col-lg-5 justify-content-center d-flex">
@@ -95,7 +95,7 @@ title: Glossary and Concepts
     <h5 id="open-science-data-federation"><a href="https://opensciencegrid.org/docs/data/stashcache/overview/#data-federation-overview">Open Science Data Federation (OSDF)</a></h5>
     <p>The OSDF is a set of federated origin and cache services that coordinate a namespace for data access.</p>
     <ul>
-      <li>Jobs at an <a href="#compute-entrypoint-ce">CE</a> can access data via the OSDF, potentially authorized by an access token.</li>
+      <li>Jobs at an <a href="#execution-point-ep">EP</a> can access data via the OSDF, potentially authorized by an access token.</li>
       <li>The OSDF system serves the data from the closest cache, retrieving it from an origin via the redirector if not on the local disk of the cache.</li>
       <li><a href="https://www.osgconnect.net/">OSG Connect</a> provides an origin service; users can place data in that origin or add their data on their filesystem via our origin service to the OSDF.</li>
     </ul>
