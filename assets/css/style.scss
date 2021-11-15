@@ -3,20 +3,33 @@
 ---
 
 
+@import "bootstrap/functions";
+@import "bootstrap/variables";
 
 // Colors
 $primary: #d41041;
-$primary-light: lighten($primary, 30);
-$primary-white: lighten($primary, 40);
+$primary-light: tint-color($primary, 30%);
+$primary-white: tint-color($primary, 40%);
 $secondary: #000000;
-$secondary-light: lighten($secondary, 50);
-$secondary-white: lighten($secondary, 97);
+$secondary-light: tint-color($secondary, 50%);
+$secondary-white: tint-color($secondary, 97%);
 
 $dark: black;
 $black: #000000;
 $white: #ffffff;
 $white-offset: $secondary-white;
 $steel: #5C5A5A;
+
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "danger":     $danger,
+        "light":      $light,
+        "dark":       $dark
+);
 
 // Cards
 $card-background-color: lighten($secondary-light, 5);
@@ -43,12 +56,9 @@ $footer-text-color: $white;
 $sub-footer-background-color: darken($primary, 10%);
 $sub-footer-text-color: $white;
 
-// Bootstrap
-@import 'bootstrap-variables';
-@import 'bootstrap/bootstrap-reboot';
-@import 'bootstrap/bootstrap-grid';
-@import 'bootstrap/bootstrap'; // Uncomment this line to import the entire Bootstrap library
 
+// Load in the rest of bootstrap
+@import 'bootstrap/bootstrap';
 
 // Libraries
 @import 'libraries/hamburgers/hamburgers';
@@ -125,6 +135,9 @@ body {
 .navbar {
   width: 100%;
   font-size: 1.2rem;
+  .nav-link {
+    font-family: 'Playfair Display', serif, -apple-system;
+  }
   .social-media {
     img {
       margin-left: map-get($spacers, 1);
@@ -137,8 +150,10 @@ body {
 .section-break {
   font-weight: bold;
   hr {
-    border-top-color: $primary;
+    background-color: $primary;
     border-top-width: 3px;
+    opacity: 1;
+    padding: 1px;
   }
   .section-header {
     text-align: center;
