@@ -10,19 +10,19 @@ bodyClass: page-team-list
         <div class="team team-summary team-summary-large">
             {% if team.image %}
             <div class="team-image">
-                <img alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
+                <img alt="{{ team.name }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
             </div>
             {% endif %}
             <div class="team-meta">
                 {% if team.website %}
                 <a href="{{ team.website }}">
                 {% endif %}
-                <h2 class="team-name">{{ team.title }}</h2>
+                <h2 class="team-name">{{ team.name }}</h2>
                 {% if team.website %}
                 </a>
                 {% endif %}
                 <p class="team-institution">{{ team.institution }}</p>
-                <p class="team-description">{{ team.jobtitle }}</p>
+                <p class="team-description">{{ team.title }}</p>
                 {% if team.linkedinurl %}
                 <a target="_blank" href="{{ team.linkedinurl }}">LinkedIn</a>
                 {% endif %}
@@ -40,19 +40,19 @@ bodyClass: page-team-list
         <div class="team team-summary">
             {% if team.image %}
             <div class="team-image">
-                <img alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
+                <img alt="{{ team.name }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
             </div>
             {% endif %}
             <div class="team-meta">
                 {% if team.website %}
                 <a href="{{ team.website }}">
                 {% endif %}
-                <h3 class="team-name m-0">{{ team.title }}</h3>
+                <h3 class="team-name m-0">{{ team.name }}</h3>
                 {% if team.website %}
                 </a>
                 {% endif %}
                 <p class="team-institution">{{ team.institution }}</p>
-                <p class="team-description">{{ team.jobtitle }}</p>
+                <p class="team-description">{{ team.title }}</p>
             </div>
         </div>
     </div>
