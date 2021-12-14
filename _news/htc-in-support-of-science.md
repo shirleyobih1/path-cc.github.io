@@ -27,7 +27,7 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[Submit Locally, Run Globally](/news/2020-12-7-Submit-Locally-Run-Globally/)** (2020)
 
-- **[High Throughput Computing Powers Covid Genetic Sequencing](/2020-11-18-High-Throughput-Computing-Powers-Covid-Genetic-Sequencing/)** (2020)
+- **[High Throughput Computing Powers Covid Genetic Sequencing](/news/2020-11-18-High-Throughput-Computing-Powers-Covid-Genetic-Sequencing/)** (2020)
 
 - **[Chasing ghost particles with armies of computers](https://morgridge.org/story/chasing-ghost-particles-with-armies-of-computers/)** (2018)
 
