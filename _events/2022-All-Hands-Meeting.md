@@ -43,31 +43,31 @@ The sessions cover the following topics:
 {% endcapture %}
 
 {% capture subsection %}
-# Dates
+### Dates
 
 14-18 March 2022
 
 
-# Who 
+### Who 
 
 Researchers, Campuses and Organizations, Site Administrators, and Collaborations interested in OSG, science and high-throughput computing.
 
  
-# Where
+### Where
 
 Hybrid Event both at the University of Oklahoma (OU) in Norman and Virtual. 
 
 
-# Fees
+### Fees
 
 In-person participation will include a standard registration fee; online-only participation will continue to be free. Required registration for both components will open in January 2022.
 
 
-# Registration
+### Registration
 
 Required registration for both components will open in January 2022.
 
-# Questions?
+### Questions?
 
 For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
 {% endcapture %}
