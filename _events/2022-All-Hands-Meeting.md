@@ -60,7 +60,7 @@ Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 # Fees
 
-In-person participation will include a standard registration fee; online-only participation will continue to be free. Required registration for both components will open in January 2022.
+In-person participation will include a standard registration fee; online-only participation will continue to be free. 
 
 
 # Registration
