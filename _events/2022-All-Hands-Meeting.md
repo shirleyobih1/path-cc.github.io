@@ -37,9 +37,6 @@ For further details, visit: [https://opensciencegrid.org/all-hands/2022/](https:
 
 For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
 
-The sessions cover the following topics:
-
-
 {% endcapture %}
 
 {% capture subsection %}
