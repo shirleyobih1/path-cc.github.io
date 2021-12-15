@@ -11,6 +11,7 @@ location: "University of Oklahoma (OU) in Norman and Virtually"
 link: "https://opensciencegrid.org/all-hands/2022/"
 image: "/images/events/OU_AHM_2022.jpeg"
 header_image: "/images/events/OU_AHM_2022.jpeg"
+header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-NC-SA 2.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=openverse&atype=rich'
 ---
 
 {% capture main %}
