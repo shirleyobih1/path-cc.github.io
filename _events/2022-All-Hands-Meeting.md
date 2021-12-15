@@ -66,7 +66,7 @@ Required registration for both components will open in January 2022.
 
 ### Questions?
 
-For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
+For questions, write to <events@opensciencegrid.org>.
 {% endcapture %}
 
 {% capture endblock %}
