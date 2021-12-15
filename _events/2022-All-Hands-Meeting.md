@@ -7,7 +7,7 @@ excerpt: |
    Save the Date for the OSG All Hands Meeting to be held March 14-18 at the University of Oklahoma (OU)in Norman and virtually. We are planning a hybrid event.    If you regiser for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with collegause, have planned or ad      hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentation and discusions as in    the past 2 years, whether in-person or online. 
 start_date: 2022-03-14
 end_date: 2022-03-18
-location: "University of Oklahoma (OU) in Norman and Virtually"
+location: "University of Oklahoma and Virtually"
 link: "https://opensciencegrid.org/all-hands/2022/"
 image: "/images/events/OU_AHM_2022.jpeg"
 header_image: "/images/events/OU_AHM_2022.jpeg"
@@ -33,7 +33,7 @@ In-person participation will include a standard registration fee; online-only pa
 
 Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
-For further details, visit: https://opensciencegrid.org/all-hands/2022/
+For further details, visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
 
 For questions, please see the contacts on the page linked above or, as always, write to <events@opensciencegrid.org>.
 
