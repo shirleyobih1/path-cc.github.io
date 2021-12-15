@@ -1,10 +1,8 @@
-
 ---
 short_title: All Hands Meeting 2022 
 title: "All Hands Meeting 14-18 March 2022"
 layout: events
 published: true
-
 excerpt: |
    Save the Date for the OSG All Hands Meeting to be held March 14-18 at the University of Oklahoma (OU)in Norman and virtually. We are planning a hybrid event.    If you regiser for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with collegause, have planned or ad      hoc   meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentation and discusions as in    the past 2 years, whether in-person or online. 
 start_date: 2021-12-15
