@@ -9,8 +9,8 @@ start_date: 2021-12-15
 end_date: 2022-03-19
 location: "University of Oklahoma (OU) in Norman and Virtually"
 link: "https://opensciencegrid.org/all-hands/2022/"
-image: "/events/OU_AHM_2022.jpeg"
-header_image: "/events/OU_AHM_2022.jpeg"
+image: "/images/events/OU_AHM_2022.jpeg"
+header_image: "/images/events/OU_AHM_2022.jpeg"
 ---
 
 {% capture main %}
