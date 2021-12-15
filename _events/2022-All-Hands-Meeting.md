@@ -55,7 +55,7 @@ Researchers, Campuses and Organizations, Site Administrators, and Collaborations
  
 # Where
 
-Hybrid Event both at the University of Oklahoma (OU) in Norman and Virtual. 
+Hybrid event both at the University of Oklahoma (OU) in Norman and virtual. 
 
 
 # Fees
