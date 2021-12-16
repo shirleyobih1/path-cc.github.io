@@ -12,7 +12,7 @@ By Josephine Watkins
 
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{ 'images/news/Gaylen-Fronk-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Gaylen Fronk" width="250px">
-  <figcaption class="figure-caption">Gaylen Fronk is using HTC to examine substance-use disorder treatments. Image credit: <a href="https://arc.psych.wisc.edu/">UW ARC</a>.<br/></figcaption>
+  <figcaption class="figure-caption">Gaylen Fronk. Image credit: <a href="https://arc.psych.wisc.edu/">UW ARC</a>.<br/></figcaption>
 </figure> 
 
 
@@ -28,7 +28,7 @@ Embarking on this project in August of 2019, Fronk began by reaching out to the 
 
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{ 'images/news/christina-koch-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Christina Koch" width="250px">
-  <figcaption class="figure-caption">Christina Koch is a Research Computing Facilitator at CHTC and collaborates with Fronk on her project.<br/></figcaption>
+  <figcaption class="figure-caption">Christina Koch.<br/></figcaption>
 </figure> 
 
 CHTC research computing facilitator [Christina Koch](https://wid.wisc.edu/people/christina-koch/) has worked closely with Fronk since the beginning of her project, and elaborates on the benefits arising from this synergistic relationship: “Instead of every research group on campus needing to have their own in-house large-scale computing expert, they can meet with our facilitation team and we provide them with the information they need to expand their research computing vision and apply it to their work. But we also learn a lot ourselves from the wide variety of researchers we consult with. Since our experience isn't siloed to a particular research domain, we take lessons learned from one group and share them with another group, where normally those groups would never have thought to connect with each other.”
