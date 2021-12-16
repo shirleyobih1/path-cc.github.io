@@ -8,7 +8,7 @@ author: Josephine Watkins
 published: true
 --- 
 
-By Josephine Watkins
+*By Josephine Watkins*
 
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{ 'images/news/Gaylen-Fronk-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Gaylen Fronk" width="250px">
