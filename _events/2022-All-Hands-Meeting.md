@@ -1,6 +1,6 @@
 ---
-short_title: All Hands Meeting 2022 
-title: "All Hands Meeting 14-18 March 2022"
+short_title: OSG All-Hands Meeting 2022
+title: "OSG All-Hands Meeting 2022"
 layout: events
 published: true
 excerpt: |
