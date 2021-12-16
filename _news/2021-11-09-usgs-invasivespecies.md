@@ -6,6 +6,8 @@ image_src: images/news/USGS-collage.jpg
 image_alt: Sattelite image collage graphic
 --- 
 
+By Josephine Watkins
+
 <figure>
   <img src="{{ '/images/news/USGS-collage.jpg' | relative_url }}" alt="Sattelite image collage graphic"/>
   <figcaption class="figure-caption"> From left to right: Mississippi River Delta, Colorado Rocky Mountains, Kansas’s Milford Lake. Images by <a href="https://unsplash.com/@usgs">USGS on Unsplash.</a><br/></figcaption>
