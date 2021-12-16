@@ -8,6 +8,8 @@ author: Josephine Watkins
 published: true
 --- 
 
+By Josephine Watkins
+
 <figure class="figure float-right" style="margin-left: 1em">
   <img src="{{ 'images/news/Gaylen-Fronk-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Gaylen Fronk" width="250px">
   <figcaption class="figure-caption">Gaylen Fronk is using HTC to examine substance-use disorder treatments. Image credit: <a href="https://arc.psych.wisc.edu/">UW ARC</a>.<br/></figcaption>
