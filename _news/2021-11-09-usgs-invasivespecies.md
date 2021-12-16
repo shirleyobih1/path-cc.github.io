@@ -6,6 +6,8 @@ image_src: images/news/USGS-collage.jpg
 image_alt: Sattelite image collage graphic
 --- 
 
+***Researchers at the USGS are using HTC to pinpoint potential invasive species for the United States.***
+
 By Josephine Watkins
 
 <figure>
