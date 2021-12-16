@@ -24,7 +24,7 @@ Save the dates! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We ar
 Focus areas for 2022 will include:
 - State of OSG and vision for its future
 - New types of resources that support new types of applications
-- Research that benefited from OSG
+- Research that benefitted from OSG
 - Campus services and experiences, and NSF Campus Cyberinfrastructure (CC*)
 - Impact on multi-institutional collaborations, including U.S. LHC Projects
 
