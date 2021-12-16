@@ -1,10 +1,9 @@
 ---
 short_title: OSG All-Hands Meeting 2022
 title: "OSG All-Hands Meeting 2022"
-layout: events
 published: true
 excerpt: |
-   Save the Date for the OSG All Hands Meeting to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event.    If you regiser for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with collegause, have planned or ad      hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentation and discusions as in    the past 2 years, whether in-person or online. 
+   Save the Date for the OSG All-Hands Meeting 2022 to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event. If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentation and discussions as in the past 2 years, whether in-person or online.
 start_date: 2022-03-14
 end_date: 2022-03-18
 location: "University of Oklahoma and Virtually"
@@ -25,7 +24,7 @@ Save the dates! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We ar
 Focus areas for 2022 will include:
 - State of OSG and vision for its future
 - New types of resources that support new types of applications
-- Research that benefitted from OSG
+- Research that benefited from OSG
 - Campus services and experiences, and NSF Campus Cyberinfrastructure (CC*)
 - Impact on multi-institutional collaborations, including U.S. LHC Projects
 
@@ -45,19 +44,19 @@ For questions, please see the contacts on the page linked above or, as always, w
 14-18 March 2022
 
 
-### Who 
+### Who
 
 Researchers, Campuses and Organizations, Site Administrators, and Collaborations interested in OSG, science and high-throughput computing.
 
- 
+
 ### Where
 
-Hybrid event both at the University of Oklahoma (OU) in Norman and virtual. 
+Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 
 ### Fees
 
-In-person participation will include a standard registration fee; online-only participation will continue to be free. 
+In-person participation will include a standard registration fee; online-only participation will continue to be free.
 
 
 ### Registration
