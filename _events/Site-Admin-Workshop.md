@@ -27,8 +27,6 @@ While there is no fee, registration and completion of this brief survey is requi
 Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform)
 
 Office Hours will begin with a very short presentation on "Why is my site not running jobs? Examples, Answers, and Discussion." You'll also have a chance to get your burning questions of the day answered. We will be hosting breakout rooms for troubleshooting and finishing any site configurations. If you have any open tickets you’d like to discuss with OSG staff, we especially encourage you to attend. 
-Send any questions about the event to events@opensciencegrid.org. 
-
 
 {% endcapture %}
 
@@ -40,7 +38,7 @@ All site admins or site representatives sharing resources, using OSG services or
 
 # When
 
-Tuesday, Jnaury 25 from 2 - 5 PM ET
+Tuesday, Janaury 25 from 2 - 5 PM ET
 
 # Where
 
@@ -53,7 +51,7 @@ No fees, attendance is free!
 # Registration
 
 While there is no fee, registration and completion of this brief survey is required for participants to receive connection information. Seats are limited.
-Please register here: https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform
+Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform)
 
 # Questions?
 
@@ -62,12 +60,6 @@ Contact us at <events@opensciencegrid.org>.
 {% endcapture %}
 
 {% capture endblock %}
-## Contact Us
 
-
-If you have any questions about the event, feel free to email us:
-
-<events@opensciencegrid.org>
-{% endcapture %}
 
 {% include event/event-page.html %}
