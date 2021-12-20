@@ -38,7 +38,7 @@ All site admins or site representatives sharing resources, using OSG services or
 
 # When
 
-Tuesday, Janaury 25 from 2 - 5 PM ET
+Tuesday, January 25 from 2 - 5 PM ET
 
 # Where
 
@@ -50,7 +50,7 @@ No fees, attendance is free!
 
 # Registration
 
-While there is no fee, registration and completion of this brief survey is required for participants to receive connection information. Seats are limited.
+Registration and completion of this brief survey is required for participants to receive connection information. Seats are limited.
 Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform)
 
 # Questions?
