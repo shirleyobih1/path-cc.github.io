@@ -10,7 +10,7 @@ excerpt: |
 start_date: 2022-01-25
 end_date: 2022-01-25
 location: "Virtual"
-link: "https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform"
+link: 
 image: "/images/events/siteadmin.jpg"
 header_image: "/images/events/siteadmin.jpg"
 ---
