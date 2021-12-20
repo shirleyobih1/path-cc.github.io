@@ -11,8 +11,8 @@ start_date: 2022-01-25
 end_date: 2022-01-25
 location: "Virtual"
 link: 
-image: "/images/events/siteadmin.jpg"
-header_image: "/images/events/siteadmin.jpg"
+image: "/images/events/siteadmin1.jpg"
+header_image: "/images/events/siteadmin1.jpg"
 ---
 
 {% capture main %}
