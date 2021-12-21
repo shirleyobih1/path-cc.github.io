@@ -51,7 +51,7 @@ No fees, attendance is free!
 # Registration
 
 Registration and completion of this brief survey is required for participants to receive connection information. Seats are limited.
-Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform)
+Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform) 
 
 # Questions?
 
