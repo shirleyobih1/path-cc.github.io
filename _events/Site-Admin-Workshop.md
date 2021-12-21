@@ -3,10 +3,8 @@ short_title: Site Admin Office Hours
 title: "Register Now for OSG's Site Admin Office Hours"
 layout: events
 published: true
-
 excerpt: |
-    We will be hosting our first Site Admin Office Hours, Tuesday January 25 from 2 - 5 PM ET offered by the Partnership to Advance Throughput Computing (PATh). The office hours provide an opportunity for any system administrator to work with the OSG Software and Operations teams on pressing site configuration or troubleshooting issues. All site admins or site representatives sharing resources using OSG services or running an Access Point are encouraged to attend. 
-    
+    We will be hosting our first Site Admin Office Hours, Tuesday January 25 from 2-5 PM ET offered by the Partnership to Advance Throughput Computing (PATh). The office hours provide an opportunity for any system administrator to work with the OSG Software and Operations teams on pressing site configuration or troubleshooting issues. All site admins or site representatives sharing resources using OSG services or running an Access Point are encouraged to attend.
 start_date: 2022-01-25
 end_date: 2022-01-25
 location: "Virtual"
@@ -60,6 +58,7 @@ Contact us at <events@opensciencegrid.org>.
 {% endcapture %}
 
 {% capture endblock %}
+{% endcapture %}
 
 
 {% include event/event-page.html %}
