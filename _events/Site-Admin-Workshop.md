@@ -30,28 +30,28 @@ Office Hours will begin with a very short presentation on "Why is my site not ru
 
 
 {% capture subsection %}
-# Who
+### Who
 
 All site admins or site representatives sharing resources, using OSG services or running an Access Point.
 
-# When
+### When
 
 Tuesday, January 25 from 2 - 5 PM ET
 
-# Where
+### Where
 
 Virtual
 
-# Fees
+### Fees
 
 No fees, attendance is free!
 
-# Registration
+### Registration
 
 Registration and completion of this brief survey is required for participants to receive connection information. Seats are limited.
 Please [register here.](https://docs.google.com/forms/d/e/1FAIpQLSdnvnv3uFdKN5MiVFmpFfsIYaZVZDLbpJUvTBprBsGpsSgKxQ/viewform) 
 
-# Questions?
+### Questions?
 
 Contact us at <events@opensciencegrid.org>. 
 
