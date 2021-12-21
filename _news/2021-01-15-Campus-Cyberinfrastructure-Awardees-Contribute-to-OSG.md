@@ -71,7 +71,7 @@ These campuses are contributing to an <a href="https://research.cs.wisc.edu/htco
 >- <a href="https://www1.lehigh.edu/" target="_blank">Lehigh University</a>
 >- <a href="http://www.hpc.lsu.edu/about/index.php" target="_blank"> Louisiana State University</a>
 >- <a href="https://www.lsuhsc.edu/" target="_blank"> LSU Health</a>
->- <a href="https://newscenter.nmsu.edu/Articles/view/14445/nsf-grant-brings-high-performance-computing-to-new-mexico-students-faculty" target="_blank"> New Mexico State University</a>
+>- <a href="https://www.nmsu.edu/" target="_blank"> New Mexico State University</a>
 >- <a href="https://www.purdue.edu/newsroom/releases/2019/Q3/nsf-supports-purdue-team-developing-online-manufacturing-education.html" target="_blank">Purdue University</a>
 >- <a href="https://news.syr.edu/blog/2020/09/03/national-science-foundation-awards-390000-to-syracuse-university-computing-initiative/" target="_blank"> Syracuse University</a>
 >- <a href="https://www.siue.edu/its/cyberinfrastructure/" target="_blank"> Southern Illinois University Edwardsville</a>

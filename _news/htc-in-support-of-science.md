@@ -7,6 +7,11 @@ publish: true
 
 The high throughput computing capabilities provided by HTCondor and the OSG Consortium’s Fabric of Services have a rich history of advancing all domains of research. From detecting gravitational waves caused by ancient black hole collisions, to hunting viral variants of COVID-19 –– browse the collection of articles below to discover just what’s possible with high throughput computing.
 
+
+- **[Harnessing HTC-enabled precision mental health to capture the complexity of smoking cessation](/news/2021-12-16-precision-mental-health/)** (2021)
+
+- **[Protecting ecosystems with HTC](/news/2021-11-09-usgs-invasivespecies/)** (2021)
+
 - **[80,000 jobs, 40 billion base pairs, and 20 bats –– all in 4 weeks](/news/2021-10-26-bat-genomics/)** (2021)
 
 - **[Centuries of newspapers are now easily searchable thanks to HTCSS](/news/2021-10-26-banq/)** (2021)
@@ -27,7 +32,7 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[Submit Locally, Run Globally](/news/2020-12-7-Submit-Locally-Run-Globally/)** (2020)
 
-- **[High Throughput Computing Powers Covid Genetic Sequencing](/2020-11-18-High-Throughput-Computing-Powers-Covid-Genetic-Sequencing/)** (2020)
+- **[High Throughput Computing Powers Covid Genetic Sequencing](/news/2020-11-18-High-Throughput-Computing-Powers-Covid-Genetic-Sequencing/)** (2020)
 
 - **[Chasing ghost particles with armies of computers](https://morgridge.org/story/chasing-ghost-particles-with-armies-of-computers/)** (2018)
 

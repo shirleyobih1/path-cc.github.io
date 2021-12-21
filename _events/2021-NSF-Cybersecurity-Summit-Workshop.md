@@ -29,7 +29,7 @@ no registration fee.
 
 ### Call for Presentations
 To present at the workshop, please send the names, affiliations, and emails for the presenters along
-with the title and a short description of the topic to be presented to [workshop@sciauth.org](workshop@sciauth.org) by
+with the title and a short description of the topic to be presented to [workshop@sciauth.org](mailto:workshop@sciauth.org) by
 ~~September 14~~ September 30.
 
 ### About the Workshop
@@ -100,10 +100,10 @@ Following an initial 20-minute welcome and introduction session, four 40-minute 
 The intended audience includes developers, operators, and stakeholders in interoperable JWT-based AAI for the worldwide science, engineering, research and academic communities. We intend for all sessions to be recorded - to capture presenter and audience comments and to make sessions available for later replay online.
 
 ### Contact Information
-- Derek Simmel [dsimmel@psc.edu](dsimmel@psc.edu)
-- Jim Basney [jbasney@illinois.edu](jbasney@illinois.edu)
-- Brian Bockelman [bbockelman@morgridge.org](bbockelman@morgridge.org)
-- Derek Weitzel [dweitzel@unl.edu](dweitzel@unl.edu)
+- Derek Simmel [dsimmel@psc.edu](mailto:dsimmel@psc.edu)
+- Jim Basney [jbasney@illinois.edu](mailto:jbasney@illinois.edu)
+- Brian Bockelman [bbockelman@morgridge.org](mailto:bbockelman@morgridge.org)
+- Derek Weitzel [dweitzel@unl.edu](mailto:dweitzel@unl.edu)
 
 ### Acknowledgements
 The workshop is co-organized by [SciAuth](https://sciauth.org/) and [TAGPMA](http://www.tagpma.org/).
