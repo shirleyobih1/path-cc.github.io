@@ -3,7 +3,7 @@
         <div class="col-auto">
             <h2 class="subtitle">
                 {% assign date = page.start_date | date: "%B %e" %}
-                {% if event.start_date != event.end_date %}
+                {% if page.start_date != page.end_date %}
                     {% assign date = page.end_date | date: "-%e" | prepend: date %}
                 {% endif %}
 
