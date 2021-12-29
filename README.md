@@ -1,14 +1,22 @@
 # PATh - Partnership to Advance Throughput Computing
 
-❗Recent Changes❗ 
-- [Using Github for Development](#using-github-for-development)
+- [Development](#development)
+- [Building Locally](#installing-ruby-&-jekyll)
+- [Using Github Automatic Previews](#using-github-for-development)
+- [Using Docker Container](#using-docker-for-development)
 - [Pushing Changes to Production](#pushing-changes-to-production)
 
 [PATh](https://path-cc.io/) brings together the Center for High Throughput Computing and the OSG in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing.
 
 Thie website is a [Jekyll](https://jekyllrb.com/) based website.  The theme is based on [Jekyll-Serif](https://github.com/zerostaticthemes/jekyll-serif-theme).  Please create a pull request to modify the website.
 
-# Installation
+# Deployment
+
+To have you changes merged into the main website you must create a PR and get one review before you are allowed to merge. If you don't have anyone in mind you can request _@CannonLock_ and he will review it the next morning.
+
+# Development
+
+The following three guides contain a method to view your website changes before creating a PR.
 
 ### Installing Ruby & Jekyll
  
