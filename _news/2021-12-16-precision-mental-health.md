@@ -12,7 +12,7 @@ published: true
 
 By Josephine Watkins
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{ 'images/news/Gaylen-Fronk-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Gaylen Fronk" width="250px">
   <figcaption class="figure-caption">Gaylen Fronk. Image credit: <a href="https://arc.psych.wisc.edu/">UW ARC</a>.<br/></figcaption>
 </figure> 
@@ -28,7 +28,7 @@ Embarking on this project in August of 2019, Fronk began by reaching out to the 
 
 “I am never going to be a computer scientist,” explains Fronk. “I’m doing my best and I’m learning, but that’s not what my focus is and that’s never going to be my area of expertise. I think it's really wonderful to be able to lean on people for whom that is their area of expertise, and have those collaborative relationships.” This type of collaboration among computing experts and researchers will be vital as computational advances continue to spread throughout the social sciences. Computing staff like CHTC’s research computing facilitators help researchers to transform, expand, and accelerate their work; and specialized researchers like Fronk provide their domain expertise to ensure these computational methods are incorporated in ways that preserve the conceptual and theoretical basis of their discipline. 
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{ 'images/news/christina-koch-square.jpg' | relative_url }}" class="figure-img img-fluid rounded" alt="Christina Koch" width="250px">
   <figcaption class="figure-caption">Christina Koch.<br/></figcaption>
 </figure> 

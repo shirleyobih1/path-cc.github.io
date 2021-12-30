@@ -10,7 +10,7 @@ image_alt: Ariadna Morales
 
 By Josephine Watkins
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{site.baseurl}}/images/news/bat-genomics-Ariadna.jpeg" class="figure-img img-fluid rounded" alt="Ariadna Morales" width="350px">
   <figcaption class="figure-caption">Ariadna Morales (Credit: AMNH) <br/></figcaption>
 </figure>
