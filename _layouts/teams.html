@@ -33,10 +33,10 @@ bodyClass: page-team-list
     {% endfor %}
 </div>
 <div class="row pt-6 pb-6">
-    {% assign teams = team | sort: "weight" | sort: "title" %}
+    {% assign teams = team | sort: "weight" | sort: "name" %}
     {% for team in teams %}
     {% if team.promoted == nil %}
-    <div class="col-12 col-md-6 col-lg-4 mb-3">
+    <div class="col-12 col-md-6 col-lg-4 mb-3 px-1">
         <div class="team team-summary">
             {% if team.image %}
             <div class="team-image">
@@ -51,8 +51,8 @@ bodyClass: page-team-list
                 {% if team.website %}
                 </a>
                 {% endif %}
-                <p class="team-institution">{{ team.institution }}</p>
-                <p class="team-description">{{ team.title }}</p>
+                <p>{{ team.title }}</p>
+                <p class="team-institution"><small>{{ team.institution }}</small></p>
             </div>
         </div>
     </div>
