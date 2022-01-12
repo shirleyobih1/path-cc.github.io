@@ -1,7 +1,7 @@
 ---
-title: Proposal for classifying the utilization of OSG
+title: Multiple files vs. Tar.gz
 layout: sub-page
-date: 2021-1-7
+date: 2022-1-7
 excerpt: |
     The objective of these tests is to check if it is faster to transfer each file separately or compress all the files on a tar.gz file for a job on the Open Science Grid (OSG) using the HTCondor.
 ---
@@ -43,8 +43,11 @@ queue 20</code></pre>
 <hr>
 <div class="bg-light p-2">
 <pre class="m-0"><code>#!/bin/bash
-tar −x f data.tar.gz
+
+tar −xf data.tar.gz
+
 cd data
+
 for f in file *;
 do
     md5sum $f
@@ -66,7 +69,7 @@ done</code></pre>
 Arguments = $(ProcId)
 output = short$(ProcId).output
 log = short$(ProcId).log
-Requirements = GLIDEI_ Site == ”CU − Research Computing”
+Requirements = GLIDEIN_Site == ”CU − Research Computing”
 +DESIRED_Sites = ”CU − Research Computing”
 transfer_input_files = /home/fandri/data2/
 should_transfer_files = yes
@@ -99,7 +102,7 @@ done</code></pre>
     <li>CU – Research Computing (Colorado University - Boulder - CO).</li>
 </ul>
 <p>
-    The tests were executed 20 times. Table 1 contains statistical data from all the tests:
+    The tests were executed 20 times. Table <span class="text-info">1</span> contains statistical data from all the tests:
 </p>
 <ul>
     <li>“AVG transfer” column shows the average time to transfer the files;</li>

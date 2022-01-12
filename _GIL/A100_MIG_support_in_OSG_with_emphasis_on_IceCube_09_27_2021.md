@@ -6,20 +6,20 @@ excerpt: |
     This document provides an assessment of the feasibility to use the NVIDIA A100 GPU Multi Instance Graphics (MIG) capabilities inside OSG, with a particular emphasis on IceCube. MIG allows an A100 GPU to be split in several partitions that can be assigned to independent compute jobs. (MIG is also available on the NIVIDA A30 GPUs, but we currently have no HW to test).
 ---
 
-by Igor Sfiligoi – UCSD, as of Sept 27th 2021
+**by Igor Sfiligoi – UCSD, as of Sept 27th 2021**
 
-#### Objective
+### Objective
 
 This document provides an assessment of the feasibility to use the NVIDIA A100 GPU Multi Instance Graphics (MIG) capabilities inside OSG, with a particular emphasis on IceCube. MIG allows an A100 GPU to be split in several partitions that can be assigned to independent compute jobs. (MIG is also available on the NIVIDA A30 GPUs, but we currently have no HW to test).
 
-#### Executive summary
+### Executive summary
 As of HTCondor version 9.0.6, all OSG infrastructure properly supports NVIDIA A100 GPUs that were split in multiple MIG partitions. This includes host-level HTCondor managing the GPU scheduling, glideinWMS-based pilot overlays and GRACC accounting.
 
 It should be further noted that HTCondor will not actively split any A100 GPU, just use the existing MIG partitions. Any splitting has to be performed by a privileged user before HTCondor is started.
 
 If dynamic partitioning of A100 GPUs is desired, that should become a feature request to the HTCondor team, as I am unaware of any current plans for such support.
 
-#### Detailed description
+### Detailed description
 
 In order for IceCube jobs to use a GPU, HTCondor must detect it and advertise it in the job environment through the CUDA_VISIBLE_DEVICES variable.
 While using MIG partitions does not require any change from the applications, listing all the MIG partitions requires a different API compared to just listing the GPUs. Before HTCondor version 9.0.6, that was not working correctly.
@@ -35,7 +35,7 @@ To the best of my knowledge, HTCondor does not have any support for changing the
 
 Note that several tests were ran with a pre-release version of 9.0.6, but one final test was ran with the officially release packages, too.
 
-#### Appending – Test setup details
+### Appending – Test setup details
 I used the same Cloud CE setup we put in place earlier in the year, and which is described in <https://arxiv.org/abs/2107.03963>.
 
 The worker nodes were the A2 GCP instances.
@@ -60,5 +60,5 @@ done
 ```
 
 
-#### Acknowledgements
+### Acknowledgements
 This work was partially funded by NSF grants OAC-1941481, OAC-2030508, OAC-1826967 and OAC-1541349.
