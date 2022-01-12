@@ -82,7 +82,7 @@ To monitor data access requires analyzing three data access methods:
 As users of OSG may use any of these methods, we chose a testing methodology that tested all of them independently of each other. Thus, checking the robustness and scalability is based on request files using stashcp, xrdcopy, and cvmfs in a different order with different files size and other variables following Table 1. We implement two different ways of accessing data via cvmfs. First as a simple cp from cvmfs to the local worker node, second as a direct posix read from cvmfs. There are thus 4 access methods, three of them are full file cp and the fourth is a posix read.
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/table_of_tests_using_tool_combination.png" alt="Set of tests using a combination of tools per job.">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/table_of_tests_using_tool_combination.png' | relative_url }}" alt="Set of tests using a combination of tools per job.">
     <figcaption class="figure-caption">Table 1: Set of tests using a combination of tools per job.</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ Implicit in these steps is that each job accesses 4 randomly named files. And ea
 All these tests showed some issues in the OSG environment related to data access. Figure 2 shows statistics about the executed tests.
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/test_statistics.png" alt="Tests statistics">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/test_statistics.png' | relative_url }}" alt="Tests statistics">
     <figcaption class="figure-caption text-end">Figure 2: Tests statistics</figcaption>
 </figure>
 
@@ -131,7 +131,7 @@ Table 2: Errors found in the execution of the test.
 - UCSD XrootD cache is slow compared with the other caches. For example, the UCSD cache is 70% slower than other cache servers. This issue is not understood at present. Figure 3 shows the data transfer ratio from each cache requesting data from the Chicago node, Figure 4 shows the Iperf test between UCSD cache host and Chicago OSG login node, and Table 3 shows the latency from each cache to the Chicago node.
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/data_transfer_ratio_for_each_cache.png" alt="Data transfer ratio for each cache.">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/data_transfer_ratio_for_each_cache.png' | relative_url }}" alt="Data transfer ratio for each cache.">
     <figcaption class="figure-caption">Figure 3: Data transfer ratio for each cache.</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ Table 3: Average latency between Chicago and the host.
 |stashcache.gravity.cf.ac.uk|113 ms|3831.08 miles|
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/Iperf_test_between_chicago_and_uscd_cache_host.png" alt="Iperf test between Chicago OSG login and node and the UCSD cache host.">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/Iperf_test_between_chicago_and_uscd_cache_host.png' | relative_url }}" alt="Iperf test between Chicago OSG login and node and the UCSD cache host.">
     <figcaption class="figure-caption">Figure 4: Iperf test between Chicago OSG login and node and the UCSD cache host.</figcaption>
 </figure>
 
@@ -165,7 +165,7 @@ steps to check if the job was on the right site. This is not understood at prese
 - The fastest way to access the data is, in order, CVMFS, stashcp, and xrdcopy. However, to use CVMFS is necessary to wait for the synchronization between the /public and cvmfs dir. Figure 5 shows one test executed to measure the data access on OSG,  the error bars show the standard deviation from the time measure from 100 jobs, and each bar shows the time to execute each operation from the Chicago nodes.
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/one_test_executed_to_measure_the_data_access_on_osg.png" alt="One test executed to measure the data access on OSG.">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/one_test_executed_to_measure_the_data_access_on_osg.png' | relative_url }}" alt="One test executed to measure the data access on OSG.">
     <figcaption class="figure-caption">Figure 5: One test executed to measure the data access on OSG.</figcaption>
 </figure>
 
