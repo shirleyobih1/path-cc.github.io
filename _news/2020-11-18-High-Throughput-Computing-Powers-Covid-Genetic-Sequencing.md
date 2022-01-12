@@ -5,7 +5,7 @@ excerpt: MADISON - David O’Connor, professor at the UW School of Medicine and 
 publish: true
 --- 
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{site.baseurl}}/images/news/KatBL3.JPG" class="figure-img img-fluid rounded" alt="Gene Sequencing in the Lab" width="250px">
   <figcaption class="figure-caption">Gene Sequencing in the Lab<br/>Credit: Gage Moreno</figcaption>
 </figure>

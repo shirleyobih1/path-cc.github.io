@@ -8,15 +8,17 @@ logo:
 
 
 <div id="hero-image" class="hero-image">
-  <div class="container pt-4 pb-4">
+  <div class="container py-5">
     <div class="row mb-3">
       <div class="col-12 d-flex justify-content-center">
         <img class="d-none d-md-block" src="{{ 'images/logo/Logo_Primary.png' | relative_url}}"/>
         <img class="d-block d-md-none" src="{{ 'images/logo/Logo_Round_Med.png' | relative_url}}"/>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <a class="btn btn-outline-primary" href="{{site.baseurl}}/about">Explore PATh</a>
+    <div class="row d-flex justify-content-center my-2">
+      <div class="col-auto">
+        <a class="btn btn-outline-primary" href="{{site.baseurl}}/about">Explore PATh</a>
+      </div>
     </div>
   </div>
 </div>
@@ -56,7 +58,7 @@ logo:
   {% include text-hr.html text="News" %}
   <div class="row">
     {% assign sorted_articles = site.news | reverse %}
-    <div class="col-12 col-md-6 col-lg-4 bg-white-offset">
+    <div class="col-12 col-md-6 col-lg-4 bg-light">
       {% for article in sorted_articles limit: 1 %}
       {% include highlighted-title-image-text-card.html
       internal_href=article.url

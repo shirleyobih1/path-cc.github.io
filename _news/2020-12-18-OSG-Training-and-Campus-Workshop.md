@@ -5,7 +5,7 @@ excerpt: Save the date and register now for another Campus Workshop on distribut
 publish: true
 --- 
 
-<figure class="figure float-right" style="margin-left: 1em">
+<figure class="figure float-end" style="margin-left: 1em">
   <img src="{{site.baseurl}}/images/news/savethedate.jpeg" class="figure-img img-fluid rounded" alt="campus facilitation" width="250px">
   <figcaption class="figure-caption">Campus Facilitation<br/></figcaption>
 </figure>
