@@ -1,0 +1,145 @@
+---
+title: Proposal for classifying the utilization of OSG
+layout: sub-page
+date: 2021-1-7
+excerpt: |
+    The objective of these tests is to check if it is faster to transfer each file separately or compress all the files on a tar.gz file for a job on the Open Science Grid (OSG) using the HTCondor.
+---
+<p>
+    <b>by Fabio Andrijauskas, as of January 7th, 2022</b>
+</p>
+
+<p>
+    The objective of these tests is to check if it is faster to transfer each file separately or compress all
+    the files on a tar.gz file for a job on the Open Science Grid (OSG) using the HTCondor. Was used one
+    tar.gz file with 50000 50KB (each file has a random content, the compress ratio is ≈ 1 : 1) to copy to
+    the node, and the MD5 hash was calculated using the code from Listing <span class="text-info">1</span> e <span class="text-info">2</span>.
+</p>
+
+<p class="text-center">
+    Listing 1: Job requesting the tar.gz file.
+</p>
+<hr>
+<div class="bg-light p-2">
+<pre class="m-0"><code>error = short$(ProcId).error
+Arguments = $(ProcId)
+output = short$(ProcId).output
+log = short$(ProcId).log
+Requirements = GLIDEIN_Site == ”CU − Research Computing”
++DESIRED_Sites = ”CU − Research Computing”
+transfer_input_files = /home/fandri/data2.tar.gz
+should_transfer_files = yes
+request_cpus = 1
+request_memory = 100 MB
+request_disk = 100 MB
+executable = 1.sh
+queue 20</code></pre>
+</div>
+
+<hr>
+<p class="text-center">
+    Listing 2: Script to check the data
+</p>
+<hr>
+<div class="bg-light p-2">
+<pre class="m-0"><code>#!/bin/bash
+tar −x f data.tar.gz
+cd data
+for f in file *;
+do
+    md5sum $f
+done</code></pre>
+</div>
+<hr>
+
+<p>
+    Code on Listing <span class="text-info">3</span> e <span class="text-info">4</span> was used to process 50000 files 50KB each (files have a random content, the
+    compress ratio is ≈ 1 : 1) to copy to the node and calculate the MD5 hash.
+</p>
+
+<p class="text-center">
+    Listing 3: Job
+</p>
+<hr>
+<div class="bg-light p-2">
+<pre class="m-0"><code>error = short$(ProcId).error
+Arguments = $(ProcId)
+output = short$(ProcId).output
+log = short$(ProcId).log
+Requirements = GLIDEI_ Site == ”CU − Research Computing”
++DESIRED_Sites = ”CU − Research Computing”
+transfer_input_files = /home/fandri/data2/
+should_transfer_files = yes
+request_cpus = 1
+request_memory = 100 MB
+request_disk = 100 MB
+executable = 1.sh
+queue 20</code></pre>
+</div>
+<hr>
+<p class="text-center">
+    Listing 4: Script
+</p>
+<hr>
+<div class="bg-light p-2">
+<pre class="m-0"><code>for f in file *;
+do
+    md5sum $f
+done</code></pre>
+</div>
+
+<hr>
+<p>
+    Table <span class="text-info">1</span> shows the results using 50000 50KB (each file has a random content) on a tar.gz and
+    multiple files requesting from Chicago - IL to:
+</p>
+<ul>
+    <li>SU-ITS (Syracuse University - New York - NY);</li>
+    <li>SDSC (San Diego - CA);</li>
+    <li>CU – Research Computing (Colorado University - Boulder - CO).</li>
+</ul>
+<p>
+    The tests were executed 20 times. Table 1 contains statistical data from all the tests:
+</p>
+<ul>
+    <li>“AVG transfer” column shows the average time to transfer the files;</li>
+    <li>“AVG decompress” show the average time to decompress the files;</li>
+    <li>“AVG proc” indicates the average time to process the files</li>
+    <li>“AVG total proc” show the sum of the average time for all process steps (transfer, decompress,
+        and process);</li>
+    <li>“STDEV transfer” represents the standard deviation for the transfer time;</li>
+    <li>“STDEV untar” represents the standard deviation for the decompress time;</li>
+    <li>“STDEV proc” means the standard deviation for the processing time.</li>
+</ul>
+
+<div class="py-4">
+    <p class="text-center">
+        Table 1: Results from tests on SU-ITS, SDSC, and CU site from the Chicago OSG login.
+    </p>
+    <table class="c17 table">
+        <tbody>
+        <tr class="c27"><th class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">Site </span></p></th><th class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c7">AVG transfer </span></p></th><th class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c7">AVG decompress </span></p></th><th class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c7">AVG proc </span></p></th><th class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c7">AVG total proc </span></p></th><th class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c7">STDEV transfer </span></p></th><th class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c7">STDEV untar </span></p></th><th class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c7">STDEV proc</span></p></th></tr>
+        <tr class="c27 table-light"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">SU-ITS - targz </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">211.59s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">35.24s </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">868.80s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">1115.62s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">84.57s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">7.39s </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">437.79s</span></p></td></tr>
+        <tr class="c24 table-light"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">SU-ITS - files </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">202.94s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">973.18s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">1176.12s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">40.41s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">296.78s</span></p></td></tr>
+        <tr class="c27"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">CU - targz </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">77.84s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">17.32s </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">179.22s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">274.38s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">19.22s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">1.36s </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">54.69s</span></p></td></tr>
+        <tr class="c24"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">CU - files </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">85.45s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">178.52s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">263.96s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">23.28s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">57.17s</span></p></td></tr>
+        <tr class="c27 table-light"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">SDSC - targz </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">40.309s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">27.99ss </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">353.99s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">422.22s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">22.99s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">6.5s </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">56.86s</span></p></td></tr>
+        <tr class="c27 table-light"><td class="c9" colspan="1" rowspan="1"><p class="c3"><span class="c7">SDSC - files </span></p></td><td class="c2" colspan="1" rowspan="1"><p class="c3"><span class="c1">37.82s </span></p></td><td class="c25" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c13" colspan="1" rowspan="1"><p class="c3"><span class="c1">559.73s </span></p></td><td class="c19" colspan="1" rowspan="1"><p class="c3"><span class="c1">597.53s </span></p></td><td class="c11" colspan="1" rowspan="1"><p class="c3"><span class="c1">19.13s </span></p></td><td class="c10" colspan="1" rowspan="1"><p class="c3"><span class="c1">– </span></p></td><td class="c8" colspan="1" rowspan="1"><p class="c3"><span class="c1">196.70s</span></p></td></tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p>
+    Figure <span class="text-info">1</span> shows the time to transfer the data using multiple files or using only one tar.gz file. The error bars are the standard deviation. Due to the standard deviation of all measures, there is no statistical difference between the test using tar.gz or the multiple files.
+</p>
+
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/multiple_files_vs_tar_gz/transfer_time_comparison.png" alt="Time for transferring data using one tar.gz file or multiple files, the bars show the standard deviation.">
+    <figcaption class="figure-caption text-end">Figure 1: Time for transferring data using one tar.gz file or multiple files, the bars show the standard deviation.</figcaption>
+</figure>
+
+<p>
+    All tests show no statistical difference when using the tar.gz or the multiple files. The investigations of the HTCondor source code (https://github.com/htcondor/htcondor/blob/master/src/condor_utils/file_transfer.cpp) and HTCondor developers comments, it is possible to conclude that there is no hugely overhead for the multiple file approach on HTCondor. The only vantage to use the tar.gz is the possibility to compress the data and have less network usage.
+</p>
