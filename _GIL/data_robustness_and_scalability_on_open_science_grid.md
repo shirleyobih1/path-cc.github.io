@@ -162,11 +162,11 @@ steps to check if the job was on the right site. This is not understood at prese
 
 - OSG login node is very slow sometimes, causing problems in the job submission process.
 
-- The fastest way to access the data is, in order, CVMFS, stashcp, and xrdcopy. However, to use CVMFS is necessary to wait for the synchronization between the /public and cvmfs dir. Figure 3 shows one test executed to measure the data access on OSG,  the error bars show the standard deviation from the time measure from 100 jobs, and each bar shows the time to execute each operation from the Chicago nodes.
+- The fastest way to access the data is, in order, CVMFS, stashcp, and xrdcopy. However, to use CVMFS is necessary to wait for the synchronization between the /public and cvmfs dir. Figure 5 shows one test executed to measure the data access on OSG,  the error bars show the standard deviation from the time measure from 100 jobs, and each bar shows the time to execute each operation from the Chicago nodes.
 
 <figure class="figure py-4">
     <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/one_test_executed_to_measure_the_data_access_on_osg.png" alt="One test executed to measure the data access on OSG.">
-    <figcaption class="figure-caption">Figure 3: One test executed to measure the data access on OSG.</figcaption>
+    <figcaption class="figure-caption">Figure 5: One test executed to measure the data access on OSG.</figcaption>
 </figure>
 
 - Looking at the XrootD cache systems (with the nearest location), all the tests performed and the files are on the cache, there is a speed up the data access an average of 5 times.
