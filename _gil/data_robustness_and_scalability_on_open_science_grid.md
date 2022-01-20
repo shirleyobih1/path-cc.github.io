@@ -64,7 +64,7 @@ Robustness is the degree to which a system or component can function correctly i
 We define a set of benchmarks and test accessing the data using different methods to check all these measures for robustness and scalability. We have origins and caches on the OSG data federation, and different origins have data from various organizations. XrootD caches can provide data "locally" and speed up the process for the jobs. However, numerous jobs running are required to detect when a job fails due to data access, and we do not have this monitoring. Figure 1 shows the basic idea of a job accessing data.
 
 <figure class="figure py-4">
-    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/data_access_and_osg_data_request.png" alt="Data access and OSG job data request.">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/data_robustness_and_scalability/data_access_and_osg_data_request.png' | relative_url }}" alt="Data access and OSG job data request.">
     <figcaption class="figure-caption">Figure 1: Data access and OSG job data request.</figcaption>
 </figure>
 
