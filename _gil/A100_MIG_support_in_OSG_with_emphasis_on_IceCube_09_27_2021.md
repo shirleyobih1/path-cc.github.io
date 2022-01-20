@@ -6,7 +6,7 @@ excerpt: |
     This document provides an assessment of the feasibility to use the NVIDIA A100 GPU Multi Instance Graphics (MIG) capabilities inside OSG, with a particular emphasis on IceCube. MIG allows an A100 GPU to be split in several partitions that can be assigned to independent compute jobs. (MIG is also available on the NIVIDA A30 GPUs, but we currently have no HW to test).
 ---
 
-**by Igor Sfiligoi – UCSD, as of Sept 27th 2021**
+**by Igor Sfiligoi - University of California San Diego, as of Sept 27th 2021**
 
 ### Objective
 
