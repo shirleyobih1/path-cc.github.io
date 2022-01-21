@@ -38,6 +38,9 @@ collections:
   events:
     output: true
     permalink: /events/:path/
+  gil:
+    output: true
+    permalink: /GIL/:path/
 
 defaults:
   - scope:
@@ -58,6 +61,7 @@ defaults:
       path: 'images'
     values:
       image: true
+
 
 sass:
   style: compact # possible values: nested expanded compact compressed

@@ -1,12 +1,13 @@
 ---
 title: "Global Infrastructure Laboratory: Options for Jupyter Support in OSG"
 date: 2021-03-31T15:15:26+10:00
-featured: true
-excerpt_separator: <!--more-->
-weight: 4
+layout: sub-page
+excerpt: |
+    GIL conducted an open dicussion with the entire OSG staff@opensciencegrid.org mailing list on March 9, 2021.
+    The team reviewed the [proposal document](https://docs.google.com/document/d/1d7-x5Kh6IayZR5BYQduhYf__5mFUckvMN0xBJ9iD1G0/) and concluded the following.
 ---
 
-# Summary of GIL Discussion of Options for Jupyter Support in OSG
+### Summary of GIL Discussion of Options for Jupyter Support in OSG
 
 GIL conducted an open dicussion with the entire OSG staff@opensciencegrid.org mailing list on March 9, 2021. 
 The team reviewed the [proposal document](https://docs.google.com/document/d/1d7-x5Kh6IayZR5BYQduhYf__5mFUckvMN0xBJ9iD1G0/) and concluded the following:
