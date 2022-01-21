@@ -6,7 +6,7 @@ excerpt: |
     This document provides a set of results about the data access in the Open Science Grid (OSG). The objective is to show issues on data access of an OSG job.  All the process follows a methodology to understand how a user requests the information and any problem with this process.
 ---
 
-**by Fabio Andrijauskas and Frank Wüerthwein - University of California San Diego, as of December 31st 2021**
+**by Fabio Andrijauskas and Frank Wüerthwein - University of California San Diego, as of December 31, 2021**
 
 ### Objective
 
