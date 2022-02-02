@@ -56,12 +56,28 @@ Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 ### Fees
 
-In-person participation will include a standard registration fee; online-only participation will continue to be free.
+In-person participation will include a $70 standard registration fee; online-only participation will continue to be free.
 
 
 ### Registration
 
-Required registration for both components will open in January 2022.
+There are separate registration forms for the in-person and virtual-only components. Please register only once for either the in-person or the virtual. 
+
+#### Registration for online components
+Registration is OPEN! Click here to register.
+
+Registration for the online components is **free**, but required.
+
+
+#### Registration for in-person components
+Registration is OPEN! Click [here](https://oupacsrcc-web.ungerboeck.net/reg/reg_p1_form.aspx?oc=10&ct=PART&eventid=10048) to register.
+
+Registration for the in-person OSG All-Hands Meeting 2022 costs **$70**, which includes:
+- Attendance Monday through Wednesday (Thursday and Friday are virtual only)
+- Hot beverage service all day, an morning and afternoon snacks. 
+If at least 30 people register for the in-person components by the deadline, and if enough staff are available, the hybrid event will proceed as planned; otherwise, the in-person components will have to be cancelled and there will just be the online components. If OSG cancels the in-person component, you will receive a full refund of your registration fee. 
+
+**Note:** The registration deadline for in-person attendance is **February 17.**
 
 ### Questions?
 
