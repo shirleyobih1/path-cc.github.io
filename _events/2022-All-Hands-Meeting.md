@@ -56,7 +56,7 @@ Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 ### Fees
 
-In-person participation will include a standard registration fee ($70); online-only participation will continue to be free.
+In-person participation will include a standard $70 registration fee; online-only participation will continue to be free.
 
 
 ### Registration
