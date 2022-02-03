@@ -30,7 +30,7 @@ Focus areas for 2022 will include:
 
 In-person participation will include a standard registration fee; online-only participation will continue to be free. Required registration for both components will open in January 2022. For Registration details visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
 
-Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
+Note that there will be an initial in-person registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
 For further details, visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
 
