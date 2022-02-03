@@ -3,7 +3,7 @@ short_title: OSG All-Hands Meeting 2022
 title: "OSG All-Hands Meeting 2022"
 published: true
 excerpt: |
-   Save the date for the OSG All-Hands Meeting 2022 to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event. If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentations and discussions as in the past 2 years, whether in-person or online.
+   Registration is now open for the OSG All-Hands Meeting 2022 to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event. If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentations and discussions as in the past 2 years, whether in-person or online.
 start_date: 2022-03-14
 end_date: 2022-03-18
 location: "University of Oklahoma and Virtually"
@@ -14,6 +14,9 @@ header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-N
 ---
 
 {% capture main %}
+
+{: .alert-dark .p-3 }
+Registration isd now open, find details on the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/).
 
 Save the dates! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We are planning a hybrid event:
 
@@ -56,12 +59,14 @@ Hybrid event both at the University of Oklahoma (OU) in Norman and virtual.
 
 ### Fees
 
-In-person participation will include a standard registration fee; online-only participation will continue to be free.
+In-person participation will include a standard $70 registration fee; online-only participation will continue to be free.
 
 
 ### Registration
 
-Required registration for both components will open in January 2022.
+Details on both in-person and online registration can be found on the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/).
+
+**Note:** The registration deadline for in-person attendance is **February 17.**
 
 ### Questions?
 
