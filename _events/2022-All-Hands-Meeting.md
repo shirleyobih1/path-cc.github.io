@@ -3,7 +3,7 @@ short_title: OSG All-Hands Meeting 2022
 title: "OSG All-Hands Meeting 2022"
 published: true
 excerpt: |
-   Save the date for the OSG All-Hands Meeting 2022 to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event. If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentations and discussions as in the past 2 years, whether in-person or online.
+   Registration is Open for the OSG All-Hands Meeting 2022 to be held March 14-18 at the University of Oklahoma (OU) in Norman and virtually. We are planning a hybrid event. If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons. In addition, everyone can enjoy the same kind of presentations and discussions as in the past 2 years, whether in-person or online.
 start_date: 2022-03-14
 end_date: 2022-03-18
 location: "University of Oklahoma and Virtually"
@@ -15,7 +15,7 @@ header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-N
 
 {% capture main %}
 
-Save the dates! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We are planning a hybrid event:
+Registration is Open! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We are planning a hybrid event:
 
 >If you register for and travel to the University of Oklahoma (OU) in Norman for the in-person components, you can mingle with colleagues, have planned or ad hoc meetings, attend workshops or training events, and join hack-a-thons.
 
@@ -28,7 +28,7 @@ Focus areas for 2022 will include:
 - Campus services and experiences, and NSF Campus Cyberinfrastructure (CC*)
 - Impact on multi-institutional collaborations, including U.S. LHC Projects
 
-In-person participation will include a standard registration fee; online-only participation will continue to be free. Required registration for both components will open in January 2022.
+In-person participation will include a standard registration fee; online-only participation will continue to be free. Required registration for both components will open in January 2022. For Registration details visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
 
 Note that there will be an initial registration deadline of February 17. If at least 30 people register for the in-person components by that date, we can proceed with the hybrid event; otherwise, we will have to cancel the in-person components and have just the online components.
 
@@ -64,13 +64,14 @@ In-person participation will include a $70 standard registration fee; online-onl
 There are separate registration forms for the in-person and virtual-only components. Please register only once for either the in-person or the virtual. 
 
 #### Registration for online components
-Registration is OPEN! Click here to register.
+Registration is OPEN! For details visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
+
 
 Registration for the online components is **free**, but required.
 
 
 #### Registration for in-person components
-Registration is OPEN! Click [here](https://oupacsrcc-web.ungerboeck.net/reg/reg_p1_form.aspx?oc=10&ct=PART&eventid=10048) to register.
+Registration is OPEN! For details, visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/).
 
 Registration for the in-person OSG All-Hands Meeting 2022 costs **$70**, which includes:
 - Attendance Monday through Wednesday (Thursday and Friday are virtual only)
