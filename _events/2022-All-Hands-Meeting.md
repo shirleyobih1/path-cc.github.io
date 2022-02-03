@@ -16,7 +16,7 @@ header_credit: '"Field House w/ Water Tower" by Majdan is licensed under CC BY-N
 {% capture main %}
 
 {: .alert-dark .p-3 }
-Registration isd now open, find details on the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/).
+Registration is now open, find details on the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/).
 
 Save the dates! The OSG All-Hands Meeting 2022 will be 14–18 March 2022. We are planning a hybrid event:
 
