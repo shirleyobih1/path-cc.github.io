@@ -41,4 +41,8 @@ layer with benefits across the NSF CI ecosystem.
 
 GIL has proposed and led the discussion of the following ideas:
 
-> [March 9, 2021 - Jupyter Support in OSG](https://path-cc.io/GIL/Jupyter-support-in-OSG/)
+{% assign gil = site.gil | sort: "date" | reverse %}
+{% for article in gil %}
+> [{{article.date | date: "%B %e, %Y"}} - {{article.title}}]({{article.url}}) 
+{% endfor %}
+
