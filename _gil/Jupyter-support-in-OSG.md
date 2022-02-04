@@ -1,5 +1,5 @@
 ---
-title: "Global Infrastructure Laboratory: Options for Jupyter Support in OSG"
+title: "Options for Jupyter Support in OSG"
 date: 2021-03-31T15:15:26+10:00
 layout: sub-page
 excerpt: |
