@@ -58,7 +58,7 @@ Online participation will continue to be free.
 
 ### Registration
 
-Registration is reqired. Visit the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/) for complete event and registration information.
+Registration is required. Visit the [All-Hands Website](https://opensciencegrid.org/all-hands/2022/registration/) for complete event and registration information.
 
 
 
