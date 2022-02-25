@@ -27,7 +27,7 @@ Focus areas for 2022 will include:
 - Campus services and experiences, and NSF Campus Cyberinfrastructure (CC*)
 - Impact on multi-institutional collaborations, including U.S. LHC Projects
 
-Online participation will continue to be free, but registration is rquired. To register visit the [AHM registration page](https://opensciencegrid.org/all-hands/2022/registration/). The event will be entirely virtual this year. 
+Online participation will continue to be free, but registration is required. To register visit the [AHM registration page](https://opensciencegrid.org/all-hands/2022/registration/). The event will be entirely virtual this year. 
 
 For further details, visit: [https://opensciencegrid.org/all-hands/2022/](https://opensciencegrid.org/all-hands/2022/)
 
