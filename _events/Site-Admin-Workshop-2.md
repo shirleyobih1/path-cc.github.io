@@ -4,7 +4,7 @@ title: "Register Now for OSG's Site Admin Office Hours"
 layout: events
 published: true
 excerpt: |
-    We will be hosting our second Site Admin Office Hours, Tuesday, March 15 from 3:30 - 5:30 PM CT offered by the Partnership to Advance Throughput Computing (PATh). The office hours provide an opportunity for any system administrator to work with the OSG Software and Operations teams on pressing site configuration or troubleshooting issues. All site admins or site representatives sharing resources using OSG services or running an Access Point are encouraged to attend.
+    We will be hosting our second Site Admin Office Hours, Tuesday, March 15 from 3:30 - 5:30 PM CT offered by the Partnership to Advance Throughput Computing (PATh). The Office Hours provide an opportunity for any system administrator to work with the OSG Software and Operations teams on pressing site configuration or troubleshooting issues. All site admins or site representatives sharing resources using OSG services or running an Access Point are encouraged to attend.
 start_date: 2022-03-15
 end_date: 2022-03-15
 location: "Virtual"
