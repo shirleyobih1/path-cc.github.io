@@ -3,6 +3,18 @@
 ---
 
 
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+        6: $spacer * 6,
+        7: $spacer * 8,
+) !default;
+
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
@@ -183,5 +195,10 @@ main {
     a {
       text-decoration: underline;
     }
+  }
+}
+@each $number, $padding in $spacers {
+  .top-#{$number} {
+    top: #{$padding}
   }
 }
