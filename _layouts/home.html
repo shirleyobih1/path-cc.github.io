@@ -22,17 +22,38 @@ logo:
   {% include text-hr.html text="Bring the power of HTC to your research" %}
   <div class="row">
     <div class="col-12 {% if future_events.size != 0 %}col-lg-8{% endif %}">
-      <h2 class="pb-4">
+      <h2 class="pb-2">
         PATh provides services and technologies for distributed high-throughput computing (dHTC)!
       </h2>
-      {% include light-title-date-desc-card.html
-      title="For Researchers"
-      desc="Learn about HTC and running HTC work on an [HTCondor](https://htcondor.org) computing system. Do not have access to an HTCondor system? Researchers with US-affiliated projects can use an [OSG-Connect](https://www.osgconnect.net/) Access Point to harness the capacity of the [Open Science Pool](https://opensciencegrid.org/about/open_science_pool/)."
-      %}
-      {% include light-title-date-desc-card.html
-      title="For Organizations"
-      desc="Build local HTC capacity with the [HTCondor Software Suite](https://htcondor.org). Share computing capacity, data, and software between collaborators and even across continents. Connect or contribute campus computing and data resources into the [US national cyberinfrastructure via OSG](https://opensciencegrid.org/campus-cyberinfrastructure.html). Contact us at <support@opensciencegrid.org> to collaborate on the right options for your desired outcomes."
-      %}
+      <div class="bg-light px-2 pt-2 pb-1">
+        <div>
+          <h3 class="article-title pb-2">
+            For Researchers
+          </h3>
+          <p class="fs-5">
+            PATh specific resources can be requested from the NSF using the mechanisms
+            detailed on the <a href="/facility/#using-path-facilities">facility page</a>.
+          </p>
+          <p class="fs-5">
+            US-affiliated projects can use an
+            <a href="https://www.osgconnect.net/">OSG-Connect</a> Access Point to harness the capacity of the
+            <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool</a>.
+          </p>
+        </div>
+        <div>
+          <h3 class="article-title pb-2">
+            For Organizations
+          </h3>
+          <p class="fs-5">
+            Build local HTC capacity with the <a href="https://htcondor.org">HTCondor Software Suite</a>.
+            Share computing capacity, data, and software between collaborators and even across continents.
+            Connect or contribute campus computing and data resources into the
+            <a href="https://opensciencegrid.org/campus-cyberinfrastructure.html">US national cyberinfrastructure
+              via OSG</a>. Contact us at <a href="mailtto:support@opensciencegrid.org">support@opensciencegrid.org</a>
+            to collaborate on the right options for your desired outcomes.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="col-12 col-lg-4 {% if future_events.size == 0 %}d-none{% endif %}">
       <h2 class="m-0">Events</h2>
