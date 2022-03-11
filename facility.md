@@ -37,7 +37,7 @@ The PATh team is here to help!  As part of the consulting services offered to an
     <div class="col-12 col-sm-10 col-md-8">
         <figure>
             <img class="img-fluid" src="/images/PATh_Facility_Preview.jpg" alt="Image of the PATh Servers" />
-            <figcaption class="p-1 bg-light">PATh Hardware at UW-Madison</figcaption>
+            <figcaption class="p-1 bg-light">PATh facility worker nodes destined for Syracuse University Research Computing</figcaption>
         </figure>
     </div>
 </div>
