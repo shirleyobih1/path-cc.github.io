@@ -30,6 +30,17 @@ Users of the facility will receive [credit accounts](/services/credit-accounts/)
 
 The PATh team is here to help!  As part of the consulting services offered to any researcher, our team can help you decompose your workload to ensembles of jobs and generate resource estimates for the various tasks in the ensemble.  Please reach out to [credit-accounts@path-cc.io](mailto:credit-accounts@path-cc.io) to initiate your consult.
 
+
+<div class="row justify-content-center py-3 pb-4">
+    <div class="col-12 col-sm-10 col-md-8">
+        <figure>
+            <img class="img-fluid" src="/images/PATh_Facility_Preview.jpg" alt="Image of the PATh Servers" />
+            <figcaption class="p-1 bg-light">PATh Hardware at UW-Madison</figcaption>
+        </figure>
+    </div>
+</div>
+
+
 ## Facility Description
 
 The PATh facility consists of the following sites and resources:
