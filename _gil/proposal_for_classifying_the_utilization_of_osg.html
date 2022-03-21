@@ -1,0 +1,148 @@
+---
+title: Proposal for classifying the utilization of OSG
+layout: sub-page
+date: 2022-1-7
+excerpt: |
+    For this proposal, we are concerned only about wall time measures due to the combined gWMS and HTCondor systems. The proposed classification thus may be understood largely as a walk through the "state machine" of how these two systems work together.
+---
+
+<p>
+    <b>by Fabio Andrijauskas, Igor Sfiligoi and Frank Wüerthwein - University of California San Diego, as of January 7, 2022</b>
+</p>
+
+<p>
+    Open Science Grid (OSG) has a complex system to access all the available resources. Figure 1 shows a vision of HTCondor and glidein Workflow Managment System (GlideinWMS) how they provide access to the computer structure [1].
+</p>
+
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/proposal_for_classifying_the_utilization_of_osg/glideinwms_for_grid_access_with_condor.png' | relative_url }}" alt="GlideinWMS for grid access with condor [2].">
+    <figcaption class="figure-caption text-end">Figure 1: GlideinWMS for grid access with condor [2].</figcaption>
+</figure>
+
+<p>
+    Figure 1 shows the main idea is that when demand for more resources is sensed by the Virtual Organization Frontend, Condor job execution daemons (aka glidein pilots) are submitted to the grid by the Glidein Factory (GF):
+</p>
+<div class="px-0 px-lg-4">
+    <p>
+        “This is known as “gliding in” to the grid. When they begin running, they “phone home” and join the glideinWMS Condor pool. Then they are available to run user jobs through the normal Condor mechanisms. Once demand for resources decreases to the point where some nodes have no work to do, the Condor job execution daemons on those idle nodes exit and the resources that were allocated to glideinWMS at the grid site are released for use by others” [2].
+    </p>
+</div>
+
+<p>
+    Even with this well-made structure, it is a fact of life that the resources are not always perfectly utilized. In order to improve utilization of the available resource, we first must have a clear understanding of how to classify the activity of those resources.
+</p>
+<p>
+    For this proposal, we are concerned only about wall time measures due to the combined gWMS and HTCondor systems. The proposed classification thus may be understood largely as a walk through the "state machine" of how these two systems work together.
+</p>
+<p>
+    Note that we will be considering CPU and GPU resources separately for ease of understanding. We thus define the unit of “time” as “cpu core hours” for CPUs and “gpu chip hours” for GPUs.
+</p>
+<p>
+    Moreover, to account for the fine-grained partitioning inside pilot jobs, we also define a notion of “canonical unit”. At this point in time, we propose to define it as “1 CPU core + 2 GB of RAM” for CPU resources and “1 GPU chip” for GPU resources. It can then be used to compute “canonical time” in the same units as normal time. The detailed use of this unit is discussed below.
+</p>
+<p>
+    We postulate that the time of resources available to OSG can be partitioned among the following 8 categories, with the first 6 belonging to the pilot infrastructure:
+</p>
+
+<ul>
+<li>
+    <p>
+        <span class=text-danger>Validation fail:</span> Any time spent by a pilot that failed the initial validation (so the collector was never aware of it).
+    </p>
+</li>
+<li>
+    <p>
+        <span class=text-danger>Decision problem:</span>  Any time spent by a pilot that starts and registers with the collector but does not get any match before the pilot end of life (EOF).
+    </p>
+</li>
+<li>
+    <p><span class=text-danger>Pilot misconfiguration badput:</span> Any time spent by a pilot running jobs that fail in the beginning due to a runtime problem not imputable to user errors (e.g. black hole).</p>
+    <p class="fst-italic">
+        While the definition is necessarily somewhat ambiguous, the intention is to capture any resource hardware or configuration problems that should have been caught by validation.
+    </p>
+</li>
+<li>
+    <p><span style="color: #282892;">Pilot goodput:</span>  Any time spent by a pilot running jobs that complete.</p>
+    <p class="fst-italic">
+        Note that we do not check the exit code of the job and do not attempt in any way to interpret the outcome from the user point of view. Any job that starts and finishes on its own is considered successful, with the limited exception of the “pilot misconfiguration badput” definition.
+    </p>
+</li>
+<li>
+    <p><span class=text-danger>Pilot preemption badput:</span>  Any time spent by jobs that start running but do not finish because the pilot terminates (end of life).</p>
+</li>
+<li>
+    <p><span class=text-danger>Pilot overhead:</span>  For any pilot that starts at least one job, any <b>canonical time</b> spent not running any jobs is counted as pilot overhead. Any difference between <b>“total time”</b> and <b>“canonical time”</b> will instead be proportionally accounted to any jobs running at that time, if any.</p>
+    <p class="fst-italic">
+        Further clarification and some examples regarding the accounting using canonical time is presented below in a dedicated paragraph.
+    </p>
+    <p class="fst-italic">
+        Note that any time spent before the first job is ran is accounted to either (1) or (2), if the pilot never runs a single job, and here else.
+    </p>
+</li>
+<li>
+    <p><span class=text-danger>Pilot goodput:</span>  Any time spent by a pilot running jobs that complete.</p>
+    <p class="fst-italic">
+        Note that we do not check the exit code of the job and do not attempt in any way to interpret the outcome from the user point of view. Any job that starts and finishes on its own is considered successful, with the limited exception of the “pilot misconfiguration badput” definition.
+    </p>
+</li>
+<li>
+    <p><span class=text-danger>Pilot preemption badput:</span>  Any time spent by jobs that start running but do not finish because the pilot terminates (end of life).</p>
+</li>
+</ul>
+
+<p>
+    There are two additional classifications of time available to OSG and not directly related to pilot infrastructure:
+</p>
+
+<ul>
+    <li>
+        <p>
+            <span class=text-danger>Provisioning bottleneck:</span> Any time a resource provider, aka site, is sitting idle because we did not send enough pilots, even though we had user jobs waiting for resources.
+        </p>
+    </li>
+    <li>
+        <p>
+            <span class=text-danger>Insufficient demand:</span> Any time a resource provider, aka site, is sitting idle because we did not send enough pilots because there are no jobs waiting that can run on that resource.
+        </p>
+    </li>
+</ul>
+
+<p>
+    Figure 2 shows a simplified pilot's lifetime and when each type of measure happens.
+</p>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="{{ '/images/GIL/proposal_for_classifying_the_utilization_of_osg/pilot_lifetime_and_the_measure_classification.png' | relative_url }}" alt="Pilot lifetime and the measure classification.">
+    <figcaption class="figure-caption">Figure 2: Pilot lifetime and the measure classification.</figcaption>
+</figure>
+
+<h3>Further clarification of “Pilot overhead” and canonical units</h3>
+
+<p>
+    OSG jobs come with fine-grained requirements, while the pilots offer a fixed total number of CPU cores, GPUs, and memory, and there is no optimal way to maximize the use of all the resources while keeping job priorities in consideration. OSG thus allows for certain resources to be idle, if some of the other equally important resources are fully utilized. For example, it is just as acceptable to “use all the CPU cores and only a fraction the memory” as it is to “use all the memory and only a subset of the CPU cores”.
+</p>
+
+<p>
+    The <b>“canonical unit”</b> and <b class="fst-italics">“canonical time”</b> definitions provide a measure of what is the smallest unit that is considered <b>“true overhead”</b>. We thus account “Pilot overhead” only in multiples of <b>“canonical units”</b>. For example, given the CPU definition of canonical unit of “1 CPU core and 2 GB of memory”, an hour when we have 3 CPU cores and 3 GB of memory unused would count as “1 CPU core hour” (memory limited), the same period of 3 CPU cores and 1 GB of memory unused would count as “0 CPU core hours” (memory limited), and the same period of 2 CPU cores and 6 GB of memory unused would count as “2 CPU core hours” (CPU core limited).
+</p>
+
+<p>
+    The use of <b>“canonical time”</b> in “Pilot overhead” brings however an accounting problem; I.e. What to do with the remainder of the time that remains unaccounted for. Using the first example above, when we have 3 CPU cores and 3 GB of memory unused, we have a remainder of “2 CPU core hours”.
+</p>
+
+<p>
+    In order to fully account for all the resources, we thus account that remainder proportionally between any jobs that were running at that point in time. For example, if we had a remainder of 2 CPU cores (and any amount of memory) and there were two jobs running during the considered time period, say 1h for example simplicity, one which completed and one that never did due to the pilot getting preempted sometime in the future, we would account 1 CPU core hour to each of “Pilot goodput” and “Pilot preemption badput”. 	As a further clarification, any time the pilot does not run any jobs at all, all the time is accounted to “Pilot overhead”, even if it is not a multiple of “canonical time”.
+</p>
+<p>
+    Note that for GPU accounting <b>“canonical time”</b> is currently defined the same as “time”, i.e. “GPU chip hours”, so there is never any leftover there.
+</p>
+
+<h3>A word about time classification vs measurement:</h3>
+
+<p>
+    This document only provides the partitioned definitions of how the resources are being used. It does not aim to provide any guidance regarding how to classify the resource usage using the existing monitoring tools.
+</p>
+<p>
+    As an example, it is currently unknown how to properly measure (a) and (b) but one could speculate that one could approximate it by means of measuring period with no pilots waiting in the sites’ queues. Such clarifications and guidance are of course necessary but will be subject to a separate future document.
+</p>

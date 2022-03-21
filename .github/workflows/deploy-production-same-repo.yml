@@ -1,0 +1,38 @@
+name: Deploy production version of the Website on Current Repo
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  Build-And-Deploy-Production:
+    if: ${{ github.repository_owner == 'path-cc' }}
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Initialize GH User
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+
+      - name: Build and Deploy
+        run: |
+          # Build the production version of website
+          JEKYLL_ENV=production bundle exec jekyll build
+
+          # Commit the build then use 'git subtree' to create a branch with just the _site contents
+          git add _site -f
+          git commit -m "Build Production Website"
+          git checkout -b gh-pages `git subtree split --prefix _site master`
+
+          # Push to Production
+          git push --set-upstream origin gh-pages --force

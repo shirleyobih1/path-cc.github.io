@@ -2,68 +2,158 @@
 title: Jekyll Serif - Jekyll Small Business Theme
 layout: default
 bodyClass: page-home
+header: dark
+logo:
 ---
 
-<div class="intro">
-  <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-8 order-2 order-md-1">
-        {{ content }}
-        {% if site.homepage.show_call_box %}
-          {% include call.html show_button=true %}
-        {% endif %}
+
+<div id="hero-image" class="hero-image">
+  <div class="container py-5">
+    <div class="row mb-3">
+      <div class="col-12 d-flex justify-content-center">
+        <img class="d-none d-md-block" src="{{ 'images/logo/Logo_Primary.png' | relative_url}}"/>
+        <img class="d-block d-md-none" src="{{ 'images/logo/Logo_Round_Med.png' | relative_url}}"/>
       </div>
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-4 order-1 order-md-2 position-relative">
-        <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
-
-<div class="strip">
-  <div class="container pt-6 pb-6 pb-md-10">
-    <div class="row justify-content-start">
-      {% for service in site.services %}
-      <div class="col-12 col-md-4 mb-1">
-        <div class="service service-summary">
-          <div class="service-content">
-            <h2 class="service-title">
-              <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-            </h2>
-            <p>{{ service.content | markdownify | strip_html | truncate: 100 }}</p>
+{% include get/future_events.html %}
+<div class="container">
+  {% include text-hr.html text="Bring the power of HTC to your research" %}
+  <div class="row">
+    <div class="col-12 {% if future_events.size != 0 %}col-lg-8{% endif %}">
+      <h2 class="pb-2">
+        PATh provides services and technologies for distributed high-throughput computing (dHTC)!
+      </h2>
+      <div class="bg-light px-2 pt-2 pb-1">
+        <div>
+          <h3 class="article-title pb-2">
+            For Researchers
+          </h3>
+          <p class="fs-5">
+            <b>New!</b> Complementing our technologies and services, PATh has dedicated compute resources
+            in the <a href="/facility/#using-path-facilities">PATh facility</a>.
+            <a href="https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp">Apply for compute credits</a> now!
+          </p>
+          <p class="fs-5">
+            US-affiliated projects can use an
+            <a href="https://www.osgconnect.net/">OSG-Connect</a> Access Point to harness the capacity of the
+            <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool</a>.
+          </p>
+        </div>
+        <div>
+          <h3 class="article-title pb-2">
+            For Organizations
+          </h3>
+          <p class="fs-5">
+            Build local HTC capacity with the <a href="https://htcondor.org">HTCondor Software Suite</a>.
+            Share computing capacity, data, and software between collaborators and even across continents.
+            Connect or contribute campus computing and data resources into the
+            <a href="https://opensciencegrid.org/campus-cyberinfrastructure.html">US national cyberinfrastructure
+              via OSG</a>. Contact us at <a href="mailtto:support@opensciencegrid.org">support@opensciencegrid.org</a>
+            to collaborate on the right options for your desired outcomes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4 {% if future_events.size == 0 %}d-none{% endif %}">
+      <h2 class="m-0">Events</h2>
+      <hr class="header-break">
+      <div class="row justify-content-center">
+        {% for event in future_events limit:2 %}
+          <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+            {% include event/event-card.html event=event %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% include text-hr.html text="News" %}
+  <div class="row">
+    {% assign sorted_articles = site.news | reverse %}
+    <div class="col-12 col-md-6 col-lg-4 bg-light">
+      {% for article in sorted_articles limit: 1 %}
+      {% include highlighted-title-image-text-card.html
+      internal_href=article.url
+      image=article.image_src
+      alt=article.image_alt
+      title=article.title
+      date=article.date
+      desc=article.excerpt
+      %}
+      {% endfor %}
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="row pt-md-0 pt-3">
+        {% for article in sorted_articles limit: 2 offset: continue %}
+        <div class="col-12">
+          {% include light-title-date-desc-card.html
+          title=article.title
+          href=article.url
+          date=article.date
+          desc=article.excerpt
+          %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="row pt-4 pt-lg-0">
+        <div class="col-6 col-lg-12">
+          <a class="twitter-timeline" data-height="325" href="https://twitter.com/opensciencegrid?ref_src=twsrc%5Etfw">Tweets by opensciencegrid</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div class="col-6 col-lg-12">
+          <a class="twitter-timeline" data-height="325" href="https://twitter.com/HTCondor?ref_src=twsrc%5Etfw">Tweets by HTCondor</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include text-hr.html text="About" %}
+  <div class="row mb-4">
+    <div class="col-12 col-lg-4 order-2">
+      <h2 class="mb-0">Partners</h2>
+      <hr class="header-break">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="Center for High Throughput Computing"
+          image="images/CHTC-centered.svg"
+          alt="Center for High Throughput Computing Logo"
+          href="https://chtc.cs.wisc.edu/"
+          %}
+        </div>
+        <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+          {% include title-image-card.html
+          title="OSG"
+          image="images/logo/OSG-logo.svg"
+          alt="Open Science Grid Logo"
+          href="https://opensciencegrid.org/"
+          %}
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 mb-4 order-1">
+      <div class="row justify-content-start">
+        {% for service in site.services %}
+        <div class="col-12 col-md-6">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+              </h2>
+              <p>{{ service.excerpt | markdownify | strip_html}}</p>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% if site.data.features %}
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-
-      {% for feature in site.data.features %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image | relative_url }}" /></div>
-          {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
-          <div class="feature-content">{{ feature.description }}</div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a class="button button-primary" href="{{site.baseurl}}/services">View All Services</a>
         </div>
       </div>
-      {% endfor %}
-
     </div>
   </div>
 </div>
-{% endif %}
+
+

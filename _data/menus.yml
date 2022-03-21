@@ -1,16 +1,19 @@
 main:
+  - name: "Facility"
+    url: "/facility/"
+    weight: 1
   - name: "Services"
     url: "/services/"
     weight: 2
-  - name: "Team"
-    url: "/team/"
-    weight: 3
-  - name: "About"
-    url: "/about/"
+  - name: "News"
+    url: "/news/"
     weight: 4
+  - name: "Events"
+    url: "/events/"
+    weight: 5
   - name: "Contact"
     url: "/contact/"
-    weight: 5
+    weight: 7
 
 footer:
   - name: "Home"

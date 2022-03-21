@@ -1,0 +1,5 @@
+<h1 class="title">{{ page.title }}
+    {% if include.date %}
+    <small class="text-muted article-date">{{page.date | date: '%B %d, %Y' }}</small>
+    {% endif %}
+</h1>

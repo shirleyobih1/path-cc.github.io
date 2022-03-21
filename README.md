@@ -1,81 +1,62 @@
-# PATh Website
+# PATh - Partnership to Advance Throughput Computing
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+- [Development](#development)
+- [Building Locally](#installing-ruby-&-jekyll)
+- [Using Github Automatic Previews](#using-github-for-development)
+- [Using Docker Container](#using-docker-for-development)
+- [Pushing Changes to Production](#pushing-changes-to-production)
 
-[Live Demo](https://jekyll-serif-theme.netlify.app/) | 
-[Zerostatic Themes](https://www.zerostatic.io)
+[PATh](https://path-cc.io/) brings together the Center for High Throughput Computing and the OSG in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing.
 
-![Jekyll Serif Theme screenshot](https://github.com/JugglerX/jekyll-serif-theme/blob/master/screenshots/jekyll-serif-github-readme-screenshot.png)
+Thie website is a [Jekyll](https://jekyllrb.com/) based website.  The theme is based on [Jekyll-Serif](https://github.com/zerostaticthemes/jekyll-serif-theme).  Please create a pull request to modify the website.
 
-## Theme features
+# Deployment
 
-- Jekyll 4
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- Responsive design
-- Bootstrap 4.3 grid and media queries only
-- Responsive menu
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
-- Netlify & Github Pages ready
+To have you changes merged into the main website you must create a PR and get one review before you are allowed to merge. If you don't have anyone in mind you can request _@CannonLock_ and he will review it the next morning.
 
-# Installation
+# Development
+
+The following three guides contain a method to view your website changes before creating a PR.
 
 ### Installing Ruby & Jekyll
  
 If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
 
-### Installing Theme
+### Using Github for Development
 
-Download or clone the theme.
+1. Create a Branch from master with 'preview-' at the start of the branch name
+  - For instance 'preview-helloworld'
+2. Push this branch to the repo at https://github.com/path-cc/path-cc.github.io.git
+  - If you created the branch on github it is already there!
+4. Populate the changes that you want to see
+5. Preview the changes that you have made at https://path-cc.io/web-preview/<branch-name\>/ 
+  - For this instance https://path-cc.io/web-preview/preview-helloworld/
+6. When you are happy with the changes create a PR into master
 
-To run the theme locally, navigate to the theme directory and run:
+### Using Docker for Development
+
+Depending on your environment, it may be more useful to run Jekyll inside a container.  To do this, run the following from your laptop while inside the checked-out copy of the website source:
 
 ```
-bundle install
-``` 
-
-To start the Jekyll local development server.
-
-```
-bundle exec jekyll serve
-``` 
-
-To build the theme.
- 
-```
-bundle exec jekyll build
+docker run -p 8000:8000 --rm --volume $PWD:/srv/jekyll -it jekyll/jekyll:latest /bin/sh
 ```
 
-# Deployment
+This will utilize the latest Jekyll version and map port `8000` to your host.  Within the container, a small HTTP server can be started with the following command:
 
-## Netlify
+```
+jekyll serve --watch -H 0.0.0.0 -P 8000
+```
 
-This theme contains a `netlify.toml` and has been tested to work with Netlify.
+This will build and serve the website; it can be viewed by navigating your web browser to <http://localhost:8000>.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
+With the `--watch` flag set, any changes you make to the website source will cause a new version of the website to be built; it usually takes 4-5 seconds between hitting "Save" and then "Refresh" on the website.
 
-## Github Pages
-This theme has been tested to work with Github Pages (and Github Project Pages)
+# Pushing Changes to Production
 
-If you are using this theme with Github Pages and you are using a Github Project Page then **your site will be hosted in a subfolder** you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
+The production website (https://path-cc.io/) is built automatically by GitHub Pages from the **master** branch.
 
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme"`
+To make changes to the website, use the following workflow:
 
-
-## Credits
-
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-
-
-## License
-
-This theme is open source under the MIT license. If you fork or copy this theme you must leave me as the original author in the LICENSE file (on line 3 where I am listed as the author). Really, I just don't want people copying this theme and then saying it's their theme, because I put a lot of work into my themes, thanks!
+1.  Submit a pull request with website updates to the `master` branch (the default) and request a review.
+    - Any reviews with visual changes can be handled more quickly if you provide a [preview instance](#using-github-for-development)
+1.  Upon approval and merge you can view the changes at https://path-cc.io

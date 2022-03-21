@@ -1,0 +1,24 @@
+---
+layout: container-default
+---
+
+{% assign use_date = true %}
+{% if page.hide_date %}
+  {% assign use_date = false %}
+{% endif %}
+
+<div class="row">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    {% include subpage-header.html date=use_date %}
+  </div>
+</div>
+
+
+{% capture content %}
+
+<div class="news news-single">
+  <div class="content">{{content}}</div>
+</div>
+
+{% endcapture %}
+{% include body-container.html %}

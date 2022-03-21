@@ -1,0 +1,71 @@
+.event{
+    .event-header {
+        img {
+            width: 100%;
+        }
+        .image-container {
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+        .title {
+            line-height: 1.0;
+        }
+        .subtitle {
+            color: $text-muted;
+            margin-bottom: 0;
+            padding: 10px;
+            background-color: $white-offset;
+            text-align: right;
+        }
+    }
+    .subsection {
+        border-left: solid;
+        border-left-color: $primary;
+        background-color: $white-offset; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, $white-offset, white);
+        margin-bottom: auto;
+    }
+}
+
+.dark-card {
+    width: 100%;
+    margin-bottom: map-get($spacers, 1);
+
+    .card {
+        border: 0px;
+        .card-header {
+            background-color: lighten($card-background-color, 42);
+            padding: 0px;
+            padding-left: map-get($spacers, 1);
+            padding-right: map-get($spacers, 1);
+            h2 {
+                margin: 0px;
+                color: $dark;
+            }
+        }
+        .card-body {
+            background-color: lighten($card-background-color, 45);
+            padding: 0px;
+        }
+    }
+    .card:hover {
+        box-shadow: 0px 3px 3px $gray-400;
+        * {
+            transition: background-color 150ms linear;
+        }
+        .card-header {
+            background-color: lighten($card-background-color, 39);
+        }
+        .card-body {
+            background-color: lighten($card-background-color, 42);
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.dark-card:hover {
+    transform: translateY(-1px);
+}

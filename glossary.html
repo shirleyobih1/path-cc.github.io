@@ -1,0 +1,104 @@
+---
+layout: sub-page
+title: Glossary and Concepts
+---
+
+<p>Since the inception of “High Throughput Computing” in 1996 the PATh partners have coined many
+  terms and concepts to help better describe their computational methodology. Below are the terms
+  that have been introduced and a description of each.</p>
+
+<div class="bg-light row p-3 mb-3">
+  <div class="col-12">
+    <h5 id="high-throughput-computing-htc">High Throughput Computing (HTC)</h5>
+    <p>Maximizing the throughput of a computing resource toward a common problem.</p>
+  </div>
+</div>
+
+<div class="bg-light row p-3 mb-3">
+  <div class="col-12">
+    <h5 id="distributed-high-throughput-computing-dhtc">Distributed High Throughput Computing (dHTC)</h5>
+    <p>Specialized by the <a href="#osg-consortium">OSG</a>, dHTC involves running a HTC infrastructure across many independent, collaborating administrative domains.</p>
+  </div>
+</div>
+
+<div class="bg-light row p-3 mb-3">
+  <div class="col-12">
+    <h5 id="osg-consortium"><a href="https://osg-htc.org">OSG Consortium</a></h5>
+    <p>A consortium dedicated to the advancement of all of Open Science via the practice of <a href="#distributed-high-throughput-computing-dhtc">distributed High Throughput Computing</a>, and the advancement of its state of the art.</p>
+    <p>The OSG Consortium provides a fabric of services, including a software stack, that organizations can use to build dHTC environments.  These services can be used by resource providers to build dHTC environments.</p>
+    <ul>
+      <li>The consortium coordinates the efforts contributed by projects such as the NSF-funded <a href="https://iris-hep.org/">IRIS-HEP</a> and PATh.</li>
+      <li>One important service in the OSG fabric of services is the <a href="#open-science-pool-ospool">Open Science Pool</a>.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row bg-light p-3 mb-3">
+  <div class="col-12">
+    <h5 id="htcondor-software-suite-htcss"><a href="https://htcondor.org">HTCondor Software Suite (HTCSS)</a></h5>
+    <p>HTCSS, based out of the <a href="https://chtc.cs.wisc.edu">Center for High Throughput Computing</a> at UW-Madison, implements several technologies for creating a dHTC environment.</p>
+  </div>
+  <div class="col-12 col-md-8">
+    <h5 id="access-point">Access Point (AP)</h5>
+    <p>Users can place their workloads (such as jobs, job sets, and DAGs) at an Access Point.  The AP accesses one or more resource pools to acquire resources.</p>
+
+    <h5 id="execution-point-ep">Execution Point (EP)</h5>
+    <p>The Execution Point is given jobs by an AP and executes them.</p>
+
+    <h5 id="central-manager">Central Manager (CM)</h5>
+    <p>Locates daemons and allocates shares of the overall resource pool.</p>
+
+    <h5 id="compute-entrypoint-ce">Compute Entrypoint (CE)</h5>
+    <p>Provides a mechanism to integrate a local resource (such as a batch system) with the outside world.</p>
+  </div>
+  <div class="col-12 col-md-4">
+    <img src="../images/HTCSS-service-interaction.jpg" width="100%" alt="Image detailing the interaction between users and HTCSS services">
+  </div>
+</div>
+
+<div class="row bg-light p-3 mb-3">
+  <div class="col-12 col-lg-7">
+    <h5 id="open-science-compute-federation-oscf">Open Science Compute Federation (OSCF)</h5>
+    <p>The OSCF provides a set of services for requesting and allocating computing resources and creating <a href="#distributed-high-throughput-computing-dhtc">dHTC</a> environments.</p>
+    <ul>
+      <li>The <a href="#compute-entrypoint-ce">CE</a>, hosted on-prem or off-prem, provides a way for the factory to
+        send resource requests to a compute resource.</li>
+      <li>The factory acts on behalf of an organization that requests resources.</li>
+      <li>If HTCSS is used by the organization, each resource starts an <a href="#execution-point-ep">EP</a> and joins a <a href="#central-manager">Central Manager</a>.</li>
+    </ul>
+  </div>
+  <div class="col-12 col-lg-5 justify-content-center d-flex">
+    <img class="img-fluid my-auto" src="../images/OSFC-graphic.jpg" alt="OSFC graphic detailing the interaction between the CE, factory, and resources">
+  </div>
+</div>
+
+<div class="row bg-light p-3 mb-3">
+  <div class="col-12 col-lg-7">
+    <h5 id="open-science-pool-ospool"><a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool (OSPool)</a></h5>
+    <p>An environment for any scientist or group doing open science in the US.</p>
+
+    <ul>
+      <li>Any campus, group, or collaboration can attach an access point to the OSPool and receive a share of the resources.</li>
+      <li>OSG operates the OSG Connect AP, meant to provide a place for PI-driven groups to place their jobs.</li>
+      <li>Users can Bring Your Own Resources (BYOR) to utilize their own resources (such as an XRAC allocation) via the OSPool.</li>
+    </ul>
+  </div>
+  <div class="col-12 col-lg-5 justify-content-center d-flex">
+    <img class="img-fluid my-auto" src="../images/OSPool-graphic.jpg" alt="Graphic detailing the interaction happening in the OSPool">
+  </div>
+</div>
+
+<div class="row bg-light p-3 mb-3">
+  <div class="col-12 col-lg-7">
+    <h5 id="open-science-data-federation"><a href="https://opensciencegrid.org/docs/data/stashcache/overview/#data-federation-overview">Open Science Data Federation (OSDF)</a></h5>
+    <p>The OSDF is a set of federated origin and cache services that coordinate a namespace for data access.</p>
+    <ul>
+      <li>Jobs at an <a href="#execution-point-ep">EP</a> can access data via the OSDF, potentially authorized by an access token.</li>
+      <li>The OSDF system serves the data from the closest cache, retrieving it from an origin via the OSDF redirector if not on the local disk of the cache.</li>
+      <li><a href="https://www.osgconnect.net/">OSG Connect</a> provides an origin service which users can place data in or users can attach their own storage to serve as an origin.</li>
+    </ul>
+  </div>
+  <div class="col-12 col-lg-5 justify-content-center d-flex">
+    <img class="img-fluid my-auto" src="../images/OSDF.jpg" alt="Graphic detailing the interaction happening in the Open Science Data Federation">
+  </div>
+</div>

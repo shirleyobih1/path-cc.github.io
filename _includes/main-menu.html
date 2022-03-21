@@ -2,9 +2,17 @@
   {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
   <ul>
     {% for item in mainmenu %}
-    <li class="{% if item.url == page.url %}active{% endif %}">
-      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-    </li>
+      <li class="{% if item.url == page.url %}active{% endif %}">
+        {% if site.events.size == 1 and item.name == "Events" %}
+          {% assign url = site.events[0].url %}
+        {% else %}
+          {% assign url = item.url %}
+        {% endif %}
+        <a href="{{ url | relative_url }}">{{ item.name }}</a>
+      </li>
     {% endfor %}
   </ul>
+  <div>
+    logos
+  </div>
 </div>

@@ -1,8 +1,9 @@
 .intro-image {
   width: 100%;
   height: auto;
-  margin-top: -40px;
+  /*margin-top: -40px;*/
 }
+/*
 .intro-image-absolute {
   max-width: none;
 
@@ -27,6 +28,7 @@
     width: 850px;
   }
 }
+*/
 .intro-image-hide-mobile {
   display: none;
   @include media-breakpoint-up(md) {

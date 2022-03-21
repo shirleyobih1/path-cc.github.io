@@ -1,0 +1,9 @@
+{% assign input = include.input | default: input %}
+<ul>
+{% for item in input %}
+    <li><a href="{{ item.href }}">{{ item.name }}</a></li>
+    {% if item.children %}
+        {% include list_of_lists_to_ul.liquid input=item.children %}
+    {% endif %}
+{% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+<div class="mt-2">
+    <h2>
+        <a href="{{ include.internal_href | relative_url }}">
+            {{ include.title }}
+        </a>
+        {% if include.date %}
+        <small class="article-date text-muted">{{ include.date | date: '%B %d, %Y' }}</small>
+        {% endif %}
+    </h2>
+    <div style="height:250px" class="mb-2">
+        <img style="object-fit: cover" class="w-100 h-100" src="{{ include.image }}" alt="{{ include.alt }}">
+    </div>
+    {{ include.desc | markdownify }}
+</div>

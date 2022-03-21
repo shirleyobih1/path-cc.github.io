@@ -3,28 +3,28 @@
   flex-wrap: wrap;
   flex-direction: row;
   .team-image {
-    height: 60px;
-    width: 60px;
+    height: 5rem;
+    width: 5rem;
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;
-    img {
-      width: 60px;
-    }
   }
   .team-meta {
     flex: 1;
     h2 {
       margin: 0;
-      font-size: 22px;
       font-weight: normal;
     }
     p {
       color: $black;
-      text-transform: uppercase;
       margin: 0;
-      font-size: 12px;
       font-weight: 500;
+    }
+    p.team-description {
+      text-transform: uppercase;
+    }
+    p.team-institution {
+      color: darken($primary, 20%);
     }
   }
   .team-content {
