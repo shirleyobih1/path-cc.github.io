@@ -18,15 +18,15 @@ project is funded by the NSF to advance
 [High Throughput Computing (HTC)](https://research.cs.wisc.edu/htcondor/htc.html) 
 and its impact on research and
 education. To achieve this goal, PATh operates a fabric of capacity services
-that ranges from Research Computing Facilitation, to Access Points capable of
-managing distributed HTC workloads. Starting January 2022, PATh will add to its
-fabric of services support for capacity credit accounts. These accounts will
+that range from Research Computing Facilitation, to Access Points capable of
+managing distributed HTC workloads. Starting January 2022, PATh will add to its 
+support for capacity credit accounts. These accounts will
 provide PIs with HTC workloads access to the processing and storage capacity of
 dedicated resources managed by PATh. NSF will deposit credit into these accounts
-when funding a proposal.
+when funding a proposal that includes a request for credits.
 
 A team of PATh Facilitators is available to guide PIs in effectively using the
-Access Points to manage their HTC workloads and utilizing their credit; training
+Access Points to manage their HTC workloads and utilizing their credits; training
 and documentation material are also available. Access Points provide a rich set
 of capabilities for managing workloads that consist of individual jobs, sets of
 jobs, or Directed Acyclic Graphs (DAG) of jobs. Further, PIs can utilize access
@@ -34,7 +34,7 @@ points to perform data placement and data caching through the [Open Science Data
 Federation](https://opensciencegrid.org/docs/data/stashcache/overview/).
 
 The two PATh partners – the [OSG Consortium](https://osg-htc.org) and the [UW-Madison Center for High
-Throughput Computing (CHTC)](https://chtc.cs.wisc.edu/), have a long track record in turning the potential
+Throughput Computing (CHTC)](https://chtc.cs.wisc.edu/) – have a long track record of turning the potential
 of distributed HTC into scientific discovery in a broad range of domains.
 Information about how research efforts, ranging from a single PI to international
 collaboration, leveraged the power of our HTC services are documented in our
@@ -53,47 +53,49 @@ The dedicated PATh resources that power the capacity credit accounts are expecte
 - Nearline storage of up to 20TB of NVMe per job.
 
 The dedicated PATh resources will be distributed across four sites; credits
-for dedicated resources can be used at a PATh access point.
+for dedicated resources can be used via a PATh Access Point.
 
-##### Are PATh dedicated resources the same as the Open Science Pool?
+##### Are PATh dedicated resources part of the Open Science Pool?
 
 PATh dedicated resources are _not_ the same as the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/).
-The OSPool is composed of resources, often opportunistic, that are managed by PATh through fairshare.
+The OSPool is composed of resources, often opportunistic, that are managed by PATh through fair-share.
 
-The dedicated resources are funded by NSF to be managed by PATh and accessible via the PATh credit account system.  This provides
-PATh with the ability to set policy.  For example, users will have more flexibility in their workloads; jobs can have much longer runtimes compared
-to the OSPool (where long-running jobs are often preempted by the local site).
+Dedicated PATh-mananaged resources are funded by NSF and accessible via the PATh 
+credit account system.  Users will have more flexibility than in the 
+OSPool, with PATh-managed resources supporting longer runtimes and larger jobs
+(in terms of number of CPU cores, RAM) compared
+with the OSPool's opportunitic resources, which may pre-empt jobs and provided smaller computing 'slots', on average.
 
 ##### Can HTC workloads access other resources?
 
 Workloads placed on the PATh Access Points can harness resources pools
-beyond the credit-based dedicated resources.  For example, the [Open Science
+beyond the credit-based dedicated resources, perhaps for different phases of an overall workflow.  For example, the [Open Science
 Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/) capacity consists of aggregated opportunistic resources across
-about 50 sites on a fairshare basis.  PIs can also utilize their [XRAC](https://portal.xsede.org/my-xsede#/guest) or
+about 60 sites on a fair-share basis for relevant workloads.  PIs can also utilize their [XRAC](https://portal.xsede.org/my-xsede#/guest) or
 [Frontera](https://www.tacc.utexas.edu/systems/frontera) allocations through Access Points.
 
 ##### What workloads run well on HTC?
 
 Requests should be for workloads that are amenable to the distributed high
-throughput computing services provided by PATh; to help the evaluation, information
+throughput computing services provided by PATh. To help the evaluation, information
 about HTC workloads should include the following information:
 
-1.	Expected number of self-contained tasks per ensemble?  (Each task can be packaged into one or more batch job)
-2.	What are the resource requirements for each task type in the ensemble?  For example, what are the requirements for cores, memory, wall-time, and scratch space?
-3.	Expected number of ensembles?
-4.	Expected input and output data requirements for each task type?
-5.	Expected number and size of shared input files within an ensemble?  How many times are each file read per ensemble?
+1.	Expected number of self-contained tasks ("jobs") per ensemble?  (Each task can be packaged into one or more batch job)
+2.	What are the per-task resource requirements for each ensemble?  For example, what are the requirements for cores, memory, wall-time, and scratch space?
+3.	Expected per-task input and output data requirements for each ensemble?
+4.	Expected number and size of shared input files within an ensemble?  Which inputs are common across tasks within and across ensembles?
+5.	Number of different ensembles?
 
-##### What about Containers?
+##### What about Software?
 
-The dedicated PATh resources support the ability to execute software within
-containers or portable, self-contained applications.
+The dedicated PATh resources support the ability to execute software via Docker or Singularity
+containers or via portable, self-contained applications (e.g. statically-compiled binaries, conda environments, etc.).
 
 ##### How can I “test drive” the HTC services?
 
-A strength of the PATh Access Point is users can get started without any
-credits through using the [OSPool’s](https://opensciencegrid.org/about/open_science_pool/) opportunistic resources.  We encourage
-users to contact [support@osg-htc.org](mailto:support@osg-htc.org) to get started on an Access Point today.
+A strength of the PATh Access Point is that users can get started without any
+credits by testing work on the [OSPool’s](https://opensciencegrid.org/about/open_science_pool/) opportunistic resources, via the OSG Connect Service and Access Points.  We encourage
+users to contact [support@osg-htc.org](mailto:support@osg-htc.org) to get started on an Access Point, today!
 
 ##### What Data Services does PATh provide?
 
@@ -107,7 +109,7 @@ Given the distributed nature of the hardware, there is no global shared filesyst
 
 ##### Can I get help estimating my HTC needs?
 
-PATh research facilitators are available to help explain the above concepts
+PATh Research Computing Facilitators are available to help explain the above concepts
 and discuss how a workload can be adapted to run on PATh.  Please contact
 [credit-accounts@path-cc.io](mailto:credit-accounts@path-cc.io) with questions about PATh resources, using HTC,
 or estimating credit needs.
@@ -115,7 +117,7 @@ or estimating credit needs.
 HTC resource management has different approaches compared to many batch systems.  For example, PATh has more
 scheduling flexibility for smaller jobs, resulting in an escalating charge in credits for larger jobs.
 
-Please see our [2022 charge listing](/credit-account-charges) for more details.
+Please see our [2022 Charge Listing](/credit-account-charges) for more details.
 
 ##### Where is the dedicated hardware located?
 
