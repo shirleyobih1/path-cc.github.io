@@ -56,7 +56,8 @@ PATh resources will be distributed across four sites. Credits
 for dedicated resources can be used via a PATh Access Point.
 
 There is no inter-node networking across the PATh system, such that multi-node (HPC) 
-jobs are not supported. See "What workloads run well on PATh resources?", below, for more details.
+jobs are not supported, but it may be possible to break up the work to run efficiently 
+on PATh resources. See "What workloads run well on PATh resources?", below, for more details.
 
 ##### Are PATh dedicated resources part of the Open Science Pool?
 
@@ -84,7 +85,8 @@ can allow jobs within the workflow to run on resources optimized other, non-HTC 
 Requests should be for workloads that are amenable to the distributed high
 throughput computing services provided by PATh. Work that can be run in the 
 form of numerous, self-contained jobs (each with their own input and output) 
-is best supported on PATh resources. 
+is best supported on PATh resources. We're happy to help you figure out whether  
+larger jobs can be broken up to run efficiently on PATh resources with an HTC approach.
 
 Jobs requiring fewer CPU cores, GPU, and/or memory 
 will achieve the best overall throughput, across running jobs, and require fewer credits. 
