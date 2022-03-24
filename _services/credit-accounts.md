@@ -64,7 +64,7 @@ on PATh resources. See "What workloads run well on PATh resources?", below, for 
 PATh dedicated resources are _not_ the same as the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/).
 The OSPool is composed of in-kind and mostly opportunitistic resources that can interrupt jobs at any time.
 
-Dedicated PATh-mananaged resources are funded by NSF and accessible via the PATh 
+Dedicated PATh-managed resources are funded by NSF and accessible via the PATh 
 credit account system, such that PATh-managed resources support longer runtimes and larger jobs
 (in terms of number of CPU cores, RAM) compared with the OSPool's opportunitic resources.
 
