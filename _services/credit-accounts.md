@@ -26,8 +26,8 @@ dedicated resources managed by PATh. NSF will deposit credit into these accounts
 when funding a proposal that includes a request for credits.
 
 A team of PATh Facilitators is available to guide PIs in effectively using the
-Access Points to manage their HTC workloads and utilizing their credits; training
-and documentation material are also available. Access Points provide a rich set
+Access Points to manage their HTC workloads and utilize their credits; training
+and documentation materials are also available. Access Points provide a rich set
 of capabilities for managing workloads that consist of individual jobs, sets of
 jobs, or Directed Acyclic Graphs (DAG) of jobs. Further, PIs can utilize access
 points to perform data placement and data caching through the [Open Science Data
@@ -42,7 +42,7 @@ collection of [science stories](/news/htc-in-support-of-science/).
 
 ## FAQs
 
-##### What hardware resources are available through the credit accounts?
+##### What hardware resources are available through PATh credit accounts?
 
 The dedicated PATh resources that power the capacity credit accounts are expected to consist of:
 - Compute servers with up to 128 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM.
@@ -52,33 +52,46 @@ The dedicated PATh resources that power the capacity credit accounts are expecte
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
-The dedicated PATh resources will be distributed across four sites; credits
+PATh resources will be distributed across four sites. Credits
 for dedicated resources can be used via a PATh Access Point.
+
+There is no inter-node networking across the PATh system, such that multi-node (HPC) 
+jobs are not supported. See "What workloads run well on PATh resources?", below, for more details.
 
 ##### Are PATh dedicated resources part of the Open Science Pool?
 
 PATh dedicated resources are _not_ the same as the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/).
-The OSPool is composed of resources, often opportunistic, that are managed by PATh through fair-share.
+The OSPool is composed of in-kind and mostly opportunitistic resources that can interrupt jobs at any time.
 
 Dedicated PATh-mananaged resources are funded by NSF and accessible via the PATh 
-credit account system.  Users will have more flexibility than in the 
-OSPool, with PATh-managed resources supporting longer runtimes and larger jobs
-(in terms of number of CPU cores, RAM) compared
-with the OSPool's opportunitic resources, which may pre-empt jobs and provided smaller computing 'slots', on average.
+credit account system, such that PATh-managed resources support longer runtimes and larger jobs
+(in terms of number of CPU cores, RAM) compared with the OSPool's opportunitic resources.
 
-##### Can HTC workloads access other resources?
+##### Can I access other resources in combination with PATh resources?
 
-Workloads placed on the PATh Access Points can harness resources pools
+Workloads placed on a PATh Access Point can harness resources pools
 beyond the credit-based dedicated resources, perhaps for different phases of an overall workflow.  For example, the [Open Science
 Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/) capacity consists of aggregated opportunistic resources across
 about 60 sites on a fair-share basis for relevant workloads.  PIs can also utilize their [XRAC](https://portal.xsede.org/my-xsede#/guest) or
-[Frontera](https://www.tacc.utexas.edu/systems/frontera) allocations through Access Points.
+[Frontera](https://www.tacc.utexas.edu/systems/frontera) allocations through PATh Access Points.
 
-##### What workloads run well on HTC?
+While PATh resources explicitly support work that can be run with HTC approaches, 
+the integration of these other resources into a single workflow places at a PATh Access Point 
+can allow jobs within the workflow to run on resources optimized other, non-HTC job requirements (e.g. multi-node HPC jobs).
+
+##### What workloads run well on PATh resources?
 
 Requests should be for workloads that are amenable to the distributed high
-throughput computing services provided by PATh. To help the evaluation, information
-about HTC workloads should include the following information:
+throughput computing services provided by PATh. Work that can be run in the 
+form of numerous, self-contained jobs (each with their own input and output) 
+is best supported on PATh resources. 
+
+Jobs requiring fewer CPU cores, GPU, and/or memory 
+will achieve the best overall throughput, across running jobs, and require fewer credits. 
+Please see our [2022 Charge Listing](/credit-account-charges) for more details.
+
+To inform the evaluation of credit requests, information about proposed HTC workloads should include 
+the following information:
 
 1.	Expected number of self-contained tasks ("jobs") per ensemble?  (Each task can be packaged into one or more batch job)
 2.	What are the per-task resource requirements for each ensemble?  For example, what are the requirements for cores, memory, wall-time, and scratch space?
@@ -89,7 +102,9 @@ about HTC workloads should include the following information:
 ##### What about Software?
 
 The dedicated PATh resources support the ability to execute software via Docker or Singularity
-containers or via portable, self-contained applications (e.g. statically-compiled binaries, conda environments, etc.).
+containers or via portable, self-contained applications (e.g. statically-compiled binaries, conda environments, etc.). 
+While multi-node jobs are not supported by PATh hardware, MPI-dependent software can be supported via containers
+(to achieve multi-core parallelism within a single node).
 
 ##### How can I “test drive” the HTC services?
 
