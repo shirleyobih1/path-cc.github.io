@@ -94,7 +94,7 @@ Please see our [2022 Charge Listing](/credit-account-charges) for more details.
 To inform the evaluation of credit requests, information about proposed HTC workloads should include 
 the following information:
 
-1.	Expected number of self-contained tasks ("jobs") per ensemble?  (Each task can be packaged into one or more batch job)
+1.	Expected number of self-contained tasks per ensemble?  (Each task can be packaged into one or more batch job)
 2.	What are the per-task resource requirements for each ensemble?  For example, what are the requirements for cores, memory, wall-time, and scratch space?
 3.	Expected per-task input and output data requirements for each ensemble?
 4.	Expected number and size of shared input files within an ensemble?  Which inputs are common across tasks within and across ensembles?
