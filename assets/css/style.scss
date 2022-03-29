@@ -2,7 +2,6 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 ---
 
-
 $spacer: 1rem;
 $spacers: (
         0: 0,
@@ -15,33 +14,19 @@ $spacers: (
         7: $spacer * 8,
 ) !default;
 
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-
 // Colors
 $primary: #d41041;
-$primary-light: tint-color($primary, 30%);
-$primary-white: tint-color($primary, 40%);
+$primary-light: lighten($primary, 30%);
+$primary-white: lighten($primary, 40%);
 $secondary: #000000;
-$secondary-light: tint-color($secondary, 50%);
-$secondary-white: tint-color($secondary, 97%);
+$secondary-light: lighten($secondary, 50%);
+$secondary-white: lighten($secondary, 97%);
 
 $dark: black;
 $black: #000000;
 $white: #ffffff;
 $white-offset: $secondary-white;
 $steel: #5C5A5A;
-
-$theme-colors: (
-        "primary":    $primary,
-        "secondary":  $secondary,
-        "success":    $success,
-        "info":       $info,
-        "warning":    $warning,
-        "danger":     $danger,
-        "light":      $light,
-        "dark":       $dark
-);
 
 // Cards
 $card-background-color: lighten($secondary-light, 5);
@@ -53,10 +38,14 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
+$headings-font-weight:  300;
+
+$nav-link-font-weight:  300;
+
 $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: 'Playfair Display', serif, -apple-system;
-$font-family-nav: 'Playfair Display', serif, -apple-system;
 $font-size-base: 1rem;
+
+$font-family-heading: $font-family-base;
 
 // Navbar
 $navbar-light-color: $black;
@@ -76,24 +65,12 @@ $sub-footer-text-color: $white;
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
-@import 'components/type';
-@import 'components/page';
-@import 'components/header';
 @import 'components/footer';
 @import 'components/sub-footer';
-@import 'components/logo';
 @import 'components/main-menu';
 @import 'components/main-menu-mobile';
 @import 'components/hamburger';
-@import 'components/buttons';
-@import 'components/call';
-@import 'components/title';
-@import 'components/content';
-@import 'components/intro';
-@import 'components/intro-image';
-@import 'components/strip';
-@import 'components/feature';
-@import 'components/social';
+
 
 // Pages
 @import 'pages/home';
@@ -147,9 +124,6 @@ body {
 .navbar {
   width: 100%;
   font-size: 1.2rem;
-  .nav-link {
-    font-family: 'Playfair Display', serif, -apple-system;
-  }
   .social-media {
     img {
       margin-left: map-get($spacers, 1);
