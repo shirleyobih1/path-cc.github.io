@@ -3,12 +3,19 @@ layout: sub-page
 bodyClass: page-events-list
 ---
 
+<h1 class="mb-4">Events</h1>
+
 <div class="row mb-3">
     {% include get/future_events.html %}
     {% for event in future_events %}
     <div class="col-12 col-md-6 mb-3">
         <div class="news news-summary">
             <div class="article-content">
+                {% if event.header_image %}
+                    <a href="{{ event.url | relative_url }}" class="d-block">
+                        <img class="w-100 image-card-cap rounded mb-3" src="{{ event.header_image | relative_url }}">
+                    </a>
+                {% endif %}
                 <h2 class="article-title">
                     <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
                 </h2>
@@ -28,12 +35,17 @@ bodyClass: page-events-list
     {% endfor %}
 </div>
 <div class="row">
-    <div class="col-12"><h1 class="text-muted">Past Events</h1></div>
+    <div class="col-12"><h1 class="text-muted mb-4">Past Events</h1></div>
     {% include get/past_events.html %}
     {% for event in past_events %}
     <div class="col-12 col-md-6 mb-3">
         <div class="news news-summary">
             <div class="article-content">
+                {% if event.header_image %}
+                    <a href="{{ event.url | relative_url }}" class="d-block">
+                        <img class="w-100 image-card-cap rounded mb-3" src="{{ event.header_image | relative_url }}">
+                    </a>
+                {% endif %}
                 <h2 class="article-title">
                     <a href="{{ site.baseurl }}{{ event.url }}">{{ event.title }}</a>
                 </h2>
