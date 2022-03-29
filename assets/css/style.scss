@@ -19,7 +19,7 @@ $spacers: (
 @import "bootstrap/variables";
 
 // Colors
-$primary: #d41041;
+$primary: #d61d44;
 $primary-light: tint-color($primary, 30%);
 $primary-white: tint-color($primary, 40%);
 $secondary: #000000;
@@ -36,7 +36,7 @@ $theme-colors: (
         "primary":    $primary,
         "secondary":  $secondary,
         "success":    $success,
-        "info":       $info,
+        "info":       $primary-light,
         "warning":    $warning,
         "danger":     $danger,
         "light":      $light,
@@ -201,4 +201,8 @@ main {
   .top-#{$number} {
     top: #{$padding}
   }
+}
+
+main {
+  min-height: 80vh;
 }
