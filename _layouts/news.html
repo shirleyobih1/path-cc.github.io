@@ -7,18 +7,16 @@ layout: container-default
   {% assign use_date = false %}
 {% endif %}
 
-<div class="row">
-  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+<div class="row justify-content-center">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11 fs-5">
     {% include subpage-header.html date=use_date %}
   </div>
 </div>
 
-
-{% capture content %}
-
-<div class="news news-single">
-  <div class="content">{{content}}</div>
+<div class="row justify-content-center">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    <div class="news news-single">
+      <div class="content fs-5">{{content}}</div>
+    </div>
+  </div>
 </div>
-
-{% endcapture %}
-{% include body-container.html %}
