@@ -2,7 +2,9 @@
 title: "Nicholas Cooley awarded David Swanson Memorial Award " 
 date: 2021-03-19T12:00:00+00:00
 excerpt: Nicholas Cooley was awarded the 2021 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country. 
+description: Nicholas Cooley was awarded the 2021 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country.
 publish: true
+
 --- 
 
 <figure class="figure float-end" style="margin-left: 1em">

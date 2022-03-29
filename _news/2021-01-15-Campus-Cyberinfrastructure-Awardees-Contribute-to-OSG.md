@@ -2,7 +2,9 @@
 title: Campus Cyberinfrastructure (CC*) Awardees Contribute Over 349 Million Core Hours in Last 12 Months
 date: 2021-08-12 12:00:00 -0600
 excerpt: Campus Cyberinfrastructure Award Recipients Power the OSG and contributed over 349 million core hours to researchers using distributed high throughput computing (dHTC).
+description: Campus Cyberinfrastructure Award Recipients Power the OSG and contributed over 349 million core hours to researchers using distributed high throughput computing (dHTC).
 publish: true
+
 ---
 
 Campus Cyberinfrastructure Award Recipients Power the OSG

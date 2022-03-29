@@ -1,7 +1,8 @@
 ---
 title: "Submit Locally, Run Globally" 
 date: 2020-12-07T12:00:00+00:00
-excerpt: The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources. 
+excerpt: The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources.
+description: The PATh project offers technologies and services that enable researchers to harness *through a single interface,* and from the comfort of their “home directory”, computing capacity offered by a global and diverse collection of resources.
 --- 
 
 <figure class="figure float-end" style="margin-left: 1em">
