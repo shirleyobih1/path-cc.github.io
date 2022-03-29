@@ -3,15 +3,13 @@ exclude: ['README.md', vendor]
 permalink: pretty
 title: 'PATh'
 url: "https://path-cc.io"
+key: path
 
 google_analytics_id: G-0CCSDQV212
 homepage:
   show_alert: true
   show_call_box: true
-logo:
-  mobile: 'images/logo/Logo_Round_Med.png'
-  desktop: 'images/logo/Logo_Round_Med.png'
-  desktop_height: "70px"
+logo: '/images/logo/Logo_Round_Med.png'
 footer:
   copyright_text: 'This project is supported by National Science Foundation under Cooperative Agreement OAC-2030508. Any opinions, findings, conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.'
 
@@ -41,6 +39,9 @@ collections:
   gil:
     output: true
     permalink: /GIL/:path/
+  articles:
+    output: true
+    permalink: /news/:path/
 
 defaults:
   - scope:
@@ -61,6 +62,10 @@ defaults:
       path: 'images'
     values:
       image: true
+  - scope:
+      type: articles
+    values:
+      layout: news
 
 
 sass:
@@ -69,3 +74,4 @@ sass:
 plugins:
   - jekyll-environment-variables
   - jekyll-sitemap
+  - jekyll-seo-tag

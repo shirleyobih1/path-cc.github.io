@@ -1,0 +1,7 @@
+{% assign articles = site.articles | where_exp: "article", "article.publish_on contains site.key" %}
+
+{%  for news in site.news %}
+    {% assign articles = articles | push: news %}
+{%  endfor %}
+
+{% assign articles = articles | sort: "date" |  reverse %}

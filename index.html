@@ -12,16 +12,16 @@ intro_image_hide_on_mobile: true
 
 <div class="py-1">
     <div class="container-lg my-1">
-        <span class="bg-primary rounded p-1 me-2 text-white">New Service</span><span><b>PATh compute credits</b> now available to researchers! Learn how PATh can power your research on the <a href="/facility">facility</a> page.</span>
+        <a href="/facility" class="text-decoration-none bg-primary rounded p-1 me-2 text-white">New Service</a><span><b>PATh compute credits</b> now available to researchers! Learn how PATh can power your research on the <a href="/facility">facility</a> page.</span>
     </div>
 </div>
 <hr class="m-0">
-{% include header.html logo=layout.logo header_class=page.header_class %}
+{% include layout/header.html logo=layout.logo header_class=page.header_class %}
 <main>
     <div class="bg-light">
-        <div class="container py-4">
+        <div class="container-lg py-4">
             <div class="row mb-3">
-                <div class="col-6 col-xxl-7">
+                <div class="col-12 col-lg-7">
                     <h2 class="">PATh advances the state of <br>distributed high-throughput computing!</h2>
                     <hr class="m-0 mb-4">
                     <p class="fs-5">
@@ -33,18 +33,18 @@ intro_image_hide_on_mobile: true
                     </p>
                     <a href="#path-for-organizations" class="btn btn-outline-primary mb-3">PATh for Organizations</a>
                 </div>
-                <div class="col-6 col-xxl-5 justify-content-center">
+                <div class="col-6 col-lg-5 d-none d-lg-flex">
                     <img class="d-none d-md-block img-fluid" src="{{ 'images/logo/PATh_Logo_Primary_Color_Vertical.svg' | relative_url}}"/>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container my-3">
+    <div class="container-lg my-5">
         <div id="path-for-researchers" class="row my-3">
-            <div class="col-12  col-xxl-4">
+            <div class="col-12 col-md-4 col-xxl-4">
                 <img class="d-none d-md-block img-fluid" src="{{ 'images/PATh_Researchers.svg' | relative_url}}"/>
             </div>
-            <div class="col-12 col-xxl-8 d-flex">
+            <div class="col-12 col-md-8 col-xxl-8 d-flex">
                 <div class="my-auto">
                     <h3 class="pb-2">
                         For Researchers
@@ -63,16 +63,16 @@ intro_image_hide_on_mobile: true
             </div>
         </div>
         <div id="path-for-organizations" class="row my-3">
-            <div class="col-12 col-xxl-8 d-flex">
+            <div class="col-12 col-lg-8 col-xxl-8 d-flex">
                 <div class="my-auto">
-                    <h3 class="pb-2 text-end">
+                    <h3 class="pb-2 text-start text-lg-end">
                         For Organizations
                     </h3>
-                    <p class="fs-5 text-end">
+                    <p class="fs-5 text-start text-lg-end">
                         Build local HTC capacity with the <a href="https://htcondor.org">HTCondor Software Suite</a>.
                         Share computing capacity, data, and software between collaborators and even across continents.
                     </p>
-                    <p class="fs-5 text-end">
+                    <p class="fs-5 text-start text-lg-end">
                         Connect or contribute campus computing and data resources into the
                         <a href="https://opensciencegrid.org/campus-cyberinfrastructure.html">US national cyberinfrastructure
                             via OSG</a>. Contact us at <a href="mailtto:support@opensciencegrid.org">support@opensciencegrid.org</a>
@@ -80,70 +80,61 @@ intro_image_hide_on_mobile: true
                     </p>
                 </div>
             </div>
-            <div class="col-12  col-xxl-4">
+            <div class="col-12 col-lg-4 col-xxl-4 d-none d-lg-block">
                 <img class="d-none d-md-block img-fluid" src="{{ 'images/University_And_Organization.svg' | relative_url}}"/>
             </div>
         </div>
     </div>
-    <div class="container">
-        {% include text-hr.html text="News" %}
+    <div class="container-lg">
+        {% include text-hr.html text="News & Events" %}
         <div class="row">
-            {% assign sorted_articles = site.news | reverse %}
+            {% include get/articles.liquid %}
             <div class="col-12 col-md-6 col-lg-4 bg-light">
-                {% for article in sorted_articles limit: 1 %}
-                {% include highlighted-title-image-text-card.html
-                internal_href=article.url
-                image=article.image_src
-                alt=article.image_alt
-                title=article.title
-                date=article.date
-                desc=article.excerpt
-                %}
-                {% endfor %}
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="row pt-md-0 pt-3">
-                    {% for article in sorted_articles limit: 2 offset: continue %}
-                    <div class="col-12">
-                        {% include light-title-date-desc-card.html
+                {% for article in articles limit: 1 %}
+                    {% include highlighted-title-image-text-card.html
+                        internal_href=article.url
+                        image=article.image.path
+                        alt=article.image.alt
                         title=article.title
-                        href=article.url
                         date=article.date
                         desc=article.excerpt
-                        %}
-                    </div>
-                    {% endfor %}
-                </div>
+                    %}
+                {% endfor %}
             </div>
             {% include get/future_events.html %}
             <div class="col-12 col-lg-4">
+                <h2 class="text-primary">
+                    Upcoming Events
+                </h2>
+                <hr class="mt-0">
                 {% for event in future_events limit:2 %}
                     <div class="col-12 col-sm-10 col-md-6 col-lg-12">
                         {% include event/event-card.html event=event %}
                     </div>
                 {% endfor %}
             </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <a class="twitter-timeline" data-height="600" data-dnt="true" data-theme="light" href="https://twitter.com/opensciencegrid/lists/1508877823339073540?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
         {% include text-hr.html text="About" %}
         <div class="row mb-4">
             <div class="col-12 col-lg-4 order-2">
-                <h2 class="mb-0">Partners</h2>
+                <h2 class="text-primary mb-0">Partners</h2>
                 <hr class="header-break">
                 <div class="row justify-content-center">
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+                    <div class="col-12 col-sm-6 col-lg-12">
                         {% include title-image-card.html
-                        title="Center for High Throughput Computing"
-                        image="images/CHTC-centered.svg"
-                        alt="Center for High Throughput Computing Logo"
-                        href="https://chtc.cs.wisc.edu/"
+                            image="images/CHTC-centered.svg"
+                            alt="Center for High Throughput Computing Logo"
+                            href="https://chtc.cs.wisc.edu/"
                         %}
                     </div>
-                    <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+                    <div class="col-12 col-sm-6 col-lg-12">
                         {% include title-image-card.html
-                        title="OSG"
-                        image="images/logo/OSG-logo.svg"
-                        alt="Open Science Grid Logo"
-                        href="https://opensciencegrid.org/"
+                            image="images/logo/OSG-logo.svg"
+                            alt="Open Science Grid Logo"
+                            href="https://opensciencegrid.org/"
                         %}
                     </div>
                 </div>
