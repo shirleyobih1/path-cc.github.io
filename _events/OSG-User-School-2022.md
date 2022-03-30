@@ -53,15 +53,13 @@ Graduate students, advanced undergraduates, post-doctoral students, faculty, and
 The University of Wisconsin-Madison.
 
 ### Application and Deadlines
-Details about the application process can be found on the [OSG User School 2022 page](https://opensciencegrid.org/user-school-2022/#applications).
+Details about the application process can be found on the [OSG User School 2022 site](https://opensciencegrid.org/user-school-2022/#applications).
 
 **Note:** The application deadline is **Monday, 18 April 2022.**
 
 ### Contact Us
 
-The OSG User School is part of the [OSG Outreach Area](https://opensciencegrid.org/outreach/) — please visit that site to learn about other OSG Outreach activities.
-
-If you have any questions about the event, feel free to email us at [user-school@opensciencegrid.org](user-school@opensciencegrid.org)
+If you have any questions about the event, email us at [user-school@opensciencegrid.org](user-school@opensciencegrid.org)
 {% endcapture %}
 
 {% capture endblock %}
