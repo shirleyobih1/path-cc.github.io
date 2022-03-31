@@ -177,8 +177,14 @@ main {
 
 #hero {
   position: relative;
-  background-color: transparent;
 }
+
+@include media-breakpoint-down(lg) {
+  #hero {
+    background-color: $light;
+  }
+}
+
 @include media-breakpoint-up(lg) {
   #hero::before {
     content: " ";
