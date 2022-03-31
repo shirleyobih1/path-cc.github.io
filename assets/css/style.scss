@@ -167,6 +167,12 @@ main {
   object-fit: cover;
 }
 
+.content {
+  img {
+    max-width: 100%;
+  }
+}
+
 .hover-shadow-sm:hover {
   box-shadow: 0 .125rem .25rem rgba($black, .075) !important;
 }
