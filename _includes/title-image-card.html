@@ -1,6 +1,6 @@
-<div class="dark-card">
+<div class="bg-light mb-2">
     <a href="{{ include.href }}">
-        <div class="card">
+        <div class="card border-0 hover-shadow shadow-sm bg-light p-2">
             {% if include.title %}
                 <div class="card-header">
                     <h2>
@@ -8,9 +8,11 @@
                     </h2>
                 </div>
             {% endif %}
-            {% if include.image %}
-            <img alt="{{ include.alt }}" class="card-img mt-2 mb-2" src="{{ include.image | relative_url }}" />
-            {% endif %}
+            <div>
+                {% if include.image %}
+                <img alt="{{ include.alt }}" class="card-img" src="{{ include.image | relative_url }}" />
+                {% endif %}
+            </div>
         </div>
     </a>
 </div>

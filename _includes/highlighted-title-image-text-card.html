@@ -1,14 +1,17 @@
-<div class="mt-2">
-    <h2>
-        <a href="{{ include.internal_href | relative_url }}">
+<a class="text-decoration-none d-block" href="{{ include.internal_href | relative_url }}">
+    <div class="mt-2 {{ include.class }}">
+        <h2>
             {{ include.title }}
-        </a>
-        {% if include.date %}
-        <small class="article-date text-muted">{{ include.date | date: '%B %d, %Y' }}</small>
-        {% endif %}
-    </h2>
-    <div style="height:250px" class="mb-2">
-        <img style="object-fit: cover" class="w-100 h-100" src="{{ include.image }}" alt="{{ include.alt }}">
+            {% if include.date %}
+            <small class="article-date text-muted">{{ include.date | date: '%B %d, %Y' }}</small>
+            {% endif %}
+        </h2>
+        <div style="height:250px" class="mb-2">
+            <img style="object-fit: cover" class="w-100 h-100" src="{{ include.image }}" alt="{{ include.alt }}">
+        </div>
+        <div class="text-dark">
+            {{ include.desc | markdownify | strip_html }}
+        </div>
+
     </div>
-    {{ include.desc | markdownify }}
-</div>
+</a>
