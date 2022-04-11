@@ -69,4 +69,4 @@ We’re deeply grateful for all the speakers, staff, and attendees who contribut
 
 … 
 
-Browse the complete collection of videos from the OSG All-Hands Meeting 2022 on [OSG's YouTube channel](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1). To view slide decks, visit the [Indico event website](https://indico.fnal.gov/event/53029/). Learn more about the [OSG All-Hands Meeting 2022](https://opensciencegrid.org/all-hands/2022/), and browse the rich history of [past OSG All-Hands Meetings](https://opensciencegrid.org/all-hands/).
+*Browse the complete collection of videos from the OSG All-Hands Meeting 2022 on [OSG's YouTube channel](https://www.youtube.com/channel/UCVxyV0Lr1KiTeq7bTw3gwLw/playlists?view=50&sort=dd&shelf_id=1). To view slide decks, visit the [Indico event website](https://indico.fnal.gov/event/53029/). Learn more about the [OSG All-Hands Meeting 2022](https://opensciencegrid.org/all-hands/2022/), and browse the rich history of [past OSG All-Hands Meetings](https://opensciencegrid.org/all-hands/).*
