@@ -5,9 +5,7 @@ layout: events
 published: true
 
 excerpt: |
-    The OSG User School 2022 be held from Monday 25 July to Friday 29 July 2022
-    
-    Registration is now open for the OSG User School 2022 to be held July 25-29 in person at the University of Wisconsin-Madison campus.
+    The OSG User School 2022 will be held from Monday, July 25 to Friday, July 29 in person at the University of Wisconsin-Madison campus. Registration is now open!
 start_date: 2022-07-25
 end_date: 2022-07-29
 location: "University of Wisconsin-Madison"
