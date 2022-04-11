@@ -1,7 +1,7 @@
 ---
 title: "Connor Natzke awarded David Swanson Memorial Award" 
 date: 2022-04-11T12:00:00+00:00
-excerpt: Connor Natzke was awarded the 2022 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country. 
+excerpt: Connor Natzke was awarded the 2022 David Swanson Memorial Award at the March OSG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country. 
 image_src: /images/DavidSwanson.png
 image_alt: David Swanson
 publish: true
