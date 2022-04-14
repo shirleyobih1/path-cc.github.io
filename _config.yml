@@ -41,6 +41,9 @@ collections:
   gil:
     output: true
     permalink: /GIL/:path/
+  docs:
+    output: true
+    permalink: /facility/docs/:path/
 
 defaults:
   - scope:
@@ -61,6 +64,11 @@ defaults:
       path: 'images'
     values:
       image: true
+  - scope:
+      type: docs
+    values:
+      layout: page
+
 
 
 sass:
