@@ -30,7 +30,7 @@ To apply, complete both of the steps below:
 
 Complete the [online application form](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdBbGikmcgabwGO)
 
-Have someone email a letter of recommendation for you to [user-school@opensciencegrid.org](user-school@opensciencegrid.org) (ask someone who knows you professionally, and have them identify your name and the “OSG User School 2022” in the subject line and letter.)
+Have someone email a letter of recommendation for you to [user-school@opensciencegrid.org](mailto:user-school@opensciencegrid.org) (ask someone who knows you professionally, and have them identify your name and the “OSG User School 2022” in the subject line and letter.)
 
 People accepted to this program will receive financial support for essential travel and local costs associated with the School.
 
@@ -57,7 +57,7 @@ Details about the application process can be found on the [OSG User School 2022 
 
 ### Contact Us
 
-If you have any questions about the event, email us at [user-school@opensciencegrid.org](user-school@opensciencegrid.org)
+If you have any questions about the event, email us at [user-school@opensciencegrid.org](mailto:user-school@opensciencegrid.org)
 {% endcapture %}
 
 {% capture endblock %}
