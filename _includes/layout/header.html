@@ -13,14 +13,32 @@
       <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About
             </a>
-            <div class="dropdown-menu" aria-labelledby="about-nav">
-              <a class="dropdown-item" href="{{ '/about' | relative_url }}">PATh</a>
-              <a class="dropdown-item" href="{{ '/team' | relative_url }}">Team</a>
-              <a class="dropdown-item" href="{{ '/glossary' | relative_url }}">Glossary</a>
-            </div>
+            <ul class="dropdown-menu" aria-labelledby="about-nav">
+              <li class="dropdown-item"><a href="{{ '/about' | relative_url }}">PATh</a></li>
+              <li class="dropdown-item"><a href="{{ '/team' | relative_url }}">Team</a></li>
+              <li class="dropdown-item"><a href="{{ '/glossary' | relative_url }}">Glossary</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="facility-nav">
+              <li class="dropdown-item"><a href="{{ '/facility/index.html' | relative_url }}">About</a></li>
+              <li class="dropdown dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" id="facility-doc-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Documentation
+                </a>
+                <ul class="submenu dropdown-menu" aria-labelledby="facility-doc-nav">
+                  {% for doc in site.docs %}
+                    <li class="dropdown-item"><a href="{{ doc.url | relative_url }}">{{doc.title}}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            </ul>
           </li>
           {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
           {% for item in mainmenu %}
