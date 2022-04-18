@@ -27,15 +27,15 @@
 <body class='page {{page.bodyClass}}'>
 {% include main-menu-mobile.html %}
 <div id="wrapper" class="wrapper">
-    {% include header.html logo=page.logo header_class=page.header_class %}
+    {% include layout/header.html logo=page.logo header_class=page.header_class %}
     <main>
         <div class="container pb-5">
             {{content}}
         </div>
     </main>
 </div>
-{% include footer.html %}
-{% include sub-footer.html %}
+{% include layout/footer.html %}
+{% include layout/sub-footer.html %}
 <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
 {% include google-analytics.html %}
 </body>
