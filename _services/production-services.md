@@ -23,7 +23,7 @@ The computing services provided by PATh include:
 
 * **Submission endpoints** for providing researchers access to the shared
   compute power enabled by the OSG.  This includes the centrally-managed
-  [OSG Connect](https://www.osgconnect.net/), targeting PI-driven groups.
+  [OSG Connect](https://connect.osg-htc.org/), targeting PI-driven groups.
 * Overlay **resource pools** for aggregating resources from the distributed
   infrastructure on behalf of an organization.  
 * **Resource Provisioning** for acquiring resources – from

@@ -12,4 +12,4 @@ PATh brings together the Center for High Throughput Computing and the
 OSG in order to advance the nation's campuses and science
 communities through the use of distributed High Throughput Computing.
 
-<p>To register to use the OSG for your research, <a href="https://www.osgconnect.net/signup" target="_blank">click here</a>.</p>
+<p>To register to use the OSG for your research, <a href="https://connect.osg-htc.org/signup" target="_blank">click here</a>.</p>
