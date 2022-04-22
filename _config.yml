@@ -46,7 +46,7 @@ collections:
     permalink: /facility/docs/:path/
   facility:
     output: true
-    permalink: /facility/:path/
+    permalink: /facility/:title.html
 
 
 defaults:

@@ -1,7 +1,6 @@
 {% assign logo = include.logo | default: site.logo.desktop %}
 {% assign header_class = include.header_class | "light" %}
 
-
 <div>
   <div class="container-lg">
     <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
@@ -16,29 +15,20 @@
             <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About
             </a>
-            <ul class="dropdown-menu" aria-labelledby="about-nav">
-              <li class="dropdown-item"><a href="{{ '/about' | relative_url }}">PATh</a></li>
-              <li class="dropdown-item"><a href="{{ '/team' | relative_url }}">Team</a></li>
-              <li class="dropdown-item"><a href="{{ '/glossary' | relative_url }}">Glossary</a></li>
-            </ul>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="{{ '/about' | relative_url }}">PATh</a>
+              <a class="dropdown-item" href="{{ '/team' | relative_url }}">Team</a>
+              <a class="dropdown-item" href="{{ '/glossary' | relative_url }}">Glossary</a>
+            </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Facility
             </a>
-            <ul class="dropdown-menu" aria-labelledby="facility-nav">
-              <li class="dropdown-item"><a href="{{ '/facility/index.html' | relative_url }}">About</a></li>
-              <li class="dropdown dropend">
-                <a class="dropdown-item dropdown-toggle" href="#" id="facility-doc-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Documentation
-                </a>
-                <ul class="submenu dropdown-menu" aria-labelledby="facility-doc-nav">
-                  {% for doc in site.docs %}
-                    <li class="dropdown-item"><a href="{{ doc.url | relative_url }}">{{doc.title}}</a></li>
-                  {% endfor %}
-                </ul>
-              </li>
-            </ul>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="{{ '/facility/about' | relative_url }}">About</a>
+              <a class="dropdown-item" href="{{ '/facility/registration' | relative_url }}">Registration</a>
+            </div>
           </li>
           {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
           {% for item in mainmenu %}
