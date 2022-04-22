@@ -44,6 +44,10 @@ collections:
   docs:
     output: true
     permalink: /facility/docs/:path/
+  facility:
+    output: true
+    permalink: /facility/:path/
+
 
 defaults:
   - scope:
