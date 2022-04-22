@@ -16,7 +16,7 @@
 
 The major steps to getting started using compute resources at the PATh Facility are:
 
-* applying for [PATh compute credits](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) and be approved by the NSF
+* applying for [PATh compute credits](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) and being approved by the NSF
 * applying for an account 
 * meeting with a PATh staff member for a short consultation and orientation
 * uploading your SSH key
@@ -26,7 +26,7 @@ This guide will discuss how to apply for an account and login to the PATh Facili
 ## Get a PATh Facility Account
 To register with the PATh facility, submit an application using the following steps:
 
-1. Go to the [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:211).You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
+1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:211). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
     <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
 
     If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](support@opensciencegrid.org).
@@ -40,6 +40,7 @@ To register with the PATh facility, submit an application using the following st
    <img src="{{ '/images/comanage-email-verification-form.png' | relative_url }}" class="img-fluid"/>
 
 ## Meet with a Research Computing Facilitator
+
 Once PATh staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to PATh resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
 During this meeting your account will also be approved. Once approved, you will receive the following email:
@@ -69,7 +70,9 @@ After your account has been approved following a meeting with a Research Computi
    <img src="{{ '/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
 
 ## Login
+
 Once your SSH key has been uploaded, you should be able to login to your designated PATh access point using a terminal or SSH program. Additional information on this process will be provided during your meeting with a Research Computing Facilitator.
 
 ## Get Help
+
 For questions regarding logging in or creating an account, contact us at  [support@opensciencegrid.org](support@opensciencegrid.org).
