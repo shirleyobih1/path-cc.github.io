@@ -31,7 +31,7 @@ To register with the PATh facility, submit an application using the following st
 1. Go to the COManage website at [https://opensciencegrid.org/register](https://opensciencegrid.org/register).You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
     <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
 
-If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](support@opensciencegrid.org).
+    If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](support@opensciencegrid.org).
 
 
 1. Once you sign in, you will be redirected to the "OSG Registration: Self Signup with Approval" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
@@ -45,6 +45,7 @@ If you have issues signing in using your institutional credentials, contact us a
 Once PATh staff receive your email verification, a Research Computing Facilitator will contact you within 24  hours to arrange a short consultation and introduction to PATh resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
 During this meeting your account will also be approved. Once approved, you will receive the following email:
+
 <img src="{{ '/images/comanage-verified-email.png' | relative_url }}" class="img-fluid"/>
 
 
@@ -63,6 +64,7 @@ After your account has been approved following a meeting with a Research Computi
    <img src="{{ '/images/ssh-authenticator-select.png' | relative_url }}" class="img-fluid"/>
 
 1. On the new SSH Keys page, click "Add SSH Key" and browse your computer to upload your public SSH key.
+
    <img src="{{ '/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
 
 ## Login
