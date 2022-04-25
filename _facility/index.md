@@ -16,7 +16,7 @@ description: The PATh facilities consist of dedicated, distributed computational
 below_table_of_contents: |
     <h3>Have Credits?</h3>
     <div>
-        <a class="btn btn-primary" href="registration">Register Now</a>
+        <a class="btn btn-primary" href="registration.html">Register Now</a>
     </div>
 ---
 

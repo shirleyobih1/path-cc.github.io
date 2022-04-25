@@ -31,7 +31,7 @@ To register with the PATh facility, submit an application using the following st
    {: .border .border-5 }
    <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
    
-   If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](support@opensciencegrid.org).
+   If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
 
 
 1. Once you sign in, you will be redirected to the "PATh Facility User Enrollment for New Users" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
@@ -40,7 +40,7 @@ To register with the PATh facility, submit an application using the following st
    <img src="{{ '/images/comanage-enrollment-form.png' | relative_url }}" class="img-fluid"/>
 
 
-1. After submitting your application, you will receive an email from [registry@cilogon.org](registry@cilogon.org) to verify your email address. Click the link listed in the email to be redirected to a page confirm your invitation details. Click the "ACCEPT" button to complete this step.
+1. After submitting your application, you will receive an email from [registry@cilogon.org](mailto:registry@cilogon.org) to verify your email address. Click the link listed in the email to be redirected to a page confirm your invitation details. Click the "ACCEPT" button to complete this step.
 
    {: .border .border-5 }
    <img src="{{ '/images/comanage-email-verification-form.png' | relative_url }}" class="img-fluid"/>
@@ -88,4 +88,4 @@ Once your SSH key has been uploaded, you should be able to login to your designa
 
 ## Get Help
 
-For questions regarding logging in or creating an account, contact us at  [support@opensciencegrid.org](support@opensciencegrid.org).
+For questions regarding logging in or creating an account, contact us at  [support@opensciencegrid.org](mailto:support@opensciencegrid.org).
