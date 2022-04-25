@@ -26,7 +26,7 @@ This guide will discuss how to apply for an account and login to the PATh Facili
 ## Get a PATh Facility Account
 To register with the PATh facility, submit an application using the following steps:
 
-1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:211). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
+1. Go to the account [registration page](https://registry.cilogon.org/registry/co_petitions/start/coef:263). You will be redirected to the CILogon sign in page. Select your institution and use your institutional credentials to login.
    
    {: .border .border-5 }
    <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
@@ -34,7 +34,7 @@ To register with the PATh facility, submit an application using the following st
    If you have issues signing in using your institutional credentials, contact us at [support@opensciencegrid.org](support@opensciencegrid.org).
 
 
-1. Once you sign in, you will be redirected to the "OSG Registration: Self Signup with Approval" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
+1. Once you sign in, you will be redirected to the "PATh Facility User Enrollment for New Users" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
 
    {: .border .border-5 }
    <img src="{{ '/images/comanage-enrollment-form.png' | relative_url }}" class="img-fluid"/>
@@ -60,7 +60,7 @@ __Adding an SSH public key is optional.__ Contact us to discuss alternative ways
 
 After your account has been approved following a meeting with a Research Computing Facilitator, the last step of account creation is to add an SSH key. To do this:
 
-1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:211) and login using CILogon if prompted.
+1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:263) and login using CILogon if prompted.
 
 1. Click your name at the top right. In the dropdown box, click "My Profile (OSG)" button.
 
