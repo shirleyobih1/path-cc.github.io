@@ -8,7 +8,7 @@ publish: true
 --- 
 
 <figure class="figure float-end" style="margin-left: 1em">
-  <img src="{{site.baseurl}}/images/DavidSwanson.png" class="figure-img img-fluid rounded" alt="add alt text" width="350px">
+  <img src="{{site.baseurl}}/images/DavidSwanson.png" class="figure-img img-fluid rounded" alt="David Swanson" width="350px">
   <figcaption class="figure-caption">David Swanson<br/></figcaption>
 </figure>
 
