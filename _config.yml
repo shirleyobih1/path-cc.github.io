@@ -42,6 +42,12 @@ collections:
   gil:
     output: true
     permalink: /GIL/:path/
+  docs:
+    output: true
+    permalink: /facility/docs/:path/
+  facility:
+    output: true
+    permalink: /facility/:title.html
   articles:
     output: true
     permalink: /news/:path/
@@ -70,6 +76,11 @@ defaults:
       path: 'images'
     values:
       image: true
+  - scope:
+      type: docs
+    values:
+      layout: table-of-contents
+
 
 
 sass:

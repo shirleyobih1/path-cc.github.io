@@ -13,6 +13,11 @@ table_of_contents:
     - name: Facility Description
       href: '#facility-description'
 description: The PATh facilities consist of dedicated, distributed computational resources composed of over 20,000 cores and 2 dozen A100 GPUs across 6 different sites.
+below_table_of_contents: |
+    <h3>Have Credits?</h3>
+    <div>
+        <a class="btn btn-primary" href="registration.html">Register Now</a>
+    </div>
 ---
 
 
