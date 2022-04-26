@@ -12,6 +12,8 @@ jobs:
       preview_url: https://github.com/path-cc/web-preview.git
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
       - name: Get branch name
         run: echo "BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
