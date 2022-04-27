@@ -5,7 +5,7 @@ layout: events
 published: true
 
 excerpt: |
-    The OSG User School 2022 will be held from Monday, July 25 to Friday, July 29 in person at the University of Wisconsin-Madison campus. Registration is now open!
+    The OSG User School 2022 will be held from Monday, July 25 to Friday, July 29 in person at the University of Wisconsin-Madison campus.
 start_date: 2022-07-25
 end_date: 2022-07-29
 location: "University of Wisconsin-Madison"
@@ -16,23 +16,13 @@ header_image: "/images/Madison_Skyline.jpg"
 
 {% capture main %}
 
-<p style="font-size: larger; font-weight: bold;">Applications for the OSG User School 2022 are now open!</p>
-
-Applications are now **open** for the OSG User School 2022! The School will occur on July 25–29, where you will learn to use high-throughput computing (HTC) systems to run large-scale computing applications at your campus or using the national-scale OSG.
+The OSG User School will occur on July 25–29, where you will learn to use high-throughput computing (HTC) systems to run large-scale computing applications at your campus or using the national-scale OSG.
 
 At the School, you will learn how HTC systems work, how to run and manage many jobs, and where to find more information and help through lectures, discussions, and hands-on activities with  OSG staff.
 
 The School is ideal for graduate students in any research area where large-scale computing is an essential part of their research process, plus we welcome applications from advanced undergraduates (especially those who are involved in graduate-level research or coursework), post-doctoral students, faculty, and staff (especially those who perform research or support/facilitate researchers).
 
-The deadline for applications is **Monday, 18 April 2022.**
-
-To apply, complete both of the steps below:
-
-Complete the [online application form](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdBbGikmcgabwGO)
-
-Have someone email a letter of recommendation for you to [user-school@opensciencegrid.org](mailto:user-school@opensciencegrid.org) (ask someone who knows you professionally, and have them identify your name and the “OSG User School 2022” in the subject line and letter.)
-
-People accepted to this program will receive financial support for essential travel and local costs associated with the School.
+The deadline for applications has passed. 
 
 {% endcapture %}
 
@@ -53,7 +43,7 @@ The University of Wisconsin-Madison.
 ### Application and Deadlines
 Details about the application process can be found on the [OSG User School 2022 site](https://opensciencegrid.org/user-school-2022/#applications).
 
-**Note:** The application deadline is **Monday, 18 April 2022.**
+**Note:** The application deadline has passed
 
 ### Contact Us
 

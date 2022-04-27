@@ -3,9 +3,11 @@ layout: sub-page
 bodyClass: page-services-list
 ---
 
+<h1>News Articles</h1>
+
 <div class="row">
-  {% assign sorted_articles = site.news | reverse  %}
-  {% for article in sorted_articles %}
+  {% include get/news.liquid %}
+  {% for article in news %}
   <div class="col-12 col-md-6 mb-3">
     <div class="news news-summary">
       <div class="article-content">
