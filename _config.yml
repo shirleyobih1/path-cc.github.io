@@ -3,6 +3,7 @@ exclude: ['README.md', vendor]
 permalink: pretty
 title: 'PATh'
 url: "https://path-cc.io"
+key: path
 
 google_analytics_id: G-0CCSDQV212
 homepage:
@@ -47,7 +48,9 @@ collections:
   facility:
     output: true
     permalink: /facility/:title.html
-
+  articles:
+    output: true
+    permalink: /news/:path/
 
 defaults:
   - scope:
@@ -57,6 +60,11 @@ defaults:
       bodyClass: page-services-single
   - scope:
       type: news
+    values:
+      layout: news
+      bodyClass: page-news-single
+  - scope:
+      type: articles
     values:
       layout: news
       bodyClass: page-news-single

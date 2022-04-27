@@ -70,13 +70,13 @@ logo:
   </div>
   {% include text-hr.html text="News" %}
   <div class="row">
-    {% assign sorted_articles = site.news | reverse %}
+    {% include get/news.liquid %}
     <div class="col-12 col-md-6 col-lg-4 bg-light">
-      {% for article in sorted_articles limit: 1 %}
+      {% for article in news limit: 1 %}
       {% include highlighted-title-image-text-card.html
       internal_href=article.url
-      image=article.image_src
-      alt=article.image_alt
+      image=article.image.path
+      alt=article.image.alt
       title=article.title
       date=article.date
       desc=article.excerpt
@@ -85,7 +85,7 @@ logo:
     </div>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="row pt-md-0 pt-3">
-        {% for article in sorted_articles limit: 2 offset: continue %}
+        {% for article in news limit: 2 offset: continue %}
         <div class="col-12">
           {% include light-title-date-desc-card.html
           title=article.title
