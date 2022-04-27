@@ -47,7 +47,7 @@ Details about the application process can be found on the [OSG User School 2022 
 
 ### Contact Us
 
-If you have any questions about the event, email us at [user-school@opensciencegrid.org](user-school@opensciencegrid.org)
+If you have any questions about the event, email us at [user-school@opensciencegrid.org](mailto:user-school@opensciencegrid.org)
 {% endcapture %}
 
 {% capture endblock %}
