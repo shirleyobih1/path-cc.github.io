@@ -9,6 +9,8 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[Learning and adapting with OSG: Investigating the strong nuclear force](https://path-cc.io/news/2022-04-25-Natzke/)** (2022)
 
+- **[Celebrating a dynamic OSG All-Hands Meeting 2022](https://path-cc.io/news/2022-04-11-OSGAHM2022-Summary/)** (2022)
+
 - **[Machine Learning and Image Analyses for Livestock Data](https://path-cc.io/news/2022-02-22-ML-and-Image-Analyses-for-Livestock-Data/)** (2022)
 
 - **[Harnessing HTC-enabled precision mental health to capture the complexity of smoking cessation](/news/2021-12-16-precision-mental-health/)** (2021)
