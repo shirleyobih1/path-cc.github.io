@@ -25,7 +25,7 @@ Hello HTCondor Users and Collaborators!
 
 We want to invite you to HTCondor Week 2022, our annual HTCondor user conference, in beautiful Madison, Wisconsin, May 23-26, 2022. This year, HTCondor Week will be a hybrid event: we are hosting an in-person meeting at the Fluno Center on the University of Wisconsin-Madison campus. This provides HTCondor Week attendees with a compelling environment in which to attend tutorials and talks from HTCondor developers, meet other users like you and attend social events. For those who cannot attend in person, we'll also be broadcasting the event online via a Zoom meeting.
 
-Registration for HTCondor Week 2022 is open now. The registration deadline for in-person attendee is May 2, 2022, and the cost is $90 per day. For virtual-only attendance, registration is a flat $25 fee for the whole week. You can register on the [registration page](https://agenda.hep.wisc.edu/event/1733/page/35-registration).
+Registration for HTCondor Week 2022 is open now. The registration deadline for in-person attendee is May 10, 2022, and the cost is $90 per day. For virtual-only attendance, registration is a flat $25 fee for the whole week. You can register on the [registration page](https://agenda.hep.wisc.edu/event/1733/page/35-registration).
 We will have a variety of in-depth tutorials and talks where you can learn more about HTCondor and how other people are using and deploying HTCondor. Best of all, you can establish contacts and learn best practices from people in industry, government, and academia who are using HTCondor to solve hard problems, many of which may be similar to those you are facing.
 
 Speaking of learning from the community, we'd love to have you give a talk at HTCondor Week. Talks are 15-20 minutes long and are a great way to share your ideas and get feedback from the community. If you have a compelling use of HTCondor you'd like to share, see our [Speaker Information page](https://agenda.hep.wisc.edu/event/1733/abstracts/).
@@ -60,7 +60,7 @@ Registration for in-person participation in-person attendee will cost $90 per da
 ### Deadlines
 Details on both in-person and online registration can be found on the [registration page](https://agenda.hep.wisc.edu/event/1733/page/35-registration).
 
-**Note:** The registration deadline for in-person attendance is **May 2, 2022.**
+**Note:** The registration deadline for in-person attendance is **May 10, 2022.**
 
 ### Questions?
 
