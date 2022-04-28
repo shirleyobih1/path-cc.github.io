@@ -8,7 +8,9 @@
       <a class="navbar-brand" href="{{ '/' | relative_url }}">
         <img height="{{ site.logo.desktop_height }}" src="{{ logo | relative_url }}" alt="{{ site.title }}"/>
       </a>
-
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
@@ -37,7 +39,7 @@
           </li>
           {% endfor %}
         </ul>
-        <div class="social-media">
+        <div class="social-media d-none d-lg-block">
           <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
             <img alt="Twitter Icon" src="{{ '/images/icons/twitter.svg' | relative_url }}"/>
           </a>
@@ -46,8 +48,6 @@
           </a>
         </div>
       </div>
-
-      {% include hamburger.html %}
     </nav>
   </div>
 </div>
