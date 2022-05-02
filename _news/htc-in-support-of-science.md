@@ -7,6 +7,8 @@ publish: true
 
 The high throughput computing capabilities provided by HTCondor and the OSG Consortium’s Fabric of Services have a rich history of advancing all domains of research. From detecting gravitational waves caused by ancient black hole collisions, to hunting viral variants of COVID-19 –– browse the collection of articles below to discover just what’s possible with high throughput computing.
 
+- **[Expanding, uniting, and enhancing CLAS12 computing with OSG’s fabric of services](/news/2022-05-02-CLAS12/)** (2022)
+
 - **[Learning and adapting with OSG: Investigating the strong nuclear force](/news/2022-04-25-Natzke/)** (2022)
 
 - **[Celebrating a dynamic OSG All-Hands Meeting 2022](/news/2022-04-11-OSGAHM2022-Summary/)** (2022)
