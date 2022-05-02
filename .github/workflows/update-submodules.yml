@@ -14,9 +14,10 @@ jobs:
 
       - name: Pull down submodules
         run: |
+          git checkout -b update-submodules
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git submodule update --remote --merge
           git add .
           git commit -m "Update Submodules"
-          git push
+          git push origin
