@@ -4,10 +4,8 @@ on: workflow_dispatch
 jobs:
 
   Update-Submodules:
-
+    runs-on: ubuntu-latest
     steps:
-
-      runs-on: ubuntu-latest
 
       - uses: actions/checkout@v2
         with:
