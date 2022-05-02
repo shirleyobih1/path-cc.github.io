@@ -17,6 +17,6 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git submodule update --remote --merge
-          git add .github/workflows/update-submodules.yml
+          git add .
           git commit -m "Update Submodules"
           git push
