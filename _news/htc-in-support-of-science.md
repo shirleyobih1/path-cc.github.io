@@ -21,7 +21,7 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[80,000 jobs, 40 billion base pairs, and 20 bats –– all in 4 weeks](/news/2021-10-26-bat-genomics/)** (2021)
 
-- **[Centuries of newspapers are now easily searchable thanks to HTCSS](/news/2021-10-26-banq/)** (2021)
+- **[Centuries of newspapers are now easily searchable thanks to HTCSS](/news/2021-10-26-Banq/)** (2021)
 
 - **[Scaling virtual screening to ultra-large virtual chemical libraries](/news/2021-08-19-Spencer-Showcase/)** (2021)
 
@@ -29,7 +29,7 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[Antimatter: Using HTC to study very rare processes](/news/2021-08-19-Anirvan-Showcase/)** (2021)
 
-- **[Campus Cyberinfrastructure (CC*) Awardees Contribute Over 349 Million Core Hours in Last 12 Months](/news/2021-01-15-Campus-Cyberinfrastructure-Awardees-Contribute-to-OSG/)** (2021)
+- **[Campus Cyberinfrastructure (CC*) Awardees Contribute Over 349 Million Core Hours in Last 12 Months](/news/2021-01-15-Using-HTCondor-For-Large-File-Transfer/)** (2021)
 
 - **[OSG fuels a student-developed computing platform to advance RNA nanomachines](/news/2021-08-10-Science-Gateway/)** (2021)
 
