@@ -2,10 +2,16 @@ name: Update Submodules
 on: workflow_dispatch
 
 jobs:
+
   Update-Submodules:
 
     steps:
+
+      runs-on: ubuntu-latest
+
       - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
 
       - name:
         run: |
