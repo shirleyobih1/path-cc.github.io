@@ -49,7 +49,7 @@ To register with the PATh facility, submit an application using the following st
 
 Once PATh staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to PATh resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-During the meeting your account will also be approved. Upon approval, you will receive a confirmation email.
+Following the meeting, the Facilitator will approve your account, add your profile to any relevant PATh 'project' names, and ensure that you have access to the PATh Facility. (You will receive automated emails for some of these actions, which you can otherwise ignore.)
 
 
 ## Login
