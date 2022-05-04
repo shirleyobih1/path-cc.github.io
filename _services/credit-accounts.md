@@ -46,7 +46,7 @@ collection of [science stories](/news/htc-in-support-of-science/).
 
 Dedicated PATh resources that power the capacity credit accounts are expected to consist of:
 - Compute servers with up to 128 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM.
-- Compute servers with up to 64 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM
+- Compute servers with up to 64 AMD ‘Milan’ cores, 1.6TB of NVMe, and 256 GB RAM
 - Compute servers with 68 Intel Knights Landing cores and 96GB of RAM.
 - Compute servers with 48 Intel Xeon Skylake cores and 192GB of RAM.
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
