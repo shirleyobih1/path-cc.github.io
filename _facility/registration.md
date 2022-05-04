@@ -54,7 +54,7 @@ Following the meeting, the Facilitator will approve your account, add your profi
 
 ## Login
 
-Once your account has been approved, it is possible to login to the PATh access point, `submit6.chtc.wisc.edu`, using a terminal or SSH program. Logging in requires authenticating your credientials using one of two options: __web authentication__ or __SSH key pair authenticaiton__. Additional information on this process will be provided during your meeting with a Research Computing Facilitator.
+Once your account has been added to a PATh access point, you will be able to log in using a terminal or SSH program. Logging in requires authenticating your credientials using one of two options: __web authentication__ or __SSH key pair authentication__. Additional information on this process will be provided during and/or following your meeting with a Research Computing Facilitator.
 
 
 ### Option 1: Login via Web Authentication
