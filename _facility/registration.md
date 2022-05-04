@@ -49,16 +49,42 @@ To register with the PATh facility, submit an application using the following st
 
 Once PATh staff receive your email verification, a Research Computing Facilitator will contact you within one business day to arrange a short consultation and introduction to PATh resources. During this meeting, our staff will provide personalized start-up guidance per your specific computational research goals and activate your account.
 
-During the meeting your account will be approved, and you will receive a confirmation email.
+During the meeting your account will also be approved. Upon approval, you will receive a confirmation email.
 
 
+## Login
+
+Once your account has been approved, it is possible to login to the PATh access point, `submit6.chtc.wisc.edu`, using a terminal or SSH program. Logging in requires authenticating your credientials using one of two options: __web authentication__ or __SSH key pair authenticaiton__. Additional information on this process will be provided during your meeting with a Research Computing Facilitator.
 
 
-## Upload an SSH Key
+### Option 1: Login via Web Authentication
 
-__Adding an SSH public key is optional.__ Contact us to discuss alternative ways to authenticate when logging in.
+Logging in via web authentication requires no preparatory steps beyond having access to an internet browser. 
 
-After your account has been approved following a meeting with a Research Computing Facilitator, the last step of account creation is to add an SSH key. To do this:
+To authenticate using this approach: 
+
+1. Open a terminal and type `ssh username@submit6.chtc.wisc.edu`, being sure to replace `username` with your PATh access point username. Upon hitting enter, the following text should appear with a unique, but similar, URL: 
+
+```
+Authenticate at
+-----------------
+https://cilogon.org/device/?user_code=FF4-ZX6-9LK
+-----------------
+Hit enter when you authenticate
+```
+
+2. Copy the `https://` link, paste it into a web browser, and hit enter.  
+
+3. You will be redirected to a new page where you will be prompted to login using your institutional credentials. Once you have done so, a new page will appear with the following text: "You have successfully approved the user code. Please return to your device for further instructions."
+
+4. Return to your terminal, and hit the enter key to complete the login process. 
+
+
+### Option 2: Login via SSH Key Pair Authentication
+
+It is also possible to authenticate using an SSH key pair. Logging in using SSH keys does not require access to an internet browser to login into the PATh access point, `submit6.chtc.wisc.edu`. 
+
+The process below describes how to upload a public key to the registration website. It assumes that a private/public key pair has already been generated. If you need to generate a key pair, see the "Step 1: Generate SSH Keys" section of this [OSG guide](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login). 
 
 1. Return to the [Registration Page](https://registry.cilogon.org/registry/co_petitions/start/coef:263) and login using CILogon if prompted.
 
@@ -82,9 +108,6 @@ After your account has been approved following a meeting with a Research Computi
    {: .border .border-5 }
    <img src="{{ '/images/ssh-key-list.png' | relative_url }}" class="img-fluid"/>
 
-## Login
-
-Once your SSH key has been uploaded, you should be able to login to your designated PATh access point using a terminal or SSH program. Additional information on this process will be provided during your meeting with a Research Computing Facilitator.
 
 ## Get Help
 
