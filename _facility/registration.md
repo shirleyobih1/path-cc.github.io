@@ -65,13 +65,13 @@ To authenticate using this approach:
 
 1. Open a terminal and type `ssh username@submit6.chtc.wisc.edu`, being sure to replace `username` with your PATh access point username. Upon hitting enter, the following text should appear with a unique, but similar, URL: 
 
-```
-Authenticate at
------------------
-https://cilogon.org/device/?user_code=FF4-ZX6-9LK
------------------
-Type 'Enter' when you authenticate.
-```
+   ```
+   Authenticate at
+   -----------------
+   https://cilogon.org/device/?user_code=FF4-ZX6-9LK
+   -----------------
+   Type 'Enter' when you authenticate.
+   ```
 
 2. Copy the `https://` link, paste it into a web browser, and hit enter.  
 
