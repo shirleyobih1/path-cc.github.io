@@ -70,7 +70,7 @@ Authenticate at
 -----------------
 https://cilogon.org/device/?user_code=FF4-ZX6-9LK
 -----------------
-Hit enter when you authenticate
+Type 'Enter' when you authenticate.
 ```
 
 2. Copy the `https://` link, paste it into a web browser, and hit enter.  
