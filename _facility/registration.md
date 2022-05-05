@@ -77,7 +77,7 @@ Type 'Enter' when you authenticate.
 
 3. You will be redirected to a new page where you will be prompted to login using your institutional credentials. Once you have done so, a new page will appear with the following text: "You have successfully approved the user code. Please return to your device for further instructions."
 
-4. Return to your terminal, and hit the enter key to complete the login process. 
+4. Return to your terminal, and type 'Enter' to complete the login process. 
 
 
 ### Option 2: Login via SSH Key Pair Authentication
