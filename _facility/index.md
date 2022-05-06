@@ -3,8 +3,8 @@ layout: table-of-contents
 title: The PATh Facility
 tagline: Facility
 table_of_contents:
-    - name: Using PATh Facilities
-      href: '#using-path-facilities'
+    - name: Accessing the PATh Facility
+      href: '#accessing-the-path-facility'
       children:
         - name: Solicitations
           href: '#solicitations'
@@ -12,27 +12,32 @@ table_of_contents:
           href: '#dear-colleague-letter'
     - name: Facility Description
       href: '#facility-description'
-description: The PATh facilities consist of dedicated, distributed computational resources composed of over 20,000 cores and 2 dozen A100 GPUs across 6 different sites.
+description: The PATh Facility is a national-scale distributed High Throughput Computing resource to deliver computational capacity to NSF researchers through dHTC.
 below_table_of_contents: |
-    <h3>Have Credits?</h3>
+    <h3>Have PATh Credits?</h3>
     <div>
         <a class="btn btn-primary" href="registration.html">Register Now</a>
     </div>
 ---
 
 
-The PATh team is constructing a dedicated, distributed computational resources composed of over 20,000 cores and 2 dozen A100 GPUs across 6 different sites.  This facility will be available to researchers starting in spring 2022.
+The PATh Facility is a purpose-built, national-scale distributed High Throughput Computing (dHTC) resource meant to deliver computational capacity to NSF researchers.
 
-**[Contact NSF now](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) to request credits for the PATh facility.**
+The PATh Facility is part of a pilot project funded by the NSF Office of Advanced Cyberinfrastructure.  NSF-funded researchers **[can apply](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) to request credits for the PATh facility.**  The facility aims to demonstrate the value of dedicated, distributed resources to the NSF Science and Engineering community.
 
-## Using PATh Facilities
+The facility aims to empower researchers through the use of high throughput computing techniques and, as it is completed during 2022, will be spread across six physical sites.  Unique aspects of the facility include:
+
+   * Emphasis on workloads organized into ensembles of many tasks.  The PATh facility makes its greatest impact when users have a large number (tens of thousands through millions) of individual batch jobs.
+   * Due to its national, distributed nature, _multi-node MPI job capabilities_ are not offered.  The PATh facility provides a "scale out" resource, not "scale up".
+   * Similarly, the job scheduler handles the movement of input data to the worker node and output back to the [Access Point](https://osg-htc.org/services/access-point.html).  This provides the facility with the ability to manage data movement and the flexibility to move jobs to a wider variety off sites. _There is no shared filesystem between the access point and worker node_.
+
+## Accessing the PATh Facility
 
 Users of the facility will receive [credit accounts](/services/credit-accounts/) directly from the NSF which they can utilize to run high throughput computing workflows.  The NSF is making credits available through a number of mechanisms, including:
 
-
 - **Solicitations**: The 2021 [CSSI solicitation](https://www.nsf.gov/pubs/2021/nsf21617/nsf21617.pdf) included a mechanism to request credits as part of the project proposal. 
 {: #solicitations}
-- **2022 Dear Colleague Letter Pilot project**: For participating programs, the NSF [22-051 DCL](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) provides a mechanism where existing PIs can email their program officer with a request for credits. 
+- **Pilot for the Allocation of High-Throughput Computing Resources (HTC)**: The NSF provides a mechanism where existing PIs can apply for credits as a supplement to an existing award or as part of a new award.  See the [Dear Colleague Letter 22-051](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) for more information on the pilot.
 {: #dear-colleague-letter}
 
 The PATh team is here to help!  As part of the consulting services offered to any researcher, our team can help you decompose your workload to ensembles of jobs and generate resource estimates for the various tasks in the ensemble.  Please reach out to [credit-accounts@path-cc.io](mailto:credit-accounts@path-cc.io) to initiate your consult.
@@ -50,7 +55,7 @@ The PATh team is here to help!  As part of the consulting services offered to an
 
 ## Facility Description
 
-The PATh facility consists of the following sites and resources:
+The PATh Facility is under construction; the first resources came online in spring 2022 and it will continue to expand through the year; it will eventually consist of about 30,000 cores and 3 dozen A100 GPUs.  The facility includes the following sites and resources:
 
 - *Lincoln, Nebraska*: University of Nebraska Lincoln’s [Holland Computing Center](https://hcc.unl.edu/) will host 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
 - *Syracuse, New York*: Syracuse University’s [Research Computing](https://researchcomputing.syr.edu/) group will host 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
