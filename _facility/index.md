@@ -28,8 +28,10 @@ The PATh Facility is part of a pilot project funded by the NSF Office of Advance
 The facility aims to empower researchers through the use of high throughput computing techniques and, as it is completed during 2022, will be spread across six physical sites.  Unique aspects of the facility include:
 
    * Emphasis on workloads organized into ensembles of many tasks.  The PATh facility makes its greatest impact when users have a large number (tens of thousands through millions) of individual batch jobs.
-   * Due to its national, distributed nature, _multi-node MPI job capabilities_ are not offered.  The PATh facility provides a "scale out" resource, not "scale up".
-   * Similarly, the job scheduler handles the movement of input data to the worker node and output back to the [Access Point](https://osg-htc.org/services/access-point.html).  This provides the facility with the ability to manage data movement and the flexibility to move jobs to a wider variety off sites. _There is no shared filesystem between the access point and worker node_.
+   * Due to its national, distributed nature, _multi-node MPI job capabilities_ are not offered (single-node MPI works well).  The PATh facility provides a "scale out" resource, not "scale up".
+   * Similarly, the job scheduler handles the movement of input data to the worker node and output back to the [Access Point](https://osg-htc.org/services/access-point.html).  This provides the facility with the ability to manage data movement and the flexibility to move jobs to a wider variety of sites. _There is no shared filesystem between the access point and worker node_.
+
+Common examples of HTC workloads include parameter sweeps, Monte-Carlo simulations, or processing of thousands of data sets where each data set can be processed by an independent job.
 
 ## Accessing the PATh Facility
 
