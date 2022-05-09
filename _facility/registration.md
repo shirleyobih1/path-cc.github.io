@@ -6,8 +6,6 @@
           href: '#get-a-path-facility-account'
         - name: Meet Research Facilitator
           href: '#meet-with-a-research-computing-facilitator'
-        - name: Upload SSH Key
-          href: '#upload-an-ssh-key'
         - name: Login
           href: '#login'
         - name: Get Help

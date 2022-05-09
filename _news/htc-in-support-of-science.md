@@ -37,7 +37,7 @@ The high throughput computing capabilities provided by HTCondor and the OSG Cons
 
 - **[Hunting viral variants across Wisconsin, powered by high-throughput computing](https://morgridge.org/story/hunting-viral-variants-across-wisconsin-powered-by-high-throughput-computing/)** (2021)
 
-- **[How to Transfer 460 Terabytes? A File Transfer Case Study](/news/2021-01-15-Use-HTCondor-To-Transfer-Files/)** (2021)
+- **[How to Transfer 460 Terabytes? A File Transfer Case Study](/news/2021-01-15-Using-HTCondor-For-Large-File-Transfer/)** (2021)
 
 - **[Submit Locally, Run Globally](/news/2020-12-7-Submit-Locally-Run-Globally/)** (2020)
 

@@ -23,7 +23,6 @@ The office hours provide an opportunity for any system administrator to work wit
 You do not need to register for the All-Hand Meeting to attend the Site Admin Office Hours, but we encourage you to do so. If you have already registered for the All-Hands Meeting, then you do not also need to register for the Office Hours. However, if you are ONLY attending the Office Hours event, then you do need to register and complete a brief survey to attend.
 
 While there is no fee, registration and completion of this brief survey is required for participants who have not registered for the All Hands Meeting 2022 to receive connection information. Seats are limited.
-Please [register here.](https://docs.google.com/forms/d/1wUu3czRT_0Ask6rDW79QqrkQzyzR8ksyNM6uqWTOYXc//viewform)
 
 Site Admin Office Hours will begin with a very short presentation on "How the Hosted Compute Entry point ("CE") Interacts with Sites." You'll also have a chance to get your burning questions of the day answered. We will be hosting breakout rooms for troubleshooting and finishing any site configurations. If you have any open tickets you’d like to discuss with OSG staff, we especially encourage you to attend. 
 
@@ -50,7 +49,7 @@ No fees, attendance is free!
 ### Registration
 
 Registration and completion of this brief survey is required for participants who are not registered for the All-Hands Meeting to receive connection information. Seats are limited.
-Please [register here.](https://docs.google.com/forms/d/1wUu3czRT_0Ask6rDW79QqrkQzyzR8ksyNM6uqWTOYXc//viewform) 
+
 
 ### Questions?
 
