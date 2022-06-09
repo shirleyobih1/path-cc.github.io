@@ -1,6 +1,6 @@
 ---
 title: Limits of current GPU accounting in OSG
-layout: news
+layout: markdown
 date: 2022-5-31
 excerpt: |
     OSG currently accounts for GPU resources in “GPU chip hours”[1]. The GPUs are however not all the same, some are small and some are big; the science delivered from different models thus varies by an order of magnitude. Moreover, a single GPU could be shared between multiple jobs.
