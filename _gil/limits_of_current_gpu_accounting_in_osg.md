@@ -253,20 +253,22 @@ CUDAECCEnabled=false</code>
 
 ### References
 
-1. GRACC- GPU Payload Jobs Summary, <https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary> 
-1. Nautilus Documentation, <https://ucsd-prp.gitlab.io>
-1. Google Kubernetes Engine (GKE)<https://cloud.google.com/kubernetes-engine>
-1. NVIDIA Multi-Instance GPU User Guide, <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/>
-1. WIPACrepo/monitoring-scripts/condor_utils.py GitHub, <https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436>
-1. Sfiligoi et al. The anachronism of whole-GPU accounting. Accepted for publication at PEARC22. Pre-print <https://doi.org/10.48550/arXiv.2205.09232>
+1. GRACC- GPU Payload Jobs Summary, <https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary>{: #source1 }
+1. Nautilus Documentation, <https://ucsd-prp.gitlab.io>{: #source2 }
+1. Google Kubernetes Engine (GKE)<https://cloud.google.com/kubernetes-engine>{: #source3 }
+1. NVIDIA Multi-Instance GPU User Guide, <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/>{: #source4 }
+1. WIPACrepo/monitoring-scripts/condor_utils.py GitHub, <https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436>{: #source5 }
+1. Sfiligoi et al. The anachronism of whole-GPU accounting. Accepted for publication at PEARC22. Pre-print <https://doi.org/10.48550/arXiv.2205.09232>{: #source6 }
 
 ### Acknowledgements
 
-This work has been partially funded by the US National Science Foundation (NSF) Grants OAC-1826967, OAC-2030508, CNS-1925001, OAC-1841530, CNS-1730158, OAC-2112167, CNS-2100237 and CNS-2120019. All Google Kubernetes Engine costs have been covered by Google-issued credits.
+This work has been partially funded by the US National Science Foundation (NSF) Grants OAC-1826967, OAC-2030508, CNS-1925001, OAC-1841530, CNS-1730158, OAC-2112167, CNS-2100237 and CNS-2120019. 
 
-[source1]: https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary
-[source2]: https://ucsd-prp.gitlab.io
-[source3]: https://cloud.google.com/kubernetes-engine
-[source4]: https://docs.nvidia.com/datacenter/tesla/mig-user-guide/
-[source5]: https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436
-[source6]: https://doi.org/10.48550/arXiv.2205.09232
+All Google Kubernetes Engine costs have been covered by Google-issued credits.
+
+[source1]: #source1
+[source2]: #source2
+[source3]: #source3
+[source4]: #source4
+[source5]: #source5
+[source6]: #source6
