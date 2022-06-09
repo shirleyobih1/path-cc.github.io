@@ -3,7 +3,7 @@ title: Limits of current GPU accounting in OSG
 layout: markdown
 date: 2022-5-31
 excerpt: |
-    OSG currently accounts for GPU resources in “GPU chip hours”[1]. The GPUs are however not all the same, some are small and some are big; the science delivered from different models thus varies by an order of magnitude. Moreover, a single GPU could be shared between multiple jobs.
+    OSG currently accounts for GPU resources in “GPU chip hours” \[[1][source1]\]. The GPUs are however not all the same, some are small and some are big; the science delivered from different models thus varies by an order of magnitude. Moreover, a single GPU could be shared between multiple jobs.
 
     We thus propose that OSG starts treating GPUs similarly to CPUs, i.e., switches GPU-core-hours, like we do for CPUs.
 
@@ -16,14 +16,14 @@ In collaboration with David Schultz, UW Madison
 
 ### Executive summary
 
-OSG currently accounts for GPU resources in “GPU chip hours”[1]. The GPUs are however not all the same, some are small and some are big; the science delivered from different models thus varies by an order of magnitude. Moreover, a single GPU could be shared between multiple jobs.
+OSG currently accounts for GPU resources in “GPU chip hours” [[1]][source1]. The GPUs are however not all the same, some are small and some are big; the science delivered from different models thus varies by an order of magnitude. Moreover, a single GPU could be shared between multiple jobs.
 
 We thus propose that OSG starts treating GPUs similarly to CPUs, i.e., switches GPU-core-hours, like we do for CPUs.
 
 
 ### Relative GPU performance
 
-We measured the throughput of two IceCube workflows on the various GPUs provided by the Pacific Research Platform (PRP) [2]. IceCube is the major user of GPU resources in OSG, so we consider them reasonably representative. The two workflows represent the two extremes of their compute needs; the “oversize=1” is the most GPU-compute demanding and the “oversize=4” is the fastest, and thus has a significantly lower GPU-to-CPU needs.
+We measured the throughput of two IceCube workflows on the various GPUs provided by the Pacific Research Platform (PRP) [[2]][source2]. IceCube is the major user of GPU resources in OSG, so we consider them reasonably representative. The two workflows represent the two extremes of their compute needs; the “oversize=1” is the most GPU-compute demanding and the “oversize=4” is the fastest, and thus has a significantly lower GPU-to-CPU needs.
 
 <figure class="figure py-4">
     <img class="figure-img img-fluid" src="{{ '/images/GIL/limits_of_current_gpu_accounting_in_osg/image1.png' | relative_url }}" alt="Data access and OSG job data request.">
@@ -71,7 +71,7 @@ As can be seen, one can increase the science throughput by up to about 5x using 
 
 ### Kubernetes GPU sharing
 
-Google Kubernetes Engine [3] is adding the option of sharing the same GPU between multiple pods. The feature was still in limited-preview at the time of testing, but is expected to be generally available soon.
+Google Kubernetes Engine [[3]][source3] is adding the option of sharing the same GPU between multiple pods. The feature was still in limited-preview at the time of testing, but is expected to be generally available soon.
 
 Due to the limited-preview nature of the setup, we are not presenting the configuration used, but we are allowed to present the benchmarking results. As can be seen in Table 4, the throughput improvement is comparable to HTCondor sharing.
 
@@ -87,7 +87,7 @@ Note that pilots were running inside Kubernetes and were not aware of the sharin
 
 ### Hardware partitioning of A100 GPU
 
-The NVIDIA A100 GPU can be partitioned at a hardware level using Multi Instance GPU (MIG) [4].
+The NVIDIA A100 GPU can be partitioned at a hardware level using Multi Instance GPU (MIG) [[4]][source4].
 
 We benchmarked the IceCube workloads on both full A100 and MIG-partitioned GPUs, on both PRP and GKE, and present the results below. As can be seen in Table 5, the throughput improvement is comparable to both HTCondor and Kubernetes sharing, although partitioning in less than 7 partitions results in 1/7th of the HW to be idled.
 
@@ -122,9 +122,9 @@ As shown in Table 6, even the GPU-intensive “oversize=1” workflow can benefi
 
 IceCube has been internally using a GPU-normalization method that relies on the GPU model name, which is typically available in the HTCondor job history logs. (Note that A100 MIG model reporting is currently partially broken)
 
-They maintain a lookup table from GPU model to relative performance, based on their own internal benchmark numbers [5].
+They maintain a lookup table from GPU model to relative performance, based on their own internal benchmark numbers [[5]][source5].
 
-A more general solution is to account the GPUs by the number of cores they provide (similarly to what is currently being done for CPUs) [6]. HTCondor natively does support the detection of GPU cores, but it is typically not enabled by default, but can be easily enabled at pilot level with:
+A more general solution is to account the GPUs by the number of cores they provide (similarly to what is currently being done for CPUs) [[6]][source6]. HTCondor natively does support the detection of GPU cores, but it is typically not enabled by default, but can be easily enabled at pilot level with:
 
 ```
 GPU_DISCOVERY_EXTRA = $(GPU_DISCOVERY_EXTRA) -extra
@@ -252,14 +252,21 @@ CUDAECCEnabled=false</code>
 </pre>
 
 ### References
-1. GRACC- GPU Payload Jobs Summary, <https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary>
+
+1. GRACC- GPU Payload Jobs Summary, <https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary> 
 1. Nautilus Documentation, <https://ucsd-prp.gitlab.io>
 1. Google Kubernetes Engine (GKE)<https://cloud.google.com/kubernetes-engine>
 1. NVIDIA Multi-Instance GPU User Guide, <https://docs.nvidia.com/datacenter/tesla/mig-user-guide/>
-1. WIPACrepo/monitoring-scripts/ condor_utils.py GitHub, <https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436>
-I. Sfiligoi et al. The anachronism of whole-GPU accounting. Accepted for publication at PEARC22. Pre-print <https://doi.org/10.48550/arXiv.2205.09232>
+1. WIPACrepo/monitoring-scripts/condor_utils.py GitHub, <https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436>
+1. Sfiligoi et al. The anachronism of whole-GPU accounting. Accepted for publication at PEARC22. Pre-print <https://doi.org/10.48550/arXiv.2205.09232>
 
 ### Acknowledgements
 
 This work has been partially funded by the US National Science Foundation (NSF) Grants OAC-1826967, OAC-2030508, CNS-1925001, OAC-1841530, CNS-1730158, OAC-2112167, CNS-2100237 and CNS-2120019. All Google Kubernetes Engine costs have been covered by Google-issued credits.
 
+[source1]: https://gracc.opensciencegrid.org/d/000000118/gpu-payload-jobs-summary
+[source2]: https://ucsd-prp.gitlab.io
+[source3]: https://cloud.google.com/kubernetes-engine
+[source4]: https://docs.nvidia.com/datacenter/tesla/mig-user-guide/
+[source5]: https://github.com/WIPACrepo/monitoring-scripts/blob/master/condor_utils.py#L436
+[source6]: https://doi.org/10.48550/arXiv.2205.09232
