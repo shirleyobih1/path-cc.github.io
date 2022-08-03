@@ -61,7 +61,7 @@ Logging in via web authentication requires no preparatory steps beyond having ac
 
 To authenticate using this approach: 
 
-1. Open a terminal and type `ssh username@submit6.chtc.wisc.edu`, being sure to replace `username` with your PATh access point username. Upon hitting enter, the following text should appear with a unique, but similar, URL: 
+1. Open a terminal and type `ssh username@ap1.facility.path-cc.io`, being sure to replace `username` with your PATh access point username. Upon hitting enter, the following text should appear with a unique, but similar, URL: 
 
    ```
    Authenticate at
@@ -80,7 +80,7 @@ To authenticate using this approach:
 
 ### Option 2: Login via SSH Key Pair Authentication
 
-It is also possible to authenticate using an SSH key pair, if you prefer. Logging in using SSH keys does not require access to an internet browser to login into the PATh access point, `submit6.chtc.wisc.edu`. 
+It is also possible to authenticate using an SSH key pair, if you prefer. Logging in using SSH keys does not require access to an internet browser to login into the PATh access point, `ap1.facility.path-cc.io`. 
 
 The process below describes how to upload a public key to the registration website. It assumes that a private/public key pair has already been generated. If you need to generate a key pair, see the "Step 1: Generate SSH Keys" section of this [OSG guide](https://support.opensciencegrid.org/support/solutions/articles/12000027675-generate-ssh-keys-and-activate-your-osg-login). 
 
