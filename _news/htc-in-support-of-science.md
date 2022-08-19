@@ -7,10 +7,14 @@ publish: true
 
 The high throughput computing capabilities provided by HTCondor and the OSG Consortium’s Fabric of Services have a rich history of advancing all domains of research. From detecting gravitational waves caused by ancient black hole collisions, to hunting viral variants of COVID-19 –– browse the collection of articles below to discover just what’s possible with high throughput computing.
 
+- **[Introducing the PATh Facility: A Unique Distributed High Throughput Computing Service](https://path-cc.io/news/2022-06-01-PATh-Facility/)** ( 2022 )
+
 {% include get/universal_user_stories.liquid %}
 {% for article in universal_user_stories %}
 - **[{{ article.title }}]({{ article.url }})** ({{ article.date | date: "%Y" }})
 {% endfor %}
+
+- **[Connor Natzke awarded David Swanson Memorial Award](https://path-cc.io/news/2021-03-19-Nicholas-Cooley-2021-David-Swanson-Award-Winner/)** (2021)
 
 - **[Hunting viral variants across Wisconsin, powered by high-throughput computing](https://morgridge.org/story/hunting-viral-variants-across-wisconsin-powered-by-high-throughput-computing/)** (2021)
 
