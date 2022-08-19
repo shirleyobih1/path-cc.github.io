@@ -1,0 +1,1 @@
+{% assign universal_articles = site.articles | where_exp: "spotlight", "spotlight.publish_on contains site.key" | sort: "date" |  reverse %}
