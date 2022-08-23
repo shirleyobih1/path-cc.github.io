@@ -1,0 +1,1801 @@
+---
+title: Accounting of provisioned resources on OSG pool
+date: 2022-8-23
+layout: markdown
+excerpt: |
+    HTCondor and Glidein Workflow Management System (GlideinWMS) are two of the tools that
+    provide access to computational resources on the OSG pool. Our goal is to check the
+    information about computational resource provisioning, based only on HTCondor and
+    GlideinWMS.
+---
+
+
+<p><span
+>by Fabio Andrijauskas, in collaboration with &nbsp;Igor Sfiligoi, and Frank Wuerthwein</span></p>
+<p><span>University of California San Diego</span></p>
+<p><span>June 20th, 2022&nbsp;</span></p>
+<p><span></span></p>
+<p><span>HTCondor and Glidein Workflow Management System (GlideinWMS) are two of the tools that provide access to computational resources on the OSG pool. Our goal is to check the information about computational resource provisioning, based only on HTCondor and GlideinWMS. </span><span
+>We</span><span>&nbsp;postulate that resources available to OSG could be partitioned among the following eight categories, with the first six belonging to the pilot infrastructure. We are using the concept of the canonical time and the canonical unit:</span>
+</p>
+<p><span></span></p>
+<p><span>&nbsp;&ldquo;We propose to define it as &lsquo;1 CPU core + 2 GB of RAM&rsquo; for CPU resources and &lsquo;1 GPU chip&rsquo; for GPU resources. It can then be used to compute &lsquo;canonical time&rsquo; in the same units as normal time. The&nbsp;&lsquo;canonical unit&rsquo; and&nbsp;&lsquo;canonical time&rsquo;&nbsp;definitions provide a measure of what is the smallest unit that is considered&nbsp;&lsquo;true overhead&rsquo;. For example, given the CPU definition of canonical unit of &lsquo;1 CPU core and 2 GB of memory&rsquo;, an hour when we have 3 CPU cores and 3 GB of memory unused would count as &lsquo;1 CPU core hour&rsquo; (memory limited), the same period of 3 CPU cores and 1 GB of memory unused would count as &lsquo;0 CPU core hours&rsquo; (memory limited), and the same period of 2 CPU cores and 6 GB of memory unused would count as &lsquo;2 CPU core hours&rsquo; (CPU core limited</span><span
+>)</span><span>&rdquo; </span></p>
+<p><span></span></p>
+<p><span>More information is available on </span><span><a
+        href="https://www.google.com/url?q=https://path-cc.io/GIL/proposal_for_classifying_the_utilization_of_osg/&amp;sa=D&amp;source=editors&amp;ust=1661290855178593&amp;usg=AOvVaw31gzmTS5C3HwX8AX8-cEW-">https://path-cc.io/GIL/proposal_for_classifying_the_utilization_of_osg/</a></span><span
+>&nbsp;and further on this document. </span></p>
+<p><span></span></p>
+<p><span>The objectives of this document, based on GlideinWMS and HTCondor, are:</span></p>
+<p><span></span></p>
+<ol start="1">
+    <li><span
+    >Compare what monitoring data is needed and what is currently available.</span></li>
+    <li><span>Estimate the impact and effort needed to get to the desired monitoring setup.&nbsp;</span>
+    </li>
+    <li><span>Provide a summary description of what steps are needed to reach the desired state.&nbsp;</span>
+    </li>
+</ol>
+<p><span></span></p>
+<p><span>To achieve these objectives, a methodology was created to categorize the impact (i.e., how useful the accounting of this metric will be), effort to implement these metrics, and specific implementation characteristics. We use these estimates to create an ordered list of the needed activities.</span>
+</p>
+<p><span></span></p>
+<p><span>Regarding the impact of the new metric, we set 1 to 5 classifications, 1 is information that is only useful to a specific debug process, and this data could not indicate a significant problem on OSG pool, and 5 is the information that is useful to a debug, performance analysis, and about &ldquo;hidden&rdquo; issues, the impact number 5 is strategic information that could lead to the decision-making process. About the effort, we set 1 to 5 classifications, 1 is full-time equivalent (FTE) of a few days, and 5 is the FTE of months.</span>
+</p>
+<p><span></span></p>
+<p>
+    <span>The present monitoring state is on the section: &ldquo;current state overview&rdquo; further in this document.</span><span>&nbsp;</span>
+</p>
+<p><span></span></p>
+<h1><span>Recommendations</span></h1>
+<p><span></span></p>
+<p><span>Figure 1 shows each utilization categories related describe in this document.</span></p>
+<p><span></span></p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 480.87px; height: 170.31px;"><img
+        alt="Graphical user interface
+
+Description automatically generated with medium confidence" src="images/image1.png"
+        style="width: 480.87px; height: 170.31px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 1: Pilot lifetime and the measure classification. </span></p>
+<p><span></span></p>
+<ol start="1">
+    <li><span>Validation fails:</span><span>&nbsp;</span><span
+    >Any time spent by a pilot failed the initial validation (so the collector was never aware of it).&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li><span>Goal:</span><span>&nbsp;We need a time series for the time of validation fails in canonical units.</span>
+    </li>
+    <li><span>What we have:</span><span>&nbsp;We currently have a time series of failed validation time in CPU hours, but not the equivalent time series in canonical units.</span><span>&nbsp;</span><span
+    >The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+    <li><span>What we are missing: </span><span>Information from when the pilot does not return any log files.</span>
+    </li>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end: to validate the pilot&rsquo;s validation start and calculate the time spent.</span>
+    </li>
+    <li><span>Pilot validation starts time: to set the validation start time.</span>
+    </li>
+    <li><span>Pilot validation end time: to set the end of the validation.</span></li>
+    <li><span
+    >Pilot validation status: &nbsp;to check what happens on the validation.</span></li>
+    <li><span>CPU, GPU, disk, and memory requested by the pilot: to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 2 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 4 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end: </span><span>This information is available on GlideinWMS in a summarized format by the GlideinWMS module in entry/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Pilot validation starts time, pilot validation end time, and pilot status: this is calculated by the time used before starting the condor daemon. This information is available in a summarized with a time stamp in *entry/completed_jobs* on an XML file in GlideinWMS by summarization module.</span>
+    </li>
+    <li><span>CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWMS in user_*/glidein_gfactory_instance/entry*/jobs* on a key/value text file.</span>
+    </li>
+    <li><span>There are cases in which GlideinWMS is not able to get the HTCondor logs file to process the information. In this case, it is necessary to access the logs on the HTCondor nodes. This can be done by extending the Gratia probe or using the HTCondor Log central (a basic log control system on GNU/Linux with 6 months of logs).</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: &nbsp;Modify the existing summarization script to gather the timestamp, pilots&rsquo; validation status information for the completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* to create the time series for the time of validation fails (or using an external tool, Gratia or central log, when the information is not available)</span>
+    </li>
+    <li><span>&nbsp;Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<ol start="2">
+    <li><span>Decision problem:</span><span>&nbsp;</span><span
+    >Any time spent by a pilot that starts and registers with the collector but does not get any match before the pilot&rsquo;s end of life (EOF).&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li>
+        <span>Goal:</span><span>&nbsp;We need time series for the time of decision problem on a site in canonical units. </span>
+    </li>
+    <li><span>What we have:</span><span>&nbsp;We currently have time spent by the pilot on the schedule on GlideinWMS, but not the equivalent time series in canonical units. The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What we are missing:</span><span>&nbsp;Information from when the pilot does not return any information about the EOF.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot star and end: to calculate the time spent.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Pilot validation status: to check if the pilot did not have problems in the validation.</span>
+    </li>
+    <li><span
+    >Number of executed jobs on a pilot: to check the numbers of jobs. </span></li>
+</ul>
+<ul>
+    <li><span>CPU, GPU, disk, and memory requested by the pilot: to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 2 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 3 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start: </span><span>This information is available on GlideinWMS statistics module in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file by GlideinWMS module.</span>
+    </li>
+    <li><span>Pilot status: This information is available in a summarized with time stamp in *entry/completed_jobs* on an XML file on GlideinWMS.</span>
+    </li>
+    <li><span>Time running of jobs on the pilot: This information is available in a summarized with time stamp in /var/log/gwms-factory/server/completed_jobs* on an XML file by GlideinWMS module.</span>
+    </li>
+    <li><span>CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Modify the existing summarization script to gather the timestamp and the running time of the jobs on completed_jobs* for each entry and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* to create the time series for the of decision problem used time on a site </span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested ) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<p><span></span></p>
+<ol start="3">
+    <li><span>Pilot misconfiguration badput:</span><span>&nbsp;Any time spent by a pilot running jobs that fail in the beginning due to a runtime problem not imputable to user errors.&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li><span>Goal</span><span>&nbsp;We need a time series for the time of Pilot misconfiguration badput in canonical units.</span>
+    </li>
+    <li><span>What we have:</span><span>&nbsp;We currently have a time series of running time of the jobs and the exit status are available on GlideinWMS but not the equivalent time series in canonical units. The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+    <li><span>What we are missing:</span><span>&nbsp;Information from when the pilot does not return any log files or does not have information on logs related to the problem.</span>
+    </li>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span
+    >Time of the pilot start and end: to calculate the time spend. &nbsp;</span></li>
+    <li><span>Jobs exit status: to check what happen on the jobs. </span></li>
+    <li><span
+    >Pilot validation status: &nbsp;to check what happens on the validation</span></li>
+    <li><span>CPU, GPU, disk, and memory requested by the pilot: to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 4 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 4 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end and validation status: </span><span
+    >This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file by GlideinWMS module.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+    <li><span>There are cases that which GlideinWMS is not able to get the HTCondor logs file to process the information, in this case, it is necessary to access the logs on the HTCondor nodes. This can be done extending the Gratia probe or using the HTCondor Log central (basic log control system on GNU/Linux with 6 months of logs).</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Modify the existing summarization script to gather the timestamp, time of running jobs on completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* fails (or using an external tool, Gratia or central log, when the information is note available) and exit status to create the time series for the of pilot misconfiguration badput time.</span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<ol start="4">
+    <li><span>Pilot goodput:</span><span>&nbsp;Any time spent by a pilot running jobs that are complete.&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li><span>Goal</span><span>&nbsp;We need a time series for the time of pilot goodput in canonical units.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What we have: </span><span>We currently have a time series of goodput time; this data is available on GlideinWMS, but not the equivalent time series in canonical units. The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What we are missing: </span><span>none. </span></li>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span
+    >Time of the pilot start and end: to calculate the time spend. &nbsp;</span></li>
+    <li><span>Jobs exist Status: to check if is a good put. </span></li>
+</ul>
+<ul>
+    <li>
+        <span>CPU, GPU, disk, and memory requested by the pilot: on a key/value text file to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 5 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 2 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 2 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end: </span><span>This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Modify the existing summarization script to gather the timestamp, time running of jobs on completed_jobs* for each entry and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs and exit status to create the time series for the time of pilot goodput.</span>
+    </li>
+    <li><span>Move to canonical unit: </span><span>Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<ol start="5">
+    <li><span>Pilot preemption badput:</span><span>&nbsp;</span><span
+    >Any time spent by jobs that start running but do not finish because of the pilot termination (EOF).&nbsp;&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li><span>Goal</span><span>&nbsp;We need a time series for the time of Pilot preemption badput time used in canonical units.</span>
+    </li>
+    <li><span>What we have: </span><span>We currently have a time series of pilots until EOF (we can check the run time with the max time running or on nothing on a hard pilot kill); this data is available on GlideinWMS, but not the equivalent time series in canonical units. The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+    <li><span>What we are missing:</span><span>&nbsp;Information from when the pilot does not return any information about the EOF.</span>
+    </li>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span
+    >Time of the pilot start and end: to calculate the time spend. &nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Jobs exist Status: to check if the pilots reach the EOF.</span></li>
+</ul>
+<ul>
+    <li>
+        <span>CPU, GPU, disk, and memory requested by the pilot: on a key/value text file to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 4 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 3 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end: </span><span>This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+    <li><span>There are cases that which GlideinWMS is not able to get the HTCondor logs file to process the information, in this case, it is necessary to access the logs on the nodes and those logs based on the pilot information. This can be done extending the Gratia probe or using the HTCondor Log central. Or even estimate a EOF due a hard pilot kill.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Modify the existing summarization script to gather the timestamp, time of running jobs on completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* and exit status (or using an external tool, Gratia or central log, when the information is note available) to create the time series for the time of Pilot preemption badput </span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested ) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<ol start="6">
+    <li><span>Pilot overhead</span><span>: Any pilot that starts at least one job or any canonical time spent not running any jobs is counted as pilot overhead. Any difference between &ldquo;total time&rdquo; and &ldquo;canonical time&rdquo; will instead be proportionally accounted to any jobs running at that time, if any.&nbsp;&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li>
+        <span>Goal:</span><span>&nbsp;We need a time series for the time of pilot overhead time in canonical units.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What he have: </span><span>We currently have a time series data from all categories related to the pilot &ldquo;waste,&rdquo;; this data is available on GlideinWMS, but not the equivalent time series in canonical units. The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+    <li><span>What we are missing: </span><span>none. </span></li>
+</ul>
+<p><span></span></p>
+<ul>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span
+    >Time of the pilot start and end: to calculate the time spend. &nbsp;</span></li>
+    <li><span>Pilot validation starts time: to set the validation start time.</span>
+    </li>
+    <li><span>Pilot validation end time: to set the end of the validation.</span>
+    </li>
+</ul>
+<ul>
+    <li>
+        <span>CPU, GPU, disk, and memory requested by the pilot: on a key/value text file to compute the canonical unit.</span>
+    </li>
+    <li><span>Measure process to start the jobs and others process inside the pilot: to calculate the overhead. </span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 3 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 4 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Time of the pilot start and end: </span><span>This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Pilot validation starts time, pilot validation end time, and pilot status: this is calculated by the time used before starting the condor daemon. This information is available in a summarized with time stamp in *entry/completed_jobs* on an XML file in GlideinWMS by summarization module.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+    <li><span>Measure process to start the jobs and others process: add more measures on the pilot process.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Modify the existing summarization script to gather the timestamp, number of jobs on completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* and the difference between for the total time and validation time or baput (and other process) creating the time series for the number of pilot preemption overhead </span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested ) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<p><span>There are two additional classifications of time available to OSG and not directly related to pilot infrastructure:</span>
+</p>
+<p><span></span></p>
+<ol start="1">
+    <li><span>Provisioning bottleneck:</span><span
+    >&nbsp;</span><span>any time a resource provider, aka site, is idle because we did not send enough pilots, even though we had user jobs waiting for resources.&nbsp;&nbsp;&nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li><span>Goal:</span><span>&nbsp;We need a time series for the time of Provisioning bottleneck</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What we have:</span><span
+    >&nbsp;We currently have</span><span>&nbsp;</span><span>status of the jobs on each scheduler in GlideinWMS (last snapshot only). The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>What we are missing: </span><span>&nbsp;none.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Status of the jobs on each scheduler in GlideinWMS to check the number of idle jobs. </span>
+    </li>
+    <li><span>Pilots sent for a site to check the number of pilots on a site (we currently have no information about that&rsquo;s going on inside each CE). </span>
+    </li>
+</ul>
+<ul>
+    <li>
+        <span>CPU, GPU, disk, and memory requested by the pilot: on a key/value text file to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 5 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 4 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Status of the jobs and </span><span
+    >Pilots sent for a site</span><span>: </span><span>This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Create a script using python and information visualization library to gather the timestamp, number of jobs on completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* and the number of pilots on a site and the number of idle jobs on a site to create the time series of provision bottle neck.</span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<p><span></span></p>
+<ol start="2">
+    <li><span>Insufficient demand: </span><span>any time a resource provider, aka site, sits idle because we did not send enough pilots. After all, no jobs are waiting that can run on that resource. &nbsp;</span>
+    </li>
+</ol>
+<ul>
+    <li>
+        <span>Goal:</span><span>&nbsp;We need a time series for the time of Insufficient demand in canonical units.</span>
+    </li>
+    <li><span>What we have: </span><span
+    >We currently have</span><span>&nbsp;</span><span>status of the jobs on each scheduler in GlideinWMS (last snapshot only). The data needed for conversion from CPU hours to canonical hours is available when the time series is being created; it just need to be used.</span>
+    </li>
+    <li><span>What we are missing: </span><span>none.</span></li>
+    <li><span>Required information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Status of the jobs on each scheduler in GlideinWMS to check the number of idle jobs. </span>
+    </li>
+    <li><span>Pilots sent for a site to check the number of pilots on a site (we currently have no information about that&rsquo;s going on inside each CE)</span>
+    </li>
+    <li>
+        <span>CPU, GPU, disk, and memory requested by the pilot: on a key/value text file to compute the canonical unit.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Impact:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 5 </span><span>(1 to 5, high is better)&nbsp;</span>
+    </li>
+    <li><span>Deal with missing information: 5 (1 to 5, high is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Required effort:</span><span>&nbsp;</span></li>
+</ul>
+<ul>
+    <li><span>Move to canonical unit: 1 (1 to 5, low is better)&nbsp;</span></li>
+    <li><span>Deal with missing information: 2 (1 to 5, low is better)&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Description for each information:</span><span>&nbsp;&nbsp;</span>
+    </li>
+</ul>
+<ul>
+    <li><span>Status of the jobs and </span><span
+    >Pilots sent for a site</span><span>: </span><span>This information is available on GlideinWMS in a summarized format in /var/log/gwms-factory/server/completed_jobs* on an XML file.</span>
+    </li>
+    <li><span>Jobs exist Status, CPU, GPU, disk, and memory requested by the pilot: this information is on GlideinWSM in user_*/glidein_gfactory_instance/entry*/jobs* on a Key/Value text file.</span>
+    </li>
+</ul>
+<ul>
+    <li><span>How to do it</span><span>: </span></li>
+</ul>
+<ul>
+    <li><span>Deal with missing information: Create a script using python and information visualization library to gather the timestamp, number of jobs on completed_jobs* for each entry, and gather the computational resources from user_*/glidein_gfactory_instance/entry*/jobs* and the number of pilots on a site and the number of idle jobs on a site to create the time series insufficient demand on a site.</span>
+    </li>
+    <li><span>Move to canonical unit: Modify the existing summarization script to gather the computational resources (CPU, GPU, disk, and memory requested) from user_*/glidein_gfactory_instance/entry*/jobs* and calculate the canonical unit (&ldquo;1 CPU core + 2 GB of RAM&rdquo; for CPU resources and &ldquo;1 GPU chip&rdquo; for GPU resources to be used to compute &ldquo;canonical time&rdquo; in the same units as normal time.)</span>
+    </li>
+</ul>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<p><span>The log retention of the GlideinWMS logs is controlled on /etc/gwms-factory/glideinWMS.xml, and this is the default value for the OSG installations:</span>
+</p>
+<ul>
+    <li><span
+            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 685.24px; height: 78.11px;"><img
+            alt="" src="images/image5.png"
+            style="width: 685.24px; height: 78.11px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+            title=""></span></li>
+    <li><span></span></li>
+</ul>
+<p><span></span></p>
+<p><span></span></p>
+<p><span>Actions items&nbsp;</span></p>
+<p><span></span></p><a id="t.c77abe35532902a448f6c1cdd3f3cbf9d1441a78"></a><a id="t.0"></a>
+<table class="table">
+    <tr>
+        <td><p><span>Implementation order</span></p></td>
+        <td><p><span>Category</span></p></td>
+        <td><p><span>Impact</span></p></td>
+        <td><p><span>Effort</span></p></td>
+        <td><p><span>Integration</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>1</span></p></td>
+        <td><p><span>Validation fails - </span><span
+        >Move to canonical unit</span></p></td>
+        <td><p><span>5</span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>With Decision problem</span></p>
+        </td>
+    </tr>
+    <tr>
+        <td><p><span>2</span></p></td>
+        <td><p><span>Decision problem - </span><span
+        >Move to canonical unit</span></p></td>
+        <td><p><span>5</span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>With validations fails</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>3</span></p></td>
+        <td><p><span
+        >Pilot misconfiguration badput - </span><span>Move to canonical unit</span>
+        </p></td>
+        <td><p><span>5</span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>4</span></p></td>
+        <td><p><span
+        >Provisioning bottleneck - </span><span>Move to canonical unit</span></p>
+        </td>
+        <td><p><span>5</span></p>
+            <p><span></span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>With insufficient demand</span></p>
+        </td>
+    </tr>
+    <tr>
+        <td><p><span>5</span></p></td>
+        <td><p><span>Insufficient demand - </span><span
+        >Move to canonical unit</span></p></td>
+        <td><p><span>5</span></p>
+            <p><span></span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>With provision bottleneck</span></p>
+        </td>
+    </tr>
+    <tr>
+        <td><p><span>6</span></p></td>
+        <td><p><span>Pilot overhead - </span><span
+        >Move to canonical unit</span></p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>7</span></p></td>
+        <td><p><span
+        >Pilot preemption badput - </span><span>Move to canonical unit</span></p>
+        </td>
+        <td><p><span>5</span></p>
+            <p><span></span></p></td>
+        <td><p><span>1</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>8</span></p></td>
+        <td><p><span>Pilot goodput - </span><span
+        >Move to canonical unit</span></p></td>
+        <td><p><span>5</span></p>
+            <p><span></span></p>
+            <p><span></span></p></td>
+        <td><p><span>2</span></p>
+            <p><span></span></p>
+            <p><span></span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>9</span></p></td>
+        <td><p><span>Pilot goodput - </span><span
+        >Deal with missing information</span></p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>2</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>10</span></p></td>
+        <td><p><span>Pilots list - </span><span
+        >Create a list of the current pilots from GlideinWMS</span></p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>2</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>11</span></p></td>
+        <td><p><span>Insufficient demand - </span><span
+        >Deal with missing information</span></p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>2</span></p></td>
+        <td><p><span>With provision bottleneck</span></p>
+        </td>
+    </tr>
+    <tr>
+        <td><p><span>12</span></p></td>
+        <td><p><span>Data retention - </span><span
+        >The retention periods for the currently available data should be increased and controlled in GlideinWMS and HTCondor. The amount of time to be stored should be enough for the information to be processed, considering the size on the current frontend and other (10TB is a good approximation).</span>
+        </p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>3</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>13</span></p></td>
+        <td><p><span
+        >Provisioning bottleneck - </span><span>Deal with missing information:</span>
+        </p></td>
+        <td><p><span>5</span></p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>With insufficient demand</span></p>
+        </td>
+    </tr>
+    <tr>
+        <td><p><span>14</span></p></td>
+        <td><p><span>Decision problem - </span><span
+        >Deal with missing information:</span></p></td>
+        <td><p><span>2</span></p></td>
+        <td><p><span>3</span></p></td>
+        <td><p><span>With validations fails</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>15</span></p></td>
+        <td><p><span>Validation fails - </span><span
+        >Deal with missing information</span></p></td>
+        <td><p><span>2</span></p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>With Decision problem</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>16</span></p></td>
+        <td><p><span
+        >Pilot preemption badput - </span><span>Deal with missing information</span>
+        </p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>3</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>17</span></p></td>
+        <td><p><span
+        >Pilot misconfiguration badput - </span><span
+        >Deal with missing information:</span></p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>18</span></p></td>
+        <td><p><span>Pilot overhead - </span><span
+        >Deal with missing information</span></p></td>
+        <td><p><span>3</span></p></td>
+        <td><p><span>4</span></p></td>
+        <td><p><span>none</span></p></td>
+    </tr>
+</table>
+<p><span></span></p>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h1><span>Introduction &ndash; current state overview</span></h1>
+<h1><span></span></h1>
+<h1><span>Introduction</span></h1>
+<p><span></span></p>
+<p><span>The Open Science Grid has a well-made system to access available resources. Figure 2 shows how HTCondor, and Glidein Workflow Management System (GlideinWMS) provide access to the computational resources [1].</span>
+</p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 551.70px; height: 281.60px;"><img
+        alt="Diagram
+
+Description automatically generated" src="images/image2.png"
+        style="width: 551.70px; height: 281.60px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 2: GlideinWMS for grid access with condor [2].</span></p>
+<p><span></span></p>
+<p><span>Figure 2 shows the main idea is that when the Virtual Organization Frontend senses the demand for more resources, Condor job execution daemons (aka glidein pilots or pilots) are submitted to the grid by the Glidein Factory (GF) [5,6]. Figure 3 shows a simplified pilot&#39;s lifetime and when each type of measure could or happens.</span>
+</p>
+<h1><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 480.87px; height: 170.31px;"><img
+        alt="Graphical user interface
+
+Description automatically generated with medium confidence" src="images/image1.png"
+        style="width: 480.87px; height: 170.31px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></h1>
+<p><span>Figure 3: Pilot lifetime and the measure classification. </span></p>
+<h1><span></span></h1>
+<h1><span>OSG Usage Classification</span></h1>
+<p><span></span></p>
+<p><span>We postulated that the time of resources available to OSG could be partitioned among the following eight categories, with the first six belonging to the pilot infrastructure:<br></span>
+</p>
+<ul>
+    <li><span>Validation fails</span><span>: </span><span
+    >Any time spent by a pilot failed the initial validation (so the collector was never aware of it).</span>
+    </li>
+    <li><span>Decision problem</span><span>:</span><span
+    >&nbsp;Any time spent by a pilot that starts and registers with the collector but does not get any match before the pilot&rsquo;s end of life (EOF).</span>
+    </li>
+    <li><span>Pilot misconfiguration badput:</span><span
+    >&nbsp;</span><span>Any time spent by a pilot running jobs that fail in the beginning due to a runtime problem not imputable to user errors.</span>
+    </li>
+    <li>
+        <span>Pilot goodput</span><span>:</span><span>&nbsp;Any time spent by a pilot running jobs that are completed.</span>
+    </li>
+    <li><span>Pilot preemption badput:</span><span>&nbsp;</span><span
+    >Any time spent by jobs that start running but do not finish because of the pilot termination (end of life). </span>
+    </li>
+    <li><span>Pilot overhead:</span><span>&nbsp;</span><span
+    >Any pilot that starts at least one job or any canonical time spent not running any jobs is counted as pilot overhead. Any difference between &ldquo;</span><span
+    >total time</span><span>&rdquo; and &ldquo;</span><span>canonical time</span><span
+    >&rdquo; will instead be proportionally accounted to any jobs running at that time, if any. </span>
+    </li>
+</ul>
+<p><span>There are two additional classifications of time available to OSG and not directly related to pilot infrastructure:</span>
+</p>
+<ol start="1">
+    <li><span>&nbsp;</span><span>Provisioning bottleneck</span><span
+    >:</span><span>&nbsp;any time a resource provider, aka site, is idle because we did not send enough pilots, even though we had user jobs waiting for resources. &nbsp;</span>
+    </li>
+    <li><span>Insufficient demand:</span><span
+    >&nbsp;</span><span>any time a resource provider, aka site, sits idle because we did not send enough pilots. After all, no jobs are waiting that can run on that resource. </span>
+    </li>
+</ol>
+<h2><span></span></h2>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h2><span>Further clarification of &ldquo;Pilot overhead&rdquo; and canonical units</span></h2>
+<p><span></span></p>
+<p><span>OSG jobs come with fine-grained requirements, while the pilots offer a fixed total number of CPU cores, GPUs, and memory, and there is no optimal way to maximize the use of all the resources while keeping job priorities in consideration. OSG thus allows for certain resources to be idle if some of the other equally important resources are fully utilized. For example, it is just as acceptable to &ldquo;use all the CPU cores and only a fraction of the memory&rdquo; as it is to &ldquo;use all the memory and only a subset of the CPU cores&rdquo;.</span>
+</p>
+<p><span>The&nbsp;&ldquo;canonical unit&rdquo;&nbsp;and&nbsp;&ldquo;canonical time&rdquo;&nbsp;definitions provide a measure of what is the smallest unit that is considered&nbsp;&ldquo;true overhead&rdquo;. We thus account &ldquo;Pilot overhead&rdquo; only in multiples of&nbsp;&ldquo;canonical units.&rdquo; For example, given the CPU definition of the canonical unit of &ldquo;1 CPU core and 2 GB of memory&rdquo;, an hour when we have 3 CPU cores and 3 GB of memory unused would count as &ldquo;1 CPU core hour&rdquo; (memory limited), the same period of 3 CPU cores and 1 GB of memory unused would count as &ldquo;0 CPU core hours&rdquo; (memory limited), and the same period of 2 CPU cores and 6 GB of memory unused would count as &ldquo;2 CPU core hours&rdquo; (CPU core limited). </span>
+</p>
+<p><span>The use of&nbsp;&ldquo;canonical time&rdquo;&nbsp;in &ldquo;Pilot overhead&rdquo; brings however an accounting problem; I.e. What to do with the remainder of the time that remains unaccounted for. Using the first example above, when we have 3 CPU cores and 3 GB of memory unused, we have a remainder of &ldquo;2 CPU core hours&rdquo;.</span>
+</p>
+<p><span>In order to fully account for all the resources, we thus account that remainder proportionally between any jobs that were running at that point in time. For example, if we had a remainder of 2 CPU cores (and any amount of memory) and there were two jobs running during the considered time period, say 1h for example simplicity, one which completed and one that never did due to the pilot getting preempted sometime in the future, we would account 1 CPU core hour to each of &ldquo;Pilot goodput&rdquo; and &ldquo;Pilot preemption badput&rdquo;. As a further clarification, any time the pilot does not run any jobs at all, all the time is accounted to &ldquo;Pilot overhead&rdquo;, even if it is not a multiple of &ldquo;canonical time&rdquo;.</span>
+</p>
+<p><span>Note that for GPU accounting&nbsp;&ldquo;canonical time&rdquo;&nbsp;is currently defined the same as &ldquo;time&rdquo;, i.e. &ldquo;GPU chip hours&rdquo;, so there is never any leftover there.</span>
+</p>
+<p><span>This document only provides the partitioned definitions of how the resources are being used. It does not aim to provide any guidance regarding how to classify the resource usage using the existing monitoring tools. As an example, it is currently unknown how to properly class (a) and (b) but one could speculate that one could approximate it by means of measuring period with no pilots waiting in the sites&rsquo; queues. Such clarifications and guidance are of course necessary but will be subject to a separate future document.</span>
+</p>
+<p><span></span></p>
+<p><span></span></p>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h1><span>Actual metrics and data</span></h1>
+<p><span></span></p>
+<p><span>The HTCondor and GlideinWMS have tools to calculate how a pilot was performed based on several defined categories. All that information is provided by HTCondor and GlideinWMS tools and modules. Figure 4 shows how the information is processed; solid boxes are software/script, dashed boxes are data files, red boxes are information from HTCondor, and blue boxes are information from GlideinWMS.</span>
+</p>
+<p><span></span></p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 236.47px;"><img
+        alt="Diagram
+
+Description automatically generated" src="images/image4.png"
+        style="width: 624.00px; height: 236.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 4: Information gathering for GlideinWMS and jobs.</span></p>
+<p><span></span></p>
+<h1><span>Raw information</span></h1>
+<p><span></span></p>
+<p><span>In the first step, the monitoring from GlideinWMS fetches the </span><span>StartedLog*.slot </span><span>files from the HTCondor workers node, the permanence of these files is controlled for the HTCondor with the variable MAX_&lt;SUBSYS&gt;_LOG that controls the size of the logs (the default is 10 MB) and MAX_NUM_&lt;SUBSYS&gt;_LOG that controls the logs rotation (the default is two files) (where SUBSYS can be defined for STARTD to maintain the </span><span
+>StartedLog*.slot)</span><span>. Those files contain information about each job run, system process, and several pieces of information. Figure 5 shows an example of this data. In addition, some information is extracted from the </span><span
+>condor_q</span><span>&nbsp;and </span><span>condor_status</span><span>, such as the scheduler&rsquo;s state of the job running.</span>
+</p>
+<p><span></span></p>
+<p><span></span></p><a id="t.8576ace7628dffedc875dcf14e8f93a4ac4c2ec4"></a><a id="t.1"></a>
+<table class="table">
+    <tr>
+        <td><p><span>07/29/19 15:38:54 (pid:2283431) Running job as user nobody</span>
+        </p>
+            <p><span
+            >07/29/19 15:38:54 (pid:2283431) Create_Process succeeded, pid=2283501</span></p>
+            <p><span>07/29/19 16:01:41 (pid:2283431) Got SIGTERM. Performing graceful shutdown.</span>
+            </p>
+            <p><span>07/29/19 16:01:41 (pid:2283431) ShutdownGraceful all jobs.</span></p>
+            <p><span
+            >07/29/19 16:01:42 (pid:2283431) Process exited, pid=2283501, status=0</span></p>
+            <p><span>07/29/19 16:01:42 (pid:2283431) error writing to named pipe: watchdog pipe has closed</span>
+            </p>
+            <p><span>07/29/19 16:01:42 (pid:2283431) LocalClient: error sending message to server</span>
+            </p>
+            <p><span>07/29/19 16:01:42 (pid:2283431) ProcFamilyClient: failed to start connection with ProcD</span>
+            </p>
+            <p><span
+            >07/29/19 16:01:42 (pid:2283431) kill_family: ProcD communication error</span></p>
+            <p><span>07/29/19 16:01:42 (pid:2283431) waiting a second to allow the ProcD to be restarted</span>
+            </p>
+            <p>
+                <span>07/23/20 03:52:21 (pid:2356713) condor_starter (condor_STARTER) pid 2356713 EXITING WITH STATUS 0</span>
+            </p>
+            <p><span>07/27/20 11:16:18 (pid:2970490) I am: hostname: sdsc-81, fully qualified doman name: sdsc-81.t2.ucsd.edu, IP: 169.228.132.180, IPv4: 169.228.132.180, IPv6:</span>
+            </p>
+            <p><span>07/27/20 11:16:18 (pid:2970490) ** condor_starter (CONDOR_STARTER) STARTING UP</span>
+            </p></td>
+    </tr>
+</table>
+<p><span>Figure 5: Example of worker node log.</span></p>
+<p><span></span></p>
+<p><span>Table 1 shows each field parsed from the HTCondor log file to GlideinWMS; this is the first step to building all the data gathering. The GlideinWMS uses an awk script to execute this task. The text format on the message is hardcoded on the HTCondor sources: </span><span
+>condor_utils/condor_event.cpp</span><span>, </span><span>and condor_utils/status_string.cpp, src/condor_starter.V6.1/starter.cpp,</span><span
+>&nbsp;and others C++ codes. HTCondor uses the same way to gather information, for example, on </span><span
+>condor_who/who.cpp (condor_who) [8]</span><span>. </span></p>
+<p><span>This information is kept using the log GNU/Linux system and the HTCondor configuration. The data is compiled and stored in the </span><span
+>jobs</span><span>* files to the next step by the monitoring module on GlideinWMS. Besides the fields in Table 1, there is more data such as the path to job input and output files, memory limits, information on file transfer, and others. </span>
+</p>
+<p><span></span></p>
+<p><span>Table 1: Data from HTCondor logs</span></p><a
+        id="t.89171619fcc337879ddcc5ef2f956ce3e93be103"></a><a id="t.2"></a>
+<table class="table">
+    <tr>
+        <td><p><span>Measure</span></p></td>
+        <td><p><span>Description</span></p></td>
+        <td><p><span>Type</span></p></td>
+        <td><p><span>Unit</span></p></td>
+        <td><p><span>In GlideinWMS?</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Job ID</span></p></td>
+        <td><p><span>Job ID from HTCondor</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+        <td><p><span>Yes</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>PID</span></p></td>
+        <td><p><span>Process PID from the system</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Exit Status</span></p></td>
+        <td><p><span>Process exit status</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+        <td><p><span>Yes</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Start Time</span></p></td>
+        <td><p><span>The time when the job started</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Date</span></p></td>
+        <td><p><span>Yes</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>End Time</span></p></td>
+        <td><p><span>The time when the job ended</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Date</span></p></td>
+        <td><p><span>Yes</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Memory limits</span></p></td>
+        <td><p><span>The soft and hard limits of memory usage in the job</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+        <td><p><span>No</span></p>
+            <p><span></span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Output and input files path</span></p>
+        </td>
+        <td><p><span>Path for the input and output file of the job</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>User used to run the job</span></p></td>
+        <td><p><span
+        >User on the system used to run the job</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Shadow daemon address </span></p></td>
+        <td><p><span>Address for the shadow address</span></p>
+        </td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>File transfer file status</span></p>
+        </td>
+        <td><p><span
+        >If the files transfer was successful</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Machine submitted</span></p></td>
+        <td><p><span>What machine submitted</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Limits resources status</span></p></td>
+        <td><p><span
+        >If the resource limits were successful</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Local config source</span></p></td>
+        <td><p><span>List of local files used</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Job niceness</span></p></td>
+        <td><p><span>Priority of the process</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Job universe</span></p></td>
+        <td><p><span>Universe of the job</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Condor version information</span></p>
+        </td>
+        <td><p><span
+        >Information about the version HTCondor </span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Type of logging information</span></p>
+        </td>
+        <td><p><span>Type of logging set</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Factory instance for the job</span></p>
+        </td>
+        <td><p><span>What instance of the factory is used in the job</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>GLIDEIN_Job_Max_Time</span></p></td>
+        <td><p><span
+        >Max allowed time for the job to end.</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+        <td><p><span>No</span></p></td>
+    </tr>
+</table>
+<p><span></span></p>
+<p><span>Another source of information is the startd_history* from HTCondor, the same environment variable controls these logs as starter logs, and GlideinWMS do not use all their data. Table 2 shows the fields that could be used for the monitoring. This information could be parsed, the command </span><span
+>condor_history</span><span>&nbsp;uses those files (src/condor_tools/history.cpp)</span>
+</p>
+<p><span>Table 2: Data from HTCondor logs the startd_history*</span></p><a
+        id="t.d6a6dc7d826cda48138e3b16864b89ce50c0a459"></a><a id="t.3"></a>
+<table class="table">
+    <tr>
+        <td><p><span>Measure</span></p></td>
+        <td><p><span>Description</span></p></td>
+        <td><p><span>Type</span></p></td>
+        <td><p><span>Unit</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>BadputCausedByDraining</span></p></td>
+        <td><p><span>If the job was drained</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Boolean</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>ExitCode</span></p></td>
+        <td><p><span>Exit code of the job</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Job_Site</span></p></td>
+        <td><p><span>What site job was</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>WhenToTransferOutput</span></p></td>
+        <td><p><span>Show what time the output should be transfer</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>ProvisionedResources</span></p></td>
+        <td><p><span>What kind of resources are provided to the job</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>LastRejMatchReason</span></p></td>
+        <td><p><span>Last reason for the job rejection</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>RemoteWallClockTime</span></p></td>
+        <td><p><span>Cumulative number of seconds the job has been allocated a machine. This also includes time spent in suspension (if any), so the total real time spent running is</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CondorVersion</span></p></td>
+        <td><p><span>Condor version used by the job</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CPUsUsage</span></p></td>
+        <td><p><span
+        >CpusUsage (Note the plural&nbsp;</span><span>Cpus</span><span
+        >) is a floating point value that represents the number of cpu cores fully used over the lifetime of the job.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>NumRestarts</span></p></td>
+        <td><p>
+            <span>A count of the number of restarts from a checkpoint attempted by this job during its lifetime.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>DiskUsage</span></p></td>
+        <td><p><span>Amount of disk space (KiB) in the HTCondor execute directory on the execute machine that this job has used.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/kib</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>RequestCpus</span></p></td>
+        <td><p><span>The number of CPUs requested for this job.&nbsp;</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>LastJobStatus</span></p></td>
+        <td><p><span>Last status of the job report</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CpusProvisioned</span></p></td>
+        <td><p><span
+        >The number of Cpus allocated to the job.</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>RequestMemory</span></p></td>
+        <td><p><span>The amount of memory space in MiB requested for this job.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>DiskUsage_RAW</span></p></td>
+        <td><p><span>Disk usage without any round up.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/KB</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>RequestDisk</span></p></td>
+        <td><p><span>Amount of disk space (KiB) in the HTCondor execute directory on the execute machine that this job has used.&nbsp;</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/KB</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>JobPrio</span></p></td>
+        <td><p><span>Job priority</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>DESIRED_Sites</span></p></td>
+        <td><p><span>Desired site of the job</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>OnExitHold</span></p></td>
+        <td><p><span>The job was in hold when exited</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Boolean</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>Owner</span></p></td>
+        <td><p><span>User owner of the job</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>JobDuration</span></p></td>
+        <td><p><span>Job duration</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>MemoryProvisioned</span></p></td>
+        <td><p><span>The amount of memory in MiB allocated to the job.&nbsp;</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int/MB</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>TotalSubmitProcs</span></p></td>
+        <td><p><span>Process used on this job</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>project_Name</span></p></td>
+        <td><p><span
+        >Name of the project related to this job</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>JobPid</span></p></td>
+        <td><p><span>Job ID</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CompletionDate</span></p></td>
+        <td><p><span>Job end date</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Date</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>ClusterId</span></p></td>
+        <td><p><span>Id of cluster</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>MemoryUsage</span></p></td>
+        <td><p><span>An integer expression in units of Mbytes that represents the peak memory usage for the job</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+</table>
+<h1><span></span></h1>
+<p><span>We have another source of information on the central logs from HTCondor OSG worker nodes, with 197GB space, with data from January 2022. Again, there is no time limitation for this information, only storage limitation; we can hold six months of data using a simple projection. There is information about the job and worker nodes from the OSG pool referring to startd_history; Figure 7 shows an example of that information. Table 2 shows several files present on those files.</span>
+</p>
+<p><span></span></p><a id="t.c286753c8cb912b226ba24b3c57be8977191d4e2"></a><a id="t.4"></a>
+<table class="table">
+    <tr>
+        <td><p><span>&lt;149&gt;1 2022-01-28T00:23:36.804Z petes-36 condor_starter 15883 - [cat=&quot;D_ALWAYS&quot; slot=&quot;slot1_1&quot; GLIDEIN_ResourceName=&quot;SLATE_US_NMSU_AGGIE_GRID&quot; GLIDEIN_Site=&quot;SLATE_US_NMSU_AGGIE_GRID&quot; GLIDEIN_Name=&quot;glidein_24261_217254492&quot;] Failed to send job exit status to shadow</span>
+        </p>
+            <p><span>&lt;149&gt;1 2022-01-28T02:23:46.524Z CRUSH-OSG-C7-10-5-159-89 condor_starter 83403 - [cat=&quot;D_ALWAYS&quot; slot=&quot;slot1&quot; GLIDEIN_ResourceName=&quot;SU-ITS-CE2&quot; GLIDEIN_Site=&quot;SU-ITS&quot; GLIDEIN_Name=&quot;glidein_2_616735772&quot;] Failed to send job exit status to shadow</span>
+            </p>
+            <p><span>&lt;149&gt;1 2022-01-28T00:23:49.433Z petes-12 condor_starter 8804 - [cat=&quot;D_ALWAYS&quot; slot=&quot;slot1_1&quot; GLIDEIN_ResourceName=&quot;SLATE_US_NMSU_AGGIE_GRID&quot; GLIDEIN_Site=&quot;SLATE_US_NMSU_AGGIE_GRID&quot; GLIDEIN_Name=&quot;glidein_16655_31815432&quot;] Failed to send job exit status to shadow</span>
+            </p>
+            <p><span>&lt;149&gt;1 2022-01-28T07:25:06.871Z 25acf9a90275 condor_starter 263213 - [cat=&quot;D_ALWAYS&quot; slot=&quot;slot1_5&quot; GLIDEIN_ResourceName=&quot;TACC-Jetstream-Backfill&quot; GLIDEIN_Site=&quot;Texas Advanced Computing Center&quot;] Failed to send job exit status to shadow</span>
+            </p>
+            <p><span>&lt;29&gt;1 2022-01-28T07:51:03.430Z osgvo-docker-pilot-5c5bcb9885-tsgts supervisord 1 - [level=&quot;INFO&quot; GLIDEIN_ResourceName=&quot;TIGER-OSG-BACKFILL-PROD&quot; GLIDEIN_Site=&quot;CHTC&quot;] exited: condor_master (exit status 0; expected)</span>
+            </p>
+            <p><span>&lt;157&gt;1 2022-01-28T02:00:13.800588-06:00 compute-1-11 glidein_stderr - - [GLIDEIN_ResourceName=&quot;IIT_CE1&quot; GLIDEIN_Site=&quot;IIT&quot; GLIDEIN_Name=&quot;glidein_10386_583716042&quot;] FATAL: &nbsp; Unable to handle docker://hub.opensciencegrid.org/library/alpine:3 uri: while building SIF from layers: unable to create new build: while ensuring correct compression algorithm: while creating squashfs: create command failed: exit status 1: FATAL ERROR:Failed to create thread</span>
+            </p>
+            <p><span>&lt;29&gt;1 2022-01-28T08:21:11.555Z osgvo-docker-pilot-5c5bcb9885-tsgts supervisord 1 - [level=&quot;INFO&quot; GLIDEIN_ResourceName=&quot;TIGER-OSG-BACKFILL-PROD&quot; GLIDEIN_Site=&quot;CHTC&quot;] exited: condor_master (exit status 0; expected)</span>
+            </p></td>
+    </tr>
+</table>
+<p><span>Figure 7: Example of central OSG logs.</span></p>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h1><span>Summarization of the data usage</span></h1>
+<p><span></span></p>
+<p>
+    <span>We have information about each job on HTCondor related to the user on the GlideinWMS on </span><span
+>user_*/glidein_gfactory_instance/entry*/jobs* </span><span>[4]. It is possible to see several data that could be used to check each usage classification category; Figure 8 shows one example of how the information is presented on the files. On the jobs*, we have information related to the pilots, such as the validation process and the site&rsquo;s information. Using the gfactory-2.opensciencegrid.org as an example, we have </span><span
+>(/var/log/gwms-factory/client</span><span>) 213912 jobs*.out at one specific moment. The data is kept for seven days or less due to a storage limitation (which can be configured): &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span>
+</p>
+<ul>
+    <li><span>Only 7748, 3%, output files do not have any metric information; the files are incomplete.</span>
+    </li>
+    <li><span>15673 files, 8%, have the metric XML area, but any of the metrics are shown in Figure 8 due to a failure on the pilot.</span>
+    </li>
+</ul>
+<p><span></span></p><a id="t.34fad82cae13beeeadae500e3876de0834d0fd08"></a><a id="t.5"></a>
+<table class="table">
+    <tr>
+        <td><p><span
+        >&lt;status&gt;OK&lt;/status&gt;</span></p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;AutoShutdown&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;True&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;CondorDuration&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;169993&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;TotalJobsNr&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;31&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;TotalJobsTime&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;133428&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;goodZJobsNr&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;7&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;goodZJobsTime&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;4448&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;goodNZJobsNr&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;23&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;goodNZJobsTime&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;109782&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;badSignalJobsNr&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;1&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;badSignalJobsTime&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;19198&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;badOtherJobsNr&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;0&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;badOtherJobsTime&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;0&lt;/metric&gt;</span>
+            </p>
+            <p><span>&nbsp; &nbsp; &lt;metric name=&rdquo;CondorKilled&rdquo; ts=&rdquo;2022-02-28T22:42:54-08:00&rdquo; uri=&rdquo;local&rdquo;&gt;False&lt;/metric&gt;</span>
+            </p>
+            <p><span>&lt;/result&gt;</span></p></td>
+    </tr>
+</table>
+<p><span>Figure 8: Data from user_*/glidein_gfactory_instance/entry*/jobs* useful to usage classification</span>
+</p>
+<p><span>We checked the source code to ensure the meaning for each field. Table 3 shows the description for each field. Some available metrics </span><span
+>propagated</span><span>&nbsp;from HTCondor, and others are measured.</span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span>Table 3: Description for each field from </span><span>user_*/glidein_gfactory_instance/entry*/jobs*</span><span
+>.</span></p><a id="t.acc2e4ed58f51a2f74d3ad60882823212206c782"></a><a id="t.6"></a>
+<table class="table">
+    <tr>
+        <td><p><span>Measure</span></p></td>
+        <td><p><span>Description</span></p></td>
+        <td><p><span>Type</span></p></td>
+        <td><p><span>Unit</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>AutoShutdown</span></p></td>
+        <td><p><span>If the daemon will gracefully shut itself down</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>Boolean</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CondorDuration</span></p></td>
+        <td><p><span
+        >Time in seconds for the Condor execution</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>TotalJobsNr</span></p></td>
+        <td><p><span>Number of jobs in the pilot</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>TotalJobsTime</span></p></td>
+        <td><p><span>Total time of the jobs</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>goodZJobsNr</span></p></td>
+        <td><p><span>Number of jobs terminated exit 0</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>goodZJobsTime</span></p></td>
+        <td><p><span>Time of jobs exit with signal 0</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>goodNZJobsNr</span></p></td>
+        <td><p><span>&nbsp;Number of jobs that report any termination signal different than 0 (without &ldquo;dying&rdquo;).</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>goodNZJobsTime</span></p></td>
+        <td><p><span>Time used by jobs that report any termination signal different than 0. (without &ldquo;dying&rdquo;). &nbsp;.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>badSignalJobsNr</span></p></td>
+        <td><p><span>Number of jobs that end abnormally with signal different than 0.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>badSignalJobsTime</span></p></td>
+        <td><p><span>Time of jobs that end abnormally with signal different than 0</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>badOtherJobsNr</span></p></td>
+        <td><p><span>Number of jobs that end abnormally without a signal.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>badOtherJobsTime</span></p></td>
+        <td><p><span>Time of jobs that end abnormally without a signal.</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>CondorKilled</span></p></td>
+        <td><p><span>If the condor demon was killed</span></p>
+        </td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>Boolean</span></p></td>
+    </tr>
+</table>
+<p><span></span></p>
+<p><span>On the </span><span>completed_jobs_*.log</span><span>, we have a compilation of the </span><span>user_*/glidein_gfactory_instance/entry*/jobs*</span><span
+>&nbsp;creating more directed information grouping the job per pilot; completed jobs are augmented with data from the log. </span><span>Figure </span><span
+>9 shows the collection of this information.</span><span>&nbsp;Using the gfactory-2.opensciencegrid.org have as an example, we have 5322 files on the </span><span
+>/var/log/gwms-factory/server/completed_jobs*</span><span>&nbsp;on a specific date. The files are kept for 31 days by configuration or less due to a limitation on storage:</span>
+</p>
+<p><span></span></p>
+<ul>
+    <li><span>All the files have some statistical information; there is no empty data on the files.</span>
+    </li>
+    <li>
+        <span>When the &ldquo;condor_started&rdquo; is &ldquo;False,&rdquo; validation and the badput time are the same.</span>
+    </li>
+    <li><span>There are files with &ldquo;duration=-1&rdquo; when the pilots have no jobs. </span>
+    </li>
+</ul>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p><a id="t.632515b84011fcf9339c9fe94afd290aa4768997"></a><a id="t.7"></a>
+<table class="table">
+    <tr>
+        <td><p><span>&lt;job terminated=&quot;2022-02-09T05:55:38-08:00&quot; client=&quot;fermilab_okd_gpfe01_frontend&quot; &nbsp;username=&quot;fefermilab&quot; &nbsp;id=&quot;6767402.000&quot; &nbsp; duration=&quot;1359&quot; &nbsp;condor_started=&quot;True&quot; &nbsp; condor_duration=&quot;1266&quot;&gt;&lt;user &nbsp; &nbsp; jobsnr=&quot;0&quot; &nbsp; &nbsp; &nbsp;duration=&quot;0&quot; &nbsp; &nbsp; &nbsp;goodput=&quot;0&quot; &nbsp; &nbsp; &nbsp;terminated=&quot;0&quot;/&gt;&lt;wastemill &nbsp; validation=&quot;66&quot; idle=&quot;1000&quot; &nbsp; &nbsp;nosuccess=&quot;0&quot; badput=&quot;1000&quot;/&gt;&lt;/job&gt;</span>
+        </p></td>
+    </tr>
+</table>
+<p><span>Figure 9: Example of </span><span>completed_jobs_20220209.log.</span></p>
+<p><span></span></p>
+<p><span>To ensure the meaning for each field was necessary to check the GlideinWMS source code. Table 4 shows the description for each field. Some of those measures are related to a problem or error on the pilots, leading to a Measured/Estimated state.</span>
+</p>
+<p><span>Table 4: Description of fields on </span><span>the </span><span
+>completed_jobs_*</span></p><a id="t.c6c9eda46ebb8d2aa2d1ca51965f8702b4f61411"></a><a
+        id="t.8"></a>
+<table class="table">
+    <tr>
+        <td><p><span>Measure</span></p></td>
+        <td><p><span>Description</span></p></td>
+        <td><p><span>Type</span></p></td>
+        <td><p><span>Unit/type</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>job terminated</span><span>&nbsp;</span>
+        </p></td>
+        <td><p><span>Data for end of the job</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Date</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>client</span><span
+        >&nbsp;</span></p></td>
+        <td><p><span>Client from the frontend responsible for the pilot</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>username</span><span
+        >&nbsp;</span></p></td>
+        <td><p><span>Username on the Factory responsible for the pilot</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>String</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>id</span></p></td>
+        <td><p><span
+        >ID of the pilot (this is not the job ID)</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>int</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>duration</span></p></td>
+        <td><p><span>Duration of the pilot</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>condor_started</span></p></td>
+        <td><p><span>If the HTCondor </span><span
+        >daemon </span><span>has been started</span></p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>Boolean</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>condor_duration</span></p></td>
+        <td><p><span>Time in seconds for the Condor execution</span>
+        </p></td>
+        <td><p><span>Propagated</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>User - jobsnr</span></p></td>
+        <td><p><span>User jobs per on pilot</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>User - duration</span></p></td>
+        <td><p><span
+        >User jobs duration on pilot</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>User - goodput</span></p></td>
+        <td><p><span>User jobs with good put</span></p>
+        </td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>User - </span><span>terminated</span>
+        </p></td>
+        <td><p><span>User jobs terminated </span></p>
+        </td>
+        <td><p><span>Measured/</span><span>&nbsp;</span><span
+        >Estimated</span></p></td>
+        <td><p><span>Jobs</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>wastemill &nbsp; - validation</span></p>
+        </td>
+        <td><p><span>Time used with pilot validation</span>
+        </p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>wastemill &nbsp; - idle</span></p></td>
+        <td><p><span>Time wasted on idle</span></p></td>
+        <td><p><span>Measured</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>wastemill &nbsp; - nosuccess</span></p>
+        </td>
+        <td><p><span>Time with jobs with no success (non-zero or other reason)</span>
+        </p></td>
+        <td><p><span>Measured/</span><span>&nbsp;</span><span
+        >Estimated</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+    <tr>
+        <td><p><span>wastemill &nbsp; - badput</span></p></td>
+        <td><p><span>Time used with badput </span></p></td>
+        <td><p><span>Measured/</span><span>&nbsp;</span><span
+        >Estimated</span></p></td>
+        <td><p><span>Seconds</span></p></td>
+    </tr>
+</table>
+<p><span></span></p>
+<h2><span></span></h2>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h2><span>RRD Files and data retention</span></h2>
+<p><span>On GlideinWMS we have Round Robin Database (RRD) files created to be used by the web interface, which contains information about the cores, pilots, and several other information. The process to generate this file is based on the information provided by the logs from HTCondor and statistics from GlideinWMS. The information of each RRD file is kept for up to one year. On the GlideinWMS is created a dictionary with jobs, pilots, and frontends, and all this information is compiled and presented in a web interface. </span>
+</p>
+<p><span>Regarding the data retention, the GlideinWMS says all the raw data are kept only for seven days (from HTCondor, Frontend, and Factory), and the RRD files are the historical information and kept for up to one year. The documentation is aligned with the source code, and this represents the opportunity to review this process and create a new way to store and process all the monitoring information. </span>
+</p>
+<p><span></span></p>
+<h1><span></span></h1>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h1><span>Appendix &ndash; Available Tools</span></h1>
+<p><span></span></p>
+<p><span>As a result of the pipeline of monitoring data, it is possible to gather several statistics, as seen in Figure 10 as an output of the </span><span
+>analyze_entries</span><span>&nbsp;script. For example, in Figure 10, it is possible to see some information about the time used, validation, wasted, and other information related to the categories for OSG usage classification.</span>
+</p>
+<p><span></span></p><a id="t.253a0deaab7222ab56ebdb79dd216b19edc7085a"></a><a id="t.9"></a>
+<table class="table">
+    <tr>
+        <td><p><span>frontend_UCSDCMS_cmspilot:</span>
+        </p>
+            <p><span></span></p>
+            <p><span></span></p>
+            <p><span>Glideins: 5192 - 13.3% of total</span></p>
+            <p><span>Jobs: 2970 (Avg jobs/glidein: 0.57, avg job len: 2.93h) </span></p>
+            <p><span></span></p>
+            <p><span>time: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 43.0M ( 11.9K hours - 497.7 slots)</span>
+            </p>
+            <p><span>time used: &nbsp; &nbsp; &nbsp; &nbsp;31.3M ( &nbsp;8.7K hours - 362.8 slots - 72%)</span>
+            </p>
+            <p><span
+            >time validating: 719.0K ( 199.7 hours - &nbsp; 8.3 slots - &nbsp;1%)</span></p>
+            <p><span>time idle: &nbsp; &nbsp; &nbsp; &nbsp;10.4M ( &nbsp;2.9K hours - 120.9 slots - 24%)</span>
+            </p>
+            <p><span>time wasted: &nbsp; &nbsp; &nbsp;11.7M ( &nbsp;3.2K hours - 134.9 slots - 27%)</span>
+            </p>
+            <p><span>badput: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 19.6M ( &nbsp;5.5K hours - 227.3 slots - 45%)</span>
+            </p>
+            <p><span>Time used/time wasted: 2.7</span></p>
+            <p><span>Time efficiency: 0.73 &nbsp;Goodput fraction: 0.54R</span></p></td>
+    </tr>
+</table>
+<p><span>Figure 10: Information from the pilots.</span></p>
+<p><span></span></p>
+<p><span>Another source of information is the Round Robin Database (RRD) files generated on the GlideinWMS monitoring module to show the time series on the factory monitor, as an example is possible to see on </span><span
+><a
+        href="https://www.google.com/url?q=http://gfactory-2.opensciencegrid.org/factory/monitor/&amp;sa=D&amp;source=editors&amp;ust=1661290855341961&amp;usg=AOvVaw0csBcCZslrfmIIPgyJEJMx">http://gfactory-2.opensciencegrid.org/factory/monitor/</a></span><span
+>&nbsp;the documentation and the Factory, the information is retained for one year. There are several forms of data visualization: historical status, status for each entry or factory, monitor for the frontend, and other visualization types. Figure 11 shows all the possibilities of data visualization.</span>
+</p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 567.15px; height: 559.88px;"><img
+        alt="Graphical user interface
+
+Description automatically generated" src="images/image3.png"
+        style="width: 567.15px; height: 559.88px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 11: Data visualization for the Frontend and the Factory. </span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span>On the Historical status, it is possible to check information of the Glidein and the cores used: Running glidein cores, running glidein jobs, Max requested glideins, Cores at Collector, Cores claimed by user jobs, Cores not matched, User jobs running, User jobs idle, Requested idle glideins, Idle glidein jobs, and, Info age. Figure 12 shows one example of the information possible to achieve for each entry and frontend. &nbsp;</span>
+</p>
+<p><span></span></p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 288.00px;"><img
+        alt="Chart, line chart
+
+Description automatically generated" src="images/image7.png"
+        style="width: 624.00px; height: 291.86px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 12: Information about the jobs and pilots.</span></p>
+<p><span></span></p>
+<p><span>The status visualization shows more information about each entry; Figure 13 shows how the information is presented.</span>
+</p>
+<ul>
+    <li><span>Status: Running Idle, Waiting, Pending, Staging in, Staging out, Unknown Held, and, Running cores.</span>
+    </li>
+    <li><span>Requested: Max glideins and Idle.</span></li>
+    <li><span>Client Monitor: Claimed cores, User run here, User running, Unmatched cores, User idle, Registered cores, and, Info age.</span>
+    </li>
+</ul>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 130.47px;"><img
+        alt="Table
+
+Description automatically generated" src="images/image6.png"
+        style="width: 624.00px; height: 130.47px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 13: Status of Glidein and jobs.</span></p>
+<p><span></span></p>
+<p>
+    <span>Other valuable information is on current logs information; Figure 14 shows how the information is presented: </span><span
+>Running glideins, Glidein startup rate, Glidein termination rate, Glidein completion rate, and, Held rate.</span>
+</p>
+<p><span></span></p>
+<p><span
+        style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 293.26px;"><img
+        alt="Chart
+
+Description automatically generated" src="images/image8.png"
+        style="width: 624.00px; height: 301.74px; margin-left: -0.00px; margin-top: -0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
+        title=""></span></p>
+<p><span>Figure 14: shows the information about the current logs.</span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<p><span></span></p>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<h1><span></span></h1>
+<hr style="page-break-before:always;display:none;">
+<p><span></span></p>
+<h1><span>References</span><span>&nbsp;</span></h1>
+<p><span
+>[1] I Sfiligoi. Glideinwms&mdash;a generic pilot-based workload management system. </span><span
+>Journal of Physics: Conference Series</span><span>, 119(6):062044, 2008.&nbsp;</span>
+</p>
+<p><span>[2] D Bradley, I Sfiligoi, S Padhi, J Frey, and T Tannenbaum. Scalability and interoperability within glideinwms. </span><span
+>Journal of Physics: Conference Series</span><span>, 219(6):062036, 2010.&nbsp;</span>
+</p>
+<p><span>[3] https://htcondor.readthedocs.io/en/feature/</span></p>
+<p><span>[4] https://glideinwms.fnal.gov/doc.prd/index.html</span></p>
+<p><span>[5] I. Sfiligoi, D. C. Bradley, B. Holzman, P. Mhashilkar, S. Padhi, and F. Wurthwein, &quot;The Pilot Way to Grid Resources Using glideinWMS,&quot;&nbsp;</span><span
+>2009 WRI World Congress on Computer Science and Information Engineering</span><span
+>, 2009, pp. 428-432, DOI: 10.1109/CSIE.2009.950.</span></p>
+<p><span>[6] Zvada, M., Benjamin, D., &amp; Sfiligoi, I. (2010). CDF GlideinWMS usage in Grid computing of high energy physics.&nbsp;</span><span
+>Journal of Physics: Conference Series</span><span>,&nbsp;</span><span
+>219</span><span>(6), 062031. doi:10.1088/1742-6596/219/6/062031</span></p>
+<p><span>[7] https://github.com/glideinWMS/glideinwms</span></p>
+<p><span>[8] https://github.com/htcondor/htcondor</span></p>
+<p><span></span></p>
+<p><span></span></p></body>
+</html>
