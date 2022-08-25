@@ -58,7 +58,7 @@ The present monitoring state is on the section: “current state overview” fur
 Figure 1 shows each utilization categories related describe in this document.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image1.png"
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image1.png' | relative_url }}"
          alt="Figure 1: Pilot lifetime and the measure classification.">
     <figcaption>Figure 1: Pilot lifetime and the measure classification.</figcaption>
 </figure>
@@ -587,7 +587,7 @@ The log retention of the GlideinWMS logs is controlled on /etc/gwms-factory/glid
 The Open Science Grid has a well-made system to access available resources. Figure 2 shows how HTCondor, and Glidein Workflow Management System (GlideinWMS) provide access to the computational resources [[1]](#references).
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image2.png"
+    <img src=" {{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image2.png' | relative_url }}"
          alt="Figure 2: GlideinWMS for grid access with condor [2].">
     <figcaption>Figure 2: GlideinWMS for grid access with condor <a href="#references">[2]</a>.</figcaption>
 </figure>
@@ -595,7 +595,7 @@ The Open Science Grid has a well-made system to access available resources. Figu
 Figure 2 shows the main idea is that when the Virtual Organization Frontend senses the demand for more resources, Condor job execution daemons (aka glidein pilots or pilots) are submitted to the grid by the Glidein Factory (GF) [[5,6]](#references). Figure 3 shows a simplified pilot's lifetime and when each type of measure could or happens.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image1.png"
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image1.png' | relative_url }}"
          alt="Figure 3: Pilot lifetime and the measure classification.">
     <figcaption>Figure 3: Pilot lifetime and the measure classification.</figcaption>
 </figure>
@@ -635,7 +635,7 @@ This document only provides the partitioned definitions of how the resources are
 The HTCondor and GlideinWMS have tools to calculate how a pilot was performed based on several defined categories. All that information is provided by HTCondor and GlideinWMS tools and modules. Figure 4 shows how the information is processed; solid boxes are software/script, dashed boxes are data files, red boxes are information from HTCondor, and blue boxes are information from GlideinWMS.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image4.png"
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image4.png' | relative_url }}"
          alt="Figure 4: Information gathering for GlideinWMS and jobs.">
     <figcaption>Figure 4: Information gathering for GlideinWMS and jobs.</figcaption>
 </figure>
@@ -1349,14 +1349,14 @@ Time efficiency: 0.73  Goodput fraction: 0.54R
 Another source of information is the Round Robin Database (RRD) files generated on the GlideinWMS monitoring module to show the time series on the factory monitor, as an example is possible to see on [http://gfactory-2.opensciencegrid.org/factory/monitor/](http://gfactory-2.opensciencegrid.org/factory/monitor/) the documentation and the Factory, the information is retained for one year. There are several forms of data visualization: historical status, status for each entry or factory, monitor for the frontend, and other visualization types. Figure 11 shows all the possibilities of data visualization.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image3.png"/>
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image3.png' | relative_url }}"/>
 <figcaption>Figure 11: Data visualization for the Frontend and the Factory.</figcaption>
 </figure>
 
 On the Historical status, it is possible to check information of the Glidein and the cores used: Running glidein cores, running glidein jobs, Max requested glideins, Cores at Collector, Cores claimed by user jobs, Cores not matched, User jobs running, User jobs idle, Requested idle glideins, Idle glidein jobs, and, Info age. Figure 12 shows one example of the information possible to achieve for each entry and frontend.  
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image7.png" />
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image7.png' | relative_url }}" />
 <figcaption>Figure 12: Information about the jobs and pilots.</figcaption>
 </figure>
 
@@ -1367,14 +1367,14 @@ The status visualization shows more information about each entry; Figure 13 show
 - Client Monitor: Claimed cores, User run here, User running, Unmatched cores, User idle, Registered cores, and, Info age.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image6.png" />
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image6.png' | relative_url }}" />
 <figcaption>Figure 13: Status of Glidein and jobs.</figcaption>
 </figure>
 
 Other valuable information is on current logs information; Figure 14 shows how the information is presented: Running glideins, Glidein startup rate, Glidein termination rate, Glidein completion rate, and, Held rate.
 
 <figure>
-    <img src="/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image8.png" />
+    <img src="{{ '/images/GIL/accounting_of_provisioned_resource_on_OSG_pool/image8.png' | relative_url }}" />
 <figcaption>Figure 14: shows the information about the current logs.</figcaption>
 </figure>
 
