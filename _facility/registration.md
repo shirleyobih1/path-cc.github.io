@@ -29,7 +29,7 @@ To register with the PATh facility, submit an application using the following st
    {: .border .border-5 }
    <img src="{{ '/images/cilogon.png' | relative_url }}" class="img-fluid"/>
    
-   If you have issues signing in using your institutional credentials, contact us at [support@osg-htc.org](mailto:support@osg-htc.org).
+   If you have issues signing in using your institutional credentials, contact us at [support@path-cc.io](mailto:support@path-cc.io).
 
 
 1. Once you sign in, you will be redirected to the "PATh Facility User Enrollment for New Users" page. Click "Begin" and enter your name, and email address in the following page. In many cases, this information will be automatically populated. If desired, it is possible to manually edit any information automatically filled in. Once you have entered your information, click "SUBMIT".
@@ -109,4 +109,4 @@ The process below describes how to upload a public key to the registration websi
 
 ## Get Help
 
-For questions regarding logging in or creating an account, contact us at  [support@osg-htc.org](mailto:support@osg-htc.org).
+For questions regarding logging in or creating an account, contact us at  [support@path-cc.io](mailto:support@path-cc.io).
