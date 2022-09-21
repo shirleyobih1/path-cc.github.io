@@ -4,10 +4,10 @@ date: 2021-08-12 12:00:00 -0600
 categories: NSF Campus Cyberinfrastructure (CC*)
 layout: table-of-contents
 table_of_contents:
-  - name: How OSG can help your proposal
-    href: "#let-osg-help-with-your-cc-proposal"
-  - name: How OSG supports Awardees
-    href: "#osgs-active-support-of-cc-awardees"
+  - name: Assistance for CC* Proposals
+    href: "#assistance-for-cc-proposals"
+  - name: Services to CC* Awardees
+    href: "#services-to-cc-awardees"
   - name: Actively Supported Colleges
     href: "#osg-supported-colleges-and-universities-contributing-via-the-cc-program"
   - name: CC* Impact on Open Science
