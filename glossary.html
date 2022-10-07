@@ -40,10 +40,10 @@ title: Glossary and Concepts
   </div>
   <div class="col-12 col-md-8">
     <h5 id="access-point">Access Point (AP)</h5>
-    <p>Users can place their workloads (such as jobs, job sets, and DAGs) at an Access Point.  The AP accesses one or more resource pools to acquire resources.</p>
+    <p>Users can place their workloads (such as jobs, job sets, and DAGs) at an Access Point.  The Access Point accesses one or more resource pools to acquire resources.</p>
 
     <h5 id="execution-point-ep">Execution Point (EP)</h5>
-    <p>The Execution Point is given jobs by an AP and executes them.</p>
+    <p>The Execution Point is given jobs by an Access Point and executes them.</p>
 
     <h5 id="central-manager">Central Manager (CM)</h5>
     <p>Locates daemons and allocates shares of the overall resource pool.</p>
@@ -61,10 +61,10 @@ title: Glossary and Concepts
     <h5 id="open-science-compute-federation-oscf">Open Science Compute Federation (OSCF)</h5>
     <p>The OSCF provides a set of services for requesting and allocating computing resources and creating <a href="#distributed-high-throughput-computing-dhtc">dHTC</a> environments.</p>
     <ul>
-      <li>The <a href="#compute-entrypoint-ce">CE</a>, hosted on-premises or off-premises, provides a way for the factory to
+      <li>The <a href="#compute-entrypoint-ce">Compute Entrypoint</a>, hosted on-premises or off-premises, provides a way for the factory to
         send resource requests to a compute resource.</li>
       <li>The factory acts on behalf of an organization that requests resources.</li>
-      <li>If HTCSS is used by the organization, each resource starts an <a href="#execution-point-ep">EP</a> and joins a <a href="#central-manager">Central Manager</a>.</li>
+      <li>If HTCSS is used by the organization, each resource starts an <a href="#execution-point-ep">Execution Point</a> and joins a <a href="#central-manager">Central Manager</a>.</li>
     </ul>
   </div>
   <div class="col-12 col-lg-5 justify-content-center d-flex">
@@ -79,7 +79,7 @@ title: Glossary and Concepts
 
     <ul>
       <li>Any campus, group, or collaboration can attach an access point to the OSPool and receive a share of the resources.</li>
-      <li>OSG operates the OSG Connect AP, meant to provide a place for PI-driven groups to place their jobs.</li>
+      <li>OSG operates the OSG Connect Access Point, meant to provide a place for PI-driven groups to place their jobs.</li>
       <li>Users can Bring Your Own Resources (BYOR) to utilize their own resources (such as an XRAC allocation) via the OSPool.</li>
     </ul>
   </div>
@@ -93,7 +93,7 @@ title: Glossary and Concepts
     <h5 id="open-science-data-federation"><a href="https://opensciencegrid.org/docs/data/stashcache/overview/#data-federation-overview">Open Science Data Federation (OSDF)</a></h5>
     <p>The OSDF is a set of federated origin and cache services that coordinate a namespace for data access.</p>
     <ul>
-      <li>Jobs at an <a href="#execution-point-ep">EP</a> can access data via the OSDF, potentially authorized by an access token.</li>
+      <li>Jobs at an <a href="#execution-point-ep">Execution Point</a> can access data via the OSDF, potentially authorized by an access token.</li>
       <li>The OSDF system serves the data from the closest cache, retrieving it from an origin via the OSDF redirector if not on the local disk of the cache.</li>
       <li><a href="https://connect.osg-htc.org/">OSG Connect</a> provides an origin service which users can place data in or users can attach their own storage to serve as an origin.</li>
     </ul>
