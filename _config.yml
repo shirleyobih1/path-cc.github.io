@@ -51,6 +51,9 @@ collections:
   articles:
     output: true
     permalink: /news/:path/
+  redirects:
+    output: true
+    permalink: /:path
 
 defaults:
   - scope:
@@ -80,6 +83,10 @@ defaults:
       type: docs
     values:
       layout: table-of-contents
+  - scope:
+      type: redirects
+    values:
+      layout: redirect
 
 
 
