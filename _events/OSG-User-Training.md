@@ -10,8 +10,8 @@ start_date: 2022-10-18
 end_date: 2022-10-19
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
-image: "/assets/images/events/christina_image.jpg"
-header_image: "/assets/images/events/christina_image.jpg"
+image: "/images/events/christina_image.jpg"
+header_image: "/images/events/christina_image.jpg"
 ---
 
 {% capture main %}
