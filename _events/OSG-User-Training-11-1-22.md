@@ -4,10 +4,10 @@ title: "OSG User Training"
 published: true
 
 excerpt: |
-    Sign up for our upcoming Special Topics user training session on Bioinformatics Analyses on the OSPool: A BWA Example held on Tuesday, October 18th!
+    Sign up for our upcoming New User training session on Tuesday, November 1st!
     
-start_date: 2022-10-18
-end_date: 2022-10-19
+start_date: 2022-11-01
+end_date: 2022-11-01
 location: "Virtual"
 link: "https://portal.osg-htc.org/documentation/support_and_training/training/osgusertraining/"
 image: "/images/events/christina_image.jpg"
@@ -18,17 +18,15 @@ header_image: "/images/events/christina_image.jpg"
 
 <p style="font-size: larger; font-weight: bold;">Sign Up for Upcoming Trainings!</p>
 
-Sign up for our upcoming Special Topics user training session on Bioinformatics Analyses on the OSPool: A BWA Example held on Tuesday, October 18th!
+Sign up for our upcoming New User training session on Tuesday, November 1st!
 
-Many bioinformatic workflows are a great fit for the Open Science Pool (OSPool). In our upcoming "Bioinformatics Analyses on the OSPool: A BWA Example" training, we will learn how to use a common bioinformatic tool, Burrows-Wheeler Aligner (BWA), on the OSPool to analyze RNA sequencing data. This workshop will cover how to convert an existing bioinformatics workflow to run on the OSPool, how to keep an organized workflow using HTCondor submit file options, and how to install software on an OSPool Access Point. This workshop will feature hands-on components and time for discussion about other common bioinformatic workflows or tools.
+Our New User training's primary objective is to understand job submission principles to the Open Science Pool. This workshop will cover how to visualize distributed computing on the Open Science Pool, distinguish High-Performance Computing (HPC) vs. High Throughput Computing (HTC), identify ideal jobs to run on the Open Science Pool, and identify the basic elements of an HTCondor submit file. This workshop will feature an exercise using text analysis and the next steps you can take to start your workflow.
 
 **[Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)**
 
 All User Training sessions are offered from 2:30-4pm ET (and usually on Tuesdays). New User Training is offered monthly, generally on the first Tuesday of the month, and training on various additional topics happens on the third Tuesday of the month. It's best to already have an active account on an OSG Connect login node (or other access point that submits to the Open Science Pool) to follow along with hands-on examples, but anyone can listen in by registering.
 
 Other upcoming trainings:
-- Tuesday, November 1: New User Training
-**[Register here](https://docs.google.com/forms/d/e/1FAIpQLSdj3XT7I0SM4k9jBvST7YX5wsCH_er1HLA7VqRj9ICoEvf2GA/viewform)**
 - Tuesday, November 15: Using R on the OSPool, **more information and registration coming soon.**
 
 {% endcapture %}
@@ -41,7 +39,7 @@ All OSG users interested in learning about or would like a refresher on bioinfor
 
 # When
 
-Tuesday, October 18th
+Tuesday, November 1st
 
 # Where
 
