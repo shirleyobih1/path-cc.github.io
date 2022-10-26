@@ -61,7 +61,7 @@ with an HTC approach. See "What workloads run well on PATh resources?", below, f
 
 ##### Are PATh dedicated resources part of the Open Science Pool?
 
-PATh dedicated resources are distinct from the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), is which is composed of in-kind and mostly opportunitistic resources that can interrupt jobs at any time.
+PATh dedicated resources are distinct from the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), is which is composed of in-kind and mostly opportunistic resources that can interrupt jobs at any time.
 
 The _dedicated_ PATh-managed resources are funded by NSF and accessible via the PATh 
 credit account system, such that PATh-managed resources support longer runtimes and larger jobs
