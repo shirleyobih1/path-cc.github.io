@@ -57,12 +57,12 @@ The PATh team is here to help!  As part of the consulting services offered to an
 
 ## Facility Description
 
-The PATh Facility construction is complete! The first resources came online in spring 2022 and all site construction was completed in the fall 2022; it consist of about 30,000 cores and 3 dozen A100 GPUs.  The facility includes the following sites and resources:
+The PATh Facility construction is complete! The first resources came online in spring 2022 and all site construction was completed in fall 2022; it consist of about 30,000 cores and 3 dozen A100 GPUs.  The facility includes the following sites and resources:
 
 - *Lincoln, Nebraska*: University of Nebraska Lincoln’s [Holland Computing Center](https://hcc.unl.edu/) hosts 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine has 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
 - *Syracuse, New York*: Syracuse University’s [Research Computing](https://researchcomputing.syr.edu/) group hosts 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
 - *Miami, Florida*: Florida International University’s [AMPATH](https://ampath.net/) network hosts PATh equipment in their Miami interchange point.  This consists of 4 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine has 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM
-- *San Diego, California*: An additional 2 racks were be added to the [Expanse resource](https://www.sdsc.edu/support/user_guides/expanse.html) at [San Diego Supercomputing Center](https://www.sdsc.edu/) (SDSC), usable via the PATh credit accounts.  Each rack holds 16 A100 devices not part of the original Expanse design.  
+- *San Diego, California*: An additional 2 racks were added to the [Expanse resource](https://www.sdsc.edu/support/user_guides/expanse.html) at [San Diego Supercomputing Center](https://www.sdsc.edu/) (SDSC), usable via the PATh credit accounts.  Each rack holds 16 A100 devices not part of the original Expanse design.  
 - *Madison, Wisconsin*: University of Wisconsin-Madison’s [Center for High Throughput Computing](https://chtc.cs.wisc.edu/) served as a staging ground for the resources destined for Lincoln, Syracuse, and Miami.  Four machines are kept at Madison, primarily for debugging and testing purposes.
 - *Austin, Texas*: PATh has received a large allocation in the recently-upgraded [Stampede2](https://www.tacc.utexas.edu/-/nsf-extends-lifespan-of-tacc-s-stampede2-supercomputer-through-june-2023) resource at the [Texas Advanced Computing Center](https://tacc.utexas.edu) (TACC); this allocation is reachable via PATh computing credits.  Stampede2’s new resources include 224 dual-socket Intel Xeon Platinum 8380 CPUs (40 cores each).
 
