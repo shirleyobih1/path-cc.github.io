@@ -52,7 +52,7 @@ Dedicated PATh resources that power the capacity credit accounts consist of:
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
-PATh resources are distributed across four sites. Credits
+PATh resources are distributed across six sites. Credits
 for dedicated resources can be used via a PATh Access Point.
 
 Given that the PATh system is designed for HTC, there is no inter-node networking, 
