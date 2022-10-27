@@ -52,7 +52,7 @@ Dedicated PATh resources that power the capacity credit accounts consist of:
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
-PATh resources are distributed across four sites. Credits
+PATh resources are distributed across six sites. Credits
 for dedicated resources can be used via a PATh Access Point.
 
 Given that the PATh system is designed for HTC, there is no inter-node networking, 
@@ -138,15 +138,14 @@ Please see our [2022 Charge Listing](/credit-account-charges) for more details.
 
 ##### Where is the dedicated hardware located?
 
-There are currently five locations that have dedicated hardware:
+There are six locations that have dedicated hardware:
 
 * University of Nebraska-Lincoln's [Holland Computing Center](https://hcc.unl.edu)
 * University of Wisconsin - Madison's [Center for High Throughput Computing](https://chtc.cs.wisc.edu)
 * Syracuse University's [Research Computing](https://researchcomputing.syr.edu/)
 * University of California San Diego's [San Diego Supercomputing Center](https://www.sdsc.edu/)
 * University of Texas at Austin's [Texas Advanced Computing Center](https://www.tacc.utexas.edu/)
-
-Additionally, there is one location, [Florida International Univerity](https://www.fiu.edu) embedded in the nation's R&E network infrastructure backbone.
+* Florida International University’s [AMPATH](https://ampath.net/) network hosts PATh equipment in their Miami interchange point, which is embedded in the nation's R&E network infrastructure backbone.
 
 Compute and GPU credits are good at all sites.  By default, jobs may go to any location but users can add specific
 restrictions to target a single location.  For example, jobs may be restricted to San Diego because they need to
