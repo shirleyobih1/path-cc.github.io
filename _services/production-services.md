@@ -3,8 +3,7 @@ title: "Production Services"
 featured: true
 excerpt: |
   The Production Services team, as part of the Fabric of Capacity Services
-  (FoCaS), maintains services essential to delivering science on the Open Science
-  Grid.  The _Compute Management_ services allow for sharing of computing resources, provisioning pools of computing resources, job execution management. _Data
+  (FoCaS), maintains services essential to delivering science using OSG resources.  The _Compute Management_ services allow for sharing of computing resources, provisioning pools of computing resources, job execution management. _Data
   Management_ services provide for serving and pre-placing data in support of
   workflows. Additionally, services such as identity management, monitoring, and
   accounting enhance and secure the fabric.
