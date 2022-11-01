@@ -39,9 +39,18 @@ collections:
   gil:
     output: true
     permalink: /GIL/:path/
+  docs:
+    output: true
+    permalink: /facility/docs/:path/
+  facility:
+    output: true
+    permalink: /facility/:title.html
   articles:
     output: true
     permalink: /news/:path/
+  redirects:
+    output: true
+    permalink: /:path
 
 defaults:
   - scope:
@@ -55,6 +64,11 @@ defaults:
       layout: news
       bodyClass: page-news-single
   - scope:
+      type: articles
+    values:
+      layout: news
+      bodyClass: page-news-single
+  - scope:
       type: events
     values:
       layout: events
@@ -63,9 +77,14 @@ defaults:
     values:
       image: true
   - scope:
-      type: articles
+      type: docs
     values:
-      layout: news
+      layout: table-of-contents
+  - scope:
+      type: redirects
+    values:
+      layout: redirect
+
 
 
 sass:

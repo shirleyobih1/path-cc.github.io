@@ -43,6 +43,6 @@ GIL has proposed and led the discussion of the following ideas:
 
 {% assign gil = site.gil | sort: "date" | reverse %}
 {% for article in gil %}
-> [{{article.date | date: "%B %e, %Y"}} - {{article.title}}]({{article.url}}) 
+> [{{article.date | date: "%B %e, %Y"}} - {{article.title}}]({{article.url | relative_url }}) 
 {% endfor %}
 

@@ -1,6 +1,10 @@
 ---
 layout: sub-page
-bodyClass: page-team-list
+title: Meet The Team
+permalink: /team/
+intro_image:
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
 ---
 {% include get/team.liquid %}
 <div class="row pb-5">
@@ -37,7 +41,7 @@ bodyClass: page-team-list
     {% for team in teams %}
     {% if team.promoted == nil %}
     <div class="col-12 col-md-6 col-lg-4 mb-3 px-1">
-        <div class="team team-summary">
+        <div class="team team-summary my-2">
             {% if team.image %}
             <div class="team-image">
                 <img alt="{{ team.name }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />

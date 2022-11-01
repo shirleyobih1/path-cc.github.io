@@ -8,14 +8,11 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-{% include main-menu-mobile.html %}
-
-<div class="py-1">
-    <div class="container-lg my-1">
-        <a href="/facility" class="text-decoration-none border border-1 bg-light rounded p-1 me-2">New Service</a><span>PATh compute credits now available to researchers! Learn how PATh can power your research on the <a href="/facility">facility</a> page.</span>
+<div class="py-1 mb-1 bg-primary">
+    <div class="container-lg py-1">
+        <a href="/facility#accessing-the-path-facility" class="text-decoration-none border border-1 bg-light rounded pb-1 p-2 me-2">Apply for Compute Credits Now</a><span class="text-light">Compute credits now available to researchers, apply now to access the <a class="text-light text-decoration-underline" href="/facility#accessing-the-path-facility">PATh facility</a>!</span>
     </div>
 </div>
-<hr class="m-0">
 {% include layout/header.html logo=layout.logo header_class=page.header_class %}
 <main>
     <div id="hero" class="">
@@ -25,9 +22,16 @@ intro_image_hide_on_mobile: true
                     <h2 class="">PATh advances the state of <br>distributed high-throughput computing!</h2>
                     <hr class="m-0 mb-4">
                     <p class="fs-5">
-                        PATh provides <b>researchers</b><br> with technologies, services and resources to run their dHTC workloads.
+                        PATh provides <b>researchers</b><br> with technologies, services and resources to run their dHTC workloads.<br>
                     </p>
-                    <a href="#path-for-researchers" class="btn btn-outline-primary mb-3">PATh for Researchers</a>
+                    <div class="row gx-2">
+                        <div class="col-auto">
+                            <a href="/facility#accessing-the-path-facility" class="btn btn-outline-primary mb-3">Apply for Compute Credits</a>
+                        </div>
+                        <div class="col-auto">
+                            <a class="btn  btn-outline-primary text-decoration-none" href="https://connect.osg-htc.org/">Sign up for OSG-Connect</a>
+                        </div>
+                    </div>
                     <p class="fs-5">
                         PATh provides <b>organizations</b><br> with technologies, and services to build and share dHTC capacity.
                     </p>
@@ -47,18 +51,20 @@ intro_image_hide_on_mobile: true
                         For Researchers
                     </h3>
                     <p class="fs-5">
-                        <b>New!</b> Complementing our technologies and services, PATh has dedicated compute resources
-                        in the <a href="/facility/#using-path-facilities">PATh facility</a> made available by the NSF through request.
+                        <b>New!</b> The <a href="/facility/#using-path-facilities">PATh facility</a> provides
+                        compute capacity made available for researchers by the NSF through request. The dedicated capacity
+                        allows researchers to run HTC workloads on purpose built hardware from the convenience of a
+                        dedicated Access Point.
                         <div>
-                            <a class="btn btn-outline-dark text-decoration-none" href="https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp">Apply for compute credits</a>
+                            <a class="btn  btn-outline-primary text-decoration-none" href="https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp">Apply for Compute Credits</a>
                         </div>
                     </p>
                     <p class="fs-5">
                         US-affiliated researchers can use an OSG-Connect Access Point to harness the capacity of the
-                        <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool</a> to run their
-                        HTC workloads.
+                        <a href="https://opensciencegrid.org/about/open_science_pool/">Open Science Pool</a>. Sign up now
+                        and join the hundreds of <a href="https://osg-htc.org/projects">projects</a> using the OSPool!
                         <div>
-                            <a class="btn btn-outline-dark text-decoration-none" href="https://connect.osg-htc.org/">Learn more about OSGConnect</a>
+                            <a class="btn  btn-outline-primary text-decoration-none" href="https://connect.osg-htc.org/">Sign up for OSG-Connect</a>
                         </div>
                     </p>
                 </div>
@@ -79,7 +85,7 @@ intro_image_hide_on_mobile: true
                         <a href="https://opensciencegrid.org/campus-cyberinfrastructure.html">US national cyberinfrastructure
                             </a> via OSG. Contact our support staff to collaborate on the right options for your desired outcomes.
                         <div class="d-flex">
-                            <a class="ms-lg-auto btn btn-outline-dark text-decoration-none" href="mailto:support@opensciencegrid.org">Contact Support Staff</a>
+                            <a class="ms-lg-auto btn  btn-outline-primary text-decoration-none" href="mailto:support@opensciencegrid.org">Contact Support Staff</a>
                         </div>
                     </p>
                 </div>
@@ -181,7 +187,7 @@ intro_image_hide_on_mobile: true
     </div>
 
 </main>
-{% include footer.html %}
-{% include sub-footer.html %}
+{% include layout/footer.html %}
+{% include layout/sub-footer.html %}
 <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
 {% include google-analytics.html %}

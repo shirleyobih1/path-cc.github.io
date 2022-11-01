@@ -6,29 +6,32 @@ table_of_contents:
 
 <div class="container-lg pb-5">
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xxl-7">
+        <div class="col-12 col-sm-10 col-md-9 col-xxl-8">
             <div class="pt-3">
-                {% include subpage-header.html %}
+                {% include layout/subpage-header.html %}
             </div>
         </div>
         <div class="col-lg-3">
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xxl-7">
+        <div class="col-12 col-sm-10 col-md-9  col-xxl-8">
             <div>
                 {{ content }}
             </div>
         </div>
         <div class="d-none d-lg-block col-lg-3">
+            {% if page.table_of_contents %}
             <div class="sticky-top top-5">
                 <div class="me-auto">
                     <div class="">
                         <h3>Contents</h3>
                         {% include list_of_lists_to_ul.liquid input=page.table_of_contents %}
+                        {{ page.below_table_of_contents }}
                     </div>
                 </div>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

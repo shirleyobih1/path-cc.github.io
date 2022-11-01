@@ -3,13 +3,12 @@
 ---
 
 
-{% include main-menu-mobile.html %}
 {% include layout/header.html logo=layout.logo header_class=page.header_class %}
 <main>
   {{content}}
 </main>
-{% include footer.html %}
-{% include sub-footer.html %}
+{% include layout/footer.html %}
+{% include layout/sub-footer.html %}
 <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
 {% include google-analytics.html %}
 

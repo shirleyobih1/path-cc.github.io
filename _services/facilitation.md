@@ -24,7 +24,7 @@ campuses and organizations that support them. These principles include:
 PATh Research Computing Facilitators apply these principles to the practice of
 dHTC Facilitation for researchers, research groups, and multi-institutional
 collaborations leveraging the dHTC environment of the OSG
-via access services like [OSG Connect](https://www.osgconnect.net/) (available
+via access services like [OSG Connect](https://connect.osg-htc.org/) (available
 to researchers affiliated with any US-based academic, government, or non-profit
 organization). For example, all new users of the OSG Connect service first
 meet with a Facilitator to collaborate on an efficient on-ramp plan and

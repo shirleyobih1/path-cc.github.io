@@ -1,0 +1,2 @@
+{% include get/universal_articles.liquid %}
+{% assign universal_user_stories = universal_articles | where_exp: "article", "article.type != 'news'" %}

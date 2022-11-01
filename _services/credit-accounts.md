@@ -6,8 +6,8 @@ excerpt: |
     The Partnership to Advance Throughput Computing (PATh) project is funded by the
     NSF to advance High Throughput Computing (HTC) and its impact on research and
     education. To achieve this goal, PATh operates a fabric of capacity services
-    that ranges from Research Computing Facilitation, to Access Points capable of
-    managing distributed HTC workloads. Starting January 2022, PATh will add to its
+    that ranges from Research Computing Facilitation to Access Points capable of
+    managing distributed HTC workloads. PATh has added to its
     fabric of services support for capacity credit accounts.
 weight: 3
 published: true
@@ -18,9 +18,9 @@ project is funded by the NSF to advance
 [High Throughput Computing (HTC)](https://research.cs.wisc.edu/htcondor/htc.html) 
 and its impact on research and
 education. To achieve this goal, PATh operates a fabric of capacity services
-that range from Research Computing Facilitation, to Access Points capable of
-managing distributed HTC workloads. Starting January 2022, PATh will add 
-support for capacity credit accounts. These accounts will
+that range from Research Computing Facilitation to Access Points capable of
+managing distributed HTC workloads. PATh has added to its
+fabric of services support for capacity credit accounts. These accounts
 provide dedicated HTC computing resources and storage capacity for scholars with 
 HTC workloads. NSF will deposit credit into these accounts
 when funding a proposal that includes a request for credits.
@@ -44,15 +44,15 @@ collection of [science stories](/news/htc-in-support-of-science/).
 
 ##### What hardware resources are available through PATh credit accounts?
 
-Dedicated PATh resources that power the capacity credit accounts are expected to consist of:
+Dedicated PATh resources that power the capacity credit accounts consist of:
 - Compute servers with up to 128 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM.
-- Compute servers with up to 64 AMD ‘Milan’ cores, 1.6TB of NVMe, and 512 GB RAM
+- Compute servers with up to 64 AMD ‘Milan’ cores, 1.6TB of NVMe, and 256 GB RAM
 - Compute servers with 68 Intel Knights Landing cores and 96GB of RAM.
 - Compute servers with 48 Intel Xeon Skylake cores and 192GB of RAM.
 - GPU servers with up to 4 A100s, 1.6TB of NVMe, and 512 GB RAM.
 - Nearline storage of up to 20TB of NVMe per job.
 
-PATh resources will be distributed across four sites. Credits
+PATh resources are distributed across six sites. Credits
 for dedicated resources can be used via a PATh Access Point.
 
 Given that the PATh system is designed for HTC, there is no inter-node networking, 
@@ -61,7 +61,7 @@ with an HTC approach. See "What workloads run well on PATh resources?", below, f
 
 ##### Are PATh dedicated resources part of the Open Science Pool?
 
-PATh dedicated resources are distinct from the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), is which is composed of in-kind and mostly opportunitistic resources that can interrupt jobs at any time.
+PATh dedicated resources are distinct from the [Open Science Pool (OSPool)](https://opensciencegrid.org/about/open_science_pool/), which is composed of in-kind and mostly opportunistic resources that can interrupt jobs at any time.
 
 The _dedicated_ PATh-managed resources are funded by NSF and accessible via the PATh 
 credit account system, such that PATh-managed resources support longer runtimes and larger jobs
@@ -138,15 +138,14 @@ Please see our [2022 Charge Listing](/credit-account-charges) for more details.
 
 ##### Where is the dedicated hardware located?
 
-There are currently five locations that are expected to have dedicated hardware during 2022:
+There are six locations that have dedicated hardware:
 
 * University of Nebraska-Lincoln's [Holland Computing Center](https://hcc.unl.edu)
 * University of Wisconsin - Madison's [Center for High Throughput Computing](https://chtc.cs.wisc.edu)
 * Syracuse University's [Research Computing](https://researchcomputing.syr.edu/)
 * University of California San Diego's [San Diego Supercomputing Center](https://www.sdsc.edu/)
 * University of Texas at Austin's [Texas Advanced Computing Center](https://www.tacc.utexas.edu/)
-
-Additionally, there will be one location, to be confirmed, embedded in the nation's R&E network infrastructure backbone.
+* Florida International University’s [AMPATH](https://ampath.net/) network hosts PATh equipment in their Miami interchange point, which is embedded in the nation's R&E network infrastructure backbone.
 
 Compute and GPU credits are good at all sites.  By default, jobs may go to any location but users can add specific
 restrictions to target a single location.  For example, jobs may be restricted to San Diego because they need to

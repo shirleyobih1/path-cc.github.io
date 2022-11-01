@@ -1,10 +1,10 @@
 ---
-title: "Nicholas Cooley awarded David Swanson Memorial Award " 
-date: 2021-03-19T12:00:00+00:00
-excerpt: Nicholas Cooley was awarded the 2021 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country. 
-description: Nicholas Cooley was awarded the 2021 David Swanson Memorial Award at the March 0SG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country.
+title: "Connor Natzke awarded David Swanson Memorial Award" 
+date: 2022-04-11T12:00:00+00:00
+excerpt: Connor Natzke was awarded the 2022 David Swanson Memorial Award at the March OSG All-Hands Meeting. The memorial was established to honor our late colleage David Swanson who contributed to campus research across the country. 
+image_src: /images/DavidSwanson.png
+image_alt: David Swanson
 publish: true
-
 --- 
 
 <figure class="figure float-end" style="margin-left: 1em">
@@ -19,6 +19,8 @@ The OSG David Swanson Award was established to honor our late colleague, David S
 David passed away in an accident in fall 2019. In his memory the award is bestowed annually upon one or more former students of the OSG User School who have subsequently achieved significant dHTC-enabled research outcomes, and covers the recipient's costs of attending the OSG All-Hands Meeting to present their work.  
 ## Award Recipients
 
+*   **Connor Natzke**, Colorado School of Mines &mdash;
+    awarded and [presented](https://youtu.be/YTyFIdOsJvY) in 2022
 *   **Nicholas Cooley**, University of Pittsburgh &mdash;
     awarded and [presented](https://indico.fnal.gov/event/47040/contributions/208348/) in 2021
 *   **Zhonggang (John) Li**, University of Wisconsin–Madison &mdash;
@@ -26,10 +28,9 @@ David passed away in an accident in fall 2019. In his memory the award is bestow
 *   **Anirvan Shukla**, University of Hawaiʻi at Mānoa &mdash;
     awarded and [presented](https://indico.fnal.gov/event/22127/contributions/194478/) in 2020
 
+Connor Natzke, a PhD student at the Colorado School of Mines, was this year's recipient of the OSG David Swanson Award. Natzke is currently located at TRIUMF, a particle physics laboratory in Vancouver, British Columbia, where he uses OSG services to investigate the strong nuclear force. Natzke attended OSG User School in 2019 and the OSG All-Hands Meeting in 2021, and at both of these events he learned valuable ways to improve his workflow. At the All-Hands Meeting 2022, Natzke [spoke](https://youtu.be/YTyFIdOsJvY) about his journey with the OSG Consortium and the impact OSG services have had on his research to date –– including a forty-fold increase in the simulation speed of his project.
 
-In March 2021, two David Swanson Award winners presented: John Li, a 2020 award recipient, who was unavailable to speak when the All Hands Meeting was rescheduled from March to September 2020 due to the pandemic, and this year's 2021 recipient, Nicholas Cooley.
-
-John Li, of the University of Wisconsin-Madison. attended the OSG User School in 2019 and quickly accelerated in his use of high throughput computing, whether running via a campus access point or on the Open Science Pool via an OSG Connect access point. John spoke about [his work](https://indico.fnal.gov/event/47040/contributions/208347/) using data mining in genomics by high-throughput computing and noted that high-throughput computing saves significant computation time and projects that would have taken 2-3 years were completed in 1-2 weeks.
+John Li, of the University of Wisconsin-Madison, attended the OSG User School in 2019 and quickly accelerated in his use of high throughput computing, whether running via a campus access point or on the Open Science Pool via an OSG Connect access point. John spoke about [his work](https://indico.fnal.gov/event/47040/contributions/208347/) using data mining in genomics by high-throughput computing and noted that high-throughput computing saves significant computation time and projects that would have taken 2-3 years were completed in 1-2 weeks.
 
 Nick Cooley, 2021 recipient of the David Swanson Award, attended the OSG User School in 2018. Since that time, Nick and his group at the University of Pittsburgh have undertaken a number of projects benefiting from dHTC and OSG capabilities, with more than 2 million hours of compute usage on the Open Science Pool in the last year. Nick discussed [his work](https://indico.fnal.gov/event/47040/contributions/208348/) in computational biology on OSG. 
 

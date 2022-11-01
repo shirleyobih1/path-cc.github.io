@@ -1,0 +1,7 @@
+{% assign news = site.news %}
+
+{% assign spotlights = site.articles | where_exp: "spotlight", "spotlight.publish_on contains site.key" %}
+{% for story in spotlights %}
+        {% assign news = news | push: story %}
+{% endfor %}
+{% assign news = news | sort: "date" | reverse %}

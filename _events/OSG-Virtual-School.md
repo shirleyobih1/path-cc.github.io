@@ -64,7 +64,7 @@ The event is free and materials will be posted publicly.
 A selective application process was required for full participation,
 which includes access to HTC experts and to HTC systems via the
 [Center for High Throughput Computing](https://chtc.cs.wisc.edu/approach.html) and
-[OSG Connect](https://www.osgconnect.net/) service
+[OSG Connect](https://connect.osg-htc.org/) service
 (otherwise available to researchers working on a U.S.-based academic, government, or non-profit research project).
 
 While no travel is involved and the schedule allows for some flexibility,
