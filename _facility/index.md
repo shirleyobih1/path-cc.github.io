@@ -21,11 +21,11 @@ below_table_of_contents: |
 ---
 
 
-The PATh Facility is a purpose-built, national-scale distributed High Throughput Computing (dHTC) resource meant to deliver computational capacity to NSF researchers.
+The PATh Facility is a purpose-built, national-scale distributed High Throughput Computing (dHTC) resource delivering computational capacity to NSF researchers.
 
-The PATh Facility is part of a pilot project funded by the NSF Office of Advanced Cyberinfrastructure.  NSF-funded researchers **[can apply](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) to request credits for the PATh facility.**  The facility aims to demonstrate the value of dedicated, distributed resources to the NSF Science and Engineering community.
+The PATh Facility is part of a pilot project funded by the NSF Office of Advanced Cyberinfrastructure.  NSF-funded researchers **[can apply](https://www.nsf.gov/pubs/2022/nsf22051/nsf22051.jsp) to request credits for the PATh facility.**  The facility's purpose is to demonstrate the value of dedicated, distributed resources to the NSF Science and Engineering community.
 
-The facility aims to empower researchers through the use of high throughput computing techniques and, as it is completed during 2022, will be spread across six physical sites.  Unique aspects of the facility include:
+The facility empowers researchers through the use of high throughput computing techniques and is spread across six physical sites.  Unique aspects of the facility include:
 
    * Emphasis on workloads organized into ensembles of many tasks.  The PATh facility makes its greatest impact when users have a large number (tens of thousands through millions) of individual batch jobs.
    * Due to its national, distributed nature, _multi-node MPI job capabilities_ are not offered (single-node MPI works well).  The PATh facility provides a "scale out" resource, not "scale up".
@@ -57,13 +57,13 @@ The PATh team is here to help!  As part of the consulting services offered to an
 
 ## Facility Description
 
-The PATh Facility is under construction; the first resources came online in spring 2022 and it will continue to expand through the year; it will eventually consist of about 30,000 cores and 3 dozen A100 GPUs.  The facility includes the following sites and resources:
+The PATh Facility construction is complete! The first resources came online in spring 2022 and all site construction was completed in fall 2022; it consist of about 30,000 cores and 3 dozen A100 GPUs.  The facility includes the following sites and resources:
 
-- *Lincoln, Nebraska*: University of Nebraska Lincoln’s [Holland Computing Center](https://hcc.unl.edu/) will host 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
-- *Syracuse, New York*: Syracuse University’s [Research Computing](https://researchcomputing.syr.edu/) group will host 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
-- *Miami, Florida*: Florida International University’s [AMPATH](https://ampath.net/) network will host PATh equipment in their Miami interchange point.  This will consist of 4 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM
-- *San Diego, California*: An additional 2 racks will be added to the [Expanse resource](https://www.sdsc.edu/support/user_guides/expanse.html) at [San Diego Supercomputing Center](https://www.sdsc.edu/) (SDSC), usable via the PATh credit accounts.  Each rack will hold 16 A100 devices not part of the original Expanse design.  Availability is expected in early summer 2022.
-- *Madison, Wisconsin*: University of Wisconsin-Madison’s [Center for High Throughput Computing](https://chtc.cs.wisc.edu/) will serve as a staging ground for the resources destined for Lincoln, Syracuse, and Miami prior to shipment to their final destinations.  Four machines will be kept at Madison, primarily for debugging and testing purposes.
-- *Austin, Texas*: PATh has received a large allocation in the recently-upgraded [Stampede2](https://www.tacc.utexas.edu/-/nsf-extends-lifespan-of-tacc-s-stampede2-supercomputer-through-june-2023) resource at the [Texas Advanced Computing Center](https://tacc.utexas.edu) (TACC); this allocation will be reachable via PATh computing credits.  Stampede2’s new resources include 224 dual-socket Intel Xeon Platinum 8380 CPUs (40 cores each).
+- *Lincoln, Nebraska*: University of Nebraska Lincoln’s [Holland Computing Center](https://hcc.unl.edu/) hosts 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine has 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
+- *Syracuse, New York*: Syracuse University’s [Research Computing](https://researchcomputing.syr.edu/) group hosts 32 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine will have 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM.
+- *Miami, Florida*: Florida International University’s [AMPATH](https://ampath.net/) network hosts PATh equipment in their Miami interchange point.  This consists of 4 machines with 64 AMD EPYC cores (AMD 7513), 1.6TB of NVMe, and 256 GB RAM each.  One machine has 4 A100 GPUs, 1.6TB of NVMe, and 512 GB RAM
+- *San Diego, California*: An additional 2 racks were added to the [Expanse resource](https://www.sdsc.edu/support/user_guides/expanse.html) at [San Diego Supercomputing Center](https://www.sdsc.edu/) (SDSC), usable via the PATh credit accounts.  Each rack holds 16 A100 devices not part of the original Expanse design.  
+- *Madison, Wisconsin*: University of Wisconsin-Madison’s [Center for High Throughput Computing](https://chtc.cs.wisc.edu/) served as a staging ground for the resources destined for Lincoln, Syracuse, and Miami.  Four machines are kept at Madison, primarily for debugging and testing purposes.
+- *Austin, Texas*: PATh has received a large allocation in the recently-upgraded [Stampede2](https://www.tacc.utexas.edu/-/nsf-extends-lifespan-of-tacc-s-stampede2-supercomputer-through-june-2023) resource at the [Texas Advanced Computing Center](https://tacc.utexas.edu) (TACC); this allocation is reachable via PATh computing credits.  Stampede2’s new resources include 224 dual-socket Intel Xeon Platinum 8380 CPUs (40 cores each).
 
-The hosts destined for Lincoln, Syracuse, and Miami are currently being tested at Madison; availability is expected in late spring 2022.
+

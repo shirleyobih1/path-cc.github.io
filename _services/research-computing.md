@@ -27,7 +27,7 @@ facilitate sharing of research computing capabilities across campuses. As such i
 the vision of the NSF Campus Cyberinfrastructure (CC*) 
 <a href="https://www.nsf.gov/funding/pgm_summ.jsp?pims_id=504748" target="_blank">(NSF 22-582)</a> program. 
 We provide state-of-the-art 
-opensource software tools, dependable services, and facilitation to translate the power of 
+open source software tools, dependable services, and facilitation to translate the power of 
 research computing into advances in education and scientific discovery.
 
 
