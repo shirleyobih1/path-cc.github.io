@@ -10,30 +10,32 @@ intro_image_hide_on_mobile: true
 
 <div class="py-1 mb-1 bg-primary">
     <div class="container-lg py-1">
-        <a href="/facility#accessing-the-path-facility" class="text-decoration-none border border-1 bg-light rounded pb-1 p-2 me-2">Apply for Compute Credits Now</a><span class="text-light">Compute credits now available to researchers, apply now to access the <a class="text-light text-decoration-underline" href="/facility#accessing-the-path-facility">PATh facility</a>!</span>
+        <a href="/facility#accessing-the-path-facility" class="text-decoration-none border border-1 bg-light rounded py-1 p-2 me-2">Apply for Compute Credits Now</a><span class="text-light">Compute credits now available to researchers, apply now to access the <a class="text-light text-decoration-underline" href="/facility#accessing-the-path-facility">PATh facility</a>!</span>
     </div>
 </div>
 {% include layout/header.html logo=layout.logo header_class=page.header_class %}
 <main>
     <div id="hero" class="">
         <div class="container-lg py-4">
-            <div class="row mb-3">
+            <div class="row justify-content-center mb-5">
                 <div class="col-12 col-md-12 col-lg-10 col-xxl-8">
-                    <div class="border shadow bg-white rounded p-4">
-                        <h2 class="">PATh brings the power of<br> Throughput-computing to your science!</h2>
-                        <hr class="m-0 mb-4">
-                        <p class="fs-5">
-                            If you are a <b>researcher</b>
-                        </p>
-                        <p class="fs-5">
-                            apply today for <a href="/facility#accessing-the-path-facility" class="btn btn-outline-primary text-decoration-none">PATh Facility Compute Credits</a> or <a class="btn  btn-outline-primary text-decoration-none" href="https://connect.osg-htc.org/signup">Sign up for OSG-Connect</a>
-                        </p>
-                        <p class="fs-5">
-                            If you are an <b>organization</b>
-                        </p>
-                        <p class="fs-5">
-                            join us at <a href="#path-for-organizations" class="btn btn-outline-primary text-decoration-none">PATh for Organizations</a>
-                        </p>
+                    <div class="p-4">
+                        <h2 class="text-center pb-4"><img height="30px" class="mb-2" src="images/logo/PATh_Logo_Primary_Color_Just_PATh.png"> brings the power of<br> Throughput-computing to your science!</h2>
+                        <div class="row gx-2">
+                            <div class="col-6">
+                                <div class="p-2 border-end">
+                                    <h3 class="fw-normal pb-2 text-center">If you are a <b>Researcher</b></h3>
+                                    <h5 class=" text-center">Apply for <a href="/facility#accessing-the-path-facility" class="btn btn-outline-primary text-decoration-none">PATh Compute Credits</a></h5>
+                                    <h5 class="text-center">Sign up for <a class="btn  btn-outline-primary text-decoration-none" href="https://connect.osg-htc.org/signup">OSG-Connect</a></h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-2">
+                                    <h3 class="fw-normal text-center pb-2">If you are an <b>Organization</b></h3>
+                                    <h5 class="text-center">Join us at <a href="#path-for-organizations" class="btn btn-outline-primary text-decoration-none">PATh for Organizations</a></h5>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,8 +47,8 @@ intro_image_hide_on_mobile: true
                 <img class="d-none d-md-block img-fluid" src="{{ 'images/PATh_Researchers.svg' | relative_url}}"/>
             </div>
             <div class="col-12 col-md-8 col-xxl-8 d-flex">
-                <div class="my-auto">
-                    <h3 class="pb-2">
+                <div class="my-auto d-flex flex-column">
+                    <h3 class="header-bar">
                         For Researchers
                     </h3>
                     <p class="fs-5">
@@ -69,10 +71,10 @@ intro_image_hide_on_mobile: true
                 </div>
             </div>
         </div>
-        <div id="path-for-organizations" class="row my-3">
+        <div id="path-for-organizations" class="row my-5">
             <div class="col-12 col-lg-8 col-xxl-8 d-flex">
-                <div class="my-auto">
-                    <h3 class="pb-2 text-start text-lg-end">
+                <div class="my-auto d-flex flex-column">
+                    <h3 class="text-start text-lg-end header-bar">
                         For Organizations
                     </h3>
                     <p class="fs-5 text-start text-lg-end">
