@@ -57,6 +57,7 @@ The institutions in the partnership are:
 * [San Diego Supercomputing Center at the University of California San Diego](https://www.sdsc.edu/)
 * [Indiana University](https://www.iu.edu/)
 * [University of Nebraska-Lincoln](https://www.unl.edu/)
+* [Florida International University](https://www.fiu.edu/)
 {% endcapture %}
 
 {% capture content %}
