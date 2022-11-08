@@ -1,0 +1,31 @@
+- name: Researchers
+  id: researchers
+  children:
+    - name: PATh Compute Credits
+      url: /facility/#accessing-the-path-facility
+    - name: OSG Connect Account
+      url: https://connect.osg-htc.org/signup
+- name: Organizations
+  id: organizations
+  children:
+    - name: PATh for Organizations
+      url: /#path-for-organizations
+    - name: Software
+      url: /services/software-development/
+- name: Documentation
+  id: documentation
+  children:
+    - name: PATh Facility
+      url: https://portal.path-cc.io/documentation
+    - name: OSPool User
+      url: https://portal.osg-htc.org/documentation
+- name: Engagement
+  id: engagement
+  children:
+    - name: News
+      url: /news
+    - name: Events
+      url: /events.html
+    - name: Contact
+      url: /contact.html
+

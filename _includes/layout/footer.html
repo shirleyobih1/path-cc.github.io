@@ -1,19 +1,25 @@
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
-          <h3 class="footer-title">{{site.title}}</h3>
-          <ul>
-            {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
-            {% for item in footermenu %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
+<footer id="footer" class="mt-auto pt-2">
+  <div class="bg-primary">
+    <div class="container-xxl">
+      <div class="row justify-content-center py-2">
+        <div class="col-auto me-4 d-none d-md-flex">
+          <a class="my-auto" href="{{ '/' | relative_url }}"><img style="height:5rem" src="{{ '/images/logo/Logo_Round_Med.png' | relative_url }}" alt="OSG logo"></a>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8">
+          <div class="row justify-content-between my-2">
+            {% for category in site.data.footer %}
+            <div class="col-6 col-lg-4 col-xl-3 my-2">
+              <table>
+                <tr><th class="text-light">{{ category.name }}</th></tr>
+                {% for child in category.children %}
+                <tr><td><a class="text-white" href="{{ child.url | relative_url }}">{{ child.name }}</a></td></tr>
+                {% endfor %}
+              </table>
+            </div>
             {% endfor %}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</footer>
