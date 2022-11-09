@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Generate SSH Keys and Activate Your PATh Facility Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
+  
+  <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://path-cc.io" />
+  <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+  <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="PATh" />
+  <meta name="twitter:creator" content="" />
+  <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+  <meta name="google-site-verification" content="ZmoYUNawmA-Tr3VNrpFqNBEMCBeldJxpgFwOAaa0TNw" />
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page '>
+  <div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+      <div class="container-lg pb-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9 col-xxl-8">
+            <div class="pt-3">
+                <h1 class="title mb-3">Generate SSH Keys and Activate Your PATh Facility Login</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    
+</h1>
+
+
+            </div>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9  col-xxl-8">
+            <div>
+                <p>Logging into a PATh Facility Access Point requires authenticating your credientials using one of two options: <strong>web authentication</strong> or <strong>SSH key pair authentication</strong>. This guide is for users who would like to authenticate using SSH key pairs.</p>
+
+<p>To use this approach, you need to follow a two-step process to associate your SSH key to your PATh Facility account.</p>
+
+<ol>
+  <li>
+    <p>Generate a SSH key pair.</p>
+  </li>
+  <li>
+    <p>Add your public key to the PATh Access Point by uploading it to
+your user profile on the <a href="https://registry.cilogon.org/registry/co_petitions/start/coef:263">PATh Facility registration website</a>.</p>
+  </li>
+</ol>
+
+<p>After completing the process, you can log in to the PATh Access Point (<code class="language-plaintext highlighter-rouge">ap1.facility.path-cc.io</code>) from a local computer
+(your laptop or desktop) using either ssh or an ssh program like Putty – see below for
+more details on logging in.</p>
+
+<p>NOTE: Please do not edit the authorized keys file on the Access Point.</p>
+
+<h2 id="step-1-generate-ssh-keys">Step 1: Generate SSH Keys</h2>
+
+<p>We will discuss how to generate a SSH key pair for two cases:</p>
+
+<ul>
+  <li>“Unix” systems (Linux, Mac) and certain, latest versions of Windows</li>
+  <li>Older Windows systems</li>
+</ul>
+
+<p>Please note: The key pair consist of a private key and a public key. You will upload the
+public key <a href="https://registry.cilogon.org/registry/co_petitions/start/coef:263">PATh Facility registration website</a>, but you also need to keep a copy of the private key to log in!<br />
+You should keep the private key on machines that you have
+direct access to, i.e. your local computer (your laptop or desktop).</p>
+
+<h3 id="unix-based-operating-system-linuxmac-or-latest-windows-10-versions">Unix-based operating system (Linux/Mac) or latest Windows 10 versions</h3>
+
+<p>We will create a key in the .ssh directory of your computer. Open a terminal on your local computer and run the following commands:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> mkdir ~/.ssh
+ chmod 700 ~/.ssh
+ ssh-keygen -t rsa
+</code></pre></div></div>
+
+<p>For the newer OS versions the .ssh directory is already created and the first command is redundant. The last command will produce a prompt similar to</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Generating public/private rsa key pair.
+ Enter file in which to save the key (/home/&lt;local_user_name&gt;/.ssh/id_rsa):
+</code></pre></div></div>
+
+<p>Unless you want to change the location of the key, continue by pressing enter.
+Now you will be asked for a passphrase. Enter a passphrase that you will be
+able to remember and which is secure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Enter passphrase (empty for no passphrase):
+ Enter same passphrase again:
+</code></pre></div></div>
+
+<p>When everything has successfully completed, the output should resemble the
+following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Your identification has been saved in /home/&lt;local_user_name&gt;/.ssh/id_rsa.
+ Your public key has been saved in /home/&lt;local_user_name&gt;/.ssh/id_rsa.pub.
+ The key fingerprint is:
+ ...
+</code></pre></div></div>
+
+<p>See Step 2 below to learn how to upload the contents of the <code class="language-plaintext highlighter-rouge">.pub</code> file (~/.ssh/id_rsa.pub) to the PATh Facility registration website.</p>
+
+<h3 id="windows-using-putty-to-log-in">Windows, using Putty to log in</h3>
+
+<p>If you can connect using the <code class="language-plaintext highlighter-rouge">ssh</code> command within the Command Prompt (Windows 10 build version 1803 and later), please follow the Mac/Linux directions above. If not,
+continue with the directions below.</p>
+
+<ol>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">PuTTYgen</code> program.  You can download <code class="language-plaintext highlighter-rouge">PuttyGen</code>
+here: <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuttyGen Download Page</a>,
+scroll down until you see the <code class="language-plaintext highlighter-rouge">puttygen.exe</code> file.</p>
+  </li>
+  <li>
+    <p>For Type of key to generate, select RSA or SSH-2 RSA.</p>
+  </li>
+  <li>
+    <p>Click the “Generate” button.</p>
+  </li>
+  <li>
+    <p><strong>Move your mouse in the area below the progress bar.</strong>
+When the progress bar is full, PuTTYgen generates your key pair.</p>
+  </li>
+  <li>
+    <p>Type a passphrase in the “Key passphrase” field. Type the same passphrase in the “Confirm passphrase” field. You
+can use a key without a passphrase, but this is not recommended.</p>
+  </li>
+  <li>
+    <p>Click the “Save private key” and “Save public key” buttons to save both keys. <strong>You must save both keys.</strong> You will need them to successfully login from your machine.</p>
+
+    <p class="border border-5"><img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/puttygen_ssh_key.png" class="img-fluid" alt="PuttyGen Window" /></p>
+  </li>
+  <li>
+    <p>In Step 2 below, you will upload your public key to the <a href="https://registry.cilogon.org/registry/co_petitions/start/coef:263">PATh Facility registration website</a>. The expected key is a single line, with three fields looking something like <code class="language-plaintext highlighter-rouge">ssh-rsa ASSFFSAF... user@host</code>.</p>
+  </li>
+</ol>
+
+<h2 id="step-2-add-the-public-ssh-key-to-login-node">Step 2: Add the public SSH key to login node</h2>
+
+<p>To add your public key to the <a href="https://registry.cilogon.org/registry/co_petitions/start/coef:263">PATh Facility registration website</a>:</p>
+
+<ol>
+  <li>
+    <p>Go to the <a href="https://registry.cilogon.org/registry/co_petitions/start/coef:263">PATh Facility registration website</a> and sign in with the institutional identity you used when requesting an account.</p>
+  </li>
+  <li>
+    <p>Click your name at the top right. In the dropdown box, click “My Profile (OSG)” button.</p>
+
+    <p class="border border-5"><img src="/images/ssh-homepage-dropdown.png" class="img-fluid" /></p>
+  </li>
+  <li>
+    <p>On the right hand side of your profile, click “Authenticators” link.</p>
+
+    <p class="border border-5"><img src="/images/ssh-edit-profile.png" class="img-fluid" /></p>
+  </li>
+  <li>
+    <p>On the authenticators page, click the “Manage” button.</p>
+
+    <p class="border border-5"><img src="/images/ssh-authenticator-select.png" class="img-fluid" /></p>
+  </li>
+  <li>
+    <p>On the new SSH Keys page, click “Add SSH Key” and browse your computer to upload your public SSH key. The expected key is a single line, with three fields looking something like <code class="language-plaintext highlighter-rouge">ssh-rsa ASSFFSAF... user@host</code>.</p>
+
+    <p class="border border-5"><img src="/images/ssh-key-list.png" class="img-fluid" /></p>
+
+    <p><strong>Mac Operating Systems</strong>: When you click “browse”, your Mac Finder window will appear. At the top of the Finder window, open the drop-down box and select “Macintosh HD”. Then navigate to “Users” and select your username. Using your keyboard, type <code class="language-plaintext highlighter-rouge">Command + Shift + . </code> to reveal hidden files and directories. Open the <code class="language-plaintext highlighter-rouge">.ssh</code> directory, and select the <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> file. Click the “Upload” box to upload your public SSH key.</p>
+
+    <p><strong>Windows Operating Systems</strong>: When you click “browse”, an Explorer window will appear. Navigate to the directory where you saved your <em>public</em> key file. Select it and click the “Upload” box to upload your public SSH key.</p>
+
+    <p><strong>Linux Operating Systems</strong>: When you click “browse”, the window that appears may vary depending on your Linux operating system as well as your browser. You will want to navigate to your <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> file, which is typically found in the path of <code class="language-plaintext highlighter-rouge">Users/[your user name]/.ssh</code>. To show hidden files/directories on a machine running Ubuntu or Debian, use the keyboard shortcut <code class="language-plaintext highlighter-rouge">ctrl + h</code>. If you have trouble finding your <code class="language-plaintext highlighter-rouge">id_ssh.pub</code> file for your specific Linux environment, there are many resources online. Additionally, our Research Computing Facilitators are here to help you should you need it.</p>
+  </li>
+  <li>
+    <p>Once you have added your public key, click “Update”. You should be able to login within a few hours.</p>
+  </li>
+</ol>
+
+<blockquote>
+  <h3 id="can-i-use-multiple-keys">Can I Use Multiple Keys?</h3>
+  <p>Yes! If you want to log into the PATh Facility from multiple computers, you can do so by generating
+a keypair on each computer you want to use, and then adding the public key to your PATh Facility
+profile.</p>
+</blockquote>
+
+<h2 id="logging-in">Logging In</h2>
+
+<p>After following the steps above to upload your key and it’s been a few hours, you should
+be able to log in to begin using PATh Facility compute resources.</p>
+
+<h3 id="for-mac-linux-or-newer-versions-of-windows">For Mac, Linux, or newer versions of Windows</h3>
+
+<p>Open a terminal and type in:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh &lt;your_PATh_Facility_username&gt;@ap1.facility.path-cc.io
+</code></pre></div></div>
+
+<p>It will ask for the passphrase for your ssh key (if you set one) and then you
+should be logged in.</p>
+
+<h3 id="for-older-versions-of-windows">For older versions of Windows</h3>
+
+<p>On older versions of Windows, you can use the <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">Putty program</a> to log in.</p>
+
+<p class="border border-5"><img src="https://raw.githubusercontent.com/OSGConnect/connectbook/master/images/putty-screenshots.png" class="img-fluid" alt="PuTTY Intructions Screenshot" /></p>
+
+<ol>
+  <li>
+    <p>Open the <code class="language-plaintext highlighter-rouge">PutTTY</code> program. If necessary, you can download PuTTY from the website here <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY download page</a>.</p>
+  </li>
+  <li>
+    <p>Type in <code class="language-plaintext highlighter-rouge">ap1.facility.path-cc.io</code> as the as the hostname address. Leave Port <code class="language-plaintext highlighter-rouge">22</code> as the default Port number.</p>
+  </li>
+  <li>
+    <p>In the left hand menu, click the “+” next to “SSH” to expand the menu.</p>
+  </li>
+  <li>
+    <p>Click “Auth” in the “SSH” menu.</p>
+  </li>
+  <li>
+    <p>Click “Browse” and specify the private key file you saved in Step 1.</p>
+  </li>
+  <li>
+    <p>Return to “Session”.  <br />
+a. Name your session  <br />
+b. Save session for future use</p>
+  </li>
+  <li>
+    <p>Click “Open” to launch shell. Provide your ssh-key passphrase (created above in PuTTYgen) when prompted to do so.</p>
+  </li>
+</ol>
+
+<h2 id="get-help">Get Help</h2>
+
+<p>For questions regarding logging in or creating an account, contact us at  <a href="mailto:support@opensciencegrid.org">support@opensciencegrid.org</a>.</p>
+
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-3">
+            
+            <div class="sticky-top top-5">
+                <div class="me-auto">
+                    <div class="">
+                        <h3>Contents</h3>
+                        
+<ul>
+
+    <li><a href="#step-1-generate-ssh-keys">Generate SSH Keys</a></li>
+    
+        
+<ul>
+
+    <li><a href="#unix-based-operating-system-linuxmac-or-latest-windows-10-versions">Linux/Mac/Windows 10</a></li>
+    
+
+    <li><a href="#windows-using-putty-to-log-in">Windows using Putty</a></li>
+    
+
+</ul>
+    
+
+    <li><a href="#step-2-add-the-public-ssh-key-to-login-node">Add SSH Key to Login Node</a></li>
+    
+
+    <li><a href="#logging-in">Logging In</a></li>
+    
+        
+<ul>
+
+    <li><a href="#for-mac-linux-or-newer-versions-of-windows">Linux/Mac/Windows 10</a></li>
+    
+
+    <li><a href="#for-older-versions-of-windows">Windows using Putty</a></li>
+    
+
+</ul>
+    
+
+</ul>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+    </main>
+  </div>
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>

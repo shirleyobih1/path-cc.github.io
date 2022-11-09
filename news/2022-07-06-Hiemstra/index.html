@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Testing GPU/ML Framework Compatibility</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    
+    <meta name="description" content="Justin Hiemstra, a Machine Learning Application Specialist for CHTC’s GPU Lab, discusses the testing suite developed to test CHTC's support for GPU and ML framework compatibility." />
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page page-news-single'>
+<div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+        <div class="container pb-5">
+            
+
+
+<div class="row mb-4">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    <h1 class="title mb-3">Testing GPU/ML Framework Compatibility</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    <small class="text-muted article-date">Hannah Cheren</small>
+    
+    
+    <small class="text-muted article-date">July 06, 2022</small>
+    
+</h1>
+
+
+  </div>
+</div>
+
+
+
+<div class="row justify-content-start">
+<div class="col-12 col-xl-9 col-lg-10 col-md-11">
+
+
+<div class="news news-single">
+  <div class="content"><p><strong><em>Justin Hiemstra, a Machine Learning Application Specialist for CHTC’s GPU Lab, discusses the testing suite developed to test CHTC’s support for GPU and ML framework compatibility.</em></strong></p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Hiemstra-card.png" alt="Photo by Ali Shah Lakhani on Unsplash." />
+  <figcaption class="figure-caption">Photo by Ali Shah Lakhani <a href="https://unsplash.com/photos/sp1BZ1atp7M">on Unsplash.</a><br /></figcaption>
+</figure>
+
+<p>Researchers at UW–Madison have increasingly required graphics processing units (GPUs) for their work. GPUs are specialized computing hardware that drives different data science technologies, including machine learning (ML). But what actually goes into running an ML job on the UW-Madison Center for High Throughput Computing (CHTC) using GPU capacity?</p>
+
+<p><a href="https://justinhiemstra.com/">Justin Hiemstra</a>, a graduate student in the Department of Electrical and Computer Engineering at the University of Wisconsin-Madison and currently working as an ML Application Specialist for CHTC’s GPU Lab, outlined the steps for running an ML job on CHTC using GPU capacity during <a href="https://agenda.hep.wisc.edu/event/1733/timetable/?view=standard">HTCondor Week 2022</a>.</p>
+
+<p>Whenever a researcher has an ML job that they want to run on CHTC with a GPU, they need three things:</p>
+
+<p>First, the researcher must write their ML code using a deep learning framework, such as PyTorch or TensorFlow.</p>
+
+<p>Second, the researcher needs to pick a GPU type. “You can run ML jobs on a normal server without GPUs, but certain machine learning processes (e.g., neural networks) run much faster if you use one,” notes Christina Koch, one of Hiemstra’s supervisors for his work. When using the HTCondor Software Suite, the researcher <a href="https://support.opensciencegrid.org/support/solutions/articles/5000653025-using-gpus-on-the-ospool">can choose a specific GPU type by specifying a CUDA compute capability</a> in the HTCondor job submit file.</p>
+
+<p>Third, the researcher has to pick a CUDA runtime library. This library handles communication between the GPU and the application space, allowing the ML code to run its computations.</p>
+
+<p>For an ML job to complete successfully, these components (ML framework, GPU type, CUDA runtime) must be compatible.</p>
+
+<p>Some issues come into play with this setup. The first issue is a lack of documentation.“There’s no central resource we can go to to look at and see if different versions of deep learning frameworks, GPUs, and capabilities are compatible with each other,” Hiemstra notes.</p>
+
+<p>The second issue is that as these frameworks and GPU hardware evolves, Hiemstra and his team have noticed they’ve started to drop support for older frameworks and compute capabilities.</p>
+
+<p>The third issue is “whenever you have computing resources made up of discrete servers in a computing pool, you run into the issue of heterogeneous server configurations.” This issue adds to the problem and confusion of trying to pick compatible versions.</p>
+
+<p>Hiemstra has put together a suite of test jobs to explore this compatibility issue. The jobs test whether a single tuple of CUDA runtime, framework, and compute capability versions are compatible on a CHTC resource. He looks at three things to do so:</p>
+
+<p>First, did the jobs match, meaning, was it able to find the resources that they requested? Second, did the Conda Environment resolve, meaning, was it able to match all of the versions without finding any conflicting dependencies? Finally, was the framework able to communicate with GPUs? The job should run as expected if all three of these things happen. The test job will print out an error file if any of these fail.</p>
+
+<p>When a job fails, it’ll give some indication as to where the error occurred. These messages get recorded and later reviewed by Hiemstra so he can try to understand better what’s happening on the GPU Servers in the CHTC GPU Lab.</p>
+
+<p>The goal now for Hiemstra and his team is to “look at all of the different versions we might be interested in combining to see which ranges of compute capabilities, frameworks, and CUDA runtime libraries might work with each other.”</p>
+
+<p>Issues arise when trying to analyze the entire version space. First, the version space to test grows combinatorially. “On an active system where research is being done, that’ll start gobbling up capacity and taking it away from the researchers,” Hiemstra remarks.</p>
+
+<p>To prune the version space, so they’re not testing tens of thousands of different versions, they know that the CHTC has certain compute capabilities available. Knowing this, Hiemstra and his team can limit the number of versions they test only to include those that the CHTC has available. In addition, they assume that researchers use tools, such as Conda, to install their software, so they focus on framework and CUDA runtime versions that are available through Conda.</p>
+
+<p>The second issue is that the team needs some way of automatically collecting the different test parameters. Essentially, the goal is to have it so that someone in CHTC doesn’t have to update this by hand continuously. Each job needs several files to run, so to dynamically generate these files, the team uses Python String formatting to build these files.</p>
+
+<p>Finally, they’d like to find a way to manage all the jobs since they will continue to “fire off” hundreds of jobs during this process. To do this, they decided on a “timeout” period of 24 hours so that they don’t have scripts running on the CHTC Access Point indefinitely.</p>
+
+<p>Hiemstra and his team use DAGman, a tool for Directed Acyclic Graph (DAG) workflows, to first spawn a parent process.</p>
+
+<p>That parent process will do all the version space pruning and file generation. It’ll then submit all the jobs for testing, wait 24 hours for that timeout, and “run a postscript to interpret the output of those jobs.”</p>
+
+<p>Next, they process all the output files to gain further insight into how the system works.</p>
+
+<p>Currently, they’re running it quarterly, looking at the output table, and seeing if anything unexpected pops up. Hiemstra explains that going through this process “should give us some tools to debug the system if something suddenly crashes or if different versions a researcher is using are not compatible with each other.</p>
+
+<p>Hiemstra is curious to see and examine for the future how the choice of versions that a researcher picks affects the runtime of their ML model or whether or not it affects the outcome or performance of that model.</p>
+
+<p>“Everything about machine learning approaches is diverse and changing quickly,” Koch remarks, “having information about compatible frameworks and GPUs allows us to be more responsive and helpful to researchers who may be new to the field.”</p>
+
+<p>The implementation of this tool that Hiemstra and his team have developed can be found on the <a href="https://github.com/chTC/gpu-compatibility-testing">CHTC GitHub Repository</a>.</p>
+
+<p>…</p>
+
+<p><em>Watch a video recording of Justin Hiemstra’s talk at HTCondor Week 2022, and browse his <a href="https://agenda.hep.wisc.edu/event/1733/contributions/25477/attachments/8296/9571/Testing%20GPU_ML%20Framework%20Compatibility.pdf">slides</a>.</em></p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/pb6ooJ4-VJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</div>
+
+
+</div>
+</div>
+        </div>
+    </main>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>

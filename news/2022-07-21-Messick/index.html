@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LIGO's Search for Gravitational Waves Signals Using HTCondor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    
+    <meta name="description" content="Cody Messick, a Postdoc at the Massachusetts Institute of Technology (MIT) working for the LIGO lab, describes LIGO's use of HTCondor to search for new gravitational wave sources." />
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page page-news-single'>
+<div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+        <div class="container pb-5">
+            
+
+
+<div class="row mb-4">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    <h1 class="title mb-3">LIGO's Search for Gravitational Waves Signals Using HTCondor</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    <small class="text-muted article-date">Hannah Cheren</small>
+    
+    
+    <small class="text-muted article-date">July 21, 2022</small>
+    
+</h1>
+
+
+  </div>
+</div>
+
+
+
+<div class="row justify-content-start">
+<div class="col-12 col-xl-9 col-lg-10 col-md-11">
+
+
+<div class="news news-single">
+  <div class="content"><p><strong><em>Cody Messick, a Postdoc at the Massachusetts Institute of Technology (MIT) working for the LIGO lab, describes LIGO’s use of HTCondor to search for new gravitational wave sources.</em></strong></p>
+
+<figure>
+  <img class="w-100" src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Messick-card.png" alt="Image of two black holes. Photo credit: Cody Messick’s presentation slides." />
+  <figcaption class="figure-caption">Image of two black holes. Photo credit: Cody Messick’s presentation slides.<br /></figcaption>
+</figure>
+
+<p>High-throughput computing (HTC) is critical to astronomy, from black hole research to radial astronomy and beyond. At the <a href="https://agenda.hep.wisc.edu/event/1733/timetable/?view=standard">2022 HTCondor Week</a>, another area of astronomy was put in the spotlight by <a href="https://space.mit.edu/people/messick-cody/">Cody Messick</a>, a researcher working for the <a href="https://space.mit.edu/instrumentation/ligo/">LIGO</a> lab and a Postdoc at the Massachusetts Institute of Technology (MIT). His work focuses on a gravitational-wave analysis that he’s been running with the help of HTCondor to search for new gravitational wave signals.</p>
+
+<p>Starting with general relativity and why it’s crucial to his work, Messick explains that “it tells us two things; first, space and time are not separate entities but are instead part of a four-dimensional object called space-time. Second, space-time is warped by mass and energy, and it’s these changes to the geometry of space-time that we experience as gravity.”</p>
+
+<p>Messick notes that general relativity is important to his work because it predicts the existence of gravitational waves. These waves are tiny ripples in the curvature of space-time that travel at the speed of light and stretch and compress space. Accelerating non-spherically symmetric masses generate these waves.</p>
+
+<p>Generating ripples in the curvature of space-time large enough to be detectable using modern ground-based gravitational-wave observatories takes an enormous amount of energy; the observations made thus far have come from the mergers of compact binaries, pairs of extraordinarily dense yet relatively small astronomical objects that spiral into each other at speeds approaching the speed of light. Black holes and neutron stars are examples of these so-called compact objects, both of which are or almost are perfectly spherical.</p>
+
+<p>Messick and his team first detected two black holes going two-thirds the speed of light right before they collided. “It’s these fantastic amounts of energy in a collision that moves our detectors by less than the radius of a proton, so we need extremely energetic explosions of collisions to detect these things.”</p>
+
+<p>Messick looks for specific gravitational waveforms during the data analysis. “We don’t know which ones we’re going to look for or see in advance, so we look for about a million different ones.” They then use match filtering to find the probability that the random noise in the detectors would generate something that looks like a gravitational-wave; the first gravitational-wave observation had less than a 1 in 3.5 billion chance of coming from noise and matched theoretical predictions from general relativity extremely well.</p>
+
+<p>Messick’s work with external collaborators outside the LIGO-Virgo-KAGRA collaboration looks for systems  their normal analyses are not sensitive to. Scientists use the parameter kappa to characterize the ability of a nearly spherical object to distort when spinning rapidly or, in simple terms, how squished a sphere will become when spinning quickly.</p>
+
+<p>LIGO searches are insensitive to any signal with a kappa greater than approximately ten. “There could be [signals] hiding in the data that we can’t see because we’re not looking with the right waveforms,” Messick explains. His analysis has been working on this problem.</p>
+
+<p>Messick uses HTCondor DAGs to model his workflows, which he modified to make integration with OSG easier. The first job checks the frequency spectrum of the noise. These workflows go into an aggregation of the frequency spectrum, decomposition (labeled by color by type of detector), and finally, the filtering process occurs.</p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Messick-workflow.png" alt="A section of Messick’s DAG workflow." />
+  <figcaption class="figure-caption">A section of Messick’s DAG workflow.<br /></figcaption>
+</figure>
+
+<p>Although Messick’s work is more physics-heavy than computationally driven, he remarks that “HTCondor is extremely useful to us… it can fit the work we’ve been doing very, very naturally.”</p>
+
+<p>…</p>
+
+<p><em>Watch a video recording of Cody Messick’s talk at HTCondor Week 2022, and browse his <a href="https://agenda.hep.wisc.edu/event/1733/contributions/25501/attachments/8303/9586/How%20LIGO%20Analysis%20is%20using%20HTCondor.pdf">slides</a>.</em></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FcgpmPTXmaA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</div>
+
+
+</div>
+</div>
+        </div>
+    </main>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>

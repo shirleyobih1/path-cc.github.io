@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Data robustness and scalability on Open Science Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page '>
+<div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+        <div class="container pb-5">
+            <div class="pt-5">
+    <h1 class="title mb-3">Data robustness and scalability on Open Science Grid</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    
+</h1>
+
+
+</div>
+<p><strong>by Fabio Andrijauskas and Frank Wüerthwein - University of California San Diego, as of December 31, 2021</strong></p>
+
+<h3 id="objective">Objective</h3>
+
+<p>This document provides a set of results about the data access in the Open Science Grid (OSG). The objective is to show issues on data access of an OSG job.  All the process follows a methodology to understand how a user requests the information and any problem with this process.</p>
+
+<h3 id="executive-summary">Executive summary</h3>
+
+<p>Robustness is the degree to which a system or component can function correctly in the presence of valid inputs, and scalability is the responsiveness of a service with a reasonable performance given as the use of the service increases. Underlying this activity is the notion that robustness may deteriorate as scale of use of the service increases. To measure such a possible deterioration requires a set of benchmarks and tests accessing the data using different methods to check all these measures for robustness as a function of scale.</p>
+
+<p>We have origins and caches on the OSG data federation, and the origins have data from various experiments. Caches have a way to provide data “locally” and speed up the process for the jobs. With numerous jobs running, it is necessary to detect when a job fails due to data access. After more than 10,000 jobs using a methodology to explore several data access methods, the following issues in the OSG Data Federation infrastructure were found:</p>
+
+<ul>
+  <li>
+    <p>The Chicago XrootD cache was found to exhibit a performance issue during one of the tests. This was traced to a feature in the XRootD software that makes it possible (in principle) for a single slow response origin in the federation to bring down the performance of all caches of the federation. Details are given below.</p>
+
+    <ul>
+      <li class="text-danger">
+        <p class="text-danger">We propose that the OSG software team, together with the OSG production team engage in a conversation on amelioration of this problem in one of the following ways:</p>
+
+        <ul>
+          <li>The XRootD team protect the software against this failure mode in some fashion.</li>
+          <li>The OSG team develop a monitoring and deployment scheme to observe and protect against this failure mode.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>The Kansas city XrootD cache is prone to overload issue due to the way GeoIP localization for the closest cache is implemented in the OSG Data Federation. Whenever GeoIP fails to find the location of a client’s IP address, it defaults to the geographic middle of the USA. The Kansas cache is the closest cache to that middle, and thus all cache accesses with failed GeoIP have to be served by that cache. This makes that cache prone to overloads, thus reducing the overall reliability of the OSG Data Federation.</p>
+
+    <ul>
+      <li class="text-danger pb-2">We propose a change in the logic for the “closest cache” location choice. Any time the location of the client is the middle of the USA, the OSG software should pick a cache at random from a list of known functional caches, rather than always the Kansas cache.</li>
+    </ul>
+  </li>
+  <li>
+    <p>UCSD XrootD cache is slow compared with the other caches.</p>
+
+    <ul>
+      <li class="text-danger pb-2">We propose that a ticket is opened with the UCSD T2 to investigate this further. There was no obvious pattern here which may indicate a partial hardware failure on some disk, or NIC, or some such.</li>
+    </ul>
+  </li>
+  <li>
+    <p>The system to check the closest cache needs an analysis; several sites use only the Kansas City Cache.</p>
+
+    <ul>
+      <li class="text-danger pb-2">We propose a systematic analysis is done to understand why these sites consistently fall back to the Kansas City Cache. We suspect that their worker nodes do not resolve their IP via GeoIP but investigating this further was deemed outside of scope here.</li>
+    </ul>
+  </li>
+  <li>
+    <p>+DESIRED_Sites instruction is not followed sometimes by condor system.</p>
+
+    <ul>
+      <li class="text-danger">We propose a follow-up investigation. We are concerned that this could point to some deeper problem in HTCondor and/or the way it is configured and used in OSG. Such a follow-up investigation was deemed out of scope for this activity.</li>
+    </ul>
+  </li>
+  <li>
+    <p>OSG login node is very slow sometimes.</p>
+
+    <ul>
+      <li class="text-danger pb-2">We propose OSG production to monitor the performance and load of the osg-connect access points to gain consistent awareness of load issues there.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="detailed-description">Detailed description</h3>
+
+<p>Robustness is the degree to which a system or component can function correctly in the presence of valid inputs or stressful environmental conditions, and scalability is given a reasonable or good performance on a sample problem with a commensurate increase in computational resources [1,3]. One method to measure is one procedure referred to as FePIA [2,4], where the abbreviation stands for: identifying the performance features, the perturbation parameters, the impact of perturbation parameters on performance features, and the analysis to determine the robustness. For OSG it is required to check how a system could use computation resources related to robustness and scalability. There are many ways to execute code and access data on OSG data federation, and almost all interactions are through jobs.</p>
+
+<p>We define a set of benchmarks and test accessing the data using different methods to check all these measures for robustness and scalability. We have origins and caches on the OSG data federation, and different origins have data from various organizations. XrootD caches can provide data “locally” and speed up the process for the jobs. However, numerous jobs running are required to detect when a job fails due to data access, and we do not have this monitoring. Figure 1 shows the basic idea of a job accessing data.</p>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/data_access_and_osg_data_request.png" alt="Data access and OSG job data request." />
+    <figcaption class="figure-caption">Figure 1: Data access and OSG job data request.</figcaption>
+</figure>
+
+<h3 id="methodology">Methodology</h3>
+
+<p>To monitor data access requires analyzing three data access methods:</p>
+
+<ul>
+  <li>
+    <p>stashcp: Stashcp uses geo-located nearby caches to copy from the OSG Connect’s stash storage service to a job’s workspace on a cluster [5]. The stashcp, by default, try to use cvmfs, xrootd, and HTTP to access the files.</p>
+  </li>
+  <li>
+    <p>xrdcopy: copy directly from a location. It is possible to check the nearest cache using the stashcp command or using the GeoIP service directly.</p>
+  </li>
+  <li>
+    <p>cvmfs: copy directly from a file system. It is possible only to check where the closest cache.</p>
+  </li>
+</ul>
+
+<p>As users of OSG may use any of these methods, we chose a testing methodology that tested all of them independently of each other. Thus, checking the robustness and scalability is based on request files using stashcp, xrdcopy, and cvmfs in a different order with different files size and other variables following Table 1. We implement two different ways of accessing data via cvmfs. First as a simple cp from cvmfs to the local worker node, second as a direct posix read from cvmfs. There are thus 4 access methods, three of them are full file cp and the fourth is a posix read.</p>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/table_of_tests_using_tool_combination.png" alt="Set of tests using a combination of tools per job." />
+    <figcaption class="figure-caption">Table 1: Set of tests using a combination of tools per job.</figcaption>
+</figure>
+
+<p>The following steps are to measure the failure statistics for each of these 6 job types:</p>
+
+<ol>
+  <li>Create the files on the /osgconnect/public/ with random names;</li>
+  <li>Request the files following Table 1 using a condor job on different sites;</li>
+  <li>Collect data about the requests;</li>
+  <li>Delete the files from /osgconnect/public/;</li>
+  <li>Back to step 1;</li>
+</ol>
+
+<p>Implicit in these steps is that each job accesses 4 randomly named files. And each file needs to be copied via the cache from the origin. We are thus testing the situation of an “empty cache”. We consider this a worst case scenario for robustness. A “full cache” is less likely to fail than an empty cache because in both cases the cache is exercised but only the empty cache exercises the cache connection to the origin.</p>
+
+<h3 id="results-and-conclusions">Results and conclusions</h3>
+
+<p>All these tests showed some issues in the OSG environment related to data access. Figure 2 shows statistics about the executed tests.</p>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/test_statistics.png" alt="Tests statistics" />
+    <figcaption class="figure-caption text-end">Figure 2: Tests statistics</figcaption>
+</figure>
+
+<p>Table 2 shows some errors found during the execution of the jobs. Some network problems are shown on lines 1, 2, 4, 6, and 9 in Table 2. The errors on lines 3 and 5 could be related to the high load on the Chicago cache. Error number 7 was not part of the failure on statistics. However, it is a source of a problem in a user’s process.</p>
+
+<p class="text-center mt-4">Table 2: Errors found in the execution of the test.</p>
+
+<table class="table table-striped mb-4">
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Date (Y/M/D)</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2021-11-10</td>
+      <td>Unable to look up wlcg-wpad.fnal.gov</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2021-11-10</td>
+      <td>Unable to resolve osg-kansas-city-stashcache.nrp.internet2.edu:1094: Name or service not known</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2021-11-01</td>
+      <td>osg-chicago-stashcache.nrp.internet2.edu:1094 #0] elapsed = 0, pConnectionWindow = 120 seconds.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2021-11-01</td>
+      <td>[osg-kansas-city-stashcache.nrp.internet2.edu:1094 #0] Unable to resolve IP address for the host</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2021-11-15</td>
+      <td>[osg-chicago-stashcache.nrp.internet2.edu:1094 #0.0] Unable to connect: Connection refused</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2021-10-26</td>
+      <td>[osg-gftp2.pace.gatech.edu:1094 #0] Stream parameters: Network Stack: IPAuto, Connection Window: 30, ConnectionRetry: 2, Stream Error Widnow: 1800</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>2021-10-26</td>
+      <td>Write: failed Disk quota exceeded (from my user account)</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>2021-11-01</td>
+      <td>ERROR    Unable to look up wlcg-wpad.fnal.gov ERROR    Unable to look up wlcg-wpad.cern.ch ERROR    Unable to look up wlcg-wpad.fnal.gov ERROR    unable to get list of caches ERROR    Unable to look up wlcg-wpad.cern.ch ERROR    Unable to look up wlcg-wpad.fnal.gov</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2021-11-01</td>
+      <td>Unable to look up wlcg-wpad.cern.chUnable to look up wlcg-wpad.fnal.gov</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>The Chicago XrootD cache has a performance issue related to a scenario with a slow origin on the redirector. If a cache has cache misses that require data retrieval from a slow origin, the data retrievals queue up. There appears to be a queue limit that is cche specific rather than origin-specific. As a result, all cache misses for all origins from that cache are affected by a single slow origin that leads data retrievals to queue up. The response to the cache misses thus slows down. This scenario implies that a single slow origin can, in principle, lead to all caches slowing down. Thus lack of response to cache misses globally across the entire data federation. We consider this a fundamental flaw of the system as one bad apple can affect everybody that uses the data federation.</p>
+  </li>
+  <li>The Kansas city XrootD cache has an overload issue due to any issue with GeoIP localization. GeoIP defaults to the geographic middle of the USA when it can not resolve the geographic location of the IP of the client. Kansas City is the closest cache we have to the middle of the country. Therefore, if any client IP can not be resolved, it always defaults to the Kansas city cache. In our test, this has happened often enough to overload the Kansas City Cache, making it unusable.
+    <ul>
+      <li>The system to check the closest cache needs a review. For example, several sites are using only the Kansas City Cache. See suggestions below.</li>
+    </ul>
+  </li>
+  <li>UCSD XrootD cache is slow compared with the other caches. For example, the UCSD cache is 70% slower than other cache servers. This issue is not understood at present. Figure 3 shows the data transfer ratio from each cache requesting data from the Chicago node, Figure 4 shows the Iperf test between UCSD cache host and Chicago OSG login node, and Table 3 shows the latency from each cache to the Chicago node.</li>
+</ul>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/data_transfer_ratio_for_each_cache.png" alt="Data transfer ratio for each cache." />
+    <figcaption class="figure-caption">Figure 3: Data transfer ratio for each cache.</figcaption>
+</figure>
+
+<p class="text-center mt-4">Table 3: Average latency between Chicago and the host.</p>
+
+<table class="table table-striped mb-4">
+  <thead>
+    <tr>
+      <th>Cache</th>
+      <th>Latency</th>
+      <th>Linear distance - cities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ucsd</td>
+      <td>58.8ms</td>
+      <td>1731.81 miles</td>
+    </tr>
+    <tr>
+      <td>houston</td>
+      <td>24.6ms</td>
+      <td>941.90 miles</td>
+    </tr>
+    <tr>
+      <td>its-condor-xrootd1.syr.edu</td>
+      <td>13.7ms</td>
+      <td>590.11 miles</td>
+    </tr>
+    <tr>
+      <td>chicago</td>
+      <td>0.649 ms</td>
+      <td>0 miles</td>
+    </tr>
+    <tr>
+      <td>new-york</td>
+      <td>19.6 ms</td>
+      <td>710.75 miles</td>
+    </tr>
+    <tr>
+      <td>dtn2-daejeon.kreonet.net</td>
+      <td>159 ms</td>
+      <td>6597.25 miles</td>
+    </tr>
+    <tr>
+      <td>osg-sunnyvale-stashcache.nrp.internet2.edu</td>
+      <td>46.4 ms</td>
+      <td>1815.37 miles</td>
+    </tr>
+    <tr>
+      <td>fiona.uvalight.net</td>
+      <td>108 ms</td>
+      <td>4105.72 miles</td>
+    </tr>
+    <tr>
+      <td>stashcache.gravity.cf.ac.uk</td>
+      <td>113 ms</td>
+      <td>3831.08 miles</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/Iperf_test_between_chicago_and_uscd_cache_host.png" alt="Iperf test between Chicago OSG login and node and the UCSD cache host." />
+    <figcaption class="figure-caption">Figure 4: Iperf test between Chicago OSG login and node and the UCSD cache host.</figcaption>
+</figure>
+
+<ul>
+  <li>
+    <p>The +DESIRED_Sites instruction is not working sometimes, which requires some extra
+steps to check if the job was on the right site. This is not understood at present. We are concerned that this indicates a fundamental bug in the HTCondor matchmaking.</p>
+  </li>
+  <li>
+    <p>OSG login node is very slow sometimes, causing problems in the job submission process.</p>
+  </li>
+  <li>
+    <p>The fastest way to access the data is, in order, CVMFS, stashcp, and xrdcopy. However, to use CVMFS is necessary to wait for the synchronization between the /public and cvmfs dir. Figure 5 shows one test executed to measure the data access on OSG,  the error bars show the standard deviation from the time measure from 100 jobs, and each bar shows the time to execute each operation from the Chicago nodes.</p>
+  </li>
+</ul>
+
+<figure class="figure py-4">
+    <img class="figure-img img-fluid" src="/images/GIL/data_robustness_and_scalability/one_test_executed_to_measure_the_data_access_on_osg.png" alt="One test executed to measure the data access on OSG." />
+    <figcaption class="figure-caption">Figure 5: One test executed to measure the data access on OSG.</figcaption>
+</figure>
+
+<ul>
+  <li>Looking at the XrootD cache systems (with the nearest location), all the tests performed and the files are on the cache, there is a speed up the data access an average of 5 times.</li>
+</ul>
+
+<h3 id="recommendations">Recommendations</h3>
+
+<p>To prevent or solve the issues, this is a set of recommendations:</p>
+
+<ul>
+  <li>
+    <p>Develop a monitoring to track the load on the XrootD caches.</p>
+  </li>
+  <li>
+    <p>Create a monitoring system to check the “health” of the cache, origins, and redirectors in such a way that “slow origins” can at least be detected, and maybe even disabled to protect data access to other origins. (More on this in next bullet.)</p>
+  </li>
+  <li>
+    <p>Engage with the XRootD team to solve the fundamental problem with a single origin slowing down the entire data federation. This is a conceptual problem of the system that we need a long-term solution that is carefully designed together with the XRootD development team.</p>
+
+    <ul>
+      <li>Alternatively, and maybe more short term, develop a deployment scheme that isolates different origins, protecting them against each other.</li>
+    </ul>
+  </li>
+  <li>Analyze the Stashcp GeoIP system to detect any failure avoiding the overhead on the Kansas city cache. We propose that anytime GeoIP returns to the middle of the USA, we simply pick a cache at random or some other equivalent remediation.
+    <ul>
+      <li>Analyze why certain sites seem to always hit the Kansas City cache. Maybe none of their worker node Ips are GeoIP locatable? Maybe some other solution needs to be implemented for those sites?</li>
+    </ul>
+  </li>
+  <li>
+    <p>Start a debugging program to understand why HTCondor matchmaking matches some of the time incorrectly. We are concerned that this is a fundamental bug somewhere in HTCondor but have no evidence for it at this time. Therefore, we consider this out of scope for the present study but necessary to follow up.</p>
+  </li>
+  <li>
+    <p>Analyze the UCSD cache to check the reason for the slow data rate;</p>
+  </li>
+  <li>
+    <p>Monitoring the load on the login nodes on OSG.</p>
+  </li>
+  <li>Check the version of the Stashcp on the OSG site; There are new improvements on the latest version, and some OSG  sites are using an older version.</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<p>[1] Ieee standard glossary of software engineering terminology. IEEE Std 610.12-1990, pages 1–84,1990.</p>
+
+<p>[2] E.A. Luke. Defining and measuring scalability. In Proceedings of Scalable Parallel Libraries Conference, pages 183–186, 1993.</p>
+
+<p>[3] S. Ali, A.A. Maciejewski, H.J. Siegel, and Jong-Kook Kim. Definition of a robustness metric for resource allocation. In Proceedings International Parallel and Distributed Processing Symposium, pages 10 pp.–, 2003.</p>
+
+<p>[4] S. Ali, A.A. Maciejewski, H.J. Siegel, and Jong-Kook Kim. Measuring the robustness of a resource allocation. IEEE Transactions on Parallel and Distributed Systems, 15(7):630–641, 2004.</p>
+
+<p>[5] Derek Weitzel, Brian Bockelman, Duncan A. Brown, Peter Couvares, Frank W¨urthwein, and Edgar Fajardo Hernandez. Data Access for LIGO on the OSG. arXiv e-prints, page arXiv:1705.06202, May 2017.</p>
+
+        </div>
+    </main>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>

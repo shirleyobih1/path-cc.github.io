@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Using HTC and HPC Applications to Track the Dispersal of Spruce Budworm Moths</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    
+    <meta name="description" content="Matthew Garcia, a Postdoctoral Research Associate in the Department of Forest & Wildlife Ecology at the University of Wisconsin–Madison, discusses how he used the HTCondor Software Suite to combine HTC and HPC capacity to perform simulations that modeled the dispersal of budworm moths." />
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page page-news-single'>
+<div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+        <div class="container pb-5">
+            
+
+
+<div class="row mb-4">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    <h1 class="title mb-3">Using HTC and HPC Applications to Track the Dispersal of Spruce Budworm Moths</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    <small class="text-muted article-date">Hannah Cheren</small>
+    
+    
+    <small class="text-muted article-date">July 06, 2022</small>
+    
+</h1>
+
+
+  </div>
+</div>
+
+
+
+<div class="row justify-content-start">
+<div class="col-12 col-xl-9 col-lg-10 col-md-11">
+
+
+<div class="news news-single">
+  <div class="content"><p><strong><em>Matthew Garcia, a Postdoctoral Research Associate in the Department of Forest &amp; Wildlife Ecology at the University of Wisconsin–Madison, discusses how he used the HTCondor Software Suite to combine HTC and HPC capacity to perform simulations that modeled the dispersal of budworm moths.</em></strong></p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Garcia-card.png" alt="Photo from Matthew Garcia's presentation at HTCondor Week 2022." />
+  <figcaption class="figure-caption">Photo from Matthew Garcia's presentation at <a href="https://agenda.hep.wisc.edu/event/1733/timetable/?view=standard">HTCondor Week 2022.</a><br /></figcaption>
+</figure>
+
+<p>Spruce budworms are small, caterpillar-like insects that enjoy munching on balsam fir and spruce trees. What the budworms lack in size, they make up for in total forest devastation;  within five to six years, the budworm kills the tree entirely. An example of this can be seen in the image above from eastern Canada, with the brown trees being “pretty much dead.”</p>
+
+<p><a href="http://matthewgarcia.tech/">Matthew Garcia</a>, a Postdoctoral Research Associate in the Department of Forest &amp; Wildlife Ecology at the University of Wisconsin–Madison, examined the flight behavior of these budworm moths. He aims to determine where the budworms disperse to stop them from causing these mass tree deaths. His research combines high throughput computing (HTC) and high-performance computing (HPC) applications.</p>
+
+<figure class="figure float-end" style="margin-left: 1em; width: 230px;">
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Garcia-cycle.png" class="figure-img img-fluid rounded" alt="Biological process of budworm moths" width="250px" />
+  <figcaption class="figure-caption">Biological process of budworm moths<br /></figcaption>
+</figure>
+
+<p>Garcia’s project takes a closer look at the biological process of the species. He’s looking at the dispersal of adult spruce budworm moths in the summertime, as this is a process least understood by researchers in the field.</p>
+
+<p>Working with collaborators at the U.S. and Canadian Forest Services, Garcia’s study of budworm dispersal tracks the budworm’s movement from where they grew up defoliating the fir and spruce trees to where they mate and drop their eggs. This biological process is driven mainly by weather and lasts about a year, though the adult phase is the period Garcia has focused on for his work thus far.</p>
+
+<p>In January 2022, Garcia published <a href="https://www.sciencedirect.com/science/article/pii/S0168192322000090">“Modeling weather-driven long-distance dispersal of spruce budworm moths. Part 1: Model Description.”</a> This individual-based model of moth behavior was developed in Python and is heavily dependent on weather model outputs. Garcia is currently working on “Part 2: Parameter calibration and feedback” that will supplement the early model results and compare them with radar observations of moth flight events.</p>
+
+<p>Garcia uses two modeling workflows to obtain the results of his study. He uses a combination of HTC and HPC for the weather modeling workflow, with the main weather model running on the HPC system and numerous pre-and post-processing tasks running on HTC. For the second workflow, he developed a Markov chain Monte Carlo (MCMC) modeling process for the flight simulation currently running at the CHTC.</p>
+
+<p>For the weather modeling workflow, Garcia runs the pre-processing using HTC, which takes in one month of historical weather data at a time and takes just about a day to complete. The pre-processing provides the initial and boundary conditions to the weather simulations. He then runs the Weather Research &amp; Forecasting (WRF) model as an HPC application, feeding the output from the pre-processing as input to the WRF model, which takes a little over six hours to generate one day of high-resolution output. Finally, the WRF model output returns to HTC for post-processing, reducing the data to just the variables needed for the budworm flight model.</p>
+
+<p>For the flight modeling workflow, Garcia runs a pre-processing step using HTC to determine the pool of available moths for the flight simulations; each simulation randomly selects a thousand moths out of the pool. He then uses the post-processed temperature and wind fields from the WRF model output to tell the moths when to fly and where to go in the flight model. Garcia runs ensembles of flight simulations to obtain a good sample of the moth population available on a given night. These simulations then run sequentially over the nights in the seasons when moths are emerging, flying, and laying eggs just about everywhere they land.</p>
+
+<figure class="figure float-end" style="margin-right: 1em; width: 180px;">
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Garcia-workflow.png" class="figure-img img-fluid rounded" alt="Garcia's workflow" width="150px" />
+  <figcaption class="figure-caption">Garcia's workflow<br /></figcaption>
+</figure>
+
+<p>“HTCondor developers have been immensely helpful in making sure that I can fit the HPC component into the middle of this larger DAGMan process,” Garcia notes. He uses DAGMan workflow scripts from HTCondor to organize his workflows with mixed submission protocols.</p>
+
+<p>Garcia combines all the collected information and calculates the moths’ survival likelihood. He has demonstrated that adult dispersal is almost entirely weather-driven and occurs almost nightly during summer and that males and females have different flight capabilities.</p>
+
+<p>“I love this because I can easily take that pre-processing part of the DAG and make it its node to build in more biological processes for the daytime part of the model,” Garica remarks. “I can then relatively easily expand the scope of the whole DAG to cover more of the seasonal or annual biological cycle model.”</p>
+
+<p>Garcia concludes, “everything’s going great – there are no pain points, everything is looking good, and my colleagues and I are very excited about the modeling results we’re seeing.”</p>
+
+<p>…</p>
+
+<p><em>Watch a video recording of Matthew Garcia’s talk at <a href="https://agenda.hep.wisc.edu/event/1733/timetable/?view=standard">HTCondor Week 2022</a>, and browse his <a href="https://agenda.hep.wisc.edu/event/1733/contributions/24771/attachments/8319/9623/MGarcia_HTCondorWeek_20220526.pdf">slides</a>.</em></p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/EFYMwxAnA44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</div>
+
+
+</div>
+</div>
+        </div>
+    </main>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>

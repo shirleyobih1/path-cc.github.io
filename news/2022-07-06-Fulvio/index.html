@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Using high throughput computing to investigate the role of neural oscillations in visual working memory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/logo/Logo_Round_32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    
+    <meta name="description" content="Jacqueline M. Fulvio, lab manager and research scientist for the Postle Lab at the University of Wisconsin-Madison, explains how she used the HTCondor Software Suite to investigate neural oscillations in visual working memory." />
+    
+    <meta property="og:title" content="Partnership to Advance Throughput Computing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://path-cc.io" />
+    <meta property="og:image" content="https://path-cc.io/images/logo/Logo_Primary_Acronym.png" />
+    <meta property="og:description" content="PATh brings together the Center for High Throughput Computing and the Open Science Grid in order to advance the nation’s campuses and science communities through the use of distributed High Throughput Computing." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="PATh" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="images/logo/Logo_Round_Med.png" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body class='page page-news-single'>
+<div id="wrapper" class="wrapper">
+    
+
+
+<div>
+  <div class="container-lg">
+    <nav class="navbar navbar-expand-lg navbar-light ps-0 pe-0">
+
+      <a class="navbar-brand" href="/">
+        <img height="70px" src="/images/logo/Logo_Round_Med.png" alt="PATh"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNavDropdown" class="collapse navbar-collapse justify-content-between">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="about-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="about-nav">
+              <a class="dropdown-item" href="/about">PATh</a>
+              <a class="dropdown-item" href="/team">Team</a>
+              <a class="dropdown-item" href="/glossary">Glossary</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="facility-nav" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Facility
+            </a>
+            <div class="dropdown-menu" aria-labelledby="facility-nav">
+              <a class="dropdown-item" href="/facility/index.html">About</a>
+              <a class="dropdown-item" href="/facility/registration.html">Registration</a>
+            </div>
+          </li>
+          
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/services/">Services</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/news/">News</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/events/">Events</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact/">Contact</a>
+          </li>
+          
+        </ul>
+        <div class="social-media d-none d-lg-block">
+          <a class="text-decoration-none" href="https://twitter.com/opensciencegrid">
+            <img alt="Twitter Icon" src="/images/icons/twitter.svg"/>
+          </a>
+          <a class="text-decoration-none" href="https://www.youtube.com/channel/UCd1UBXmZIgB4p85t2tu-gLw">
+            <img alt="Youtube Icon" src="/images/icons/youtube.svg"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+    <main>
+        <div class="container pb-5">
+            
+
+
+<div class="row mb-4">
+  <div class="col-12 col-xl-9 col-lg-10 col-md-11">
+    <h1 class="title mb-3">Using high throughput computing to investigate the role of neural oscillations in visual working memory</h1>
+<h1 class="mb-0 d-flex flex-row justify-content-between">
+    
+    <small class="text-muted article-date">Hannah Cheren</small>
+    
+    
+    <small class="text-muted article-date">July 06, 2022</small>
+    
+</h1>
+
+
+  </div>
+</div>
+
+
+
+<div class="row justify-content-start">
+<div class="col-12 col-xl-9 col-lg-10 col-md-11">
+
+
+<div class="news news-single">
+  <div class="content"><p><strong><em>Jacqueline M. Fulvio, lab manager and research scientist for the Postle Lab at the University of Wisconsin-Madison, explains how she used the HTCondor Software Suite to investigate neural oscillations in visual working memory.</em></strong></p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Fulvio-card.jpeg" alt="Computer rendering of DNA." />
+  <figcaption class="figure-caption">Photo by geralt <a href="https://pixabay.com/images/id-3382507/">on Pixabay.</a><br /></figcaption>
+</figure>
+
+<figure class="figure float-end" style="margin-left: 1em; width: 180px;">
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Fulvio-headshot.jpeg" class="figure-img img-fluid rounded" alt="Jacqueline M. Fulvio" width="150px" />
+  <figcaption class="figure-caption">Jacqueline M. Fulvio, lab manager and research scientist for the Postle Lab at the University of Wisconsin-Madison<br /></figcaption>
+</figure>
+
+<p>If you could use a method of analysis that results in better insights into your research, you’d want to use that option. The catch? It can take months to analyze one set of data.</p>
+
+<p><a href="https://postlab.psych.wisc.edu/people/west/jacqueline-fulvio1/">Jacqueline M. Fulvio</a>, a research scientist for the <a href="https://postlab.psych.wisc.edu/">Postle Lab</a> at the University of Wisconsin-Madison, explained at <a href="https://agenda.hep.wisc.edu/event/1733/timetable/?view=standard">HTCondor Week 2022</a> how she overcame this problem using high throughput computing (HTC) in her analysis of neural oscillations’ role in visual working memory.</p>
+
+<p>The Postle Lab analyzed the patterns of brain waves recorded from participants as they performed working memory tasks using an HTC workflow. Visual working memory is the brain process that temporarily allows us to maintain and manipulate visual information to solve a task. First, participants were given a sample with two images to memorize for two seconds. Then the image disappeared, and, following a five-second delay, participants were given a cue that indicated which item in memory would later be tested. The experimenter then delivered a single pulse of transcranial magnetic stimulation (TMS) to the participants’ scalp on half of the trials. TMS alters brain function, so Fulvio and her collaborators looked for corresponding impacts on participants’ brain waves recorded in an electroencephalogram (EEG). Finally, the participants indicated whether the image shown on the screen matched the original sample item.</p>
+
+<figure>
+  <img src="https://raw.githubusercontent.com/CHTC/Articles/main/images/Fulvio-research.png" class="figure-img img-fluid rounded" alt="Photo from Fulvio's presentation during HTCondor Week 2022" />
+  <figcaption class="figure-caption">Photo from Fulvio's presentation during HTCondor Week 2022<br /></figcaption>
+</figure>
+
+<p>After collecting and processing the data from the EEG, they can analyze the neural oscillations (or brain waves) to understand how they change throughout the task. Previous results have shown that the frequency of neural oscillations is associated with working memory processes.</p>
+
+<p>“In our current work, we wanted to more deeply investigate the role of these neural oscillations in working memory,” Fulvio states, “we chose to leverage an analysis called spatially distributed phase coupling extraction with a frequency-specific phases model (SPACE-FSP).” This analysis is a multi-way decomposition of the EEG data.</p>
+
+<p>The number of decomposable networks can’t be determined analytically, so the group estimates it using decomposition. Finding the optimal decomposition is an iterative process that starts with a statistical criterion and a set number of oscillating networks, which incrementally increase until they can no longer achieve the criterion. As a result, a single decomposition can take up to several months to complete.</p>
+
+<p>Although this method provides better insight into what Fulvio and her group want to analyze, “this remains a largely unused approach in the field.” Fulvio speculates that other scientists in the field often don’t use this kind of analysis because it’s very computationally demanding. “This is where high throughput [computing] came in for us.”</p>
+
+<p>Fulvio and her team planned to analyze at least 186 data sets, which, at the time, “seemed insurmountable.” The HTC capabilities of HTCondor offered them a solution to this problem by running the decompositions in parallel using the capacity of a campus wide shared facility. They also had the opportunity to utilize the Matlab parallel pool compatibility, which helped scale out the processing.</p>
+
+<p>The group started following the HTC paradigm because their lab had already used services provided by the UW-Madison Center for High Throughput Computing (CHTC) for some time. Fulvio’s supervisor, Dr. Bradley Postle, suggested setting up a meeting and seeing if what they needed could be achieved using the capacity offered by CHTC.</p>
+
+<p>Fulvio has an extensive coding history, but when she did run into compiling problems, she found the office hours offered by the CHTC Research Computing Facilitators extremely helpful, “I got useful tips from the staff in figuring out what was going wrong and what I needed to fix!”</p>
+
+<p>The group ran 42 jobs, each job taking anywhere from two days to two weeks to run. The initial results of the analyses were promising, but the two data analysis pipelines the group tried were insufficient to address some of the critical questions.</p>
+
+<p>After re-running the analyses using new data Fulvio collected, she overcame some limitations from the prior dataset to address the original questions. For this dataset, the group ran almost twice the amount of jobs – 72 – with each one again taking anywhere from two days to two weeks to run.</p>
+
+<p>The group updated the analysis once more to increase the data size from 500 milliseconds to 1-second chunks. They also combined the data into a single pipeline instead of having it in different chunks of data for two separate analyses.</p>
+
+<p>The goal of this update was to increase the amount of data they were sending, which in turn increased the amount of time it took to do these decompositions. More data resulted in a more robust and interpretable statistical result.</p>
+
+<p>“All versions of the analyses were ultimately successful,” Fulvio comments. “We’ve benefited significantly from this process.” Their final analysis obtained 1,690 components – a “fantastic number” for their data analyses.</p>
+
+<p>“We had such good support along the way so we could get this going,” Fulvio notes. In addition, what could have been years of computing on their lab machines, was condensed and boiled down into merely months for each analysis iteration.</p>
+
+<p>The group also conducted one more analysis, as “[this] experience helped us think about a special control analysis,” Fulvio remarks. The group carried out hundreds of jobs within a day using this separate analysis, giving them rapid confirmation through the control analysis results.</p>
+
+<p>Fulvio reflects, “from our research group’s broad perspective, OSPool capacity accessible via the CHTC have significantly expanded our computational capabilities.” Although computationally demanding, these resources helped the group apply this better-suited analysis method to address their original questions.</p>
+
+<p>From a more personal perspective, Fulvio notes that learning how to take advantage of these OSPool capacity has improved her skills, including coding. These resources allowed her to work with additional languages and sharpened her ability to optimize code.</p>
+
+<p>Fulvio concludes that “this has allowed us to help advance our field’s understanding, address key questions in the grant funding the research, and it provides the opportunity to reconsider other established findings and fill gaps in understanding of those studies.”</p>
+
+<p>…</p>
+
+<p><em>Watch a video recording of Jacqueline M. Fulvio’s talk at HTCondor Week 2022, and browse her <a href="https://agenda.hep.wisc.edu/event/1733/contributions/25518/attachments/8300/9578/Fulvio_HTCslides_2022.pdf">slides</a>.</em></p>
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/2D75uz-jz7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+</div>
+
+
+</div>
+</div>
+        </div>
+    </main>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">PATh</h3>
+          <ul>
+            
+            
+            <li class="">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact/">Contact</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <div class="social">
+              <a href="https://www.nsf.gov/oac">
+                  <img alt="NSF Logo" height="70px" width="70px" src="/images/logo/nsf-logo.svg">
+              </a>
+          </div>
+          <div class="copyright">
+              This project is supported by National Science Foundation under Cooperative Agreement
+              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2030508">OAC-2030508</a>.
+              Any opinions, findings, conclusions or recommendations expressed in this material are those of the
+              authors and do not necessarily reflect the views of the National Science Foundation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CCSDQV212"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0CCSDQV212');
+    </script>
+    
+
+</body>
+</html>
